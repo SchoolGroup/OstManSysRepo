@@ -10,11 +10,18 @@ namespace OstManSysMVVM.Model
 {
     class ResidentCatalogSingleton
     {
-        private static ResidentCatalogSingleton _instance = new ResidentCatalogSingleton();
+        private static ResidentCatalogSingleton _instance = null;
 
         public static ResidentCatalogSingleton Instance
         {
-            get { return _instance; }
+            get
+            {
+                if (_instance == null)
+                {
+                    _instance = new ResidentCatalogSingleton();
+                }
+                return _instance;
+            }
         }
 
         public ObservableCollection<Resident> Residents { get; set; }

@@ -70,8 +70,8 @@ namespace OstManSysMVVM.ViewModel
         public ICommand LogInCommand { get; set; }
         public ResidentViewModel()
         {
-            ResidentCatalogSingleton = ResidentCatalogSingleton.Instance;
             ResidentHandler=new Handler.ResidentHandler(this);
+            ResidentCatalogSingleton = ResidentCatalogSingleton.Instance;
             LogInHandler = new LogInHandler(this);
             NewResident = new Resident();
             SelectedResident=new Resident();
