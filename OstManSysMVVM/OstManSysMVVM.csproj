@@ -103,6 +103,15 @@
     <Compile Include="Model\AccountCatalogSingleton.cs" />
     <Compile Include="Model\Contract.cs" />
     <Compile Include="Model\Problem.cs" />
+    <Compile Include="View\AddApartment.xaml.cs">
+      <DependentUpon>AddApartment.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\AddCoResident.xaml.cs">
+      <DependentUpon>AddCoResident.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\AddResident.xaml.cs">
+      <DependentUpon>AddResident.xaml</DependentUpon>
+    </Compile>
     <Compile Include="View\MainPage.xaml.cs">
       <DependentUpon>MainPage.xaml</DependentUpon>
     </Compile>
@@ -118,8 +127,17 @@
     <Compile Include="View\BoardMemberView.xaml.cs">
       <DependentUpon>BoardMemberView.xaml</DependentUpon>
     </Compile>
+    <Compile Include="View\Report.xaml.cs">
+      <DependentUpon>Report.xaml</DependentUpon>
+    </Compile>
     <Compile Include="View\ResidentView.xaml.cs">
       <DependentUpon>ResidentView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\UpdateApartment.xaml.cs">
+      <DependentUpon>UpdateApartment.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\UpdateResident.xaml.cs">
+      <DependentUpon>UpdateResident.xaml</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>
@@ -143,6 +161,18 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Page Include="View\AddApartment.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\AddCoResident.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\AddResident.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="View\MainPage.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -151,7 +181,19 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="View\Report.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="View\ResidentView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\UpdateApartment.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\UpdateResident.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

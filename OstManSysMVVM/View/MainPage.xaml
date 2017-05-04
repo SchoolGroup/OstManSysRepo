@@ -24,7 +24,7 @@
             </StackPanel>
             <Button Command="{Binding LogInCommand,Mode=TwoWay}">Log In</Button>
         </StackPanel>
-        <Button x:Name="button" Content="Resident" HorizontalAlignment="Left" Margin="484,325,0,0" VerticalAlignment="Top">
+        <Button x:Name="button" Content="Resident" HorizontalAlignment="Left" Margin="472,255,0,0" VerticalAlignment="Top">
             <interactivity:Interaction.Behaviors>
                 <core:EventTriggerBehavior EventName="Click">
                     <core:NavigateToPageAction TargetPage="OstManSysMVVM.View.ResidentView"/>
@@ -32,7 +32,7 @@
             </interactivity:Interaction.Behaviors>
         </Button>
 
-        <Button x:Name="button1" Content="Board Member" HorizontalAlignment="Left" Margin="722,325,0,0" VerticalAlignment="Top">
+        <Button x:Name="button1" Content="Board Member" HorizontalAlignment="Left" Margin="695,255,0,0" VerticalAlignment="Top">
             <interactivity:Interaction.Behaviors>
                 <core:EventTriggerBehavior EventName="Click">
                     <core:NavigateToPageAction TargetPage="OstManSysMVVM.View.BoardMemberView"/>

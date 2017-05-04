@@ -1,4 +1,10 @@
 App.xbf
+View\AddApartment.xbf
+View\AddCoResident.xbf
+View\AddResident.xbf
 View\BoardMemberView.xbf
 View\MainPage.xbf
+View\Report.xbf
 View\ResidentView.xbf
+View\UpdateApartment.xbf
+View\UpdateResident.xbf
