@@ -1,1 +1,1 @@
-C:\Users\Universe\Documents\GitHub\SchoolProject\OstManSysAPI\OstManSysMVVM\OstManSysMVVM.csproj;x86
+C:\Users\Audrius\Documents\GitHub\OstManSysRepo\OstManSysMVVM\OstManSysMVVM.csproj;x86
