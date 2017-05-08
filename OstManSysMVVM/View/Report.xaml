@@ -35,7 +35,7 @@
             <StackPanel>
                 <TextBox x:Name="textBox" Margin="10, 0, 0, 0" HorizontalAlignment="Left" TextWrapping="Wrap" FontSize="15" Width="200" Height="50" Text="" VerticalAlignment="Top"/>
                 <TextBox x:Name="textBox1" Margin="10, 10, 0, 0" HorizontalAlignment="Left" Height="170" TextWrapping="Wrap" FontSize="15" Width="200" Text="" VerticalAlignment="Top"/>
-                <Button x:Name="button" Content="Browse" Background="Transparent" BorderBrush="Black" Margin="10, 10, 0, 0" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+                <Button x:Name="button" Content="Browse" Background="Transparent" BorderBrush="Gray" Margin="10, 10, 0, 0" HorizontalAlignment="Left" VerticalAlignment="Top"/>
                 <Button x:Name="button1" Content="Report" Background="Transparent" BorderBrush="Black" Margin="0, 15, 0, 0" HorizontalAlignment="Right" VerticalAlignment="Top"/>
 
             </StackPanel>

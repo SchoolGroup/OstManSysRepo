@@ -4,6 +4,17 @@
     xmlns:local="using:OstManSysMVVM.View"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+<<<<<<< HEAD
+    xmlns:Interactivity="using:Microsoft.Xaml.Interactivity" xmlns:Core="using:Microsoft.Xaml.Interactions.Core"
+    xmlns:ViewModel="using:OstManSysMVVM.ViewModel"
+    x:Class="OstManSysMVVM.View.AddApartment"
+    mc:Ignorable="d">
+
+    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+        <Grid.DataContext>
+            <ViewModel:ApartmentViewModel/>
+        </Grid.DataContext>
+=======
     xmlns:vm="using:OstManSysMVVM.ViewModel"
     xmlns:converter="using:OstManSysMVVM.Converter"
     xmlns:Interactivity="using:Microsoft.Xaml.Interactivity" xmlns:Core="using:Microsoft.Xaml.Interactions.Core"
@@ -16,6 +27,7 @@
         <converter:DateTimeConverter x:Key="DateTimeConverter"></converter:DateTimeConverter>
     </Page.Resources>
     <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+>>>>>>> refs/remotes/origin/master
         <Grid.RowDefinitions>
             <RowDefinition Height="*" />
             <RowDefinition Height="8*" />
@@ -26,6 +38,10 @@
             <ColumnDefinition Width="8*" />
             <ColumnDefinition Width="*" />
         </Grid.ColumnDefinitions>
+<<<<<<< HEAD
+        
+=======
+>>>>>>> refs/remotes/origin/master
         <StackPanel  Grid.Column="1" Grid.Row="1"  HorizontalAlignment="Center" VerticalAlignment="Top">
             <TextBlock x:ConnectionId='20'  x:Name="textBlock" TextWrapping="Wrap" FontWeight="Bold" Margin="0, 20, 0, 0" Text="Enter the details of the new apartment:" FontSize="20" />
         </StackPanel>
@@ -46,6 +62,19 @@
 
             <StackPanel>
 
+<<<<<<< HEAD
+                <TextBox x:ConnectionId='2' x:Name="textBox" Margin="25, 0, 0, 0"  HorizontalAlignment="Left" Text="{Binding NewApartment.Address, Mode=TwoWay}"  TextWrapping="Wrap" FontSize="15" Width="170"/>
+                <TextBox x:ConnectionId='3' x:Name="textBox1" Margin="25, 9, 0, 0"  HorizontalAlignment="Left" TextWrapping="Wrap" Text="{Binding NewApartment.Size, Mode=TwoWay}" FontSize="15" Width="170"/>
+                <TextBox x:ConnectionId='4' x:Name="textBox2" Margin="25, 9, 0, 0"  HorizontalAlignment="Left" TextWrapping="Wrap" Text="{Binding NewApartment.NumberOfRooms, Mode=TwoWay}" FontSize="15" Width="50"/>
+                <TextBox x:ConnectionId='5' x:Name="textBox3" Margin="25, 9, 0, 0"  HorizontalAlignment="Left" TextWrapping="Wrap" Text="{Binding NewApartment.Condition, Mode=TwoWay}" FontSize="15" Width="170"/>
+                <CheckBox x:ConnectionId='6' x:Name="checkBox" Content="" Margin="25, 9, 0, 0" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+                <CalendarDatePicker HorizontalAlignment="Left" Margin="25, 9, 0, 0" VerticalAlignment="Top"/>
+                <TextBox x:ConnectionId='7' x:Name="textBox6" Margin="25, 9, 0, 0"  HorizontalAlignment="Left" TextWrapping="Wrap" Text="{Binding NewApartment.MonthlyRent, Mode=TwoWay}" FontSize="15" Width="170"/>
+                <TextBox x:ConnectionId='8' x:Name="textBox7" Margin="25, 9, 0, 0"  HorizontalAlignment="Left" TextWrapping="Wrap" Text="" FontSize="15" Width="170"/>
+                <Button x:ConnectionId='9' x:Name="button2" Background="Transparent" FontSize="12" BorderBrush="Gray" Content="Browse" Margin="25, 15, 0, 0" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+                <Button x:ConnectionId='10' x:Name="button" Background="Transparent" BorderBrush="Black" Command="{Binding CreateCommand, Mode=TwoWay}" Content="Add" Margin="0, 15, 0, 0" HorizontalAlignment="Right" VerticalAlignment="Top"/>
+
+=======
                 <TextBox x:ConnectionId='2' x:Name="textBox" Margin="25, 0, 0, 0"  HorizontalAlignment="Left" TextWrapping="Wrap" Text="{Binding NewApartment.Address,Mode=TwoWay}" FontSize="15" Width="170"/>
                 <TextBox x:ConnectionId='3' x:Name="textBox1" Margin="25, 9, 0, 0"  HorizontalAlignment="Left" TextWrapping="Wrap" Text="{Binding NewApartment.Size,Mode=TwoWay}" FontSize="15" Width="170"/>
                 <TextBox x:ConnectionId='4' x:Name="textBox2" Margin="25, 9, 0, 0"  HorizontalAlignment="Left" TextWrapping="Wrap" Text="{Binding NewApartment.NumberOfRooms,Mode=TwoWay}" FontSize="15" Width="50"/>
@@ -57,10 +86,15 @@
                 <Button x:ConnectionId='9' x:Name="button2" Background="Transparent" FontSize="12" BorderBrush="Gray" Content="Browse" Margin="25, 15, 0, 0" HorizontalAlignment="Left" VerticalAlignment="Top"/>
                 <Button x:ConnectionId='10' x:Name="button" Background="Transparent" BorderBrush="Black" Content="Add" Margin="0, 15, 0, 0" Command="{Binding CreateCommand}" HorizontalAlignment="Right" VerticalAlignment="Top"/>
                 
+>>>>>>> refs/remotes/origin/master
             </StackPanel>
 
         </StackPanel>
         <StackPanel Grid.Column="1" Grid.Row="1">
+<<<<<<< HEAD
+            
+=======
+>>>>>>> refs/remotes/origin/master
             <Button x:ConnectionId='1' x:Name="button1" Background="Transparent" Width="50" Height="50" HorizontalAlignment="Left" VerticalAlignment="Top">
                 <Image Source="https://maxcdn.icons8.com/Share/icon/Arrows//left_arrow1600.png" Stretch="UniformToFill">
                     <Interactivity:Interaction.Behaviors>

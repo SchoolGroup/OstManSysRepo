@@ -7,7 +7,10 @@
     <RootPropertyPathName Name="CreateCommand" />
     <RootPropertyPathName Name="NewApartment" />
     <RootPropertyPathName Name="MonthlyRent" />
+<<<<<<< HEAD
+=======
     <RootPropertyPathName Name="LastCheck" />
+>>>>>>> refs/remotes/origin/master
     <RootPropertyPathName Name="Condition" />
     <RootPropertyPathName Name="NumberOfRooms" />
     <RootPropertyPathName Name="Size" />
@@ -16,7 +19,11 @@
     <RootPropertyPathName Name="Account" />
     <RootPropertyPathName Name="Password" />
     <RootPropertyPathName Name="ResidentID" />
+<<<<<<< HEAD
+    <RootPropertyPathName Name="GoToUpdate" />
+=======
     <RootPropertyPathName Name="DeleteCommand" />
+>>>>>>> refs/remotes/origin/master
     <RootPropertyPathName Name="SelectedApartment" />
     <RootPropertyPathName Name="ApartmentCatalogSingleton" />
     <RootPropertyPathName Name="Apartments" />
@@ -26,7 +33,11 @@
     <RootPropertyPathName Name="PhoneNumber" />
     <RootPropertyPathName Name="LastName" />
     <RootPropertyPathName Name="FirstName" />
+<<<<<<< HEAD
+    <RootPropertyPathName Name="UpdateCommand" />
+=======
     <RootPropertyPathName Name="Type" />
+>>>>>>> refs/remotes/origin/master
   </Roots.PropertyPathNames>
   <Roots.RootTypes>
     <RootType FullName="Windows.UI.Xaml.Application">
@@ -41,16 +52,17 @@
     <RootType FullName="OstManSysMVVM.Converter.DateTimeConverter" />
     <RootType FullName="Windows.UI.Xaml.Controls.Grid">
       <RootProperty Name="Background" />
+      <RootProperty Name="DataContext" />
       <RootProperty Name="RowDefinitions" />
       <RootProperty Name="ColumnDefinitions" />
       <RootProperty Name="Children" />
-      <RootProperty Name="DataContext" />
       <RootMethod Name="GetColumn" />
       <RootMethod Name="SetColumn" />
       <RootMethod Name="GetRow" />
       <RootMethod Name="SetRow" />
     </RootType>
     <RootType FullName="Microsoft.Xaml.DirectUI.ProxyTypes.ThemeResourceExtension" />
+    <RootType FullName="OstManSysMVVM.ViewModel.ApartmentViewModel" />
     <RootType FullName="Windows.UI.Xaml.Controls.RowDefinition">
       <RootProperty Name="Height" />
     </RootType>
@@ -97,8 +109,8 @@
     <RootType FullName="Windows.UI.Xaml.Controls.TextBox">
       <RootProperty Name="Margin" />
       <RootProperty Name="HorizontalAlignment" />
-      <RootProperty Name="TextWrapping" />
       <RootProperty Name="Text" />
+      <RootProperty Name="TextWrapping" />
       <RootProperty Name="FontSize" />
       <RootProperty Name="Width" />
       <RootProperty Name="Height" />
@@ -119,9 +131,13 @@
     </RootType>
     <RootType FullName="Windows.UI.Xaml.Data.Binding">
       <RootProperty Name="Mode" />
+<<<<<<< HEAD
+    </RootType>
+=======
       <RootProperty Name="Converter" />
     </RootType>
     <RootType FullName="Microsoft.Xaml.DirectUI.ProxyTypes.StaticResourceExtension" />
+>>>>>>> refs/remotes/origin/master
     <RootType FullName="Windows.UI.Xaml.Controls.TextBlock">
       <RootProperty Name="Margin" />
       <RootProperty Name="TextWrapping" />

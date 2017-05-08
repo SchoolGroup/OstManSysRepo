@@ -9,8 +9,13 @@
     x:Class="OstManSysMVVM.View.BoardMemberView"
     mc:Ignorable="d">
     <Page.DataContext>
+<<<<<<< HEAD
+     <vm:ApartmentViewModel></vm:ApartmentViewModel>
+    </Page.DataContext>
+=======
     <vm:ApartmentViewModel></vm:ApartmentViewModel>
 </Page.DataContext>
+>>>>>>> refs/remotes/origin/master
     <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
         <Grid.RowDefinitions>
             <RowDefinition Height="*" />
@@ -83,7 +88,11 @@
             </StackPanel>
         </Grid>
         <StackPanel Grid.Row="1" Grid.Column="2" VerticalAlignment="Center" HorizontalAlignment="Center">
+<<<<<<< HEAD
+            <ListView x:ConnectionId='10' x:Name="listView" HorizontalAlignment="Left" Height="450" VerticalAlignment="Top" Width="850"  SelectedItem="{Binding SelectedApartment, Mode=TwoWay}" ItemsSource="{Binding ApartmentCatalogSingleton.Apartments, Mode=TwoWay}">
+=======
             <ListView x:ConnectionId='11' x:Name="listView" HorizontalAlignment="Left" Height="450" VerticalAlignment="Top" Width="850" SelectedItem="{Binding SelectedApartment,Mode=TwoWay}" ItemsSource="{Binding ApartmentCatalogSingleton.Apartments,Mode=TwoWay}" >
+>>>>>>> refs/remotes/origin/master
                 <!--<ListView.DataContext>
                     <vm:ApartmentViewModel/>
                 </ListView.DataContext>-->
@@ -107,12 +116,19 @@
                     </Core:EventTriggerBehavior>
                 </Interactivity:Interaction.Behaviors>
             </Button>
+<<<<<<< HEAD
+            <Button x:ConnectionId='7' x:Name="button4" Margin="20, 0, 0, 0" Background="White" FontSize="13" BorderBrush="Black" Command="{Binding GoToUpdate, Mode=TwoWay}" Content="Edit apartment details" HorizontalAlignment="Left" VerticalAlignment="Top">
+                <!--<Button.DataContext>
+                    <vm:ApartmentViewModel></vm:ApartmentViewModel>
+                </Button.DataContext>-->
+=======
             <Button x:ConnectionId='8' x:Name="button4" Margin="20, 0, 0, 0" Background="White" FontSize="13" BorderBrush="Black" Content="Edit apartment details" HorizontalAlignment="Left" VerticalAlignment="Top">
                 <Interactivity:Interaction.Behaviors>
                     <Core:EventTriggerBehavior EventName="Click">
                         <Core:NavigateToPageAction TargetPage="OstManSysMVVM.View.UpdateApartment"/>
                     </Core:EventTriggerBehavior>
                 </Interactivity:Interaction.Behaviors>
+>>>>>>> refs/remotes/origin/master
             </Button>
             <Button x:ConnectionId='9' x:Name="button7" Margin="20, 0, 0, 0" Background="White" FontSize="13" BorderBrush="Black" Content="Edit resident details" HorizontalAlignment="Left" VerticalAlignment="Top">
                 <Interactivity:Interaction.Behaviors>
