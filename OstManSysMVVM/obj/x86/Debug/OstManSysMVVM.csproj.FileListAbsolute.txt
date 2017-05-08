@@ -1122,4 +1122,3 @@ C:\Users\Universe\Documents\GitHub\OstManSysRepo\OstManSysMVVM\obj\x86\Debug\Mic
 C:\Users\Universe\Documents\GitHub\OstManSysRepo\OstManSysMVVM\obj\x86\Debug\Microsoft.Xaml.Interactivity.pri.xml
 C:\Users\Universe\Documents\GitHub\OstManSysRepo\OstManSysMVVM\obj\x86\Debug\ProjectArchitectures.txt
 C:\Users\Universe\Documents\GitHub\OstManSysRepo\OstManSysMVVM\obj\x86\Debug\OstManSysMVVM.csprojResolveAssemblyReference.cache
-C:\Users\Cristian Patras\Documents\GitHub\OstManSysRepo\OstManSysMVVM\obj\x86\Debug\OstManSysMVVM.csprojResolveAssemblyReference.cache

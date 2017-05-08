@@ -55,22 +55,17 @@ namespace OstManSysMVVM.Handler
             {
                 ApartmentViewModel.ApartmentCatalogSingleton.Apartments.Add(apartment1);
             }
-            //ApartmentViewModel.NewApartment.ApartmentID = 0;
-            //ApartmentViewModel.NewApartment.Address = "";
-            //ApartmentViewModel.NewApartment.Size = 0;
-            //ApartmentViewModel.NewApartment.Condition = "";
-            //ApartmentViewModel.NewApartment.MonthlyRent = 0;
-            //ApartmentViewModel.NewApartment.NumberOfRooms = 0;
         }
 
         public void GoToUpdatePage()
         {
+            ApartmentViewModel.NewApartment.Address = ApartmentViewModel.SelectedApartment.Address;
+            ApartmentViewModel.NewApartment.Condition = ApartmentViewModel.SelectedApartment.Condition;
             var newFrame = new Frame();
             newFrame.Navigate(typeof(UpdateApartment));
             Window.Current.Content = newFrame;
             Window.Current.Activate();
-            ApartmentViewModel.NewApartment.Address = ApartmentViewModel.SelectedApartment.Address;
-        }
+       }
 
         public void UpdateApartment()
         {

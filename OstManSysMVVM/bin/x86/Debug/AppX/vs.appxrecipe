@@ -28,13 +28,13 @@
     <AppXManifest Include="C:\Users\Cristian Patras\Documents\GitHub\OstManSysRepo\OstManSysMVVM\bin\x86\Debug\Core\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2017-05-08T13:06:11.448</Modified>
+      <Modified>2017-05-08T13:42:03.778</Modified>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
     <AppxPackagedFile Include="C:\Users\Cristian Patras\Documents\GitHub\OstManSysRepo\OstManSysMVVM\bin\x86\Debug\OstManSysMVVM.exe">
       <PackagePath>entrypoint\OstManSysMVVM.exe</PackagePath>
-      <Modified>2017-05-08T13:06:09.915</Modified>
+      <Modified>2017-05-08T13:42:03.208</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Cristian Patras\.nuget\packages\Microsoft.AspNet.WebApi.Client\5.2.3\lib\portable-wp8+netcore45+net45+wp81+wpa81\System.Net.Http.Formatting.dll">
       <PackagePath>System.Net.Http.Formatting.dll</PackagePath>
@@ -521,11 +521,11 @@
     <AppxPackagedFile Include="C:\Users\Cristian Patras\Documents\GitHub\OstManSysRepo\OstManSysMVVM\bin\x86\Debug\resources.pri">
       <PackagePath>resources.pri</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2017-05-08T10:35:45.824</Modified>
+      <Modified>2017-05-08T13:36:02.802</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Cristian Patras\Documents\GitHub\OstManSysRepo\OstManSysMVVM\bin\x86\Debug\Core\OstManSysMVVM.exe">
       <PackagePath>OstManSysMVVM.exe</PackagePath>
-      <Modified>2017-05-08T13:06:11.443</Modified>
+      <Modified>2017-05-08T13:42:03.772</Modified>
     </AppxPackagedFile>
   </ItemGroup>
   <ItemGroup>
