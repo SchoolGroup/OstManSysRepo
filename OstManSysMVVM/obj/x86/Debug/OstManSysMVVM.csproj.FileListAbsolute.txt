@@ -875,7 +875,6 @@ C:\Users\Cristian Patras\Documents\GitHub\OstManSysRepo\OstManSysMVVM\obj\x86\De
 C:\Users\Cristian Patras\Documents\GitHub\OstManSysRepo\OstManSysMVVM\obj\x86\Debug\View\AddCoResident.xbf
 C:\Users\Cristian Patras\Documents\GitHub\OstManSysRepo\OstManSysMVVM\obj\x86\Debug\View\UpdateResident.xbf
 C:\Users\Cristian Patras\Documents\GitHub\OstManSysRepo\OstManSysMVVM\bin\x86\Debug\View\Report.xbf
-C:\Users\Cristian Patras\Documents\GitHub\OstManSysRepo\OstManSysMVVM\obj\x86\Debug\OstManSysMVVM.csprojResolveAssemblyReference.cache
 C:\Users\Cristian Patras\Documents\GitHub\OstManSysRepo\OstManSysMVVM\obj\x86\Debug\View\Report.g.i.cs
 C:\Users\Cristian Patras\Documents\GitHub\OstManSysRepo\OstManSysMVVM\obj\x86\Debug\View\Report.g.cs
 C:\Users\Cristian Patras\Documents\GitHub\OstManSysRepo\OstManSysMVVM\obj\x86\Debug\View\Report.xaml
@@ -1123,3 +1122,4 @@ C:\Users\Universe\Documents\GitHub\OstManSysRepo\OstManSysMVVM\obj\x86\Debug\Mic
 C:\Users\Universe\Documents\GitHub\OstManSysRepo\OstManSysMVVM\obj\x86\Debug\Microsoft.Xaml.Interactivity.pri.xml
 C:\Users\Universe\Documents\GitHub\OstManSysRepo\OstManSysMVVM\obj\x86\Debug\ProjectArchitectures.txt
 C:\Users\Universe\Documents\GitHub\OstManSysRepo\OstManSysMVVM\obj\x86\Debug\OstManSysMVVM.csprojResolveAssemblyReference.cache
+C:\Users\Cristian Patras\Documents\GitHub\OstManSysRepo\OstManSysMVVM\obj\x86\Debug\OstManSysMVVM.csprojResolveAssemblyReference.cache

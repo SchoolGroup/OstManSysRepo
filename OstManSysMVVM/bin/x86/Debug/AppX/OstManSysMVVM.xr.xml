@@ -16,10 +16,11 @@
     <RootPropertyPathName Name="Account" />
     <RootPropertyPathName Name="Password" />
     <RootPropertyPathName Name="ResidentID" />
+    <RootPropertyPathName Name="GoToUpdateCommand" />
     <RootPropertyPathName Name="DeleteCommand" />
-    <RootPropertyPathName Name="SelectedApartment" />
     <RootPropertyPathName Name="ApartmentCatalogSingleton" />
     <RootPropertyPathName Name="Apartments" />
+    <RootPropertyPathName Name="SelectedApartment" />
     <RootPropertyPathName Name="CurrentResident" />
     <RootPropertyPathName Name="DateOfBirth" />
     <RootPropertyPathName Name="EmailAddress" />
@@ -27,6 +28,7 @@
     <RootPropertyPathName Name="LastName" />
     <RootPropertyPathName Name="FirstName" />
     <RootPropertyPathName Name="Type" />
+    <RootPropertyPathName Name="UpdateCommand" />
   </Roots.PropertyPathNames>
   <Roots.RootTypes>
     <RootType FullName="Windows.UI.Xaml.Application">
@@ -143,8 +145,8 @@
       <RootProperty Name="Height" />
       <RootProperty Name="VerticalAlignment" />
       <RootProperty Name="Width" />
-      <RootProperty Name="SelectedItem" />
       <RootProperty Name="ItemsSource" />
+      <RootProperty Name="SelectedItem" />
       <RootProperty Name="Margin" />
       <RootProperty Name="Padding" />
     </RootType>

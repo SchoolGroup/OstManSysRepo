@@ -46,7 +46,7 @@ namespace OstManSysMVVM.ViewModel
         public ICommand CreateCommand { get; set; }
         public ICommand DeleteCommand { get; set; }
         public ICommand UpdateCommand { get; set; }
-
+        public ICommand GoToUpdateCommand { get; set; }
         public ApartmentViewModel()
         {
        
@@ -58,6 +58,7 @@ namespace OstManSysMVVM.ViewModel
             CreateCommand=new RelayCommand(ApartmentHandler.CreateApartment);
             DeleteCommand=new RelayCommand(ApartmentHandler.DeleteApartment);
             UpdateCommand=new RelayCommand(ApartmentHandler.UpdateApartment);
+            GoToUpdateCommand = new RelayCommand(ApartmentHandler.GoToUpdatePage);
         }
 
         public event PropertyChangedEventHandler PropertyChanged;
