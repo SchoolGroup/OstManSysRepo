@@ -35,6 +35,7 @@ namespace OstManSysMVVM.Handler
                     if (data1.ElementAt(s).Equals(ResidentViewModel.Account.Password))
                     {
                        ResidentViewModel.CurrentResident = new PersistencyFacade().GetResident(ResidentViewModel.Account);
+                        ResidentViewModel.Save();
                         if (ResidentViewModel.CurrentResident.Type == "Resident")
                         {
                             var newFrame = new Frame();

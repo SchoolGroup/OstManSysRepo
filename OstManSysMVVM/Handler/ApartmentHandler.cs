@@ -23,12 +23,13 @@ namespace OstManSysMVVM.Handler
         public void CreateApartment()
         {
             var apartment = new Apartment();
-            apartment.ApartmentID = ApartmentViewModel.NewApartment.ApartmentID;
             apartment.Address = ApartmentViewModel.NewApartment.Address;
             apartment.Size = ApartmentViewModel.NewApartment.Size;
             apartment.Condition = ApartmentViewModel.NewApartment.Condition;
             apartment.MonthlyRent = ApartmentViewModel.NewApartment.MonthlyRent;
             apartment.NumberOfRooms = ApartmentViewModel.NewApartment.NumberOfRooms;
+          
+            apartment.LastCheck = ApartmentViewModel.NewApartment.LastCheck;
             new PersistencyFacade().SaveApartment(apartment);
             var apartments = new PersistencyFacade().GetApartments();
             ApartmentViewModel.ApartmentCatalogSingleton.Apartments.Clear();
@@ -54,12 +55,12 @@ namespace OstManSysMVVM.Handler
             {
                 ApartmentViewModel.ApartmentCatalogSingleton.Apartments.RemoveAt(apartment1.ApartmentID);
             }
-            ApartmentViewModel.NewApartment.ApartmentID = 0;
-            ApartmentViewModel.NewApartment.Address = "";
-            ApartmentViewModel.NewApartment.Size = 0;
-            ApartmentViewModel.NewApartment.Condition = "";
-            ApartmentViewModel.NewApartment.MonthlyRent = 0;
-            ApartmentViewModel.NewApartment.NumberOfRooms = 0;
+            //ApartmentViewModel.NewApartment.ApartmentID = 0;
+            //ApartmentViewModel.NewApartment.Address = "";
+            //ApartmentViewModel.NewApartment.Size = 0;
+            //ApartmentViewModel.NewApartment.Condition = "";
+            //ApartmentViewModel.NewApartment.MonthlyRent = 0;
+            //ApartmentViewModel.NewApartment.NumberOfRooms = 0;
         }
 
         public void GoToUpdatePage()

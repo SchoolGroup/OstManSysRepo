@@ -96,6 +96,7 @@
       <DependentUpon>App.xaml</DependentUpon>
     </Compile>
     <Compile Include="Common\RelayCommand.cs" />
+    <Compile Include="Converter\DateTimeConverter.cs" />
     <Compile Include="Handler\ApartmentHandler.cs" />
     <Compile Include="Handler\LogInHandler.cs" />
     <Compile Include="Handler\ResidentHandler.cs" />

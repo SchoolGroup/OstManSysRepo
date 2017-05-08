@@ -4,11 +4,18 @@
     xmlns:local="using:OstManSysMVVM.View"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:vm="using:OstManSysMVVM.ViewModel"
+    xmlns:converter="using:OstManSysMVVM.Converter"
     xmlns:Interactivity="using:Microsoft.Xaml.Interactivity" xmlns:Core="using:Microsoft.Xaml.Interactions.Core"
     xmlns:ViewModel="using:OstManSysMVVM.ViewModel"
     x:Class="OstManSysMVVM.View.AddApartment"
     mc:Ignorable="d">
-
+<Page.DataContext>
+    <vm:ApartmentViewModel></vm:ApartmentViewModel>
+</Page.DataContext>
+    <Page.Resources>
+        <converter:DateTimeConverter x:Key="DateTimeConverter"></converter:DateTimeConverter>
+    </Page.Resources>
     <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
         <Grid.DataContext>
             <ViewModel:ApartmentViewModel/>
@@ -44,6 +51,7 @@
 
             <StackPanel>
 
+<<<<<<< HEAD
                 <TextBox x:Name="textBox" Margin="25, 0, 0, 0"  HorizontalAlignment="Left" Text="{Binding NewApartment.Address, Mode=TwoWay}"  TextWrapping="Wrap" FontSize="15" Width="170"/>
                 <TextBox x:Name="textBox1" Margin="25, 9, 0, 0"  HorizontalAlignment="Left" TextWrapping="Wrap" Text="{Binding NewApartment.Size, Mode=TwoWay}" FontSize="15" Width="170"/>
                 <TextBox x:Name="textBox2" Margin="25, 9, 0, 0"  HorizontalAlignment="Left" TextWrapping="Wrap" Text="{Binding NewApartment.NumberOfRooms, Mode=TwoWay}" FontSize="15" Width="50"/>
@@ -55,6 +63,19 @@
                 <Button x:Name="button2" Background="Transparent" FontSize="12" BorderBrush="Gray" Content="Browse" Margin="25, 15, 0, 0" HorizontalAlignment="Left" VerticalAlignment="Top"/>
                 <Button x:Name="button" Background="Transparent" BorderBrush="Black" Command="{Binding CreateCommand, Mode=TwoWay}" Content="Add" Margin="0, 15, 0, 0" HorizontalAlignment="Right" VerticalAlignment="Top"/>
 
+=======
+                <TextBox x:Name="textBox" Margin="25, 0, 0, 0"  HorizontalAlignment="Left" TextWrapping="Wrap" Text="{Binding NewApartment.Address,Mode=TwoWay}" FontSize="15" Width="170"/>
+                <TextBox x:Name="textBox1" Margin="25, 9, 0, 0"  HorizontalAlignment="Left" TextWrapping="Wrap" Text="{Binding NewApartment.Size,Mode=TwoWay}" FontSize="15" Width="170"/>
+                <TextBox x:Name="textBox2" Margin="25, 9, 0, 0"  HorizontalAlignment="Left" TextWrapping="Wrap" Text="{Binding NewApartment.NumberOfRooms,Mode=TwoWay}" FontSize="15" Width="50"/>
+                <TextBox x:Name="textBox3" Margin="25, 9, 0, 0"  HorizontalAlignment="Left" TextWrapping="Wrap" Text="{Binding NewApartment.Condition,Mode=TwoWay}" FontSize="15" Width="170"/>
+                <CheckBox x:Name="checkBox" Content=""  Margin="25, 9, 0, 0" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+                <CalendarDatePicker HorizontalAlignment="Left" Margin="25, 9, 0, 0" Date="{Binding NewApartment.LastCheck,Mode=TwoWay,Converter={StaticResource DateTimeConverter}}" VerticalAlignment="Top"/>
+                <TextBox x:Name="textBox6" Margin="25, 9, 0, 0"  HorizontalAlignment="Left" TextWrapping="Wrap" Text="{Binding NewApartment.MonthlyRent,Mode=TwoWay}" FontSize="15" Width="170"/>
+                <TextBox x:Name="textBox7" Margin="25, 9, 0, 0"  HorizontalAlignment="Left" TextWrapping="Wrap" Text="" FontSize="15" Width="170"/>
+                <Button x:Name="button2" Background="Transparent" FontSize="12" BorderBrush="Gray" Content="Browse" Margin="25, 15, 0, 0" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+                <Button x:Name="button" Background="Transparent" BorderBrush="Black" Content="Add" Margin="0, 15, 0, 0" Command="{Binding CreateCommand}" HorizontalAlignment="Right" VerticalAlignment="Top"/>
+                
+>>>>>>> refs/remotes/origin/master
             </StackPanel>
 
         </StackPanel>
