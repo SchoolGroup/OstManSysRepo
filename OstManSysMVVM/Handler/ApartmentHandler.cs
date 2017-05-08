@@ -25,7 +25,7 @@ namespace OstManSysMVVM.Handler
             apartment.Condition = ApartmentViewModel.NewApartment.Condition;
             apartment.MonthlyRent = ApartmentViewModel.NewApartment.MonthlyRent;
             apartment.NumberOfRooms = ApartmentViewModel.NewApartment.NumberOfRooms;
-            apartment.IsRented = true;
+          
             apartment.LastCheck = ApartmentViewModel.NewApartment.LastCheck;
             new PersistencyFacade().SaveApartment(apartment);
             var apartments = new PersistencyFacade().GetApartments();

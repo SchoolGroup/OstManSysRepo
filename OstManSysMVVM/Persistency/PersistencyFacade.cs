@@ -129,7 +129,7 @@ namespace OstManSysMVVM.Persistency
                 {
                     var apartment1 = JsonConvert.SerializeObject(apartment);
                     var content = new StringContent(apartment1, Encoding.UTF8, "Application/json");
-                    var apartmentsList = client.PostAsync("api/apartments", content).Result;
+                    var apartmentsList = client.PostAsync("api/Apartments", content).Result;
                 }
                 catch (Exception ex)
                 {
