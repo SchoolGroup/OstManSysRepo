@@ -1,5 +1,4 @@
 ﻿<Page
-    x:Class="OstManSysMVVM.View.UpdateApartment"
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
     xmlns:local="using:OstManSysMVVM.View"
@@ -7,6 +6,8 @@
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     xmlns:interactivity="using:Microsoft.Xaml.Interactivity"
     xmlns:core="using:Microsoft.Xaml.Interactions.Core"
+    xmlns:ViewModel="using:OstManSysMVVM.ViewModel"
+    x:Class="OstManSysMVVM.View.UpdateApartment"
     mc:Ignorable="d">
 
     <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
@@ -20,6 +21,9 @@
             <ColumnDefinition Width="8*" />
             <ColumnDefinition Width="*" />
         </Grid.ColumnDefinitions>
+        <Grid.DataContext>
+            <ViewModel:ApartmentViewModel/>
+        </Grid.DataContext>
         <StackPanel  Grid.Column="1" Grid.Row="1"  HorizontalAlignment="Center" VerticalAlignment="Top">
             <TextBlock  x:Name="textBlock" TextWrapping="Wrap" Margin="0, 20, 0, 0" Text="Edit the details of the apartment:" FontSize="20" FontWeight="Bold" />
         </StackPanel>
@@ -40,16 +44,16 @@
 
             <StackPanel>
 
-                <TextBox x:Name="textBox" Margin="25, 0, 0, 0"  HorizontalAlignment="Left" TextWrapping="Wrap" Text="" FontSize="15" Width="170"/>
-                <TextBox x:Name="textBox1" Margin="25, 9, 0, 0"  HorizontalAlignment="Left" TextWrapping="Wrap" Text="" FontSize="15" Width="170"/>
-                <TextBox x:Name="textBox2" Margin="25, 9, 0, 0"  HorizontalAlignment="Left" TextWrapping="Wrap" Text="" FontSize="15" Width="50"/>
-                <TextBox x:Name="textBox3" Margin="25, 9, 0, 0"  HorizontalAlignment="Left" TextWrapping="Wrap" Text="" FontSize="15" Width="170"/>
+                <TextBox x:Name="textBox" Margin="25, 0, 0, 0"  HorizontalAlignment="Left" TextWrapping="Wrap" Text="{Binding NewApartment.Address, Mode=TwoWay}" FontSize="15" Width="170"/>
+                <TextBox x:Name="textBox1" Margin="25, 9, 0, 0"  HorizontalAlignment="Left" TextWrapping="Wrap" Text="{Binding NewApartment.Size, Mode=TwoWay}" FontSize="15" Width="170"/>
+                <TextBox x:Name="textBox2" Margin="25, 9, 0, 0"  HorizontalAlignment="Left" TextWrapping="Wrap" Text="{Binding NewApartment.NumberOfRooms, Mode=TwoWay}" FontSize="15" Width="50"/>
+                <TextBox x:Name="textBox3" Margin="25, 9, 0, 0"  HorizontalAlignment="Left" TextWrapping="Wrap" Text="{Binding NewApartment.Condition, Mode=TwoWay}" FontSize="15" Width="170"/>
                 <CheckBox x:Name="checkBox" Content="" Margin="25, 9, 0, 0" HorizontalAlignment="Left" VerticalAlignment="Top"/>
                 <CalendarDatePicker HorizontalAlignment="Left" Margin="25, 9, 0, 0" VerticalAlignment="Top"/>
-                <TextBox x:Name="textBox6" Margin="25, 9, 0, 0"  HorizontalAlignment="Left" TextWrapping="Wrap" Text="" FontSize="15" Width="170"/>
+                <TextBox x:Name="textBox6" Margin="25, 9, 0, 0"  HorizontalAlignment="Left" TextWrapping="Wrap" Text="{Binding NewApartment.MonthlyRent, Mode=TwoWay}" FontSize="15" Width="170"/>
                 <TextBox x:Name="textBox7" Margin="25, 9, 0, 0"  HorizontalAlignment="Left" TextWrapping="Wrap" Text="" FontSize="15" Width="170"/>
                 <Button x:Name="button2" Background="Transparent" FontSize="12" BorderBrush="Gray" Content="Browse" Margin="25, 15, 0, 0" HorizontalAlignment="Left" VerticalAlignment="Top"/>
-                <Button x:Name="button" Background="Transparent" BorderBrush="Black" Content="Update" Margin="0, 15, 0, 0" HorizontalAlignment="Right" VerticalAlignment="Top"/>
+                <Button x:Name="button" Background="Transparent" BorderBrush="Black" Content="Update" Command="{Binding UpdateCommand}"  Margin="0, 15, 0, 0" HorizontalAlignment="Right" VerticalAlignment="Top"/>
 
             </StackPanel>
 

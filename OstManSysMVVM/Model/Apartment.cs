@@ -19,7 +19,18 @@ namespace OstManSysMVVM.Model
 
         public Apartment()
         {
-            
+        }
+
+        public Apartment(int id, string ad, double s, int nor, double mr, string c, bool ir, DateTime lc)
+        {
+            ApartmentID = id;
+            Address = ad;
+            Size = s;
+            NumberOfRooms = nor;
+            MonthlyRent = mr;
+            Condition = c;
+            IsRented = ir;
+            LastCheck = lc;
         }
 
         public override string ToString()

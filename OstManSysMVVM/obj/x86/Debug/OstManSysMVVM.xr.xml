@@ -1,15 +1,25 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Roots >
   <Roots.PropertyPathNames>
+    <RootPropertyPathName Name="CreateCommand" />
+    <RootPropertyPathName Name="NewApartment" />
+    <RootPropertyPathName Name="MonthlyRent" />
+    <RootPropertyPathName Name="Condition" />
+    <RootPropertyPathName Name="NumberOfRooms" />
+    <RootPropertyPathName Name="Size" />
+    <RootPropertyPathName Name="Address" />
     <RootPropertyPathName Name="LogInCommand" />
     <RootPropertyPathName Name="Account" />
     <RootPropertyPathName Name="Password" />
     <RootPropertyPathName Name="ResidentID" />
+    <RootPropertyPathName Name="GoToUpdate" />
+    <RootPropertyPathName Name="SelectedApartment" />
     <RootPropertyPathName Name="ApartmentCatalogSingleton" />
     <RootPropertyPathName Name="Apartments" />
     <RootPropertyPathName Name="CurrentResident" />
     <RootPropertyPathName Name="LastName" />
     <RootPropertyPathName Name="FirstName" />
+    <RootPropertyPathName Name="UpdateCommand" />
   </Roots.PropertyPathNames>
   <Roots.RootTypes>
     <RootType FullName="Windows.UI.Xaml.Application">
@@ -21,16 +31,17 @@
     </RootType>
     <RootType FullName="Windows.UI.Xaml.Controls.Grid">
       <RootProperty Name="Background" />
+      <RootProperty Name="DataContext" />
       <RootProperty Name="RowDefinitions" />
       <RootProperty Name="ColumnDefinitions" />
       <RootProperty Name="Children" />
-      <RootProperty Name="DataContext" />
       <RootMethod Name="GetColumn" />
       <RootMethod Name="SetColumn" />
       <RootMethod Name="GetRow" />
       <RootMethod Name="SetRow" />
     </RootType>
     <RootType FullName="Microsoft.Xaml.DirectUI.ProxyTypes.ThemeResourceExtension" />
+    <RootType FullName="OstManSysMVVM.ViewModel.ApartmentViewModel" />
     <RootType FullName="Windows.UI.Xaml.Controls.RowDefinition">
       <RootProperty Name="Height" />
     </RootType>
@@ -77,8 +88,8 @@
     <RootType FullName="Windows.UI.Xaml.Controls.TextBox">
       <RootProperty Name="Margin" />
       <RootProperty Name="HorizontalAlignment" />
-      <RootProperty Name="TextWrapping" />
       <RootProperty Name="Text" />
+      <RootProperty Name="TextWrapping" />
       <RootProperty Name="FontSize" />
       <RootProperty Name="Width" />
       <RootProperty Name="Height" />
@@ -96,6 +107,9 @@
       <RootProperty Name="Margin" />
       <RootProperty Name="VerticalAlignment" />
     </RootType>
+    <RootType FullName="Windows.UI.Xaml.Data.Binding">
+      <RootProperty Name="Mode" />
+    </RootType>
     <RootType FullName="Windows.UI.Xaml.Controls.TextBlock">
       <RootProperty Name="Margin" />
       <RootProperty Name="TextWrapping" />
@@ -111,21 +125,17 @@
     <RootType FullName="OstManSysMVVM.View.AddCoResident" />
     <RootType FullName="OstManSysMVVM.View.AddResident" />
     <RootType FullName="OstManSysMVVM.ViewModel.ResidentViewModel" />
-    <RootType FullName="Windows.UI.Xaml.Data.Binding">
-      <RootProperty Name="Mode" />
-    </RootType>
     <RootType FullName="OstManSysMVVM.MainPage" />
     <RootType FullName="Windows.UI.Xaml.Controls.ListView">
       <RootProperty Name="HorizontalAlignment" />
       <RootProperty Name="Height" />
       <RootProperty Name="VerticalAlignment" />
       <RootProperty Name="Width" />
+      <RootProperty Name="SelectedItem" />
       <RootProperty Name="ItemsSource" />
-      <RootProperty Name="DataContext" />
       <RootProperty Name="Margin" />
       <RootProperty Name="Padding" />
     </RootType>
-    <RootType FullName="OstManSysMVVM.ViewModel.ApartmentViewModel" />
     <RootType FullName="Windows.UI.Xaml.Shapes.Ellipse">
       <RootProperty Name="Width" />
       <RootProperty Name="Height" />
