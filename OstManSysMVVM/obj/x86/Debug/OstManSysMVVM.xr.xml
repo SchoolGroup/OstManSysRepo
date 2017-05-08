@@ -1,24 +1,44 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Roots >
+  <Roots.Interfaces>
+    <RootInterface FullName="Windows.UI.Xaml.Data.IValueConverter" />
+  </Roots.Interfaces>
   <Roots.PropertyPathNames>
+    <RootPropertyPathName Name="CreateCommand" />
+    <RootPropertyPathName Name="NewApartment" />
+    <RootPropertyPathName Name="MonthlyRent" />
+    <RootPropertyPathName Name="LastCheck" />
+    <RootPropertyPathName Name="Condition" />
+    <RootPropertyPathName Name="NumberOfRooms" />
+    <RootPropertyPathName Name="Size" />
+    <RootPropertyPathName Name="Address" />
     <RootPropertyPathName Name="LogInCommand" />
     <RootPropertyPathName Name="Account" />
     <RootPropertyPathName Name="Password" />
     <RootPropertyPathName Name="ResidentID" />
+    <RootPropertyPathName Name="DeleteCommand" />
+    <RootPropertyPathName Name="SelectedApartment" />
     <RootPropertyPathName Name="ApartmentCatalogSingleton" />
     <RootPropertyPathName Name="Apartments" />
     <RootPropertyPathName Name="CurrentResident" />
+    <RootPropertyPathName Name="DateOfBirth" />
+    <RootPropertyPathName Name="EmailAddress" />
+    <RootPropertyPathName Name="PhoneNumber" />
     <RootPropertyPathName Name="LastName" />
     <RootPropertyPathName Name="FirstName" />
+    <RootPropertyPathName Name="Type" />
   </Roots.PropertyPathNames>
   <Roots.RootTypes>
     <RootType FullName="Windows.UI.Xaml.Application">
       <RootProperty Name="RequestedTheme" />
     </RootType>
     <RootType FullName="Windows.UI.Xaml.Controls.Page">
-      <RootProperty Name="Content" />
       <RootProperty Name="DataContext" />
+      <RootProperty Name="Resources" />
+      <RootProperty Name="Content" />
     </RootType>
+    <RootType FullName="OstManSysMVVM.ViewModel.ApartmentViewModel" />
+    <RootType FullName="OstManSysMVVM.Converter.DateTimeConverter" />
     <RootType FullName="Windows.UI.Xaml.Controls.Grid">
       <RootProperty Name="Background" />
       <RootProperty Name="RowDefinitions" />
@@ -94,8 +114,14 @@
     <RootType FullName="Windows.UI.Xaml.Controls.CalendarDatePicker">
       <RootProperty Name="HorizontalAlignment" />
       <RootProperty Name="Margin" />
+      <RootProperty Name="Date" />
       <RootProperty Name="VerticalAlignment" />
     </RootType>
+    <RootType FullName="Windows.UI.Xaml.Data.Binding">
+      <RootProperty Name="Mode" />
+      <RootProperty Name="Converter" />
+    </RootType>
+    <RootType FullName="Microsoft.Xaml.DirectUI.ProxyTypes.StaticResourceExtension" />
     <RootType FullName="Windows.UI.Xaml.Controls.TextBlock">
       <RootProperty Name="Margin" />
       <RootProperty Name="TextWrapping" />
@@ -111,21 +137,17 @@
     <RootType FullName="OstManSysMVVM.View.AddCoResident" />
     <RootType FullName="OstManSysMVVM.View.AddResident" />
     <RootType FullName="OstManSysMVVM.ViewModel.ResidentViewModel" />
-    <RootType FullName="Windows.UI.Xaml.Data.Binding">
-      <RootProperty Name="Mode" />
-    </RootType>
     <RootType FullName="OstManSysMVVM.MainPage" />
     <RootType FullName="Windows.UI.Xaml.Controls.ListView">
       <RootProperty Name="HorizontalAlignment" />
       <RootProperty Name="Height" />
       <RootProperty Name="VerticalAlignment" />
       <RootProperty Name="Width" />
+      <RootProperty Name="SelectedItem" />
       <RootProperty Name="ItemsSource" />
-      <RootProperty Name="DataContext" />
       <RootProperty Name="Margin" />
       <RootProperty Name="Padding" />
     </RootType>
-    <RootType FullName="OstManSysMVVM.ViewModel.ApartmentViewModel" />
     <RootType FullName="Windows.UI.Xaml.Shapes.Ellipse">
       <RootProperty Name="Width" />
       <RootProperty Name="Height" />
