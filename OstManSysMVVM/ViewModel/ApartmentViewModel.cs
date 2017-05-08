@@ -50,10 +50,11 @@ namespace OstManSysMVVM.ViewModel
         public ApartmentViewModel()
         {
        
-            ApartmentHandler=new ApartmentHandler(this);
+           
             ApartmentCatalogSingleton = ApartmentCatalogSingleton.Instance;
+            ApartmentHandler = new Handler.ApartmentHandler(this);
             NewApartment =new Apartment();
-            SelectedApartment=new Apartment();
+            //SelectedApartment=new Apartment();
             CreateCommand=new RelayCommand(ApartmentHandler.CreateApartment);
             DeleteCommand=new RelayCommand(ApartmentHandler.DeleteApartment);
             UpdateCommand=new RelayCommand(ApartmentHandler.UpdateApartment);

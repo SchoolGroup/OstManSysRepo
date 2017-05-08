@@ -10,6 +10,7 @@ using OstManSysMVVM.Annotations;
 using OstManSysMVVM.Common;
 using OstManSysMVVM.Handler;
 using OstManSysMVVM.Model;
+using OstManSysMVVM.Persistency;
 
 namespace OstManSysMVVM.ViewModel
 {
@@ -19,7 +20,7 @@ namespace OstManSysMVVM.ViewModel
         private Resident _selectedResident;
         private Resident _currentResident;
         private Account _account;
-
+        private Account acc;
         public Account Account
         {
             get { return _account; }
@@ -76,8 +77,9 @@ namespace OstManSysMVVM.ViewModel
             NewResident = new Resident();
             SelectedResident=new Resident();
             AccountCatalogSingleton = AccountCatalogSingleton.Instance;
-            CurrentResident= new Resident();
             Account = new Account();
+            CurrentResident = new PersistencyFacade().GetResident(acc);
+           
             //CurrentResident = new Resident() {ApartmentID = 2,EmailAddress = "sadasd@asdasd.com",FirstName = "Michael",LastName = "Bech", IsBoardMember = true,PhoneNumber =02546878,ResidentID = 1};
             CreateCommand = new RelayCommand(ResidentHandler.CreateResident);
             DeleteCommand = new RelayCommand(ResidentHandler.DeleteResident);
@@ -85,6 +87,10 @@ namespace OstManSysMVVM.ViewModel
             LogInCommand=new RelayCommand(LogInHandler.CheckAccount);
         }
 
+        public void Save()
+        {
+            acc = Account;
+        }
         public event PropertyChangedEventHandler PropertyChanged;
 
         [NotifyPropertyChangedInvocator]
