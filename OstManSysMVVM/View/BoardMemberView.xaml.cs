@@ -12,6 +12,8 @@ using Windows.UI.Xaml.Data;
 using Windows.UI.Xaml.Input;
 using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Navigation;
+using OstManSysMVVM.Model;
+using OstManSysMVVM.ViewModel;
 
 // The Blank Page item template is documented at http://go.microsoft.com/fwlink/?LinkId=234238
 
@@ -26,5 +28,10 @@ namespace OstManSysMVVM.View
         {
             this.InitializeComponent();
         }
+        //protected override void OnNavigatedTo(NavigationEventArgs e)
+        //{
+        //    var passedAccount = (Account)e.Parameter;
+        //    ResidentViewModel.Account = passedAccount;
+        //}
     }
 }

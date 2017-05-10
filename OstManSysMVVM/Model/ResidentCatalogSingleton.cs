@@ -4,7 +4,9 @@ using System.Collections.ObjectModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using OstManSysMVVM.Handler;
 using OstManSysMVVM.Persistency;
+using OstManSysMVVM.ViewModel;
 
 namespace OstManSysMVVM.Model
 {
@@ -25,10 +27,12 @@ namespace OstManSysMVVM.Model
         }
 
         public ObservableCollection<Resident> Residents { get; set; }
+        public Resident CurrentResident { get; set; }
 
         private ResidentCatalogSingleton()
         {
             Residents = new ObservableCollection<Resident>(new PersistencyFacade().GetResidents());
+           // CurrentResident = new PersistencyFacade().GetResident();
         }
     }
 }

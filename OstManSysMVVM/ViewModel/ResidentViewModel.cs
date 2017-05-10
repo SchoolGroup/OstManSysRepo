@@ -78,8 +78,8 @@ namespace OstManSysMVVM.ViewModel
             SelectedResident=new Resident();
             AccountCatalogSingleton = AccountCatalogSingleton.Instance;
             Account = new Account();
-            CurrentResident = new PersistencyFacade().GetResident(acc);
-           
+            //CurrentResident = new PersistencyFacade().GetResident(acc);
+            CurrentResident = ResidentCatalogSingleton.CurrentResident;
             //CurrentResident = new Resident() {ApartmentID = 2,EmailAddress = "sadasd@asdasd.com",FirstName = "Michael",LastName = "Bech", IsBoardMember = true,PhoneNumber =02546878,ResidentID = 1};
             CreateCommand = new RelayCommand(ResidentHandler.CreateResident);
             DeleteCommand = new RelayCommand(ResidentHandler.DeleteResident);
@@ -87,10 +87,10 @@ namespace OstManSysMVVM.ViewModel
             LogInCommand=new RelayCommand(LogInHandler.CheckAccount);
         }
 
-        public void Save()
-        {
-            acc = Account;
-        }
+        //public void Save()
+        //{
+        //    acc = Account;
+        //}
         public event PropertyChangedEventHandler PropertyChanged;
 
         [NotifyPropertyChangedInvocator]

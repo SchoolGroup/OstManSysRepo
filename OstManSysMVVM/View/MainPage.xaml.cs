@@ -26,5 +26,10 @@ namespace OstManSysMVVM
         {
             this.InitializeComponent();
         }
+        //protected override void OnNavigatedTo(NavigationEventArgs e)
+        //{
+        //    var passedAccount = (Account)e.Parameter;
+        //    ResidentViewModel.Account = passedAccount;
+        //}
     }
 }

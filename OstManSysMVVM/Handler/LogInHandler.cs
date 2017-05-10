@@ -15,9 +15,11 @@ namespace OstManSysMVVM.Handler
     class LogInHandler
     {
         public ResidentViewModel ResidentViewModel { get; set; }
+        public ResidentCatalogSingleton ResidentCatalogSingleton { get; set; }
         public LogInHandler(ResidentViewModel residentViewModel)
         {
             ResidentViewModel = residentViewModel;
+            ResidentCatalogSingleton=ResidentCatalogSingleton.Instance;
         }
 
         public void CheckAccount()
@@ -34,16 +36,17 @@ namespace OstManSysMVVM.Handler
                 {
                     if (data1.ElementAt(s).Equals(ResidentViewModel.Account.Password))
                     {
-                       ResidentViewModel.CurrentResident = new PersistencyFacade().GetResident(ResidentViewModel.Account);
-                        ResidentViewModel.Save();
-                        if (ResidentViewModel.CurrentResident.Type == "Resident")
+                      var resident = new PersistencyFacade().GetResident(ResidentViewModel.Account);
+                        ResidentCatalogSingleton.CurrentResident = resident;
+                       // ResidentViewModel.Save();
+                        if (resident.Type == "Resident")
                         {
                             var newFrame = new Frame();
                             newFrame.Navigate(typeof(ResidentView));
                             Window.Current.Content = newFrame;
                             Window.Current.Activate();
                         }
-                        else if (ResidentViewModel.CurrentResident.Type == "BoardMember")
+                        else if (resident.Type == "BoardMember")
                         {
                             var newFrame = new Frame();
                             newFrame.Navigate(typeof(BoardMemberView));
