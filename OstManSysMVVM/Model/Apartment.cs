@@ -10,6 +10,8 @@ namespace OstManSysMVVM.Model
     public class Apartment
     {
         public int ApartmentID { get; set; }
+        public int DownpipeID { get; set; }
+        public int WindowID { get; set; }
         public string Address { get; set; }
         public int Size { get; set; }
         public int NumberOfRooms { get; set; }

@@ -47,7 +47,58 @@ namespace OstManSysMVVM.Persistency
                 return null;
             }
         }
+        public List<Problem> GetProblems()
+        {
+            using (var client = new HttpClient(handler))
+            {
+                client.BaseAddress = new Uri(ServerUrl);
+                client.DefaultRequestHeaders.Clear();
+                client.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
+                try
+                {
+                    var response = client.GetAsync("api/Problems").Result;
 
+                    if (response.IsSuccessStatusCode)
+                    {
+                        var problems = response.Content.ReadAsAsync<IEnumerable<Problem>>().Result;
+                        return problems.ToList();
+                    }
+
+                }
+                catch (Exception ex)
+                {
+                    new MessageDialog(ex.Message).ShowAsync();
+                }
+                return null;
+            }
+        }
+
+
+        public List<Downpipe> GetDownpipes()
+        {
+            using (var client = new HttpClient(handler))
+            {
+                client.BaseAddress = new Uri(ServerUrl);
+                client.DefaultRequestHeaders.Clear();
+                client.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
+                try
+                {
+                    var response = client.GetAsync("api/Downpipes").Result;
+
+                    if (response.IsSuccessStatusCode)
+                    {
+                        var downpipes = response.Content.ReadAsAsync<IEnumerable<Downpipe>>().Result;
+                        return downpipes.ToList();
+                    }
+
+                }
+                catch (Exception ex)
+                {
+                    new MessageDialog(ex.Message).ShowAsync();
+                }
+                return null;
+            }
+        }
         public List<Account> GetAccounts()
         {
             using (var client= new HttpClient(handler))

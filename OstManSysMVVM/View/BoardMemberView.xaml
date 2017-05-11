@@ -9,8 +9,8 @@
     x:Class="OstManSysMVVM.View.BoardMemberView"
     mc:Ignorable="d">
     <Page.DataContext>
-    <vm:ApartmentViewModel></vm:ApartmentViewModel>
-</Page.DataContext>
+        <vm:ApartmentViewModel></vm:ApartmentViewModel>
+    </Page.DataContext>
     <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
         <Grid.RowDefinitions>
             <RowDefinition Height="*" />
@@ -39,7 +39,7 @@
             </StackPanel>
 
             <StackPanel Grid.Column="1" Grid.Row="1" Orientation="Horizontal" Margin="0, 200, 0, 0">
-                <TextBlock x:Name="textBlock2" HorizontalAlignment="Left" FontSize="15" FontWeight="Bold" TextWrapping="Wrap" Text="First Name:" VerticalAlignment="Top"/>
+                <TextBlock x:Name="textBlock2" HorizontalAlignment="Left" FontSize="15" FontWeight="Bold" TextWrapping="Wrap" Text="First Name:" VerticalAlignment="Bottom" Margin="0,0,0,435"/>
                 <TextBlock x:Name="textBlock10" Margin="5, 0, 0, 0" HorizontalAlignment="Left" FontSize="15" TextWrapping="Wrap" Text="{Binding CurrentResident.FirstName}" VerticalAlignment="Top"/>
             </StackPanel>
 
@@ -83,53 +83,74 @@
             </StackPanel>
         </Grid>
         <StackPanel Grid.Row="1" Grid.Column="2" VerticalAlignment="Center" HorizontalAlignment="Center">
-            <ListView x:Name="listView" HorizontalAlignment="Left" Height="450" VerticalAlignment="Top" Width="850" ItemsSource="{Binding ApartmentCatalogSingleton.Apartments,Mode=TwoWay}" SelectedItem="{Binding SelectedApartment,Mode=TwoWay}" >
-                <!--<ListView.DataContext>
-                    <vm:ApartmentViewModel/>
-                </ListView.DataContext>-->
-            </ListView>
+            <Frame Name="MyFrame" Height="450" VerticalAlignment="Top" Width="850">
+            </Frame>
         </StackPanel>
 
-        <StackPanel Grid.Row="1" Grid.Column="2" Orientation="Horizontal" VerticalAlignment="Bottom" HorizontalAlignment="Right" Margin="0, 0, 35, 30">
-            <Button x:Name="button1"  Background="White" FontSize="13" BorderBrush="Black" Content="Add a New Apartment" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="0,0,15,0">
-                <Interactivity:Interaction.Behaviors>
-                    <Core:EventTriggerBehavior EventName="Click">
-                        <Core:NavigateToPageAction TargetPage="OstManSysMVVM.View.AddApartment"/>
-                    </Core:EventTriggerBehavior>
-                </Interactivity:Interaction.Behaviors>
-            </Button>
-            <Button x:Name="button8"  Background="White" FontSize="13" BorderBrush="Black" Content="Delete Apartment" HorizontalAlignment="Left" VerticalAlignment="Top" Command="{Binding DeleteCommand}"/>
+        <StackPanel Grid.Row="1" Grid.Column="2" Orientation="Horizontal" VerticalAlignment="Bottom" HorizontalAlignment="Right" Margin="0, 0, 45, 0">
+           <StackPanel Orientation="Vertical" Margin="0, 0, 20, 0">
+            <TextBlock x:Name="textBlock18" TextWrapping="Wrap" Margin="0, 0, 0, 5"  Text="Apartment" FontWeight="Bold" HorizontalAlignment="Center"/>
+            <StackPanel Orientation="Horizontal">
+                <Button x:Name="button1"  Background="White" Width="35" Height="35" BorderBrush="Black" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="0,0,5,0">
+                        <Image Source="../Assets/add.png" Stretch="Uniform"/>
+                        <Interactivity:Interaction.Behaviors>
+                        <Core:EventTriggerBehavior EventName="Click">
+                            <Core:NavigateToPageAction TargetPage="OstManSysMVVM.View.AddApartment"/>
+                        </Core:EventTriggerBehavior>
+                    </Interactivity:Interaction.Behaviors>
+                </Button>
 
-                <Button x:Name="button" Margin="20, 0, 0, 0" Background="White" FontSize="13" BorderBrush="Black" Content="Add a New Resident" HorizontalAlignment="Left" VerticalAlignment="Top">
-                <Interactivity:Interaction.Behaviors>
-                    <Core:EventTriggerBehavior EventName="Click">
-                        <Core:NavigateToPageAction TargetPage="OstManSysMVVM.View.AddResident"/>
-                    </Core:EventTriggerBehavior>
-                </Interactivity:Interaction.Behaviors>
-            </Button>
-            <Button x:Name="button4" Margin="20, 0, 0, 0" Background="White" FontSize="13" BorderBrush="Black" Command="{Binding GoToUpdateCommand, Mode=TwoWay}"  Content="Edit apartment details" HorizontalAlignment="Left" VerticalAlignment="Top">
-                
-            </Button>
-            <Button x:Name="button7" Margin="20, 0, 0, 0" Background="White" FontSize="13" BorderBrush="Black" Content="Edit resident details" HorizontalAlignment="Left" VerticalAlignment="Top">
-                <Interactivity:Interaction.Behaviors>
-                    <Core:EventTriggerBehavior EventName="Click">
-                        <Core:NavigateToPageAction TargetPage="OstManSysMVVM.View.UpdateResident"/>
-                    </Core:EventTriggerBehavior>
-                </Interactivity:Interaction.Behaviors>
-            </Button>
+                <Button x:Name="button8"  Background="White" Width="35" Height="35" FontSize="13" BorderBrush="Black" HorizontalAlignment="Left" VerticalAlignment="Top" Command="{Binding DeleteCommand}">
+                        <Image Source="../Assets/delete.png" Stretch="Uniform"/>
+                </Button>
 
-            <Button x:Name="button5" Margin="20, 0, 0, 0" Background="White" FontSize="13" BorderBrush="Black" Content="Report a Problem" HorizontalAlignment="Left" VerticalAlignment="Top">
-                <Interactivity:Interaction.Behaviors>
+                <Button x:Name="button4" Margin="5, 0, 0, 0" Width="35" Height="35" Background="White" FontSize="13" BorderBrush="Black" Command="{Binding GoToUpdateCommand, Mode=TwoWay}" HorizontalAlignment="Left" VerticalAlignment="Top">
+                        <Image Source="../Assets/edit.png" Stretch="Uniform"/>
+
+                    </Button>
+            </StackPanel>
+            </StackPanel>
+
+            <StackPanel Orientation="Vertical" Margin="0, 0, 20, 0">
+            <TextBlock x:Name="textBlock19" TextWrapping="Wrap" Margin="0, 0, 0, 5"  Text="Resident" FontWeight="Bold" HorizontalAlignment="Center"/>
+            <StackPanel Orientation="Horizontal">
+                <Button x:Name="button" Background="White" FontSize="13" BorderBrush="Black" Width="35" Height="35" HorizontalAlignment="Left" VerticalAlignment="Top">
+                        <Image Source="../Assets/add.png" Stretch="Uniform"/>
+                        <Interactivity:Interaction.Behaviors>
+                        <Core:EventTriggerBehavior EventName="Click">
+                            <Core:NavigateToPageAction TargetPage="OstManSysMVVM.View.AddResident"/>
+                        </Core:EventTriggerBehavior>
+                    </Interactivity:Interaction.Behaviors>
+                </Button>
+
+                <Button x:Name="button7" Margin="5, 0, 0, 0" Background="White" FontSize="13" BorderBrush="Black" Width="35" Height="35" HorizontalAlignment="Left" VerticalAlignment="Top">
+                        <Image Source="../Assets/edit.png" Stretch="Uniform"/>
+                        <Interactivity:Interaction.Behaviors>
+                        <Core:EventTriggerBehavior EventName="Click">
+                            <Core:NavigateToPageAction TargetPage="OstManSysMVVM.View.UpdateResident"/>
+                        </Core:EventTriggerBehavior>
+                    </Interactivity:Interaction.Behaviors>
+                </Button>
+            </StackPanel>
+            </StackPanel>
+            <StackPanel Orientation="Vertical">
+                <TextBlock x:Name="textBlock20" TextWrapping="Wrap" Text="Problem" Margin="0, 0, 0, 5" FontWeight="Bold" HorizontalAlignment="Center"/>
+                <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+                <Button x:Name="button5"  HorizontalContentAlignment="Center" Background="White" FontSize="13" BorderBrush="Black" Width="35" Height="35" HorizontalAlignment="Left" VerticalAlignment="Top">
+                  <Image Source="../Assets/add.png" Stretch="Uniform"/>
+                       
+                    <Interactivity:Interaction.Behaviors>
                     <Core:EventTriggerBehavior EventName="Click">
                         <Core:NavigateToPageAction TargetPage="OstManSysMVVM.View.Report"/>
                     </Core:EventTriggerBehavior>
                 </Interactivity:Interaction.Behaviors>
             </Button>
+                </StackPanel>
+            </StackPanel>
         </StackPanel>
 
-
         <StackPanel Grid.Row="1" Grid.Column="2" VerticalAlignment="Top" HorizontalAlignment="Center" Margin="0, 10, 0, 0">
-            <TextBlock x:Name="textBlock17" TextWrapping="Wrap" Text="Curent date" VerticalAlignment="Top"/>
+            <TextBlock x:Name="textBlock17" TextWrapping="Wrap" Text="{Binding C }" VerticalAlignment="Top"/>
         </StackPanel>
 
         <StackPanel Grid.Row="1" Grid.Column="2" Margin="0, 40, 35, 0" VerticalAlignment="Top" Orientation="Horizontal" HorizontalAlignment="Right">
@@ -148,6 +169,13 @@
                     </Interactivity:Interaction.Behaviors>
                 </Image>
             </Button>
+        </StackPanel>
+
+        <StackPanel Grid.Row="1" Grid.Column="2" Margin="74, 50, 0, 0" Orientation="Horizontal">
+            <Button x:Name="button9" Content="Apartments" VerticalAlignment="Top" Background="Transparent" BorderBrush="Black" Click="Button9_OnClick"/>
+            <Button x:Name="button10" Content="Down-pipes" VerticalAlignment="Top" Background="Transparent" BorderBrush="Black" Click="Button11_OnClick" Margin="5, 0, 0, 0"/>
+            <Button x:Name="button11" Content="Problems" VerticalAlignment="Top" Background="Transparent" BorderBrush="Black" Click="Button10_OnClick" Margin="5, 0, 0, 0"/>
+            <Button x:Name="button12" Content="Residents" VerticalAlignment="Top" Background="Transparent" BorderBrush="Black" Click="Button12_OnClick" Margin="5, 0, 0, 0"/>
         </StackPanel>
 
 

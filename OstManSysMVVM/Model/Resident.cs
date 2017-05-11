@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace OstManSysMVVM.Model
 {
-    class Resident
+    public class Resident
     {
         public int ResidentID { get; set; }
         public string FirstName { get; set; }
@@ -23,7 +23,7 @@ namespace OstManSysMVVM.Model
 
         public override string ToString()
         {
-            return $"The Resident {FirstName} {LastName}({ResidentID}) has a phone number {PhoneNumber} and email address {EmailAddress}";
+            return string.Format("{0} - {1} {2}({3})", ResidentID, FirstName, LastName, Type);
         }
     }
 }

@@ -103,7 +103,10 @@
     <Compile Include="Model\Account.cs" />
     <Compile Include="Model\AccountCatalogSingleton.cs" />
     <Compile Include="Model\Contract.cs" />
+    <Compile Include="Model\Downpipe.cs" />
+    <Compile Include="Model\DownpipeCatalogSingleton.cs" />
     <Compile Include="Model\Problem.cs" />
+    <Compile Include="Model\ProblemCatalogSingleton.cs" />
     <Compile Include="View\AddApartment.xaml.cs">
       <DependentUpon>AddApartment.xaml</DependentUpon>
     </Compile>
@@ -112,6 +115,12 @@
     </Compile>
     <Compile Include="View\AddResident.xaml.cs">
       <DependentUpon>AddResident.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\ApartmentsView.xaml.cs">
+      <DependentUpon>ApartmentsView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\DownPipesView.xaml.cs">
+      <DependentUpon>DownPipesView.xaml</DependentUpon>
     </Compile>
     <Compile Include="View\MainPage.xaml.cs">
       <DependentUpon>MainPage.xaml</DependentUpon>
@@ -128,8 +137,14 @@
     <Compile Include="View\BoardMemberView.xaml.cs">
       <DependentUpon>BoardMemberView.xaml</DependentUpon>
     </Compile>
+    <Compile Include="View\ProblemsView.xaml.cs">
+      <DependentUpon>ProblemsView.xaml</DependentUpon>
+    </Compile>
     <Compile Include="View\Report.xaml.cs">
       <DependentUpon>Report.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\ResidentsViewFrame.xaml.cs">
+      <DependentUpon>ResidentsViewFrame.xaml</DependentUpon>
     </Compile>
     <Compile Include="View\ResidentView.xaml.cs">
       <DependentUpon>ResidentView.xaml</DependentUpon>
@@ -148,6 +163,10 @@
     <None Include="OstManSysMVVM_TemporaryKey.pfx" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Assets\add.png" />
+    <Content Include="Assets\delete.png" />
+    <Content Include="Assets\edit.png" />
+    <Content Include="Assets\OstBanHusLogo.png" />
     <Content Include="Properties\Default.rd.xml" />
     <Content Include="Assets\LockScreenLogo.scale-200.png" />
     <Content Include="Assets\SplashScreen.scale-200.png" />
@@ -174,6 +193,14 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="View\ApartmentsView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\DownPipesView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="View\MainPage.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -182,7 +209,15 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="View\ProblemsView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="View\Report.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\ResidentsViewFrame.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

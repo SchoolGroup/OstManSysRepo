@@ -17,12 +17,10 @@ namespace OstManSysMVVM.ViewModel
     {
         private Apartment _newApartment;
         private Apartment _selectedApartment;
-
+        private Problem _selectedProblem;
+        
         public Apartment NewApartment
         {
-
-
-
             get { return _newApartment; }
             set
             {
@@ -41,7 +39,20 @@ namespace OstManSysMVVM.ViewModel
             }
         }
 
+        public Problem SelectedProblem
+        {
+            get { return _selectedProblem; }
+            set
+            {
+                _selectedProblem = value;
+                OnPropertyChanged(nameof(SelectedApartment));
+            }
+        }
+
+        public string CurrentTime = DateTime.Now.ToString("h:mm:ss tt");
         public ApartmentCatalogSingleton ApartmentCatalogSingleton { get; set; }
+        public DownpipeCatalogSingleton DownpipeCatalogSingleton { get; set; }
+        public ProblemCatalogSingleton ProblemCatalogSingleton { get; set; }
         public Handler.ApartmentHandler ApartmentHandler { get; set; }
         public ICommand CreateCommand { get; set; }
         public ICommand DeleteCommand { get; set; }
@@ -49,9 +60,9 @@ namespace OstManSysMVVM.ViewModel
         public ICommand GoToUpdateCommand { get; set; }
         public ApartmentViewModel()
         {
-       
-           
             ApartmentCatalogSingleton = ApartmentCatalogSingleton.Instance;
+            DownpipeCatalogSingleton = DownpipeCatalogSingleton.Instance;
+            ProblemCatalogSingleton = ProblemCatalogSingleton.Instance;
             ApartmentHandler = new Handler.ApartmentHandler(this);
             NewApartment =new Apartment();
             //SelectedApartment=new Apartment();

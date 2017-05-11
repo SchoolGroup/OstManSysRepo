@@ -69,7 +69,6 @@ namespace OstManSysMVVM.Handler
 
         public void UpdateApartment()
         {
-            //int _id = 0;
             string _address = "";
             int _size = 0;
             string _condition = "";

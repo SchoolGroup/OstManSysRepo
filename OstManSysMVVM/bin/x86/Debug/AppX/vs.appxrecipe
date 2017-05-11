@@ -28,13 +28,13 @@
     <AppXManifest Include="C:\Users\Cristian Patras\Documents\GitHub\OstManSysRepo\OstManSysMVVM\bin\x86\Debug\Core\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2017-05-08T13:42:03.778</Modified>
+      <Modified>2017-05-11T13:07:50.623</Modified>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
     <AppxPackagedFile Include="C:\Users\Cristian Patras\Documents\GitHub\OstManSysRepo\OstManSysMVVM\bin\x86\Debug\OstManSysMVVM.exe">
       <PackagePath>entrypoint\OstManSysMVVM.exe</PackagePath>
-      <Modified>2017-05-08T13:42:03.208</Modified>
+      <Modified>2017-05-11T13:07:48.077</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Cristian Patras\.nuget\packages\Microsoft.AspNet.WebApi.Client\5.2.3\lib\portable-wp8+netcore45+net45+wp81+wpa81\System.Net.Http.Formatting.dll">
       <PackagePath>System.Net.Http.Formatting.dll</PackagePath>
@@ -472,9 +472,21 @@
       <PackagePath>System.Xml.XmlSerializer.dll</PackagePath>
       <Modified>2015-07-22T21:11:12.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Cristian Patras\Documents\GitHub\OstManSysRepo\OstManSysMVVM\Properties\Default.rd.xml">
-      <PackagePath>Properties\Default.rd.xml</PackagePath>
-      <Modified>2017-05-04T09:32:47.302</Modified>
+    <AppxPackagedFile Include="C:\Users\Cristian Patras\Documents\GitHub\OstManSysRepo\OstManSysMVVM\Assets\add.png">
+      <PackagePath>Assets\add.png</PackagePath>
+      <Modified>2017-05-10T13:52:10.690</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Cristian Patras\Documents\GitHub\OstManSysRepo\OstManSysMVVM\Assets\delete.png">
+      <PackagePath>Assets\delete.png</PackagePath>
+      <Modified>2017-05-10T13:52:10.678</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Cristian Patras\Documents\GitHub\OstManSysRepo\OstManSysMVVM\Assets\edit.png">
+      <PackagePath>Assets\edit.png</PackagePath>
+      <Modified>2017-05-10T13:52:10.685</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Cristian Patras\Documents\GitHub\OstManSysRepo\OstManSysMVVM\Assets\OstBanHusLogo.png">
+      <PackagePath>Assets\OstBanHusLogo.png</PackagePath>
+      <Modified>2017-05-11T11:42:09.518</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Cristian Patras\Documents\GitHub\OstManSysRepo\OstManSysMVVM\Assets\LockScreenLogo.scale-200.png">
       <PackagePath>Assets\LockScreenLogo.scale-200.png</PackagePath>
@@ -510,9 +522,13 @@
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
       <Modified>2017-05-04T09:32:47.099</Modified>
     </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Cristian Patras\Documents\GitHub\OstManSysRepo\OstManSysMVVM\Properties\Default.rd.xml">
+      <PackagePath>Properties\Default.rd.xml</PackagePath>
+      <Modified>2017-05-04T09:32:47.302</Modified>
+    </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Cristian Patras\Documents\GitHub\OstManSysRepo\OstManSysMVVM\bin\x86\Debug\OstManSysMVVM.xr.xml">
       <PackagePath>OstManSysMVVM.xr.xml</PackagePath>
-      <Modified>2017-05-08T10:35:43.457</Modified>
+      <Modified>2017-05-11T12:46:51.032</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Program Files %28x86%29\Windows Kits\10\UnionMetadata\Windows.winmd">
       <PackagePath>WinMetadata\Windows.winmd</PackagePath>
@@ -521,11 +537,11 @@
     <AppxPackagedFile Include="C:\Users\Cristian Patras\Documents\GitHub\OstManSysRepo\OstManSysMVVM\bin\x86\Debug\resources.pri">
       <PackagePath>resources.pri</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2017-05-08T13:36:02.802</Modified>
+      <Modified>2017-05-11T13:07:50.130</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Cristian Patras\Documents\GitHub\OstManSysRepo\OstManSysMVVM\bin\x86\Debug\Core\OstManSysMVVM.exe">
       <PackagePath>OstManSysMVVM.exe</PackagePath>
-      <Modified>2017-05-08T13:42:03.772</Modified>
+      <Modified>2017-05-11T13:07:50.618</Modified>
     </AppxPackagedFile>
   </ItemGroup>
   <ItemGroup>

@@ -21,6 +21,9 @@ namespace OstManSysMVVM.ViewModel
         private Resident _currentResident;
         private Account _account;
         private Account acc;
+
+        public ResidentCatalogSingleton ResidentCatalogSingleton { get; set; }
+
         public Account Account
         {
             get { return _account; }
@@ -31,6 +34,12 @@ namespace OstManSysMVVM.ViewModel
             }
         }
 
+        public Resident Resident { get; set; }
+
+        //public void IdentifyResident()
+        //{
+        //    _currentResident = LogInHandler.ReturnResident();
+        //}
         public Resident CurrentResident
         {
             get { return _currentResident; }
@@ -60,9 +69,9 @@ namespace OstManSysMVVM.ViewModel
                 OnPropertyChanged(nameof(SelectedResident));
             }
         }
+        
 
         public AccountCatalogSingleton AccountCatalogSingleton { get; set; }
-        public ResidentCatalogSingleton ResidentCatalogSingleton { get; set; }
         public Handler.ResidentHandler ResidentHandler { get; set; }
         public LogInHandler LogInHandler { get; set; }
         public ICommand CreateCommand { get; set; }
@@ -78,7 +87,8 @@ namespace OstManSysMVVM.ViewModel
             SelectedResident=new Resident();
             AccountCatalogSingleton = AccountCatalogSingleton.Instance;
             Account = new Account();
-            CurrentResident = new PersistencyFacade().GetResident(acc);
+            _currentResident = LogInHandler._resident;
+            //CurrentResident = new PersistencyFacade().GetResident(acc);
            
             //CurrentResident = new Resident() {ApartmentID = 2,EmailAddress = "sadasd@asdasd.com",FirstName = "Michael",LastName = "Bech", IsBoardMember = true,PhoneNumber =02546878,ResidentID = 1};
             CreateCommand = new RelayCommand(ResidentHandler.CreateResident);
@@ -87,10 +97,10 @@ namespace OstManSysMVVM.ViewModel
             LogInCommand=new RelayCommand(LogInHandler.CheckAccount);
         }
 
-        public void Save()
-        {
-            acc = Account;
-        }
+        //public void Save()
+        //{
+        //    acc = Account;
+        //}
         public event PropertyChangedEventHandler PropertyChanged;
 
         [NotifyPropertyChangedInvocator]

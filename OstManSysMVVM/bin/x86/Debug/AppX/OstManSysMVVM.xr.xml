@@ -12,15 +12,18 @@
     <RootPropertyPathName Name="NumberOfRooms" />
     <RootPropertyPathName Name="Size" />
     <RootPropertyPathName Name="Address" />
+    <RootPropertyPathName Name="ApartmentCatalogSingleton" />
+    <RootPropertyPathName Name="Apartments" />
+    <RootPropertyPathName Name="SelectedApartment" />
+    <RootPropertyPathName Name="DownpipeCatalogSingleton" />
+    <RootPropertyPathName Name="Downpipes" />
     <RootPropertyPathName Name="LogInCommand" />
     <RootPropertyPathName Name="Account" />
     <RootPropertyPathName Name="Password" />
     <RootPropertyPathName Name="ResidentID" />
+    <RootPropertyPathName Name="C" />
     <RootPropertyPathName Name="GoToUpdateCommand" />
     <RootPropertyPathName Name="DeleteCommand" />
-    <RootPropertyPathName Name="ApartmentCatalogSingleton" />
-    <RootPropertyPathName Name="Apartments" />
-    <RootPropertyPathName Name="SelectedApartment" />
     <RootPropertyPathName Name="CurrentResident" />
     <RootPropertyPathName Name="DateOfBirth" />
     <RootPropertyPathName Name="EmailAddress" />
@@ -28,6 +31,9 @@
     <RootPropertyPathName Name="LastName" />
     <RootPropertyPathName Name="FirstName" />
     <RootPropertyPathName Name="Type" />
+    <RootPropertyPathName Name="ResidentCatalogSingleton" />
+    <RootPropertyPathName Name="Residents" />
+    <RootPropertyPathName Name="SelectedResident" />
     <RootPropertyPathName Name="UpdateCommand" />
   </Roots.PropertyPathNames>
   <Roots.RootTypes>
@@ -64,8 +70,9 @@
       <RootProperty Name="VerticalAlignment" />
       <RootProperty Name="Children" />
       <RootProperty Name="Orientation" />
-      <RootProperty Name="Width" />
       <RootProperty Name="Margin" />
+      <RootProperty Name="Width" />
+      <RootProperty Name="DataContext" />
     </RootType>
     <RootType FullName="Windows.UI.Xaml.Controls.Button">
       <RootProperty Name="Background" />
@@ -78,10 +85,13 @@
       <RootProperty Name="BorderBrush" />
       <RootProperty Name="Margin" />
       <RootProperty Name="Command" />
+      <RootProperty Name="HorizontalContentAlignment" />
+      <RootEvent Name="Click" />
     </RootType>
     <RootType FullName="Windows.UI.Xaml.Controls.Image">
       <RootProperty Name="Source" />
       <RootProperty Name="Stretch" />
+      <RootProperty Name="Width" />
       <RootProperty Name="Height" />
       <RootProperty Name="VerticalAlignment" />
     </RootType>
@@ -104,6 +114,7 @@
       <RootProperty Name="FontSize" />
       <RootProperty Name="Width" />
       <RootProperty Name="Height" />
+      <RootProperty Name="BorderBrush" />
       <RootProperty Name="BorderThickness" />
       <RootProperty Name="VerticalAlignment" />
     </RootType>
@@ -134,12 +145,11 @@
       <RootProperty Name="HorizontalAlignment" />
       <RootProperty Name="Height" />
       <RootProperty Name="Width" />
+      <RootProperty Name="Name" />
     </RootType>
     <RootType FullName="OstManSysMVVM.View.AddApartment" />
     <RootType FullName="OstManSysMVVM.View.AddCoResident" />
     <RootType FullName="OstManSysMVVM.View.AddResident" />
-    <RootType FullName="OstManSysMVVM.ViewModel.ResidentViewModel" />
-    <RootType FullName="OstManSysMVVM.MainPage" />
     <RootType FullName="Windows.UI.Xaml.Controls.ListView">
       <RootProperty Name="HorizontalAlignment" />
       <RootProperty Name="Height" />
@@ -147,8 +157,27 @@
       <RootProperty Name="Width" />
       <RootProperty Name="ItemsSource" />
       <RootProperty Name="SelectedItem" />
+      <RootProperty Name="DataContext" />
       <RootProperty Name="Margin" />
       <RootProperty Name="Padding" />
+    </RootType>
+    <RootType FullName="OstManSysMVVM.View.ApartmentsView" />
+    <RootType FullName="OstManSysMVVM.View.DownPipesView" />
+    <RootType FullName="OstManSysMVVM.ViewModel.ResidentViewModel" />
+    <RootType FullName="Windows.UI.Xaml.Controls.Canvas">
+      <RootMethod Name="GetZIndex" />
+      <RootMethod Name="SetZIndex" />
+    </RootType>
+    <RootType FullName="Windows.UI.Xaml.Controls.PasswordBox">
+      <RootProperty Name="BorderBrush" />
+      <RootProperty Name="Password" />
+    </RootType>
+    <RootType FullName="OstManSysMVVM.MainPage" />
+    <RootType FullName="Windows.UI.Xaml.Controls.Frame">
+      <RootProperty Name="Name" />
+      <RootProperty Name="Height" />
+      <RootProperty Name="VerticalAlignment" />
+      <RootProperty Name="Width" />
     </RootType>
     <RootType FullName="Windows.UI.Xaml.Shapes.Ellipse">
       <RootProperty Name="Width" />
@@ -163,7 +192,9 @@
       <RootProperty Name="Stretch" />
     </RootType>
     <RootType FullName="OstManSysMVVM.View.BoardMemberView" />
+    <RootType FullName="OstManSysMVVM.View.ProblemsView" />
     <RootType FullName="OstManSysMVVM.View.Report" />
+    <RootType FullName="OstManSysMVVM.View.ResidentsViewFrame" />
     <RootType FullName="OstManSysMVVM.View.ResidentView" />
     <RootType FullName="OstManSysMVVM.View.UpdateApartment" />
     <RootType FullName="OstManSysMVVM.View.UpdateResident" />

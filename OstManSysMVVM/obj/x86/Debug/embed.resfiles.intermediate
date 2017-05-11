@@ -2,9 +2,13 @@ App.xbf
 View\AddApartment.xbf
 View\AddCoResident.xbf
 View\AddResident.xbf
+View\ApartmentsView.xbf
 View\BoardMemberView.xbf
+View\DownPipesView.xbf
 View\MainPage.xbf
+View\ProblemsView.xbf
 View\Report.xbf
+View\ResidentsViewFrame.xbf
 View\ResidentView.xbf
 View\UpdateApartment.xbf
 View\UpdateResident.xbf

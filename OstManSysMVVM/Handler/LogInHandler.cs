@@ -20,12 +20,20 @@ namespace OstManSysMVVM.Handler
             ResidentViewModel = residentViewModel;
         }
 
+        public Resident _resident;
+
+
+        //public Resident ReturnResident()
+        //{
+        //    return _resident;
+        //}
         public void CheckAccount()
         {
             var data = from account in ResidentViewModel.AccountCatalogSingleton.Accounts
                 select account.ResidentID;
             var data1 = from account1 in ResidentViewModel.AccountCatalogSingleton.Accounts
                 select account1.Password;
+
             int s = 0;
             foreach (var i in data)
             {
@@ -34,16 +42,16 @@ namespace OstManSysMVVM.Handler
                 {
                     if (data1.ElementAt(s).Equals(ResidentViewModel.Account.Password))
                     {
-                       ResidentViewModel.CurrentResident = new PersistencyFacade().GetResident(ResidentViewModel.Account);
-                        ResidentViewModel.Save();
-                        if (ResidentViewModel.CurrentResident.Type == "Resident")
+                        _resident = new PersistencyFacade().GetResident(ResidentViewModel.Account);
+                        //ResidentViewModel.Save();
+                        if (_resident.Type == "Resident")
                         {
                             var newFrame = new Frame();
                             newFrame.Navigate(typeof(ResidentView));
                             Window.Current.Content = newFrame;
                             Window.Current.Activate();
                         }
-                        else if (ResidentViewModel.CurrentResident.Type == "BoardMember")
+                        else if (_resident.Type == "BoardMember")
                         {
                             var newFrame = new Frame();
                             newFrame.Navigate(typeof(BoardMemberView));
