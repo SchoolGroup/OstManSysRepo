@@ -5,17 +5,52 @@
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     xmlns:ViewModel="using:OstManSysMVVM.ViewModel"
+    xmlns:interactivity="using:Microsoft.Xaml.Interactivity"
+    xmlns:core="using:Microsoft.Xaml.Interactions.Core"
     x:Class="OstManSysMVVM.View.ResidentsViewFrame"
     mc:Ignorable="d">
 
     <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
-        <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="100*"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="100*"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <StackPanel Grid.Column="1" Grid.Row="1"  HorizontalAlignment="Left" VerticalAlignment="Top">
             <StackPanel.DataContext>
                 <ViewModel:ResidentViewModel/>
             </StackPanel.DataContext>
-            <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center">
+            <StackPanel Margin="16, 100, 0, 0" HorizontalAlignment="Center" VerticalAlignment="Center">
                 <ListView x:Name="listView" HorizontalAlignment="Left" Height="450" VerticalAlignment="Top" Width="850" ItemsSource="{Binding ResidentCatalogSingleton.Residents, Mode=TwoWay}"  SelectedItem="{Binding SelectedResident, Mode=TwoWay}"/>
             </StackPanel>
         </StackPanel>
+
+        <StackPanel Margin="0, 0, 0, 20" VerticalAlignment="Bottom" HorizontalAlignment="Right" Grid.Column="1" Grid.Row="1" Orientation="Vertical">
+            <StackPanel Orientation="Horizontal">
+                <Button x:Name="button" Background="White" FontSize="13" BorderBrush="Black" Width="35" Height="35" HorizontalAlignment="Left" VerticalAlignment="Top">
+                    <Image Source="../Assets/add.png" Stretch="Uniform"/>
+                    <interactivity:Interaction.Behaviors>
+                        <core:EventTriggerBehavior EventName="Click">
+                            <core:NavigateToPageAction TargetPage="OstManSysMVVM.View.AddResident"/>
+                        </core:EventTriggerBehavior>
+                    </interactivity:Interaction.Behaviors>
+                </Button>
+
+                <Button x:Name="button7" Margin="5, 0, 0, 0" Background="White" FontSize="13" BorderBrush="Black" Width="35" Height="35" HorizontalAlignment="Left" VerticalAlignment="Top">
+                    <Image Source="../Assets/edit.png" Stretch="Uniform"/>
+                    <interactivity:Interaction.Behaviors>
+                        <core:EventTriggerBehavior EventName="Click">
+                            <core:NavigateToPageAction TargetPage="OstManSysMVVM.View.UpdateResident"/>
+                        </core:EventTriggerBehavior>
+                    </interactivity:Interaction.Behaviors>
+                </Button>
+            </StackPanel>
+         </StackPanel>
     </Grid>
 </Page>

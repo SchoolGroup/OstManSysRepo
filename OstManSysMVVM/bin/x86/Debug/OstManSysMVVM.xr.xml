@@ -12,18 +12,17 @@
     <RootPropertyPathName Name="NumberOfRooms" />
     <RootPropertyPathName Name="Size" />
     <RootPropertyPathName Name="Address" />
+    <RootPropertyPathName Name="GoToUpdateCommand" />
+    <RootPropertyPathName Name="DeleteCommand" />
     <RootPropertyPathName Name="ApartmentCatalogSingleton" />
     <RootPropertyPathName Name="Apartments" />
-    <RootPropertyPathName Name="SelectedApartment" />
+    <RootPropertyPathName Name="SelectedResident" />
     <RootPropertyPathName Name="DownpipeCatalogSingleton" />
     <RootPropertyPathName Name="Downpipes" />
     <RootPropertyPathName Name="LogInCommand" />
     <RootPropertyPathName Name="Account" />
     <RootPropertyPathName Name="Password" />
     <RootPropertyPathName Name="ResidentID" />
-    <RootPropertyPathName Name="C" />
-    <RootPropertyPathName Name="GoToUpdateCommand" />
-    <RootPropertyPathName Name="DeleteCommand" />
     <RootPropertyPathName Name="CurrentResident" />
     <RootPropertyPathName Name="DateOfBirth" />
     <RootPropertyPathName Name="EmailAddress" />
@@ -33,7 +32,7 @@
     <RootPropertyPathName Name="Type" />
     <RootPropertyPathName Name="ProblemCatalogSingleton" />
     <RootPropertyPathName Name="Problems" />
-    <RootPropertyPathName Name="SelectedResident" />
+    <RootPropertyPathName Name="SelectedProblem" />
     <RootPropertyPathName Name="ResidentCatalogSingleton" />
     <RootPropertyPathName Name="Residents" />
     <RootPropertyPathName Name="UpdateCommand" />
@@ -72,9 +71,10 @@
       <RootProperty Name="VerticalAlignment" />
       <RootProperty Name="Children" />
       <RootProperty Name="Orientation" />
+      <RootProperty Name="DataContext" />
       <RootProperty Name="Margin" />
       <RootProperty Name="Width" />
-      <RootProperty Name="DataContext" />
+      <RootProperty Name="Height" />
     </RootType>
     <RootType FullName="Windows.UI.Xaml.Controls.Button">
       <RootProperty Name="Background" />
@@ -143,8 +143,8 @@
       <RootProperty Name="Text" />
       <RootProperty Name="FontSize" />
       <RootProperty Name="FontWeight" />
-      <RootProperty Name="VerticalAlignment" />
       <RootProperty Name="HorizontalAlignment" />
+      <RootProperty Name="VerticalAlignment" />
       <RootProperty Name="Height" />
       <RootProperty Name="Width" />
     </RootType>
@@ -158,7 +158,6 @@
       <RootProperty Name="Width" />
       <RootProperty Name="ItemsSource" />
       <RootProperty Name="SelectedItem" />
-      <RootProperty Name="DataContext" />
       <RootProperty Name="Margin" />
       <RootProperty Name="Padding" />
     </RootType>
@@ -193,6 +192,13 @@
       <RootProperty Name="Stretch" />
     </RootType>
     <RootType FullName="OstManSysMVVM.View.BoardMemberView" />
+    <RootType FullName="Windows.UI.Xaml.Controls.Primitives.FlyoutBase">
+      <RootMethod Name="GetAttachedFlyout" />
+      <RootMethod Name="SetAttachedFlyout" />
+    </RootType>
+    <RootType FullName="Windows.UI.Xaml.Controls.DatePickerFlyout" />
+    <RootType FullName="OstManSysMVVM.View.MyApartmentViewFrame" />
+    <RootType FullName="OstManSysMVVM.View.PreviousProblemsView" />
     <RootType FullName="OstManSysMVVM.View.ProblemsView" />
     <RootType FullName="OstManSysMVVM.View.Report" />
     <RootType FullName="OstManSysMVVM.View.ResidentsViewFrame" />

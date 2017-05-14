@@ -6,15 +6,54 @@
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     xmlns:viewModel="using:OstManSysMVVM.ViewModel"
+    xmlns:interactivity="using:Microsoft.Xaml.Interactivity"
+    xmlns:core="using:Microsoft.Xaml.Interactions.Core"
     mc:Ignorable="d">
 
     <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
-        <Grid.DataContext>
-            <viewModel:ApartmentViewModel/>
-        </Grid.DataContext>
-        <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center">
-            <ListView x:Name="listView" HorizontalAlignment="Left" Height="450" VerticalAlignment="Top" Width="850" ItemsSource="{Binding ApartmentCatalogSingleton.Apartments, Mode=TwoWay}"  SelectedItem="{Binding SelectedApartment,Mode=TwoWay}">
-            </ListView>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="100*"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="100*"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <StackPanel Grid.Column="1" Grid.Row="1"  HorizontalAlignment="Left" VerticalAlignment="Top">
+            <StackPanel.DataContext>
+                <viewModel:ApartmentViewModel/>
+            </StackPanel.DataContext>
+            <StackPanel Margin="16, 100, 0, 0" HorizontalAlignment="Center" VerticalAlignment="Center">
+                <ListView x:Name="listView" HorizontalAlignment="Left" Height="450" VerticalAlignment="Top" Width="850" ItemsSource="{Binding ApartmentCatalogSingleton.Apartments, Mode=TwoWay}"  SelectedItem="{Binding SelectedResident, Mode=TwoWay}"/>
+            </StackPanel>
+        </StackPanel>
+
+        <StackPanel Margin="0, 0, 0, 20" VerticalAlignment="Bottom" HorizontalAlignment="Right" Grid.Column="1" Grid.Row="1" Orientation="Vertical">
+            <StackPanel Orientation="Vertical" Margin="0, 0, 20, 0">
+            <StackPanel Orientation="Horizontal">
+                <Button x:Name="button1"  Background="White" Width="35" Height="35" BorderBrush="Black" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="0,0,5,0">
+                    <Image Source="../Assets/add.png" Stretch="Uniform"/>
+                    <interactivity:Interaction.Behaviors>
+                        <core:EventTriggerBehavior EventName="Click">
+                            <core:NavigateToPageAction TargetPage="OstManSysMVVM.View.AddApartment"/>
+                        </core:EventTriggerBehavior>
+                    </interactivity:Interaction.Behaviors>
+                </Button>
+
+                <Button x:Name="button8"  Background="White" Width="35" Height="35" FontSize="13" BorderBrush="Black" HorizontalAlignment="Left" VerticalAlignment="Top" Command="{Binding DeleteCommand}">
+                    <Image Source="../Assets/delete.png" Stretch="Uniform"/>
+                </Button>
+
+                <Button x:Name="button4" Margin="5, 0, 0, 0" Width="35" Height="35" Background="White" FontSize="13" BorderBrush="Black" Command="{Binding GoToUpdateCommand, Mode=TwoWay}" HorizontalAlignment="Left" VerticalAlignment="Top">
+                    <Image Source="../Assets/edit.png" Stretch="Uniform"/>
+
+                </Button>
+            </StackPanel>
+        </StackPanel>
         </StackPanel>
     </Grid>
 </Page>
+

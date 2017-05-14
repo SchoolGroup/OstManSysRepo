@@ -19,6 +19,7 @@ namespace OstManSysMVVM.ViewModel
         private Apartment _selectedApartment;
         private Problem _selectedProblem;
         
+
         public Apartment NewApartment
         {
             get { return _newApartment; }
@@ -49,7 +50,6 @@ namespace OstManSysMVVM.ViewModel
             }
         }
 
-        public string CurrentTime = DateTime.Now.ToString("h:mm:ss tt");
         public ApartmentCatalogSingleton ApartmentCatalogSingleton { get; set; }
         public DownpipeCatalogSingleton DownpipeCatalogSingleton { get; set; }
         public ProblemCatalogSingleton ProblemCatalogSingleton { get; set; }

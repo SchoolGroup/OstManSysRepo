@@ -26,5 +26,10 @@ namespace OstManSysMVVM.View
         {
             this.InitializeComponent();
         }
+
+        private void Button6_OnClick(object sender, RoutedEventArgs e)
+        {
+            throw new NotImplementedException();
+        }
     }
 }

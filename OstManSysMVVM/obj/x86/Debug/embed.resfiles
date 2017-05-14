@@ -6,6 +6,8 @@ View\ApartmentsView.xbf
 View\BoardMemberView.xbf
 View\DownPipesView.xbf
 View\MainPage.xbf
+View\MyApartmentViewFrame.xbf
+View\PreviousProblemsView.xbf
 View\ProblemsView.xbf
 View\Report.xbf
 View\ResidentsViewFrame.xbf

@@ -9,13 +9,26 @@
     mc:Ignorable="d">
 
     <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
-        <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center">
-            <ListView x:ConnectionId='1' x:Name="listView" HorizontalAlignment="Left" Height="450" VerticalAlignment="Top" Width="850" ItemsSource="{Binding DownpipeCatalogSingleton.Downpipes, Mode=TwoWay}" SelectedItem="{Binding SelectedApartment, Mode=TwoWay}">
-                <ListView.DataContext>
-                    <ViewModel:ApartmentViewModel/>
-                </ListView.DataContext>
-            </ListView>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="100*"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="100*"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <StackPanel Grid.Column="1" Grid.Row="1"  HorizontalAlignment="Left" VerticalAlignment="Top">
+            <StackPanel.DataContext>
+                <ViewModel:ApartmentViewModel/>
+            </StackPanel.DataContext>
+            <StackPanel Margin="16, 100, 0, 0" HorizontalAlignment="Center" VerticalAlignment="Center">
+                <ListView x:ConnectionId='1' x:Name="listView" HorizontalAlignment="Left" Height="450" VerticalAlignment="Top" Width="850" ItemsSource="{Binding DownpipeCatalogSingleton.Downpipes, Mode=TwoWay}"  SelectedItem="{Binding SelectedResident, Mode=TwoWay}"/>
+            </StackPanel>
         </StackPanel>
+        
     </Grid>
 </Page>
 
