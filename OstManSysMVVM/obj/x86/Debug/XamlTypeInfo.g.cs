@@ -154,14 +154,14 @@ namespace OstManSysMVVM.OstManSysMVVM_XamlTypeInfo
             _typeNameTable[18] = "Windows.UI.Xaml.Controls.Page";
             _typeNameTable[19] = "Windows.UI.Xaml.Controls.UserControl";
             _typeNameTable[20] = "OstManSysMVVM.View.AddCoResident";
-            _typeNameTable[21] = "OstManSysMVVM.View.AddResident";
-            _typeNameTable[22] = "OstManSysMVVM.ViewModel.ResidentViewModel";
-            _typeNameTable[23] = "OstManSysMVVM.Model.Account";
-            _typeNameTable[24] = "OstManSysMVVM.Model.Resident";
-            _typeNameTable[25] = "OstManSysMVVM.Model.AccountCatalogSingleton";
-            _typeNameTable[26] = "OstManSysMVVM.Model.ResidentCatalogSingleton";
-            _typeNameTable[27] = "OstManSysMVVM.Handler.ResidentHandler";
-            _typeNameTable[28] = "OstManSysMVVM.Handler.LogInHandler";
+            _typeNameTable[21] = "OstManSysMVVM.ViewModel.ResidentViewModel";
+            _typeNameTable[22] = "OstManSysMVVM.Model.Account";
+            _typeNameTable[23] = "OstManSysMVVM.Model.Resident";
+            _typeNameTable[24] = "OstManSysMVVM.Model.AccountCatalogSingleton";
+            _typeNameTable[25] = "OstManSysMVVM.Model.ResidentCatalogSingleton";
+            _typeNameTable[26] = "OstManSysMVVM.Handler.ResidentHandler";
+            _typeNameTable[27] = "OstManSysMVVM.Handler.LogInHandler";
+            _typeNameTable[28] = "OstManSysMVVM.View.AddResident";
             _typeNameTable[29] = "OstManSysMVVM.MainPage";
             _typeNameTable[30] = "OstManSysMVVM.View.BoardMemberView";
             _typeNameTable[31] = "OstManSysMVVM.View.Report";
@@ -191,14 +191,14 @@ namespace OstManSysMVVM.OstManSysMVVM_XamlTypeInfo
             _typeTable[18] = typeof(global::Windows.UI.Xaml.Controls.Page);
             _typeTable[19] = typeof(global::Windows.UI.Xaml.Controls.UserControl);
             _typeTable[20] = typeof(global::OstManSysMVVM.View.AddCoResident);
-            _typeTable[21] = typeof(global::OstManSysMVVM.View.AddResident);
-            _typeTable[22] = typeof(global::OstManSysMVVM.ViewModel.ResidentViewModel);
-            _typeTable[23] = typeof(global::OstManSysMVVM.Model.Account);
-            _typeTable[24] = typeof(global::OstManSysMVVM.Model.Resident);
-            _typeTable[25] = typeof(global::OstManSysMVVM.Model.AccountCatalogSingleton);
-            _typeTable[26] = typeof(global::OstManSysMVVM.Model.ResidentCatalogSingleton);
-            _typeTable[27] = typeof(global::OstManSysMVVM.Handler.ResidentHandler);
-            _typeTable[28] = typeof(global::OstManSysMVVM.Handler.LogInHandler);
+            _typeTable[21] = typeof(global::OstManSysMVVM.ViewModel.ResidentViewModel);
+            _typeTable[22] = typeof(global::OstManSysMVVM.Model.Account);
+            _typeTable[23] = typeof(global::OstManSysMVVM.Model.Resident);
+            _typeTable[24] = typeof(global::OstManSysMVVM.Model.AccountCatalogSingleton);
+            _typeTable[25] = typeof(global::OstManSysMVVM.Model.ResidentCatalogSingleton);
+            _typeTable[26] = typeof(global::OstManSysMVVM.Handler.ResidentHandler);
+            _typeTable[27] = typeof(global::OstManSysMVVM.Handler.LogInHandler);
+            _typeTable[28] = typeof(global::OstManSysMVVM.View.AddResident);
             _typeTable[29] = typeof(global::OstManSysMVVM.MainPage);
             _typeTable[30] = typeof(global::OstManSysMVVM.View.BoardMemberView);
             _typeTable[31] = typeof(global::OstManSysMVVM.View.Report);
@@ -248,10 +248,10 @@ namespace OstManSysMVVM.OstManSysMVVM_XamlTypeInfo
         private object Activate_16_NavigateToPageAction() { return new global::Microsoft.Xaml.Interactions.Core.NavigateToPageAction(); }
         private object Activate_17_AddApartment() { return new global::OstManSysMVVM.View.AddApartment(); }
         private object Activate_20_AddCoResident() { return new global::OstManSysMVVM.View.AddCoResident(); }
-        private object Activate_21_AddResident() { return new global::OstManSysMVVM.View.AddResident(); }
-        private object Activate_22_ResidentViewModel() { return new global::OstManSysMVVM.ViewModel.ResidentViewModel(); }
-        private object Activate_23_Account() { return new global::OstManSysMVVM.Model.Account(); }
-        private object Activate_24_Resident() { return new global::OstManSysMVVM.Model.Resident(); }
+        private object Activate_21_ResidentViewModel() { return new global::OstManSysMVVM.ViewModel.ResidentViewModel(); }
+        private object Activate_22_Account() { return new global::OstManSysMVVM.Model.Account(); }
+        private object Activate_23_Resident() { return new global::OstManSysMVVM.Model.Resident(); }
+        private object Activate_28_AddResident() { return new global::OstManSysMVVM.View.AddResident(); }
         private object Activate_29_MainPage() { return new global::OstManSysMVVM.MainPage(); }
         private object Activate_30_BoardMemberView() { return new global::OstManSysMVVM.View.BoardMemberView(); }
         private object Activate_31_Report() { return new global::OstManSysMVVM.View.Report(); }
@@ -418,16 +418,9 @@ namespace OstManSysMVVM.OstManSysMVVM_XamlTypeInfo
                 xamlType = userType;
                 break;
 
-            case 21:   //  OstManSysMVVM.View.AddResident
-                userType = new global::OstManSysMVVM.OstManSysMVVM_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.Page"));
-                userType.Activator = Activate_21_AddResident;
-                userType.SetIsLocalType();
-                xamlType = userType;
-                break;
-
-            case 22:   //  OstManSysMVVM.ViewModel.ResidentViewModel
+            case 21:   //  OstManSysMVVM.ViewModel.ResidentViewModel
                 userType = new global::OstManSysMVVM.OstManSysMVVM_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Object"));
-                userType.Activator = Activate_22_ResidentViewModel;
+                userType.Activator = Activate_21_ResidentViewModel;
                 userType.AddMemberName("Account");
                 userType.AddMemberName("CurrentResident");
                 userType.AddMemberName("NewResident");
@@ -444,44 +437,51 @@ namespace OstManSysMVVM.OstManSysMVVM_XamlTypeInfo
                 xamlType = userType;
                 break;
 
-            case 23:   //  OstManSysMVVM.Model.Account
+            case 22:   //  OstManSysMVVM.Model.Account
                 userType = new global::OstManSysMVVM.OstManSysMVVM_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Object"));
                 userType.SetIsReturnTypeStub();
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;
 
-            case 24:   //  OstManSysMVVM.Model.Resident
+            case 23:   //  OstManSysMVVM.Model.Resident
                 userType = new global::OstManSysMVVM.OstManSysMVVM_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Object"));
                 userType.SetIsReturnTypeStub();
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;
 
-            case 25:   //  OstManSysMVVM.Model.AccountCatalogSingleton
+            case 24:   //  OstManSysMVVM.Model.AccountCatalogSingleton
                 userType = new global::OstManSysMVVM.OstManSysMVVM_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Object"));
                 userType.SetIsReturnTypeStub();
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;
 
-            case 26:   //  OstManSysMVVM.Model.ResidentCatalogSingleton
+            case 25:   //  OstManSysMVVM.Model.ResidentCatalogSingleton
                 userType = new global::OstManSysMVVM.OstManSysMVVM_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Object"));
                 userType.SetIsReturnTypeStub();
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;
 
-            case 27:   //  OstManSysMVVM.Handler.ResidentHandler
+            case 26:   //  OstManSysMVVM.Handler.ResidentHandler
                 userType = new global::OstManSysMVVM.OstManSysMVVM_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Object"));
                 userType.SetIsReturnTypeStub();
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;
 
-            case 28:   //  OstManSysMVVM.Handler.LogInHandler
+            case 27:   //  OstManSysMVVM.Handler.LogInHandler
                 userType = new global::OstManSysMVVM.OstManSysMVVM_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Object"));
                 userType.SetIsReturnTypeStub();
+                userType.SetIsLocalType();
+                xamlType = userType;
+                break;
+
+            case 28:   //  OstManSysMVVM.View.AddResident
+                userType = new global::OstManSysMVVM.OstManSysMVVM_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.Page"));
+                userType.Activator = Activate_28_AddResident;
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;

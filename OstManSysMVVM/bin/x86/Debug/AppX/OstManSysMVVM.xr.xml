@@ -12,6 +12,12 @@
     <RootPropertyPathName Name="NumberOfRooms" />
     <RootPropertyPathName Name="Size" />
     <RootPropertyPathName Name="Address" />
+    <RootPropertyPathName Name="NewResident" />
+    <RootPropertyPathName Name="DateOfBirth" />
+    <RootPropertyPathName Name="EmailAddress" />
+    <RootPropertyPathName Name="PhoneNumber" />
+    <RootPropertyPathName Name="LastName" />
+    <RootPropertyPathName Name="FirstName" />
     <RootPropertyPathName Name="LogInCommand" />
     <RootPropertyPathName Name="Account" />
     <RootPropertyPathName Name="Password" />
@@ -22,11 +28,6 @@
     <RootPropertyPathName Name="Apartments" />
     <RootPropertyPathName Name="SelectedApartment" />
     <RootPropertyPathName Name="CurrentResident" />
-    <RootPropertyPathName Name="DateOfBirth" />
-    <RootPropertyPathName Name="EmailAddress" />
-    <RootPropertyPathName Name="PhoneNumber" />
-    <RootPropertyPathName Name="LastName" />
-    <RootPropertyPathName Name="FirstName" />
     <RootPropertyPathName Name="Type" />
     <RootPropertyPathName Name="UpdateCommand" />
   </Roots.PropertyPathNames>
@@ -137,8 +138,8 @@
     </RootType>
     <RootType FullName="OstManSysMVVM.View.AddApartment" />
     <RootType FullName="OstManSysMVVM.View.AddCoResident" />
-    <RootType FullName="OstManSysMVVM.View.AddResident" />
     <RootType FullName="OstManSysMVVM.ViewModel.ResidentViewModel" />
+    <RootType FullName="OstManSysMVVM.View.AddResident" />
     <RootType FullName="OstManSysMVVM.MainPage" />
     <RootType FullName="Windows.UI.Xaml.Controls.ListView">
       <RootProperty Name="HorizontalAlignment" />

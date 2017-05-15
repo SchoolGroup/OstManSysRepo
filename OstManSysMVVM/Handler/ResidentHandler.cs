@@ -20,11 +20,12 @@ namespace OstManSysMVVM.Handler
         public void CreateResident()
         {
             var resident = new Resident();
-            resident.ResidentID = ResidentViewModel.NewResident.ResidentID;
             resident.FirstName = ResidentViewModel.NewResident.FirstName;
             resident.LastName = ResidentViewModel.NewResident.LastName;
             resident.EmailAddress = ResidentViewModel.NewResident.EmailAddress;
             resident.PhoneNumber = ResidentViewModel.NewResident.PhoneNumber;
+            resident.DateOfBirth = ResidentViewModel.NewResident.DateOfBirth;
+            resident.Type = ResidentViewModel.NewResident.Type;
            // resident.ApartmentID = ResidentViewModel.NewResident.ApartmentID;
             //resident.IsBoardMember = ResidentViewModel.NewResident.IsBoardMember;
             new PersistencyFacade().SaveResident(resident);
