@@ -16,9 +16,10 @@
     <RootPropertyPathName Name="DeleteCommand" />
     <RootPropertyPathName Name="ApartmentCatalogSingleton" />
     <RootPropertyPathName Name="Apartments" />
-    <RootPropertyPathName Name="SelectedResident" />
+    <RootPropertyPathName Name="SelectedApartment" />
     <RootPropertyPathName Name="DownpipeCatalogSingleton" />
     <RootPropertyPathName Name="Downpipes" />
+    <RootPropertyPathName Name="SelectedResident" />
     <RootPropertyPathName Name="LogInCommand" />
     <RootPropertyPathName Name="Account" />
     <RootPropertyPathName Name="Password" />
@@ -71,8 +72,8 @@
       <RootProperty Name="VerticalAlignment" />
       <RootProperty Name="Children" />
       <RootProperty Name="Orientation" />
-      <RootProperty Name="DataContext" />
       <RootProperty Name="Margin" />
+      <RootProperty Name="DataContext" />
       <RootProperty Name="Width" />
       <RootProperty Name="Height" />
     </RootType>

@@ -87,10 +87,7 @@ namespace OstManSysMVVM.ViewModel
             SelectedResident=new Resident();
             AccountCatalogSingleton = AccountCatalogSingleton.Instance;
             Account = new Account();
-            _currentResident = LogInHandler._resident;
-            //CurrentResident = new PersistencyFacade().GetResident(acc);
-           
-            //CurrentResident = new Resident() {ApartmentID = 2,EmailAddress = "sadasd@asdasd.com",FirstName = "Michael",LastName = "Bech", IsBoardMember = true,PhoneNumber =02546878,ResidentID = 1};
+            CurrentResident = ResidentCatalogSingleton.CurrentResident;
             CreateCommand = new RelayCommand(ResidentHandler.CreateResident);
             DeleteCommand = new RelayCommand(ResidentHandler.DeleteResident);
             UpdateCommand=new RelayCommand(ResidentHandler.UpdateResident);

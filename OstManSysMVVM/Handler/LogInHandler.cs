@@ -15,9 +15,11 @@ namespace OstManSysMVVM.Handler
     class LogInHandler
     {
         public ResidentViewModel ResidentViewModel { get; set; }
+        public ResidentCatalogSingleton ResidentCatalogSingleton { get; set; }
         public LogInHandler(ResidentViewModel residentViewModel)
         {
             ResidentViewModel = residentViewModel;
+            ResidentCatalogSingleton = ResidentCatalogSingleton.Instance;
         }
 
         public Resident _resident;
@@ -43,6 +45,7 @@ namespace OstManSysMVVM.Handler
                     if (data1.ElementAt(s).Equals(ResidentViewModel.Account.Password))
                     {
                         _resident = new PersistencyFacade().GetResident(ResidentViewModel.Account);
+                        ResidentCatalogSingleton.CurrentResident = _resident;
                         //ResidentViewModel.Save();
                         if (_resident.Type == "Resident")
                         {

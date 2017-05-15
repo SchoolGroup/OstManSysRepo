@@ -1,0 +1,68 @@
+﻿<Page
+    x:Class="OstManSysMVVM.View.MyApartmentViewFrame"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:OstManSysMVVM.View"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:viewModel="using:OstManSysMVVM.ViewModel"
+    mc:Ignorable="d">
+
+    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+        <Grid.DataContext>
+            <viewModel:ApartmentViewModel/>
+        </Grid.DataContext>
+
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="100*"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="100*"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <StackPanel Grid.Column="1" Grid.Row="1"  Margin="16, 100, 0, 0" HorizontalAlignment="Left" VerticalAlignment="Top" Height="450" Width="850">
+            <StackPanel.DataContext>
+                <viewModel:ApartmentViewModel/>
+            </StackPanel.DataContext>
+            <StackPanel HorizontalAlignment="Left" VerticalAlignment="Center" >
+                <FlyoutBase.AttachedFlyout>
+                    <DatePickerFlyout/>
+                </FlyoutBase.AttachedFlyout>
+                <StackPanel  VerticalAlignment="Center" HorizontalAlignment="Center" Orientation="Vertical">
+                    <StackPanel Orientation="Horizontal">
+                        <TextBlock x:ConnectionId='10' x:Name="textBlock" FontSize="15" FontWeight="Bold"  TextWrapping="Wrap" Text="Address:"/>
+                        <TextBlock x:ConnectionId='11' x:Name="textBlock5" FontSize="15" Margin="5, 0, 0, 0" TextWrapping="Wrap" Text="Ryesgade 25, Copenhagen"/>
+                    </StackPanel>
+                    <StackPanel Orientation="Horizontal">
+                        <StackPanel Orientation="Horizontal">
+                            <TextBlock x:ConnectionId='8' x:Name="textBlock1" FontSize="15" FontWeight="Bold"  TextWrapping="Wrap" Text="Size:"/>
+                            <TextBlock x:ConnectionId='9' x:Name="textBlock8" Margin="5, 0, 0, 0" FontSize="15" TextWrapping="Wrap" Text="67 sq.m."/>
+                        </StackPanel>
+                        
+                        <StackPanel Orientation="Horizontal" Margin="10, 0, 0, 0">
+                            <TextBlock x:ConnectionId='6' x:Name="textBlock2" FontSize="15" FontWeight="Bold"  TextWrapping="Wrap" Text="Number of Rooms:"/>
+                            <TextBlock x:ConnectionId='7' x:Name="textBlock9" Margin="5, 0, 0, 0" FontSize="15" TextWrapping="Wrap" Text="2"/>
+                        </StackPanel>
+                        </StackPanel>
+                    <StackPanel Orientation="Horizontal">
+                        <TextBlock x:ConnectionId='4' x:Name="textBlock3" FontSize="15" FontWeight="Bold"  TextWrapping="Wrap" Text="Last Check:"/>
+                        <TextBlock x:ConnectionId='5' x:Name="textBlock11" FontSize="15" Margin="5, 0, 0, 0"  TextWrapping="Wrap" Text="15/04/2017"/>
+                    </StackPanel>
+                    
+                    <StackPanel Orientation="Horizontal">
+                         <TextBlock x:ConnectionId='1' x:Name="textBlock4" FontSize="15" FontWeight="Bold"  TextWrapping="Wrap" Text="Rent:"/>
+                         <TextBlock x:ConnectionId='2' x:Name="textBlock10" FontSize="15" Margin="5, 0, 0, 0"  TextWrapping="Wrap" Text="4870"/>
+                         <TextBlock x:ConnectionId='3' x:Name="textBlock12" FontSize="15" Margin="5, 0, 0, 0"  TextWrapping="Wrap" Text="DKK"/>
+                    </StackPanel>
+                </StackPanel>
+                
+            </StackPanel>
+        </StackPanel>
+    </Grid>
+</Page>
+

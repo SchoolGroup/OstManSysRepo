@@ -11,6 +11,9 @@
     mc:Ignorable="d">
 
     <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+        <Grid.DataContext>
+            <viewModel:ApartmentViewModel/>
+        </Grid.DataContext>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="*"/>
             <ColumnDefinition Width="100*"/>
@@ -23,11 +26,11 @@
             <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
         <StackPanel Grid.Column="1" Grid.Row="1"  HorizontalAlignment="Left" VerticalAlignment="Top">
-            <StackPanel.DataContext>
+            <!--<StackPanel.DataContext>
                 <viewModel:ApartmentViewModel/>
-            </StackPanel.DataContext>
+            </StackPanel.DataContext>-->
             <StackPanel Margin="16, 100, 0, 0" HorizontalAlignment="Center" VerticalAlignment="Center">
-                <ListView x:Name="listView" HorizontalAlignment="Left" Height="450" VerticalAlignment="Top" Width="850" ItemsSource="{Binding ApartmentCatalogSingleton.Apartments, Mode=TwoWay}"  SelectedItem="{Binding SelectedResident, Mode=TwoWay}"/>
+                <ListView x:Name="listView" HorizontalAlignment="Left" Height="450" VerticalAlignment="Top" Width="850" ItemsSource="{Binding ApartmentCatalogSingleton.Apartments, Mode=TwoWay}"  SelectedItem="{Binding SelectedApartment, Mode=TwoWay}"/>
             </StackPanel>
         </StackPanel>
 
