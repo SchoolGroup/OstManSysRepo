@@ -102,6 +102,8 @@
     <Compile Include="Handler\ResidentHandler.cs" />
     <Compile Include="Model\Account.cs" />
     <Compile Include="Model\AccountCatalogSingleton.cs" />
+    <Compile Include="Model\ApartmentAddress.cs" />
+    <Compile Include="Model\ApartmentAddressCatalogSingleton.cs" />
     <Compile Include="Model\Contract.cs" />
     <Compile Include="Model\Downpipe.cs" />
     <Compile Include="Model\DownpipeCatalogSingleton.cs" />

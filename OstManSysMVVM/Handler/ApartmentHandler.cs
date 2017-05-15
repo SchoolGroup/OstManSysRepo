@@ -23,7 +23,7 @@ namespace OstManSysMVVM.Handler
         public void CreateApartment()
         {
             var apartment = new Apartment();
-            apartment.Address = ApartmentViewModel.NewApartment.Address;
+            apartment.AddressID = ApartmentViewModel.NewApartment.AddressID;
             apartment.Size = ApartmentViewModel.NewApartment.Size;
             apartment.Condition = ApartmentViewModel.NewApartment.Condition;
             apartment.MonthlyRent = ApartmentViewModel.NewApartment.MonthlyRent;
@@ -38,7 +38,7 @@ namespace OstManSysMVVM.Handler
                 ApartmentViewModel.ApartmentCatalogSingleton.Apartments.Add(apartment1);
             }
             ApartmentViewModel.NewApartment.ApartmentID= 0;
-            ApartmentViewModel.NewApartment.Address="";
+            ApartmentViewModel.NewApartment.AddressID=0;
             ApartmentViewModel.NewApartment.Size=0;
             ApartmentViewModel.NewApartment.Condition="";
             ApartmentViewModel.NewApartment.MonthlyRent=0;
@@ -59,7 +59,7 @@ namespace OstManSysMVVM.Handler
 
         public void GoToUpdatePage()
         {
-            ApartmentViewModel.NewApartment.Address = ApartmentViewModel.SelectedApartment.Address;
+            ApartmentViewModel.NewApartment.AddressID = ApartmentViewModel.SelectedApartment.AddressID;
             ApartmentViewModel.NewApartment.Condition = ApartmentViewModel.SelectedApartment.Condition;
             var newFrame = new Frame();
             newFrame.Navigate(typeof(UpdateApartment));
@@ -69,7 +69,7 @@ namespace OstManSysMVVM.Handler
 
         public void UpdateApartment()
         {
-            string _address = "";
+            int _address = 0;
             int _size = 0;
             string _condition = "";
             decimal _rent = 0;
@@ -84,13 +84,13 @@ namespace OstManSysMVVM.Handler
             //    _id = ApartmentViewModel.NewApartment.ApartmentID;
             //}
 
-            if (ApartmentViewModel.NewApartment.Address == "")
+            if (ApartmentViewModel.NewApartment.AddressID == 0)
             {
-                _address = ApartmentViewModel.SelectedApartment.Address;
+                _address = ApartmentViewModel.SelectedApartment.AddressID;
             }
             else
             {
-                _address = ApartmentViewModel.NewApartment.Address;
+                _address = ApartmentViewModel.NewApartment.AddressID;
             }
 
             if (ApartmentViewModel.NewApartment.Size == 0)
@@ -131,7 +131,7 @@ namespace OstManSysMVVM.Handler
 
             var updatedApartment = new Apartment();
             //updatedApartment.ApartmentID = _id;
-            updatedApartment.Address = _address;
+            updatedApartment.AddressID = _address;
             updatedApartment.Condition = _condition;
             updatedApartment.MonthlyRent = _rent;
             updatedApartment.NumberOfRooms = _numberOfRooms;

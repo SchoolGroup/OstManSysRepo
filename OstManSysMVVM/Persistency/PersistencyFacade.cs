@@ -22,6 +22,31 @@ namespace OstManSysMVVM.Persistency
             handler.UseDefaultCredentials = true;
         }
 
+        public List<ApartmentAddress> GetApartmentAddresses()
+        {
+            using (var client = new HttpClient(handler))
+            {
+                client.BaseAddress = new Uri(ServerUrl);
+                client.DefaultRequestHeaders.Clear();
+                client.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
+                try
+                {
+                    var response = client.GetAsync("api/ApartmentAddresses").Result;
+
+                    if (response.IsSuccessStatusCode)
+                    {
+                        var apartmentAddresses = response.Content.ReadAsAsync<IEnumerable<ApartmentAddress>>().Result;
+                        return apartmentAddresses.ToList();
+                    }
+
+                }
+                catch (Exception ex)
+                {
+                    new MessageDialog(ex.Message).ShowAsync();
+                }
+                return null;
+            }
+        }
         public List<Apartment> GetApartments()
         {
             using (var client = new HttpClient(handler))

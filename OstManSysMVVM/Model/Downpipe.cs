@@ -8,6 +8,7 @@ namespace OstManSysMVVM.Model
 {
     public class Downpipe
     {
+        public int DownpipeID { get; set; }
         public string Condition { get; set; }
         public DateTime LastChecked { get; set; }
         public string Picture { get; set; }
