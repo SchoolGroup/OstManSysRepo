@@ -8,6 +8,7 @@ using System.Threading.Tasks;
 using Windows.UI.Popups;
 using Newtonsoft.Json;
 using OstManSysMVVM.Model;
+using OstManSysMVVM.View;
 
 namespace OstManSysMVVM.Persistency
 {
@@ -47,6 +48,86 @@ namespace OstManSysMVVM.Persistency
                 return null;
             }
         }
+
+        public List<DownpipeApartmentAddress> GetDownpipeApartmentAddress()
+            {
+                using (var client = new HttpClient(handler))
+                {
+                    client.BaseAddress = new Uri(ServerUrl);
+                    client.DefaultRequestHeaders.Clear();
+                    client.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
+                    try
+                    {
+                        var response = client.GetAsync("api/DownpipeApartmentAddresses").Result;
+
+                        if (response.IsSuccessStatusCode)
+                        {
+                            var downpipeApartmentAddresses =
+                                response.Content.ReadAsAsync<IEnumerable<DownpipeApartmentAddress>>().Result;
+                            return downpipeApartmentAddresses.ToList();
+                        }
+
+                    }
+                    catch (Exception ex)
+                    {
+                        new MessageDialog(ex.Message).ShowAsync();
+                    }
+                    return null;
+                }
+            }
+        public List<ResidentHistory> GetResidentHistories()
+        {
+            using (var client = new HttpClient(handler))
+            {
+                client.BaseAddress = new Uri(ServerUrl);
+                client.DefaultRequestHeaders.Clear();
+                client.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
+                try
+                {
+                    var response = client.GetAsync("api/ResidentHistories").Result;
+
+                    if (response.IsSuccessStatusCode)
+                    {
+                        var residentHistories =
+                            response.Content.ReadAsAsync<IEnumerable<ResidentHistory>>().Result;
+                        return residentHistories.ToList();
+                    }
+
+                }
+                catch (Exception ex)
+                {
+                    new MessageDialog(ex.Message).ShowAsync();
+                }
+                return null;
+            }
+        }
+        public List<ProblemHistory> GetProblemHistories()
+        {
+            using (var client = new HttpClient(handler))
+            {
+                client.BaseAddress = new Uri(ServerUrl);
+                client.DefaultRequestHeaders.Clear();
+                client.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
+                try
+                {
+                    var response = client.GetAsync("api/ProblemHistories").Result;
+
+                    if (response.IsSuccessStatusCode)
+                    {
+                        var problemHistories =
+                            response.Content.ReadAsAsync<IEnumerable<ProblemHistory>>().Result;
+                        return problemHistories.ToList();
+                    }
+
+                }
+                catch (Exception ex)
+                {
+                    new MessageDialog(ex.Message).ShowAsync();
+                }
+                return null;
+            }
+        }
+
         public List<Apartment> GetApartments()
         {
             using (var client = new HttpClient(handler))

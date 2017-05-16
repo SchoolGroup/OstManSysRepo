@@ -17,9 +17,8 @@
     <RootPropertyPathName Name="ApartmentAddressCatalogSingleton" />
     <RootPropertyPathName Name="ApartmentAddresses" />
     <RootPropertyPathName Name="SelectedApartment" />
-    <RootPropertyPathName Name="DownpipeCatalogSingleton" />
-    <RootPropertyPathName Name="Downpipes" />
-    <RootPropertyPathName Name="SelectedResident" />
+    <RootPropertyPathName Name="DownpipeApartmentAddressCatalogSingleton" />
+    <RootPropertyPathName Name="DownpipeApartmentAddresses" />
     <RootPropertyPathName Name="LogInCommand" />
     <RootPropertyPathName Name="Account" />
     <RootPropertyPathName Name="Password" />
@@ -36,6 +35,7 @@
     <RootPropertyPathName Name="SelectedProblem" />
     <RootPropertyPathName Name="ResidentCatalogSingleton" />
     <RootPropertyPathName Name="Residents" />
+    <RootPropertyPathName Name="SelectedResident" />
     <RootPropertyPathName Name="UpdateCommand" />
   </Roots.PropertyPathNames>
   <Roots.RootTypes>

@@ -106,9 +106,13 @@
     <Compile Include="Model\ApartmentAddressCatalogSingleton.cs" />
     <Compile Include="Model\Contract.cs" />
     <Compile Include="Model\Downpipe.cs" />
+    <Compile Include="Model\DownpipeApartmentAddress.cs" />
+    <Compile Include="Model\DownpipeApartmentAddressCatalogSingleton.cs" />
     <Compile Include="Model\DownpipeCatalogSingleton.cs" />
     <Compile Include="Model\Problem.cs" />
     <Compile Include="Model\ProblemCatalogSingleton.cs" />
+    <Compile Include="Model\ResidentHistory.cs" />
+    <Compile Include="Model\ResidentHistoryCatalogSingleton.cs" />
     <Compile Include="View\AddApartment.xaml.cs">
       <DependentUpon>AddApartment.xaml</DependentUpon>
     </Compile>
@@ -145,6 +149,8 @@
     <Compile Include="View\PreviousProblemsView.xaml.cs">
       <DependentUpon>PreviousProblemsView.xaml</DependentUpon>
     </Compile>
+    <Compile Include="View\ProblemHistory.cs" />
+    <Compile Include="View\ProblemHistoryCatalogSingleton.cs" />
     <Compile Include="View\ProblemsView.xaml.cs">
       <DependentUpon>ProblemsView.xaml</DependentUpon>
     </Compile>

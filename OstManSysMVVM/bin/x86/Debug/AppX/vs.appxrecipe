@@ -28,13 +28,13 @@
     <AppXManifest Include="C:\Users\Universe\Documents\GitHub\OstManSysRepo\OstManSysMVVM\bin\x86\Debug\Core\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2017-05-15T18:21:55.818</Modified>
+      <Modified>2017-05-16T09:05:17.112</Modified>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
     <AppxPackagedFile Include="C:\Users\Universe\Documents\GitHub\OstManSysRepo\OstManSysMVVM\bin\x86\Debug\OstManSysMVVM.exe">
       <PackagePath>entrypoint\OstManSysMVVM.exe</PackagePath>
-      <Modified>2017-05-15T18:21:54.677</Modified>
+      <Modified>2017-05-16T09:05:15.940</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Universe\.nuget\packages\Microsoft.AspNet.WebApi.Client\5.2.3\lib\portable-wp8+netcore45+net45+wp81+wpa81\System.Net.Http.Formatting.dll">
       <PackagePath>System.Net.Http.Formatting.dll</PackagePath>
@@ -474,27 +474,27 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Universe\Documents\GitHub\OstManSysRepo\OstManSysMVVM\Assets\add.png">
       <PackagePath>Assets\add.png</PackagePath>
-      <Modified>2017-05-15T17:31:56.005</Modified>
+      <Modified>2017-05-16T08:34:47.312</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Universe\Documents\GitHub\OstManSysRepo\OstManSysMVVM\Assets\delete.png">
       <PackagePath>Assets\delete.png</PackagePath>
-      <Modified>2017-05-15T17:31:56.007</Modified>
+      <Modified>2017-05-16T08:34:47.313</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Universe\Documents\GitHub\OstManSysRepo\OstManSysMVVM\Assets\done.png">
       <PackagePath>Assets\done.png</PackagePath>
-      <Modified>2017-05-15T17:31:56.007</Modified>
+      <Modified>2017-05-16T08:34:47.314</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Universe\Documents\GitHub\OstManSysRepo\OstManSysMVVM\Assets\edit.png">
       <PackagePath>Assets\edit.png</PackagePath>
-      <Modified>2017-05-15T17:31:56.007</Modified>
+      <Modified>2017-05-16T08:34:47.315</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Universe\Documents\GitHub\OstManSysRepo\OstManSysMVVM\Assets\history.png">
       <PackagePath>Assets\history.png</PackagePath>
-      <Modified>2017-05-15T17:31:56.008</Modified>
+      <Modified>2017-05-16T08:34:47.316</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Universe\Documents\GitHub\OstManSysRepo\OstManSysMVVM\Assets\OstBanHusLogo.png">
       <PackagePath>Assets\OstBanHusLogo.png</PackagePath>
-      <Modified>2017-05-15T17:31:56.005</Modified>
+      <Modified>2017-05-16T08:34:47.311</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Universe\Documents\GitHub\OstManSysRepo\OstManSysMVVM\Assets\LockScreenLogo.scale-200.png">
       <PackagePath>Assets\LockScreenLogo.scale-200.png</PackagePath>
@@ -536,7 +536,7 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Universe\Documents\GitHub\OstManSysRepo\OstManSysMVVM\bin\x86\Debug\OstManSysMVVM.xr.xml">
       <PackagePath>OstManSysMVVM.xr.xml</PackagePath>
-      <Modified>2017-05-15T18:21:54.413</Modified>
+      <Modified>2017-05-16T08:47:52.478</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Program Files %28x86%29\Windows Kits\10\UnionMetadata\Windows.winmd">
       <PackagePath>WinMetadata\Windows.winmd</PackagePath>
@@ -545,11 +545,11 @@
     <AppxPackagedFile Include="C:\Users\Universe\Documents\GitHub\OstManSysRepo\OstManSysMVVM\bin\x86\Debug\resources.pri">
       <PackagePath>resources.pri</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2017-05-15T18:21:55.399</Modified>
+      <Modified>2017-05-16T09:05:16.694</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Universe\Documents\GitHub\OstManSysRepo\OstManSysMVVM\bin\x86\Debug\Core\OstManSysMVVM.exe">
       <PackagePath>OstManSysMVVM.exe</PackagePath>
-      <Modified>2017-05-15T18:21:55.802</Modified>
+      <Modified>2017-05-16T09:05:17.095</Modified>
     </AppxPackagedFile>
   </ItemGroup>
   <ItemGroup>
