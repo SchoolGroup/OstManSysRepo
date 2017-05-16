@@ -30,7 +30,7 @@
                 <viewModel:ApartmentViewModel/>
             </StackPanel.DataContext>-->
             <StackPanel Margin="16, 100, 0, 0" HorizontalAlignment="Center" VerticalAlignment="Center">
-                <ListView x:Name="listView" HorizontalAlignment="Left" Height="450" VerticalAlignment="Top" Width="850" ItemsSource="{Binding ApartmentCatalogSingleton.Apartments, Mode=TwoWay}"  SelectedItem="{Binding SelectedApartment, Mode=TwoWay}"/>
+                <ListView x:Name="listView" HorizontalAlignment="Left" Height="450" VerticalAlignment="Top" Width="850" ItemsSource="{Binding ApartmentAddressCatalogSingleton.ApartmentAddresses, Mode=TwoWay}"  SelectedItem="{Binding SelectedApartment, Mode=TwoWay}"/>
             </StackPanel>
         </StackPanel>
 

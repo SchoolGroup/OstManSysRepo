@@ -14,8 +14,8 @@
     <RootPropertyPathName Name="Address" />
     <RootPropertyPathName Name="GoToUpdateCommand" />
     <RootPropertyPathName Name="DeleteCommand" />
-    <RootPropertyPathName Name="ApartmentCatalogSingleton" />
-    <RootPropertyPathName Name="Apartments" />
+    <RootPropertyPathName Name="ApartmentAddressCatalogSingleton" />
+    <RootPropertyPathName Name="ApartmentAddresses" />
     <RootPropertyPathName Name="SelectedApartment" />
     <RootPropertyPathName Name="DownpipeCatalogSingleton" />
     <RootPropertyPathName Name="Downpipes" />

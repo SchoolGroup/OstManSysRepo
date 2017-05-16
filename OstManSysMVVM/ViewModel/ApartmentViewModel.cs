@@ -51,6 +51,7 @@ namespace OstManSysMVVM.ViewModel
         }
 
         public ApartmentCatalogSingleton ApartmentCatalogSingleton { get; set; }
+        public ApartmentAddressCatalogSingleton ApartmentAddressCatalogSingleton { get; set; }
         public DownpipeCatalogSingleton DownpipeCatalogSingleton { get; set; }
         public ProblemCatalogSingleton ProblemCatalogSingleton { get; set; }
         public Handler.ApartmentHandler ApartmentHandler { get; set; }
@@ -60,6 +61,7 @@ namespace OstManSysMVVM.ViewModel
         public ICommand GoToUpdateCommand { get; set; }
         public ApartmentViewModel()
         {
+            ApartmentAddressCatalogSingleton = ApartmentAddressCatalogSingleton.Instance;
             ApartmentCatalogSingleton = ApartmentCatalogSingleton.Instance;
             DownpipeCatalogSingleton = DownpipeCatalogSingleton.Instance;
             ProblemCatalogSingleton = ProblemCatalogSingleton.Instance;

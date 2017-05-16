@@ -12,7 +12,7 @@ namespace OstManSysMVVM.Model
         public int ApartmentID { get; set; }
         public int DownpipeID { get; set; }
         public int WindowID { get; set; }
-        public string Address { get; set; }
+        public int AddressID { get; set; }
         public int Size { get; set; }
         public int NumberOfRooms { get; set; }
         public decimal MonthlyRent { get; set; }
@@ -27,7 +27,7 @@ namespace OstManSysMVVM.Model
 
         public override string ToString()
         {
-            return string.Format("{0} - {1} - {2} - {3} - {4} - {5}", ApartmentID, Address, Size, NumberOfRooms, MonthlyRent,
+            return string.Format("{0} - {1} - {2} - {3} - {4} - {5}", ApartmentID, AddressID, Size, NumberOfRooms, MonthlyRent,
                 Condition);
         }
     }
