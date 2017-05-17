@@ -355,6 +355,9 @@
     <AppxPackagedFile Include="C:\Users\Cristian Patras\Documents\GitHub\OstManSysRepo\OstManSysMVVM\Assets\add.png">
       <PackagePath>Assets\add.png</PackagePath>
     </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Cristian Patras\Documents\GitHub\OstManSysRepo\OstManSysMVVM\Assets\attach.png">
+      <PackagePath>Assets\attach.png</PackagePath>
+    </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Cristian Patras\Documents\GitHub\OstManSysRepo\OstManSysMVVM\Assets\delete.png">
       <PackagePath>Assets\delete.png</PackagePath>
     </AppxPackagedFile>

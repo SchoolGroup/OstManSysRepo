@@ -125,6 +125,9 @@
     <Compile Include="View\ApartmentsView.xaml.cs">
       <DependentUpon>ApartmentsView.xaml</DependentUpon>
     </Compile>
+    <Compile Include="View\AttachView.xaml.cs">
+      <DependentUpon>AttachView.xaml</DependentUpon>
+    </Compile>
     <Compile Include="View\DownPipesView.xaml.cs">
       <DependentUpon>DownPipesView.xaml</DependentUpon>
     </Compile>
@@ -184,6 +187,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Assets\add.png" />
+    <Content Include="Assets\attach.png" />
     <Content Include="Assets\delete.png" />
     <Content Include="Assets\done.png" />
     <Content Include="Assets\edit.png" />
@@ -216,6 +220,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="View\ApartmentsView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\AttachView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

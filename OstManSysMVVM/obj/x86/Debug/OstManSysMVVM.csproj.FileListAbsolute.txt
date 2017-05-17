@@ -1193,3 +1193,8 @@ C:\Users\Cristian Patras\Documents\GitHub\OstManSysRepo\OstManSysMVVM\obj\x86\De
 C:\Users\Cristian Patras\Documents\GitHub\OstManSysRepo\OstManSysMVVM\obj\x86\Debug\View\ProblemSolved.xaml
 C:\Users\Cristian Patras\Documents\GitHub\OstManSysRepo\OstManSysMVVM\obj\x86\Debug\View\ProblemSolved.xbf
 C:\Users\Cristian Patras\Documents\GitHub\OstManSysRepo\OstManSysMVVM\obj\x86\Debug\OstManSysMVVM.csprojResolveAssemblyReference.cache
+C:\Users\Cristian Patras\Documents\GitHub\OstManSysRepo\OstManSysMVVM\bin\x86\Debug\View\AttachView.xbf
+C:\Users\Cristian Patras\Documents\GitHub\OstManSysRepo\OstManSysMVVM\obj\x86\Debug\View\AttachView.g.i.cs
+C:\Users\Cristian Patras\Documents\GitHub\OstManSysRepo\OstManSysMVVM\obj\x86\Debug\View\AttachView.g.cs
+C:\Users\Cristian Patras\Documents\GitHub\OstManSysRepo\OstManSysMVVM\obj\x86\Debug\View\AttachView.xaml
+C:\Users\Cristian Patras\Documents\GitHub\OstManSysRepo\OstManSysMVVM\obj\x86\Debug\View\AttachView.xbf

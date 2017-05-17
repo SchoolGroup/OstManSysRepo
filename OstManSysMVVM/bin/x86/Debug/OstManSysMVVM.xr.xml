@@ -24,6 +24,8 @@
     <RootPropertyPathName Name="ApartmentAddressCatalogSingleton" />
     <RootPropertyPathName Name="ApartmentAddresses" />
     <RootPropertyPathName Name="SelectedApartment" />
+    <RootPropertyPathName Name="ApartmentCatalogSingleton" />
+    <RootPropertyPathName Name="Apartments" />
     <RootPropertyPathName Name="DownpipeApartmentAddressCatalogSingleton" />
     <RootPropertyPathName Name="DownpipeApartmentAddresses" />
     <RootPropertyPathName Name="ResidentHistoryCatalogSingleton" />
@@ -101,6 +103,7 @@
       <RootProperty Name="Margin" />
       <RootProperty Name="Command" />
       <RootProperty Name="HorizontalContentAlignment" />
+      <RootProperty Name="FontWeight" />
       <RootEvent Name="Click" />
     </RootType>
     <RootType FullName="Windows.UI.Xaml.Controls.Image">
@@ -174,8 +177,15 @@
       <RootProperty Name="SelectedItem" />
       <RootProperty Name="Margin" />
       <RootProperty Name="Padding" />
+      <RootProperty Name="ItemTemplate" />
     </RootType>
     <RootType FullName="OstManSysMVVM.View.ApartmentsView" />
+    <RootType FullName="Windows.UI.Xaml.Controls.ComboBox">
+      <RootProperty Name="MaxDropDownHeight" />
+      <RootProperty Name="Width" />
+      <RootProperty Name="ItemsSource" />
+    </RootType>
+    <RootType FullName="OstManSysMVVM.View.AttachView" />
     <RootType FullName="OstManSysMVVM.View.DownPipesView" />
     <RootType FullName="OstManSysMVVM.View.HistoryOfResidentsView" />
     <RootType FullName="Windows.UI.Xaml.Controls.Canvas">
@@ -216,6 +226,9 @@
     <RootType FullName="OstManSysMVVM.View.ProblemSolved" />
     <RootType FullName="OstManSysMVVM.View.ProblemsView" />
     <RootType FullName="OstManSysMVVM.View.Report" />
+    <RootType FullName="Windows.UI.Xaml.DataTemplate">
+      <RootProperty Name="Template" />
+    </RootType>
     <RootType FullName="OstManSysMVVM.View.ResidentsViewFrame" />
     <RootType FullName="OstManSysMVVM.View.ResidentView" />
     <RootType FullName="OstManSysMVVM.View.UpdateApartment" />
