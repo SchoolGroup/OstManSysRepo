@@ -29,7 +29,20 @@
         </Grid.RowDefinitions>
         <StackPanel Grid.Column="1" Grid.Row="1"  HorizontalAlignment="Left" VerticalAlignment="Top">
                 <StackPanel Margin="16, 100, 0, 0" HorizontalAlignment="Center" VerticalAlignment="Center">
-                <ListView x:Name="listView" HorizontalAlignment="Left" Height="450" VerticalAlignment="Top" Width="850" ItemsSource="{Binding ProblemCatalogSingleton.Problems, Mode=TwoWay}"  SelectedItem="{Binding ProblemCatalogSingleton.SelectedProblem, Mode=TwoWay}"/>
+                  <ListView x:Name="listView" HorizontalAlignment="Left" Height="450" VerticalAlignment="Top" Width="850" ItemsSource="{Binding ProblemCatalogSingleton.Problems, Mode=TwoWay}"  SelectedItem="{Binding ProblemCatalogSingleton.SelectedProblem, Mode=TwoWay}">
+                    <ListView.ItemTemplate>
+                        <DataTemplate>
+                            <StackPanel>
+                                <TextBlock>
+                                    <Run Text="{Binding ProblemID}" FontWeight="Bold"/><Run Text="." FontWeight="Bold"/>
+                                    <Run Text="{Binding ApartmentID}"/>
+                                    <Run Text="{Binding Header}" FontStyle="Italic"/>
+                                    <Run Text="{Binding Description}"/>
+                                </TextBlock>
+                            </StackPanel>
+                        </DataTemplate>
+                    </ListView.ItemTemplate>
+                  </ListView>
             </StackPanel>
         </StackPanel>
 

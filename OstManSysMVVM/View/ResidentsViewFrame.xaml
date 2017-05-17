@@ -28,16 +28,15 @@
         <StackPanel Grid.Column="1" Grid.Row="1"  HorizontalAlignment="Left" VerticalAlignment="Top">
             <StackPanel Margin="16, 100, 0, 0" HorizontalAlignment="Center" VerticalAlignment="Center">
                 <ListView x:Name="listView" HorizontalAlignment="Left" Height="450" VerticalAlignment="Top" Width="850" ItemsSource="{Binding ResidentCatalogSingleton.Residents, Mode=TwoWay}"  SelectedItem="{Binding SelectedResident, Mode=TwoWay}">
-                    <interactivity:Interaction.Behaviors>
-                        
-                    </interactivity:Interaction.Behaviors>
                     <ListView.ItemTemplate>
                         <DataTemplate>
                             <StackPanel Orientation="Horizontal">
                                 <TextBlock Text="{Binding ResidentID}" VerticalAlignment="Center" FontWeight="Bold" Margin="0, 0, 10, 0"/>
                                 <TextBlock Text="{Binding FirstName}" VerticalAlignment="Center" Margin="0, 0, 5, 0"/>
                                 <TextBlock Text="{Binding LastName}" VerticalAlignment="Center" Margin="0, 0, 5, 0"/>
-                                <TextBlock Text="{Binding Type}" VerticalAlignment="Center"/>
+                                <TextBlock VerticalAlignment="Center">
+                                    <Run Text="("/><Run Text="{Binding Type}"/><Run Text=")"/>
+                                </TextBlock>
                                 <Button VerticalAlignment="Center" FontSize="11" FontWeight="Bold"  Margin="5, 0, 0, 0" Content="Attach to an apartment" Background="Transparent">
                                     <interactivity:Interaction.Behaviors>
                                         <core:EventTriggerBehavior EventName="Click">

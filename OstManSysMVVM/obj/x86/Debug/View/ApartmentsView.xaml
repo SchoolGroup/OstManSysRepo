@@ -30,7 +30,35 @@
                 <viewModel:ApartmentViewModel/>
             </StackPanel.DataContext>-->
             <StackPanel Margin="16, 100, 0, 0" HorizontalAlignment="Center" VerticalAlignment="Center">
-                <ListView x:ConnectionId='4' x:Name="listView" HorizontalAlignment="Left" Height="450" VerticalAlignment="Top" Width="850" ItemsSource="{Binding ApartmentAddressCatalogSingleton.ApartmentAddresses, Mode=TwoWay}"  SelectedItem="{Binding SelectedApartment, Mode=TwoWay}"/>
+                <ListView x:ConnectionId='4' x:Name="listView" HorizontalAlignment="Left" Height="450" VerticalAlignment="Top" Width="850" ItemsSource="{Binding ApartmentAddressCatalogSingleton.ApartmentAddresses, Mode=TwoWay}"  SelectedItem="{Binding SelectedApartment, Mode=TwoWay}">
+                    <ListView.ItemTemplate>
+                        <DataTemplate>
+                            <StackPanel Orientation="Horizontal" >
+                                <StackPanel Margin="0, 0, 15, 0" VerticalAlignment="Center">
+                                    <TextBlock Text="{Binding ApartmentID}" VerticalAlignment="Center"/>
+                                </StackPanel>
+
+                                <StackPanel Margin="0, 0, 5, 0" VerticalAlignment="Center" Orientation="Horizontal">
+                                    <TextBlock Text="{Binding StreetName}"/>
+                                    <TextBlock Text=","/>
+                                </StackPanel>
+                                <StackPanel Margin="0, 0, 5, 0" VerticalAlignment="Center" Orientation="Horizontal">
+                                    <TextBlock Text="{Binding StreetNumber}"/>
+                                    <TextBlock Text=","/>
+                                </StackPanel>
+
+                                <StackPanel Margin="0, 0, 5, 0" VerticalAlignment="Center" Orientation="Horizontal">
+                                    <TextBlock Text="{Binding Floor}"/>
+                                    <TextBlock Text=""/>
+                                    <TextBlock Text="{Binding Side}"/>
+                                </StackPanel>
+                                
+                                
+                                <Button VerticalAlignment="Center" FontSize="10" Content="View Details" Background="Transparent" Margin="10, 0, 0, 0" BorderBrush="Black"/>
+                            </StackPanel>
+                        </DataTemplate>
+                    </ListView.ItemTemplate>
+                </ListView>
             </StackPanel>
         </StackPanel>
 

@@ -16,7 +16,7 @@ namespace OstManSysMVVM.Model
         public DateTime DateOfBirth { get; set; }
         public string Type { get; set; }
         public DateTime MoveInDate { get; set; }
-        public DateTime? MoveOutDate { get; set; }
+        public DateTime MoveOutDate { get; set; }
         public int ApartmentID { get; set; }
 
         public ResidentHistory()

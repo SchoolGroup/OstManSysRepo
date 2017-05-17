@@ -8,6 +8,7 @@
     xmlns:viewModel="using:OstManSysMVVM.ViewModel"
     xmlns:interactivity="using:Microsoft.Xaml.Interactivity"
     xmlns:core="using:Microsoft.Xaml.Interactions.Core"
+    xmlns:system="using:System"
     mc:Ignorable="d">
 
     <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
@@ -27,7 +28,23 @@
         </Grid.RowDefinitions>
         <StackPanel Grid.Column="1" Grid.Row="1"  HorizontalAlignment="Left" VerticalAlignment="Top">
             <StackPanel Margin="16, 100, 0, 0" HorizontalAlignment="Center" VerticalAlignment="Center">
-                <ListView x:Name="listView" HorizontalAlignment="Left" Height="450" VerticalAlignment="Top" Width="850" ItemsSource="{Binding ResidentHistoryCatalogSingleton.ResidentHistories, Mode=TwoWay}"/>
+                <ListView x:Name="listView" HorizontalAlignment="Left" Height="450" VerticalAlignment="Top" Width="850" ItemsSource="{Binding ResidentHistoryCatalogSingleton.ResidentHistories, Mode=TwoWay}"  SelectedItem="{Binding SelectedResident, Mode=TwoWay}">
+                    <ListView.ItemTemplate>
+                        <DataTemplate>
+                            <StackPanel Orientation="Horizontal">
+                                <StackPanel Orientation="Horizontal" Margin="0, 0, 10, 0">
+                                      <TextBlock Text="{Binding ResidentID}" VerticalAlignment="Center" FontWeight="Bold"/>
+                                    <TextBlock Text="." VerticalAlignment="Center" FontWeight="Bold"/>
+                                </StackPanel>
+                                <TextBlock Text="{Binding FirstName}" VerticalAlignment="Center" Margin="0, 0, 5, 0"/>
+                                <TextBlock Text="{Binding LastName}" VerticalAlignment="Center" Margin="0, 0, 5, 0"/>
+                                <TextBlock VerticalAlignment="Center">
+                                    <Run Text="("/><Run Text="{Binding MoveInDate.Day}"/><Run Text="/"/><Run Text="{Binding MoveInDate.Month}"/><Run Text="/"/><Run Text="{Binding MoveInDate.Year}"/><Run Text="-"/><Run Text="{Binding MoveOutDate.Day}"/><Run Text="/"/><Run Text="{Binding MoveOutDate.Month}"/><Run Text="/"/><Run Text="{Binding MoveOutDate.Year}"/><Run Text=")"/>
+                                </TextBlock>
+                            </StackPanel>
+                        </DataTemplate>
+                    </ListView.ItemTemplate>
+                </ListView>
             </StackPanel>
         </StackPanel>
     </Grid>

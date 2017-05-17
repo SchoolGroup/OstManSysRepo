@@ -24,32 +24,45 @@
     <RootPropertyPathName Name="ApartmentAddressCatalogSingleton" />
     <RootPropertyPathName Name="ApartmentAddresses" />
     <RootPropertyPathName Name="SelectedApartment" />
+    <RootPropertyPathName Name="Side" />
+    <RootPropertyPathName Name="Floor" />
+    <RootPropertyPathName Name="StreetNumber" />
+    <RootPropertyPathName Name="StreetName" />
+    <RootPropertyPathName Name="ApartmentID" />
     <RootPropertyPathName Name="ApartmentCatalogSingleton" />
     <RootPropertyPathName Name="Apartments" />
     <RootPropertyPathName Name="DownpipeApartmentAddressCatalogSingleton" />
     <RootPropertyPathName Name="DownpipeApartmentAddresses" />
+    <RootPropertyPathName Name="LastChecked" />
+    <RootPropertyPathName Name="Year" />
+    <RootPropertyPathName Name="Month" />
+    <RootPropertyPathName Name="Day" />
+    <RootPropertyPathName Name="DownpipeID" />
     <RootPropertyPathName Name="ResidentHistoryCatalogSingleton" />
     <RootPropertyPathName Name="ResidentHistories" />
+    <RootPropertyPathName Name="SelectedResident" />
+    <RootPropertyPathName Name="MoveOutDate" />
+    <RootPropertyPathName Name="MoveInDate" />
+    <RootPropertyPathName Name="ResidentID" />
     <RootPropertyPathName Name="LogInCommand" />
     <RootPropertyPathName Name="Account" />
     <RootPropertyPathName Name="Password" />
-    <RootPropertyPathName Name="ResidentID" />
     <RootPropertyPathName Name="CurrentResident" />
     <RootPropertyPathName Name="ProblemHistoryCatalogSingleton" />
     <RootPropertyPathName Name="ProblemHistories" />
-    <RootPropertyPathName Name="SolveTheProblemCommand" />
-    <RootPropertyPathName Name="ProblemNote" />
     <RootPropertyPathName Name="ProblemCatalogSingleton" />
-    <RootPropertyPathName Name="Problems" />
     <RootPropertyPathName Name="SelectedProblem" />
-    <RootPropertyPathName Name="CreateProblemCommand" />
-    <RootPropertyPathName Name="NewProblem" />
-    <RootPropertyPathName Name="ApartmentID" />
+    <RootPropertyPathName Name="Note" />
     <RootPropertyPathName Name="Description" />
     <RootPropertyPathName Name="Header" />
+    <RootPropertyPathName Name="ProblemID" />
+    <RootPropertyPathName Name="SolveTheProblemCommand" />
+    <RootPropertyPathName Name="ProblemNote" />
+    <RootPropertyPathName Name="Problems" />
+    <RootPropertyPathName Name="CreateProblemCommand" />
+    <RootPropertyPathName Name="NewProblem" />
     <RootPropertyPathName Name="ResidentCatalogSingleton" />
     <RootPropertyPathName Name="Residents" />
-    <RootPropertyPathName Name="SelectedResident" />
     <RootPropertyPathName Name="UpdateCommand" />
   </Roots.PropertyPathNames>
   <Roots.RootTypes>
@@ -151,6 +164,7 @@
     <RootType FullName="Windows.UI.Xaml.Data.Binding">
       <RootProperty Name="Mode" />
       <RootProperty Name="Converter" />
+      <RootProperty Name="Path" />
     </RootType>
     <RootType FullName="Microsoft.Xaml.DirectUI.ProxyTypes.StaticResourceExtension" />
     <RootType FullName="Windows.UI.Xaml.Controls.TextBlock">
@@ -159,8 +173,10 @@
       <RootProperty Name="Text" />
       <RootProperty Name="FontSize" />
       <RootProperty Name="FontWeight" />
-      <RootProperty Name="HorizontalAlignment" />
       <RootProperty Name="VerticalAlignment" />
+      <RootProperty Name="Inlines" />
+      <RootProperty Name="FontStyle" />
+      <RootProperty Name="HorizontalAlignment" />
       <RootProperty Name="Height" />
       <RootProperty Name="Width" />
     </RootType>
@@ -175,9 +191,12 @@
       <RootProperty Name="Width" />
       <RootProperty Name="ItemsSource" />
       <RootProperty Name="SelectedItem" />
+      <RootProperty Name="ItemTemplate" />
       <RootProperty Name="Margin" />
       <RootProperty Name="Padding" />
-      <RootProperty Name="ItemTemplate" />
+    </RootType>
+    <RootType FullName="Windows.UI.Xaml.DataTemplate">
+      <RootProperty Name="Template" />
     </RootType>
     <RootType FullName="OstManSysMVVM.View.ApartmentsView" />
     <RootType FullName="Windows.UI.Xaml.Controls.ComboBox">
@@ -186,6 +205,11 @@
       <RootProperty Name="ItemsSource" />
     </RootType>
     <RootType FullName="OstManSysMVVM.View.AttachView" />
+    <RootType FullName="Windows.UI.Xaml.Documents.Run">
+      <RootProperty Name="Text" />
+      <RootProperty Name="FontWeight" />
+      <RootProperty Name="FontStyle" />
+    </RootType>
     <RootType FullName="OstManSysMVVM.View.DownPipesView" />
     <RootType FullName="OstManSysMVVM.View.HistoryOfResidentsView" />
     <RootType FullName="Windows.UI.Xaml.Controls.Canvas">
@@ -226,9 +250,6 @@
     <RootType FullName="OstManSysMVVM.View.ProblemSolved" />
     <RootType FullName="OstManSysMVVM.View.ProblemsView" />
     <RootType FullName="OstManSysMVVM.View.Report" />
-    <RootType FullName="Windows.UI.Xaml.DataTemplate">
-      <RootProperty Name="Template" />
-    </RootType>
     <RootType FullName="OstManSysMVVM.View.ResidentsViewFrame" />
     <RootType FullName="OstManSysMVVM.View.ResidentView" />
     <RootType FullName="OstManSysMVVM.View.UpdateApartment" />
