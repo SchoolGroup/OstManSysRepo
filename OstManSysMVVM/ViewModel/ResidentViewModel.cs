@@ -19,11 +19,12 @@ namespace OstManSysMVVM.ViewModel
         private Resident _newResident;
         private Resident _selectedResident;
         private Resident _currentResident;
+        private Problem _selectedProblem;
         private Account _account;
         private Account acc;
 
         public ResidentCatalogSingleton ResidentCatalogSingleton { get; set; }
-
+        public ResidentHistoryCatalogSingleton ResidentHistoryCatalogSingleton { get; set; }
         public Account Account
         {
             get { return _account; }
@@ -31,6 +32,16 @@ namespace OstManSysMVVM.ViewModel
             {
                 _account = value;
                 OnPropertyChanged(nameof(Account));
+            }
+        }
+
+        public Problem SelectedProblem
+        {
+            get { return _selectedProblem; }
+            set
+            {
+                _selectedProblem = value;
+                OnPropertyChanged(nameof(SelectedProblem));
             }
         }
 
@@ -82,6 +93,7 @@ namespace OstManSysMVVM.ViewModel
         {
             ResidentHandler=new Handler.ResidentHandler(this);
             ResidentCatalogSingleton = ResidentCatalogSingleton.Instance;
+            ResidentHistoryCatalogSingleton = ResidentHistoryCatalogSingleton.Instance;
             LogInHandler = new LogInHandler(this);
             NewResident = new Resident();
             SelectedResident=new Resident();

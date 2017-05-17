@@ -9,7 +9,7 @@ using OstManSysMVVM.Persistency;
 
 namespace OstManSysMVVM.View
 {
-    class ProblemHistoryCatalogSingleton
+    public class ProblemHistoryCatalogSingleton
     {
         private static ProblemHistoryCatalogSingleton _instance = null;
 

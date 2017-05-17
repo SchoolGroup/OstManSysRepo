@@ -12,12 +12,13 @@ namespace OstManSysMVVM.Model
         public int ApartmentID { get; set; }
         public string Header { get; set; }
         public string Description { get; set; }
+        public string  Note { get; set; }
 
         public Problem()
         {
             
         }
-
+        
         public override string ToString()
         {
             return string.Format("{0} - {1} - {2} - {3}", ProblemID, ApartmentID, Header, Description);

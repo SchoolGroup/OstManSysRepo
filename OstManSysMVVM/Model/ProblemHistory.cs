@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace OstManSysMVVM.View
 {
-    class ProblemHistory
+    public class ProblemHistory
     {
         public int ProblemID { get; set; }
         public int ApartmentID { get; set; }

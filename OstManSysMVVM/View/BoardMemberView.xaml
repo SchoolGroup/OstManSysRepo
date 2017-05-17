@@ -94,7 +94,7 @@
             
         </StackPanel>-->
 
-        <StackPanel Grid.Row="1" Grid.Column="2" Margin="0, 40, 35, 0" VerticalAlignment="Top" Orientation="Horizontal" HorizontalAlignment="Right">
+        <StackPanel Grid.Row="1" Grid.Column="2" Margin="0, 40, 10, 0" VerticalAlignment="Top" Orientation="Horizontal" HorizontalAlignment="Right">
             <TextBox x:Name="textBox" HorizontalAlignment="Left" BorderThickness="0.5" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="159"/>
             <Button x:Name="button2" HorizontalAlignment="Left" VerticalAlignment="Top" Width="45" Height="35" Background="Transparent">
                 <Image Source="http://wfarm4.dataknet.com/static/resources/icons/set110/37275f5a.png" Stretch="UniformToFill"/>
@@ -118,6 +118,8 @@
             <Button x:Name="button11" Content="Problems" VerticalAlignment="Top" Background="Transparent" BorderBrush="Black" Click="Button10_OnClick" Margin="5, 0, 0, 0"/>
             <Button x:Name="button13" Content="History of Problems" VerticalAlignment="Top" Background="Transparent" BorderBrush="Black" Click="Button13_OnClick" Margin="5, 0, 0, 0"/>
             <Button x:Name="button12" Content="Residents" VerticalAlignment="Top" Background="Transparent" BorderBrush="Black" Click="Button12_OnClick" Margin="5, 0, 0, 0"/>
+            <Button x:Name="button14" Content="History of Residents" VerticalAlignment="Top" Background="Transparent" BorderBrush="Black" Click="Button14_OnClick" Margin="5, 0, 0, 0"/>
+
         </StackPanel>
 
 

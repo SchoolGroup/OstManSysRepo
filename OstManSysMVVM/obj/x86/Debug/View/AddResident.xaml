@@ -1,5 +1,4 @@
 ﻿<Page
-    x:Class="OstManSysMVVM.View.AddResident"
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
     xmlns:local="using:OstManSysMVVM.View"
@@ -7,8 +6,14 @@
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     xmlns:interactivity="using:Microsoft.Xaml.Interactivity"
     xmlns:core="using:Microsoft.Xaml.Interactions.Core"
+    xmlns:ViewModel="using:OstManSysMVVM.ViewModel"
+    xmlns:converter="using:OstManSysMVVM.Converter"
+    x:Class="OstManSysMVVM.View.AddResident"
     mc:Ignorable="d">
 
+    <Page.Resources>
+        <converter:DateTimeConverter x:Key="DateTimeConverter"></converter:DateTimeConverter>
+    </Page.Resources>
     <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
         <Grid.RowDefinitions>
             <RowDefinition Height="*" />
@@ -20,7 +25,10 @@
             <ColumnDefinition Width="8*" />
             <ColumnDefinition Width="*" />
         </Grid.ColumnDefinitions>
-        <StackPanel  Grid.Column="1" Grid.Row="1"  HorizontalAlignment="Center" VerticalAlignment="Top">
+        <Grid.DataContext>
+            <ViewModel:ResidentViewModel/>
+        </Grid.DataContext>
+         <StackPanel  Grid.Column="1" Grid.Row="1"  HorizontalAlignment="Center" VerticalAlignment="Top">
             <TextBlock x:ConnectionId='16'  x:Name="textBlock" FontWeight="Bold" TextWrapping="Wrap" Margin="0, 20, 0, 0" Text="Enter the details of the new user:" FontSize="20" />
         </StackPanel>
 
@@ -34,25 +42,25 @@
                 <TextBlock x:ConnectionId='14' x:Name="TextBlock9" Margin="0, 21 0, 0" TextWrapping="Wrap" Text="Images:" FontSize="15" FontWeight="Bold"/>
 
                 <TextBlock x:ConnectionId='15' x:Name="TextBlock7" Margin="0, 21 0, 0" TextWrapping="Wrap" Text="Note:" FontSize="15" FontWeight="Bold"/>
-                
+
             </StackPanel>
 
             <StackPanel>
 
-                <TextBox x:ConnectionId='2' x:Name="textBox" Margin="25, 5, 0, 0"  HorizontalAlignment="Left" TextWrapping="Wrap" Text="" FontSize="15" Width="170"/>
-                <TextBox x:ConnectionId='3' x:Name="textBox1" Margin="25, 10, 0, 0"  HorizontalAlignment="Left" TextWrapping="Wrap" Text="" FontSize="15" Width="170"/>
-                <TextBox x:ConnectionId='4' x:Name="textBox2" Margin="25, 7, 0, 0"  HorizontalAlignment="Left" TextWrapping="Wrap" Text="" FontSize="15" Width="170"/>
-                <TextBox x:ConnectionId='5' x:Name="textBox3" Margin="25, 7, 0, 0"  HorizontalAlignment="Left" TextWrapping="Wrap" Text="" FontSize="15" Width="170"/>
-                <CalendarDatePicker HorizontalAlignment="Left" Margin="25, 9, 0, 0" VerticalAlignment="Top"/>
+                <TextBox x:ConnectionId='2' x:Name="textBox" Margin="25, 5, 0, 0"  HorizontalAlignment="Left" TextWrapping="Wrap" Text="{Binding NewResident.FirstName, Mode=TwoWay}" FontSize="15" Width="170"/>
+                <TextBox x:ConnectionId='3' x:Name="textBox1" Margin="25, 10, 0, 0"  HorizontalAlignment="Left" TextWrapping="Wrap" Text="{Binding NewResident.LastName, Mode=TwoWay}" FontSize="15" Width="170"/>
+                <TextBox x:ConnectionId='4' x:Name="textBox2" Margin="25, 7, 0, 0"  HorizontalAlignment="Left" TextWrapping="Wrap" Text="{Binding NewResident.PhoneNumber, Mode=TwoWay}" FontSize="15" Width="170"/>
+                <TextBox x:ConnectionId='5' x:Name="textBox3" Margin="25, 7, 0, 0"  HorizontalAlignment="Left" TextWrapping="Wrap" Text="{Binding NewResident.EmailAddress, Mode=TwoWay}" FontSize="15" Width="170"/>
+                <CalendarDatePicker HorizontalAlignment="Left" Margin="25, 9, 0, 0" VerticalAlignment="Top" Date="{Binding NewResident.DateOfBirth ,Mode=TwoWay, Converter={StaticResource DateTimeConverter}}"/>
                 <Button x:ConnectionId='6' x:Name="button2" Background="Transparent" FontSize="12" BorderBrush="Gray" Content="Browse" Margin="25, 15, 0, 0" HorizontalAlignment="Left" VerticalAlignment="Top"/>
-                <TextBox x:ConnectionId='7' x:Name="textBox6" Margin="25, 9, 0, 0"  HorizontalAlignment="Left" TextWrapping="Wrap" Text="" FontSize="15" Height="100" Width="170"/>
-                <Button x:ConnectionId='8' x:Name="button" Background="Transparent" BorderBrush="Black" Content="Add" Margin="0, 15, 0, 0" HorizontalAlignment="Right" VerticalAlignment="Top"/>
+                <TextBox x:ConnectionId='7' x:Name="textBox6" Margin="25, 9, 0, 0"  HorizontalAlignment="Left" TextWrapping="Wrap" Text="{Binding NewResident.Type, Mode=TwoWay}" FontSize="15" Height="100" Width="170"/>
+                <Button x:ConnectionId='8' x:Name="button" Background="Transparent" Command="{Binding CreateCommand, Mode=TwoWay}" BorderBrush="Black" Content="Add" Margin="0, 15, 0, 0" HorizontalAlignment="Right" VerticalAlignment="Top"/>
 
             </StackPanel>
 
         </StackPanel>
         <StackPanel Grid.Column="1" Grid.Row="1">
-            <Button x:ConnectionId='1' x:Name="button1" Background="Transparent" Width="50" Height="50" HorizontalAlignment="Left" VerticalAlignment="Top">
+            <Button x:ConnectionId='1' x:Name="button1" Background="Transparent" Width="50" Height="50" HorizontalAlignment="Left"  VerticalAlignment="Top">
                 <Image Source="https://maxcdn.icons8.com/Share/icon/Arrows//left_arrow1600.png" Stretch="UniformToFill">
                     <interactivity:Interaction.Behaviors>
                         <core:EventTriggerBehavior EventName="PointerPressed">

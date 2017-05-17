@@ -5,9 +5,11 @@ View\AddResident.xbf
 View\ApartmentsView.xbf
 View\BoardMemberView.xbf
 View\DownPipesView.xbf
+View\HistoryOfResidentsView.xbf
 View\MainPage.xbf
 View\MyApartmentViewFrame.xbf
 View\PreviousProblemsView.xbf
+View\ProblemSolved.xbf
 View\ProblemsView.xbf
 View\Report.xbf
 View\ResidentsViewFrame.xbf

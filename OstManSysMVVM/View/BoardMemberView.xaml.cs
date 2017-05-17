@@ -52,5 +52,10 @@ namespace OstManSysMVVM.View
         {
             MyFrame.Navigate(typeof(PreviousProblemsView));
         }
+
+        private void Button14_OnClick(object sender, RoutedEventArgs e)
+        {
+            MyFrame.Navigate(typeof(HistoryOfResidentsView));
+        }
     }
 }

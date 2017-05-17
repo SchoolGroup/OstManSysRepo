@@ -23,7 +23,7 @@ namespace OstManSysMVVM.Model
                 return _instance;
             }
         }
-
+        public Problem SelectedProblem { get; set; }
         public ObservableCollection<Problem> Problems { get; set; }
         private ProblemCatalogSingleton()
         {

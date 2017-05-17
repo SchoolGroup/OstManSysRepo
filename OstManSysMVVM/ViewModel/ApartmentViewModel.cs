@@ -10,6 +10,7 @@ using OstManSysMVVM.Annotations;
 using OstManSysMVVM.Common;
 using OstManSysMVVM.Handler;
 using OstManSysMVVM.Model;
+using OstManSysMVVM.View;
 
 namespace OstManSysMVVM.ViewModel
 {
@@ -18,7 +19,28 @@ namespace OstManSysMVVM.ViewModel
         private Apartment _newApartment;
         private Apartment _selectedApartment;
         private Problem _selectedProblem;
-        
+        private Problem _newProblem;
+        private string _problemNote;
+
+        public string ProblemNote
+        {
+            get { return _problemNote; }
+            set
+            {
+                _problemNote = value;
+                OnPropertyChanged(nameof(ProblemNote));
+            }
+        }
+
+        public Problem NewProblem
+        {
+            get { return _newProblem; }
+            set
+            {
+                _newProblem = value;
+                OnPropertyChanged(nameof(NewProblem));
+            }
+        }
 
         public Apartment NewApartment
         {
@@ -56,10 +78,14 @@ namespace OstManSysMVVM.ViewModel
         public DownpipeCatalogSingleton DownpipeCatalogSingleton { get; set; }
         public ProblemCatalogSingleton ProblemCatalogSingleton { get; set; }
         public Handler.ApartmentHandler ApartmentHandler { get; set; }
+        public ProblemHistoryCatalogSingleton ProblemHistoryCatalogSingleton { get; set; }
         public ICommand CreateCommand { get; set; }
         public ICommand DeleteCommand { get; set; }
         public ICommand UpdateCommand { get; set; }
         public ICommand GoToUpdateCommand { get; set; }
+        public ICommand CreateProblemCommand { get; set; }
+        public ICommand SolveTheProblemCommand { get; set; }
+
         public ApartmentViewModel()
         {
             DownpipeApartmentAddressCatalogSingleton = DownpipeApartmentAddressCatalogSingleton.Instance;
@@ -67,13 +93,19 @@ namespace OstManSysMVVM.ViewModel
             ApartmentCatalogSingleton = ApartmentCatalogSingleton.Instance;
             DownpipeCatalogSingleton = DownpipeCatalogSingleton.Instance;
             ProblemCatalogSingleton = ProblemCatalogSingleton.Instance;
+            ProblemHistoryCatalogSingleton = ProblemHistoryCatalogSingleton.Instance;
             ApartmentHandler = new Handler.ApartmentHandler(this);
             NewApartment =new Apartment();
+            NewProblem = new Problem();
+            SelectedProblem = ProblemCatalogSingleton.SelectedProblem;
             //SelectedApartment=new Apartment();
             CreateCommand=new RelayCommand(ApartmentHandler.CreateApartment);
             DeleteCommand=new RelayCommand(ApartmentHandler.DeleteApartment);
             UpdateCommand=new RelayCommand(ApartmentHandler.UpdateApartment);
             GoToUpdateCommand = new RelayCommand(ApartmentHandler.GoToUpdatePage);
+            CreateProblemCommand = new RelayCommand(ApartmentHandler.ReportAProblem);
+            SolveTheProblemCommand = new RelayCommand(ApartmentHandler.DeleteProblem);
+
         }
 
         public event PropertyChangedEventHandler PropertyChanged;

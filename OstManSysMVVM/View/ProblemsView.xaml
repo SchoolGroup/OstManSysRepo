@@ -28,11 +28,8 @@
             <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
         <StackPanel Grid.Column="1" Grid.Row="1"  HorizontalAlignment="Left" VerticalAlignment="Top">
-            <StackPanel.DataContext>
-                <ViewModel:ApartmentViewModel/>
-            </StackPanel.DataContext>
-            <StackPanel Margin="16, 100, 0, 0" HorizontalAlignment="Center" VerticalAlignment="Center">
-                <ListView x:Name="listView" HorizontalAlignment="Left" Height="450" VerticalAlignment="Top" Width="850" ItemsSource="{Binding ProblemCatalogSingleton.Problems, Mode=TwoWay}"  SelectedItem="{Binding SelectedProblem, Mode=TwoWay}"/>
+                <StackPanel Margin="16, 100, 0, 0" HorizontalAlignment="Center" VerticalAlignment="Center">
+                <ListView x:Name="listView" HorizontalAlignment="Left" Height="450" VerticalAlignment="Top" Width="850" ItemsSource="{Binding ProblemCatalogSingleton.Problems, Mode=TwoWay}"  SelectedItem="{Binding ProblemCatalogSingleton.SelectedProblem, Mode=TwoWay}"/>
             </StackPanel>
         </StackPanel>
 
@@ -50,7 +47,13 @@
                     </Button>
 
                     <Button x:Name="button7"  HorizontalContentAlignment="Center" Background="White" FontSize="13" BorderBrush="Black" Width="35" Height="35" HorizontalAlignment="Left" Margin="0, 0, 5, 0" VerticalAlignment="Top">
-                        <Image Source="../Assets/done.png" Stretch="Uniform"/>
+                        <Image Source="../Assets/done.png" Stretch="Uniform">
+                            <interactivity:Interaction.Behaviors>
+                                <core:EventTriggerBehavior EventName="PointerPressed">
+                                    <core:NavigateToPageAction TargetPage="OstManSysMVVM.View.ProblemSolved"/>
+                                </core:EventTriggerBehavior>
+                            </interactivity:Interaction.Behaviors>
+                        </Image>
                     </Button>
                 </StackPanel>
             </StackPanel>

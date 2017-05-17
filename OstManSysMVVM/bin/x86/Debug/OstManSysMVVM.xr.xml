@@ -12,6 +12,13 @@
     <RootPropertyPathName Name="NumberOfRooms" />
     <RootPropertyPathName Name="Size" />
     <RootPropertyPathName Name="Address" />
+    <RootPropertyPathName Name="NewResident" />
+    <RootPropertyPathName Name="Type" />
+    <RootPropertyPathName Name="DateOfBirth" />
+    <RootPropertyPathName Name="EmailAddress" />
+    <RootPropertyPathName Name="PhoneNumber" />
+    <RootPropertyPathName Name="LastName" />
+    <RootPropertyPathName Name="FirstName" />
     <RootPropertyPathName Name="GoToUpdateCommand" />
     <RootPropertyPathName Name="DeleteCommand" />
     <RootPropertyPathName Name="ApartmentAddressCatalogSingleton" />
@@ -19,20 +26,25 @@
     <RootPropertyPathName Name="SelectedApartment" />
     <RootPropertyPathName Name="DownpipeApartmentAddressCatalogSingleton" />
     <RootPropertyPathName Name="DownpipeApartmentAddresses" />
+    <RootPropertyPathName Name="ResidentHistoryCatalogSingleton" />
+    <RootPropertyPathName Name="ResidentHistories" />
     <RootPropertyPathName Name="LogInCommand" />
     <RootPropertyPathName Name="Account" />
     <RootPropertyPathName Name="Password" />
     <RootPropertyPathName Name="ResidentID" />
     <RootPropertyPathName Name="CurrentResident" />
-    <RootPropertyPathName Name="DateOfBirth" />
-    <RootPropertyPathName Name="EmailAddress" />
-    <RootPropertyPathName Name="PhoneNumber" />
-    <RootPropertyPathName Name="LastName" />
-    <RootPropertyPathName Name="FirstName" />
-    <RootPropertyPathName Name="Type" />
+    <RootPropertyPathName Name="ProblemHistoryCatalogSingleton" />
+    <RootPropertyPathName Name="ProblemHistories" />
+    <RootPropertyPathName Name="SolveTheProblemCommand" />
+    <RootPropertyPathName Name="ProblemNote" />
     <RootPropertyPathName Name="ProblemCatalogSingleton" />
     <RootPropertyPathName Name="Problems" />
     <RootPropertyPathName Name="SelectedProblem" />
+    <RootPropertyPathName Name="CreateProblemCommand" />
+    <RootPropertyPathName Name="NewProblem" />
+    <RootPropertyPathName Name="ApartmentID" />
+    <RootPropertyPathName Name="Description" />
+    <RootPropertyPathName Name="Header" />
     <RootPropertyPathName Name="ResidentCatalogSingleton" />
     <RootPropertyPathName Name="Residents" />
     <RootPropertyPathName Name="SelectedResident" />
@@ -151,6 +163,7 @@
     </RootType>
     <RootType FullName="OstManSysMVVM.View.AddApartment" />
     <RootType FullName="OstManSysMVVM.View.AddCoResident" />
+    <RootType FullName="OstManSysMVVM.ViewModel.ResidentViewModel" />
     <RootType FullName="OstManSysMVVM.View.AddResident" />
     <RootType FullName="Windows.UI.Xaml.Controls.ListView">
       <RootProperty Name="HorizontalAlignment" />
@@ -164,7 +177,7 @@
     </RootType>
     <RootType FullName="OstManSysMVVM.View.ApartmentsView" />
     <RootType FullName="OstManSysMVVM.View.DownPipesView" />
-    <RootType FullName="OstManSysMVVM.ViewModel.ResidentViewModel" />
+    <RootType FullName="OstManSysMVVM.View.HistoryOfResidentsView" />
     <RootType FullName="Windows.UI.Xaml.Controls.Canvas">
       <RootMethod Name="GetZIndex" />
       <RootMethod Name="SetZIndex" />
@@ -200,6 +213,7 @@
     <RootType FullName="Windows.UI.Xaml.Controls.DatePickerFlyout" />
     <RootType FullName="OstManSysMVVM.View.MyApartmentViewFrame" />
     <RootType FullName="OstManSysMVVM.View.PreviousProblemsView" />
+    <RootType FullName="OstManSysMVVM.View.ProblemSolved" />
     <RootType FullName="OstManSysMVVM.View.ProblemsView" />
     <RootType FullName="OstManSysMVVM.View.Report" />
     <RootType FullName="OstManSysMVVM.View.ResidentsViewFrame" />

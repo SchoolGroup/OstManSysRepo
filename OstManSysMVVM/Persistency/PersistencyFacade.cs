@@ -275,6 +275,8 @@ namespace OstManSysMVVM.Persistency
                 return null;
             }
         }
+
+
         public void SaveApartment(Apartment apartment)
         {
             using (var client = new HttpClient(handler))
@@ -315,6 +317,67 @@ namespace OstManSysMVVM.Persistency
                 }
             }
         }
+
+        public void SaveProblem(Problem problem)
+        {
+            using (var client = new HttpClient(handler))
+            {
+                client.BaseAddress = new Uri(ServerUrl);
+                client.DefaultRequestHeaders.Clear();
+                client.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
+                try
+                {
+                    var problem1 = JsonConvert.SerializeObject(problem);
+                    var content = new StringContent(problem1, Encoding.UTF8, "Application/json");
+                    var problemsList = client.PostAsync("api/Problems", content).Result;
+                }
+                catch (Exception ex)
+                {
+                    new MessageDialog(ex.Message).ShowAsync();
+                }
+            }
+        }
+
+        public void MoveProblemToHistory(ProblemHistory problemHistory)
+        {
+            using (var client = new HttpClient(handler))
+            {
+                client.BaseAddress = new Uri(ServerUrl);
+                client.DefaultRequestHeaders.Clear();
+                client.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
+                try
+                {
+                    var problemHistory1 = JsonConvert.SerializeObject(problemHistory);
+                    var content = new StringContent(problemHistory1, Encoding.UTF8, "Application/json");
+                    var problemHistoryList = client.PostAsync("api/ProblemHistories" , content).Result;
+                }
+                catch (Exception ex)
+                {
+                    new MessageDialog(ex.Message).ShowAsync();
+                }
+            }
+        }
+
+        public void MoveResidentToHistory(ResidentHistory resident)
+        {
+            using (var client = new HttpClient(handler))
+            {
+                client.BaseAddress = new Uri(ServerUrl);
+                client.DefaultRequestHeaders.Clear();
+                client.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
+                try
+                {
+                    var resident1 = JsonConvert.SerializeObject(resident);
+                    var content = new StringContent(resident1, Encoding.UTF8, "Application/json");
+                    var residentsList = client.PostAsync("api/ResidentHistories", content).Result;
+                }
+                catch (Exception ex)
+                {
+                    new MessageDialog(ex.Message).ShowAsync();
+                }
+            }
+        }
+
         public void DeleteApartment(Apartment apartment)
         {
             using (var client = new HttpClient(handler))
@@ -350,6 +413,25 @@ namespace OstManSysMVVM.Persistency
                 }
             }
         }
+
+        public void DeleteProblem(Problem problem)
+        {
+            using (var client = new HttpClient(handler))
+            {
+                client.BaseAddress = new Uri(ServerUrl);
+                client.DefaultRequestHeaders.Clear();
+                client.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
+                try
+                {
+                    var problemsList = client.DeleteAsync("api/Problems/" + problem.ProblemID).Result;
+                }
+                catch (Exception ex)
+                {
+                    new MessageDialog(ex.Message).ShowAsync();
+                }
+            }
+        }
+
         public void UpdateApartment(Apartment apartment)
         {
             using (var client = new HttpClient(handler))

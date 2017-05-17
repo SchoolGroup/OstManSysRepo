@@ -20,6 +20,28 @@ namespace OstManSysMVVM.Handler
             ApartmentViewModel = apartmentViewModel;
         }
 
+        public void ReportAProblem()
+        {
+            var problem = new Problem();
+            problem.ApartmentID = ApartmentViewModel.NewProblem.ApartmentID;
+            problem.Description = ApartmentViewModel.NewProblem.Description;
+            problem.Header = ApartmentViewModel.NewProblem.Header;
+            problem.ProblemID = ApartmentViewModel.NewProblem.ProblemID;
+            
+            new PersistencyFacade().SaveProblem(problem);
+            var problems = new PersistencyFacade().GetProblems();
+            ApartmentViewModel.ProblemCatalogSingleton.Problems.Clear();
+            foreach (var problem1 in problems)
+            {
+                ApartmentViewModel.ProblemCatalogSingleton.Problems.Add(problem1);
+            }
+
+            ApartmentViewModel.NewProblem.ApartmentID = 0;
+            ApartmentViewModel.NewProblem.Description = "";
+            ApartmentViewModel.NewProblem.Header = "";
+            ApartmentViewModel.NewProblem.ProblemID = 0;
+        }
+
         public void CreateApartment()
         {
             var apartment = new Apartment();
@@ -46,6 +68,52 @@ namespace OstManSysMVVM.Handler
 
         }
 
+        //public void MoveProblemToHistory()
+        //{
+        //    new PersistencyFacade().MoveProblemToHistory(HistoryConvert());
+        //    DeleteProblem();
+        //    var problems = new PersistencyFacade().GetProblemHistories();
+        //}
+
+        public ProblemHistory HistoryConvert()
+        {
+            Problem problem = ApartmentViewModel.SelectedProblem;
+            ProblemHistory problemHistory = new ProblemHistory()
+            {
+                ApartmentID = problem.ApartmentID,
+                Description = problem.Description,
+                Header = problem.Header,
+                ProblemID = problem.ProblemID,
+                Note = ApartmentViewModel.ProblemNote
+            };
+            return problemHistory;
+
+        }
+
+
+        public void DeleteProblem()
+        {
+            ProblemHistory problem = HistoryConvert();
+            new PersistencyFacade().MoveProblemToHistory(problem);
+            new PersistencyFacade().DeleteProblem(ApartmentViewModel.SelectedProblem);
+            var problems = new PersistencyFacade().GetProblems();
+            var historyProblems = new PersistencyFacade().GetProblemHistories();
+            ApartmentViewModel.ProblemHistoryCatalogSingleton.ProblemHistories.Clear();
+            ApartmentViewModel.ProblemCatalogSingleton.Problems.Clear();
+            foreach (var problem1 in problems)
+            {
+                ApartmentViewModel.ProblemCatalogSingleton.Problems.Add(problem1);
+            }
+            foreach (var problem2 in historyProblems)
+            {
+                ApartmentViewModel.ProblemHistoryCatalogSingleton.ProblemHistories.Add(problem2);
+            }
+
+            ApartmentViewModel.NewProblem.ApartmentID = 0;
+            ApartmentViewModel.NewProblem.Description = "";
+            ApartmentViewModel.NewProblem.Header = "";
+            ApartmentViewModel.NewProblem.ProblemID = 0;
+                  }
         public void DeleteApartment()
         {
             new PersistencyFacade().DeleteApartment(ApartmentViewModel.SelectedApartment);
