@@ -31,7 +31,9 @@
                     <ListView.ItemTemplate>
                         <DataTemplate>
                             <StackPanel Orientation="Horizontal">
-                                <TextBlock Text="{Binding ResidentID}" VerticalAlignment="Center" FontWeight="Bold" Margin="0, 0, 10, 0"/>
+                                <TextBlock  VerticalAlignment="Center" FontWeight="Bold" Margin="0, 0, 10, 0">
+                                    <Run Text="{Binding ResidentID}"/><Run Text="."/>
+                                </TextBlock>
                                 <TextBlock Text="{Binding FirstName}" VerticalAlignment="Center" Margin="0, 0, 5, 0"/>
                                 <TextBlock Text="{Binding LastName}" VerticalAlignment="Center" Margin="0, 0, 5, 0"/>
                                 <TextBlock VerticalAlignment="Center">

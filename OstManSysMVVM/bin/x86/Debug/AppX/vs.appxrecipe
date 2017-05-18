@@ -28,13 +28,13 @@
     <AppXManifest Include="C:\Users\Cristian Patras\Documents\GitHub\OstManSysRepo\OstManSysMVVM\bin\x86\Debug\Core\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2017-05-17T15:21:46.243</Modified>
+      <Modified>2017-05-18T10:17:05.584</Modified>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
     <AppxPackagedFile Include="C:\Users\Cristian Patras\Documents\GitHub\OstManSysRepo\OstManSysMVVM\bin\x86\Debug\OstManSysMVVM.exe">
       <PackagePath>entrypoint\OstManSysMVVM.exe</PackagePath>
-      <Modified>2017-05-17T15:21:44.214</Modified>
+      <Modified>2017-05-18T10:17:03.622</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Cristian Patras\.nuget\packages\Microsoft.AspNet.WebApi.Client\5.2.3\lib\portable-wp8+netcore45+net45+wp81+wpa81\System.Net.Http.Formatting.dll">
       <PackagePath>System.Net.Http.Formatting.dll</PackagePath>
@@ -540,7 +540,7 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Cristian Patras\Documents\GitHub\OstManSysRepo\OstManSysMVVM\bin\x86\Debug\OstManSysMVVM.xr.xml">
       <PackagePath>OstManSysMVVM.xr.xml</PackagePath>
-      <Modified>2017-05-17T15:17:57.885</Modified>
+      <Modified>2017-05-18T10:14:33.851</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Program Files %28x86%29\Windows Kits\10\UnionMetadata\Windows.winmd">
       <PackagePath>WinMetadata\Windows.winmd</PackagePath>
@@ -549,11 +549,11 @@
     <AppxPackagedFile Include="C:\Users\Cristian Patras\Documents\GitHub\OstManSysRepo\OstManSysMVVM\bin\x86\Debug\resources.pri">
       <PackagePath>resources.pri</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2017-05-17T15:21:45.835</Modified>
+      <Modified>2017-05-18T10:17:05.183</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Cristian Patras\Documents\GitHub\OstManSysRepo\OstManSysMVVM\bin\x86\Debug\Core\OstManSysMVVM.exe">
       <PackagePath>OstManSysMVVM.exe</PackagePath>
-      <Modified>2017-05-17T15:21:46.229</Modified>
+      <Modified>2017-05-18T10:17:05.571</Modified>
     </AppxPackagedFile>
   </ItemGroup>
   <ItemGroup>
