@@ -11,7 +11,7 @@
     <RootPropertyPathName Name="Condition" />
     <RootPropertyPathName Name="NumberOfRooms" />
     <RootPropertyPathName Name="Size" />
-    <RootPropertyPathName Name="Address" />
+    <RootPropertyPathName Name="AddressID" />
     <RootPropertyPathName Name="GoToUpdateCommand" />
     <RootPropertyPathName Name="DeleteCommand" />
     <RootPropertyPathName Name="ApartmentAddressCatalogSingleton" />
@@ -37,6 +37,7 @@
     <RootPropertyPathName Name="Residents" />
     <RootPropertyPathName Name="SelectedResident" />
     <RootPropertyPathName Name="UpdateCommand" />
+    <RootPropertyPathName Name="Address" />
   </Roots.PropertyPathNames>
   <Roots.RootTypes>
     <RootType FullName="Windows.UI.Xaml.Application">

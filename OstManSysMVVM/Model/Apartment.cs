@@ -15,7 +15,7 @@ namespace OstManSysMVVM.Model
         public int AddressID { get; set; }
         public int Size { get; set; }
         public int NumberOfRooms { get; set; }
-        public decimal MonthlyRent { get; set; }
+        public double MonthlyRent { get; set; }
         public string Condition { get; set; }
         public bool IsRented { get; set; }
         public DateTime LastCheck { get; set; }
