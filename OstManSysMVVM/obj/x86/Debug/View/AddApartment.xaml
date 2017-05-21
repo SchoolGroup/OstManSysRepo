@@ -46,7 +46,7 @@
 
             <StackPanel>
 
-                <TextBox x:ConnectionId='2' x:Name="textBox" Margin="25, 0, 0, 0"  HorizontalAlignment="Left" TextWrapping="Wrap" Text="{Binding NewApartment.Address,Mode=TwoWay}" FontSize="15" Width="170"/>
+                <TextBox x:ConnectionId='2' x:Name="textBox" Margin="25, 0, 0, 0"  HorizontalAlignment="Left" TextWrapping="Wrap" Text="{Binding NewApartment.AddressID,Mode=TwoWay}" FontSize="15" Width="170"/>
                 <TextBox x:ConnectionId='3' x:Name="textBox1" Margin="25, 9, 0, 0"  HorizontalAlignment="Left" TextWrapping="Wrap" Text="{Binding NewApartment.Size,Mode=TwoWay}" FontSize="15" Width="170"/>
                 <TextBox x:ConnectionId='4' x:Name="textBox2" Margin="25, 9, 0, 0"  HorizontalAlignment="Left" TextWrapping="Wrap" Text="{Binding NewApartment.NumberOfRooms,Mode=TwoWay}" FontSize="15" Width="50"/>
                 <TextBox x:ConnectionId='5' x:Name="textBox3" Margin="25, 9, 0, 0"  HorizontalAlignment="Left" TextWrapping="Wrap" Text="{Binding NewApartment.Condition,Mode=TwoWay}" FontSize="15" Width="170"/>

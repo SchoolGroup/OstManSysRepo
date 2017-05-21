@@ -132,111 +132,113 @@ namespace OstManSysMVVM.OstManSysMVVM_XamlTypeInfo
 
         private void InitTypeTables()
         {
-            _typeNameTable = new string[51];
+            _typeNameTable = new string[52];
             _typeNameTable[0] = "OstManSysMVVM.ViewModel.ApartmentViewModel";
             _typeNameTable[1] = "Object";
             _typeNameTable[2] = "String";
             _typeNameTable[3] = "OstManSysMVVM.Model.Problem";
             _typeNameTable[4] = "OstManSysMVVM.Model.Apartment";
-            _typeNameTable[5] = "OstManSysMVVM.Model.ApartmentCatalogSingleton";
-            _typeNameTable[6] = "OstManSysMVVM.Model.ApartmentAddressCatalogSingleton";
-            _typeNameTable[7] = "OstManSysMVVM.Model.DownpipeApartmentAddressCatalogSingleton";
-            _typeNameTable[8] = "OstManSysMVVM.Model.DownpipeCatalogSingleton";
-            _typeNameTable[9] = "OstManSysMVVM.Model.ProblemCatalogSingleton";
-            _typeNameTable[10] = "OstManSysMVVM.Handler.ApartmentHandler";
-            _typeNameTable[11] = "OstManSysMVVM.View.ProblemHistoryCatalogSingleton";
-            _typeNameTable[12] = "System.Windows.Input.ICommand";
-            _typeNameTable[13] = "OstManSysMVVM.Converter.DateTimeConverter";
-            _typeNameTable[14] = "Microsoft.Xaml.Interactivity.Interaction";
-            _typeNameTable[15] = "Microsoft.Xaml.Interactivity.BehaviorCollection";
-            _typeNameTable[16] = "Windows.UI.Xaml.DependencyObjectCollection";
-            _typeNameTable[17] = "Windows.UI.Xaml.DependencyObject";
-            _typeNameTable[18] = "Microsoft.Xaml.Interactions.Core.EventTriggerBehavior";
-            _typeNameTable[19] = "Microsoft.Xaml.Interactivity.Trigger";
-            _typeNameTable[20] = "Microsoft.Xaml.Interactivity.Behavior";
-            _typeNameTable[21] = "Microsoft.Xaml.Interactivity.ActionCollection";
-            _typeNameTable[22] = "Microsoft.Xaml.Interactions.Core.NavigateToPageAction";
-            _typeNameTable[23] = "OstManSysMVVM.View.AddApartment";
-            _typeNameTable[24] = "Windows.UI.Xaml.Controls.Page";
-            _typeNameTable[25] = "Windows.UI.Xaml.Controls.UserControl";
-            _typeNameTable[26] = "OstManSysMVVM.View.AddCoResident";
-            _typeNameTable[27] = "OstManSysMVVM.ViewModel.ResidentViewModel";
-            _typeNameTable[28] = "OstManSysMVVM.Model.ResidentCatalogSingleton";
-            _typeNameTable[29] = "OstManSysMVVM.Model.ResidentHistoryCatalogSingleton";
-            _typeNameTable[30] = "OstManSysMVVM.Model.Account";
-            _typeNameTable[31] = "OstManSysMVVM.Model.Resident";
-            _typeNameTable[32] = "OstManSysMVVM.Model.AccountCatalogSingleton";
-            _typeNameTable[33] = "OstManSysMVVM.Handler.ResidentHandler";
-            _typeNameTable[34] = "OstManSysMVVM.Handler.LogInHandler";
-            _typeNameTable[35] = "OstManSysMVVM.View.AddResident";
-            _typeNameTable[36] = "OstManSysMVVM.View.ApartmentsView";
-            _typeNameTable[37] = "OstManSysMVVM.View.AttachView";
-            _typeNameTable[38] = "OstManSysMVVM.View.DownPipesView";
-            _typeNameTable[39] = "OstManSysMVVM.View.HistoryOfResidentsView";
-            _typeNameTable[40] = "OstManSysMVVM.MainPage";
-            _typeNameTable[41] = "OstManSysMVVM.View.BoardMemberView";
-            _typeNameTable[42] = "OstManSysMVVM.View.MyApartmentViewFrame";
-            _typeNameTable[43] = "OstManSysMVVM.View.PreviousProblemsView";
-            _typeNameTable[44] = "OstManSysMVVM.View.ProblemSolved";
-            _typeNameTable[45] = "OstManSysMVVM.View.ProblemsView";
-            _typeNameTable[46] = "OstManSysMVVM.View.Report";
-            _typeNameTable[47] = "OstManSysMVVM.View.ResidentsViewFrame";
-            _typeNameTable[48] = "OstManSysMVVM.View.ResidentView";
-            _typeNameTable[49] = "OstManSysMVVM.View.UpdateApartment";
-            _typeNameTable[50] = "OstManSysMVVM.View.UpdateResident";
+            _typeNameTable[5] = "OstManSysMVVM.Model.ApartmentAddress";
+            _typeNameTable[6] = "OstManSysMVVM.Model.ApartmentCatalogSingleton";
+            _typeNameTable[7] = "OstManSysMVVM.Model.ApartmentAddressCatalogSingleton";
+            _typeNameTable[8] = "OstManSysMVVM.Model.DownpipeApartmentAddressCatalogSingleton";
+            _typeNameTable[9] = "OstManSysMVVM.Model.DownpipeCatalogSingleton";
+            _typeNameTable[10] = "OstManSysMVVM.Model.ProblemCatalogSingleton";
+            _typeNameTable[11] = "OstManSysMVVM.Handler.ApartmentHandler";
+            _typeNameTable[12] = "OstManSysMVVM.View.ProblemHistoryCatalogSingleton";
+            _typeNameTable[13] = "System.Windows.Input.ICommand";
+            _typeNameTable[14] = "OstManSysMVVM.Converter.DateTimeConverter";
+            _typeNameTable[15] = "Microsoft.Xaml.Interactivity.Interaction";
+            _typeNameTable[16] = "Microsoft.Xaml.Interactivity.BehaviorCollection";
+            _typeNameTable[17] = "Windows.UI.Xaml.DependencyObjectCollection";
+            _typeNameTable[18] = "Windows.UI.Xaml.DependencyObject";
+            _typeNameTable[19] = "Microsoft.Xaml.Interactions.Core.EventTriggerBehavior";
+            _typeNameTable[20] = "Microsoft.Xaml.Interactivity.Trigger";
+            _typeNameTable[21] = "Microsoft.Xaml.Interactivity.Behavior";
+            _typeNameTable[22] = "Microsoft.Xaml.Interactivity.ActionCollection";
+            _typeNameTable[23] = "Microsoft.Xaml.Interactions.Core.NavigateToPageAction";
+            _typeNameTable[24] = "OstManSysMVVM.View.AddApartment";
+            _typeNameTable[25] = "Windows.UI.Xaml.Controls.Page";
+            _typeNameTable[26] = "Windows.UI.Xaml.Controls.UserControl";
+            _typeNameTable[27] = "OstManSysMVVM.View.AddCoResident";
+            _typeNameTable[28] = "OstManSysMVVM.ViewModel.ResidentViewModel";
+            _typeNameTable[29] = "OstManSysMVVM.Model.ResidentCatalogSingleton";
+            _typeNameTable[30] = "OstManSysMVVM.Model.ResidentHistoryCatalogSingleton";
+            _typeNameTable[31] = "OstManSysMVVM.Model.Account";
+            _typeNameTable[32] = "OstManSysMVVM.Model.Resident";
+            _typeNameTable[33] = "OstManSysMVVM.Model.AccountCatalogSingleton";
+            _typeNameTable[34] = "OstManSysMVVM.Handler.ResidentHandler";
+            _typeNameTable[35] = "OstManSysMVVM.Handler.LogInHandler";
+            _typeNameTable[36] = "OstManSysMVVM.View.AddResident";
+            _typeNameTable[37] = "OstManSysMVVM.View.ApartmentsView";
+            _typeNameTable[38] = "OstManSysMVVM.View.AttachView";
+            _typeNameTable[39] = "OstManSysMVVM.View.DownPipesView";
+            _typeNameTable[40] = "OstManSysMVVM.View.HistoryOfResidentsView";
+            _typeNameTable[41] = "OstManSysMVVM.MainPage";
+            _typeNameTable[42] = "OstManSysMVVM.View.BoardMemberView";
+            _typeNameTable[43] = "OstManSysMVVM.View.MyApartmentViewFrame";
+            _typeNameTable[44] = "OstManSysMVVM.View.PreviousProblemsView";
+            _typeNameTable[45] = "OstManSysMVVM.View.ProblemSolved";
+            _typeNameTable[46] = "OstManSysMVVM.View.ProblemsView";
+            _typeNameTable[47] = "OstManSysMVVM.View.Report";
+            _typeNameTable[48] = "OstManSysMVVM.View.ResidentsViewFrame";
+            _typeNameTable[49] = "OstManSysMVVM.View.ResidentView";
+            _typeNameTable[50] = "OstManSysMVVM.View.UpdateApartment";
+            _typeNameTable[51] = "OstManSysMVVM.View.UpdateResident";
 
-            _typeTable = new global::System.Type[51];
+            _typeTable = new global::System.Type[52];
             _typeTable[0] = typeof(global::OstManSysMVVM.ViewModel.ApartmentViewModel);
             _typeTable[1] = typeof(global::System.Object);
             _typeTable[2] = typeof(global::System.String);
             _typeTable[3] = typeof(global::OstManSysMVVM.Model.Problem);
             _typeTable[4] = typeof(global::OstManSysMVVM.Model.Apartment);
-            _typeTable[5] = typeof(global::OstManSysMVVM.Model.ApartmentCatalogSingleton);
-            _typeTable[6] = typeof(global::OstManSysMVVM.Model.ApartmentAddressCatalogSingleton);
-            _typeTable[7] = typeof(global::OstManSysMVVM.Model.DownpipeApartmentAddressCatalogSingleton);
-            _typeTable[8] = typeof(global::OstManSysMVVM.Model.DownpipeCatalogSingleton);
-            _typeTable[9] = typeof(global::OstManSysMVVM.Model.ProblemCatalogSingleton);
-            _typeTable[10] = typeof(global::OstManSysMVVM.Handler.ApartmentHandler);
-            _typeTable[11] = typeof(global::OstManSysMVVM.View.ProblemHistoryCatalogSingleton);
-            _typeTable[12] = typeof(global::System.Windows.Input.ICommand);
-            _typeTable[13] = typeof(global::OstManSysMVVM.Converter.DateTimeConverter);
-            _typeTable[14] = typeof(global::Microsoft.Xaml.Interactivity.Interaction);
-            _typeTable[15] = typeof(global::Microsoft.Xaml.Interactivity.BehaviorCollection);
-            _typeTable[16] = typeof(global::Windows.UI.Xaml.DependencyObjectCollection);
-            _typeTable[17] = typeof(global::Windows.UI.Xaml.DependencyObject);
-            _typeTable[18] = typeof(global::Microsoft.Xaml.Interactions.Core.EventTriggerBehavior);
-            _typeTable[19] = typeof(global::Microsoft.Xaml.Interactivity.Trigger);
-            _typeTable[20] = typeof(global::Microsoft.Xaml.Interactivity.Behavior);
-            _typeTable[21] = typeof(global::Microsoft.Xaml.Interactivity.ActionCollection);
-            _typeTable[22] = typeof(global::Microsoft.Xaml.Interactions.Core.NavigateToPageAction);
-            _typeTable[23] = typeof(global::OstManSysMVVM.View.AddApartment);
-            _typeTable[24] = typeof(global::Windows.UI.Xaml.Controls.Page);
-            _typeTable[25] = typeof(global::Windows.UI.Xaml.Controls.UserControl);
-            _typeTable[26] = typeof(global::OstManSysMVVM.View.AddCoResident);
-            _typeTable[27] = typeof(global::OstManSysMVVM.ViewModel.ResidentViewModel);
-            _typeTable[28] = typeof(global::OstManSysMVVM.Model.ResidentCatalogSingleton);
-            _typeTable[29] = typeof(global::OstManSysMVVM.Model.ResidentHistoryCatalogSingleton);
-            _typeTable[30] = typeof(global::OstManSysMVVM.Model.Account);
-            _typeTable[31] = typeof(global::OstManSysMVVM.Model.Resident);
-            _typeTable[32] = typeof(global::OstManSysMVVM.Model.AccountCatalogSingleton);
-            _typeTable[33] = typeof(global::OstManSysMVVM.Handler.ResidentHandler);
-            _typeTable[34] = typeof(global::OstManSysMVVM.Handler.LogInHandler);
-            _typeTable[35] = typeof(global::OstManSysMVVM.View.AddResident);
-            _typeTable[36] = typeof(global::OstManSysMVVM.View.ApartmentsView);
-            _typeTable[37] = typeof(global::OstManSysMVVM.View.AttachView);
-            _typeTable[38] = typeof(global::OstManSysMVVM.View.DownPipesView);
-            _typeTable[39] = typeof(global::OstManSysMVVM.View.HistoryOfResidentsView);
-            _typeTable[40] = typeof(global::OstManSysMVVM.MainPage);
-            _typeTable[41] = typeof(global::OstManSysMVVM.View.BoardMemberView);
-            _typeTable[42] = typeof(global::OstManSysMVVM.View.MyApartmentViewFrame);
-            _typeTable[43] = typeof(global::OstManSysMVVM.View.PreviousProblemsView);
-            _typeTable[44] = typeof(global::OstManSysMVVM.View.ProblemSolved);
-            _typeTable[45] = typeof(global::OstManSysMVVM.View.ProblemsView);
-            _typeTable[46] = typeof(global::OstManSysMVVM.View.Report);
-            _typeTable[47] = typeof(global::OstManSysMVVM.View.ResidentsViewFrame);
-            _typeTable[48] = typeof(global::OstManSysMVVM.View.ResidentView);
-            _typeTable[49] = typeof(global::OstManSysMVVM.View.UpdateApartment);
-            _typeTable[50] = typeof(global::OstManSysMVVM.View.UpdateResident);
+            _typeTable[5] = typeof(global::OstManSysMVVM.Model.ApartmentAddress);
+            _typeTable[6] = typeof(global::OstManSysMVVM.Model.ApartmentCatalogSingleton);
+            _typeTable[7] = typeof(global::OstManSysMVVM.Model.ApartmentAddressCatalogSingleton);
+            _typeTable[8] = typeof(global::OstManSysMVVM.Model.DownpipeApartmentAddressCatalogSingleton);
+            _typeTable[9] = typeof(global::OstManSysMVVM.Model.DownpipeCatalogSingleton);
+            _typeTable[10] = typeof(global::OstManSysMVVM.Model.ProblemCatalogSingleton);
+            _typeTable[11] = typeof(global::OstManSysMVVM.Handler.ApartmentHandler);
+            _typeTable[12] = typeof(global::OstManSysMVVM.View.ProblemHistoryCatalogSingleton);
+            _typeTable[13] = typeof(global::System.Windows.Input.ICommand);
+            _typeTable[14] = typeof(global::OstManSysMVVM.Converter.DateTimeConverter);
+            _typeTable[15] = typeof(global::Microsoft.Xaml.Interactivity.Interaction);
+            _typeTable[16] = typeof(global::Microsoft.Xaml.Interactivity.BehaviorCollection);
+            _typeTable[17] = typeof(global::Windows.UI.Xaml.DependencyObjectCollection);
+            _typeTable[18] = typeof(global::Windows.UI.Xaml.DependencyObject);
+            _typeTable[19] = typeof(global::Microsoft.Xaml.Interactions.Core.EventTriggerBehavior);
+            _typeTable[20] = typeof(global::Microsoft.Xaml.Interactivity.Trigger);
+            _typeTable[21] = typeof(global::Microsoft.Xaml.Interactivity.Behavior);
+            _typeTable[22] = typeof(global::Microsoft.Xaml.Interactivity.ActionCollection);
+            _typeTable[23] = typeof(global::Microsoft.Xaml.Interactions.Core.NavigateToPageAction);
+            _typeTable[24] = typeof(global::OstManSysMVVM.View.AddApartment);
+            _typeTable[25] = typeof(global::Windows.UI.Xaml.Controls.Page);
+            _typeTable[26] = typeof(global::Windows.UI.Xaml.Controls.UserControl);
+            _typeTable[27] = typeof(global::OstManSysMVVM.View.AddCoResident);
+            _typeTable[28] = typeof(global::OstManSysMVVM.ViewModel.ResidentViewModel);
+            _typeTable[29] = typeof(global::OstManSysMVVM.Model.ResidentCatalogSingleton);
+            _typeTable[30] = typeof(global::OstManSysMVVM.Model.ResidentHistoryCatalogSingleton);
+            _typeTable[31] = typeof(global::OstManSysMVVM.Model.Account);
+            _typeTable[32] = typeof(global::OstManSysMVVM.Model.Resident);
+            _typeTable[33] = typeof(global::OstManSysMVVM.Model.AccountCatalogSingleton);
+            _typeTable[34] = typeof(global::OstManSysMVVM.Handler.ResidentHandler);
+            _typeTable[35] = typeof(global::OstManSysMVVM.Handler.LogInHandler);
+            _typeTable[36] = typeof(global::OstManSysMVVM.View.AddResident);
+            _typeTable[37] = typeof(global::OstManSysMVVM.View.ApartmentsView);
+            _typeTable[38] = typeof(global::OstManSysMVVM.View.AttachView);
+            _typeTable[39] = typeof(global::OstManSysMVVM.View.DownPipesView);
+            _typeTable[40] = typeof(global::OstManSysMVVM.View.HistoryOfResidentsView);
+            _typeTable[41] = typeof(global::OstManSysMVVM.MainPage);
+            _typeTable[42] = typeof(global::OstManSysMVVM.View.BoardMemberView);
+            _typeTable[43] = typeof(global::OstManSysMVVM.View.MyApartmentViewFrame);
+            _typeTable[44] = typeof(global::OstManSysMVVM.View.PreviousProblemsView);
+            _typeTable[45] = typeof(global::OstManSysMVVM.View.ProblemSolved);
+            _typeTable[46] = typeof(global::OstManSysMVVM.View.ProblemsView);
+            _typeTable[47] = typeof(global::OstManSysMVVM.View.Report);
+            _typeTable[48] = typeof(global::OstManSysMVVM.View.ResidentsViewFrame);
+            _typeTable[49] = typeof(global::OstManSysMVVM.View.ResidentView);
+            _typeTable[50] = typeof(global::OstManSysMVVM.View.UpdateApartment);
+            _typeTable[51] = typeof(global::OstManSysMVVM.View.UpdateResident);
         }
 
         private int LookupTypeIndexByName(string typeName)
@@ -274,39 +276,40 @@ namespace OstManSysMVVM.OstManSysMVVM_XamlTypeInfo
         private object Activate_0_ApartmentViewModel() { return new global::OstManSysMVVM.ViewModel.ApartmentViewModel(); }
         private object Activate_3_Problem() { return new global::OstManSysMVVM.Model.Problem(); }
         private object Activate_4_Apartment() { return new global::OstManSysMVVM.Model.Apartment(); }
-        private object Activate_13_DateTimeConverter() { return new global::OstManSysMVVM.Converter.DateTimeConverter(); }
-        private object Activate_15_BehaviorCollection() { return new global::Microsoft.Xaml.Interactivity.BehaviorCollection(); }
-        private object Activate_18_EventTriggerBehavior() { return new global::Microsoft.Xaml.Interactions.Core.EventTriggerBehavior(); }
-        private object Activate_21_ActionCollection() { return new global::Microsoft.Xaml.Interactivity.ActionCollection(); }
-        private object Activate_22_NavigateToPageAction() { return new global::Microsoft.Xaml.Interactions.Core.NavigateToPageAction(); }
-        private object Activate_23_AddApartment() { return new global::OstManSysMVVM.View.AddApartment(); }
-        private object Activate_26_AddCoResident() { return new global::OstManSysMVVM.View.AddCoResident(); }
-        private object Activate_27_ResidentViewModel() { return new global::OstManSysMVVM.ViewModel.ResidentViewModel(); }
-        private object Activate_30_Account() { return new global::OstManSysMVVM.Model.Account(); }
-        private object Activate_31_Resident() { return new global::OstManSysMVVM.Model.Resident(); }
-        private object Activate_35_AddResident() { return new global::OstManSysMVVM.View.AddResident(); }
-        private object Activate_36_ApartmentsView() { return new global::OstManSysMVVM.View.ApartmentsView(); }
-        private object Activate_37_AttachView() { return new global::OstManSysMVVM.View.AttachView(); }
-        private object Activate_38_DownPipesView() { return new global::OstManSysMVVM.View.DownPipesView(); }
-        private object Activate_39_HistoryOfResidentsView() { return new global::OstManSysMVVM.View.HistoryOfResidentsView(); }
-        private object Activate_40_MainPage() { return new global::OstManSysMVVM.MainPage(); }
-        private object Activate_41_BoardMemberView() { return new global::OstManSysMVVM.View.BoardMemberView(); }
-        private object Activate_42_MyApartmentViewFrame() { return new global::OstManSysMVVM.View.MyApartmentViewFrame(); }
-        private object Activate_43_PreviousProblemsView() { return new global::OstManSysMVVM.View.PreviousProblemsView(); }
-        private object Activate_44_ProblemSolved() { return new global::OstManSysMVVM.View.ProblemSolved(); }
-        private object Activate_45_ProblemsView() { return new global::OstManSysMVVM.View.ProblemsView(); }
-        private object Activate_46_Report() { return new global::OstManSysMVVM.View.Report(); }
-        private object Activate_47_ResidentsViewFrame() { return new global::OstManSysMVVM.View.ResidentsViewFrame(); }
-        private object Activate_48_ResidentView() { return new global::OstManSysMVVM.View.ResidentView(); }
-        private object Activate_49_UpdateApartment() { return new global::OstManSysMVVM.View.UpdateApartment(); }
-        private object Activate_50_UpdateResident() { return new global::OstManSysMVVM.View.UpdateResident(); }
-        private void VectorAdd_15_BehaviorCollection(object instance, object item)
+        private object Activate_5_ApartmentAddress() { return new global::OstManSysMVVM.Model.ApartmentAddress(); }
+        private object Activate_14_DateTimeConverter() { return new global::OstManSysMVVM.Converter.DateTimeConverter(); }
+        private object Activate_16_BehaviorCollection() { return new global::Microsoft.Xaml.Interactivity.BehaviorCollection(); }
+        private object Activate_19_EventTriggerBehavior() { return new global::Microsoft.Xaml.Interactions.Core.EventTriggerBehavior(); }
+        private object Activate_22_ActionCollection() { return new global::Microsoft.Xaml.Interactivity.ActionCollection(); }
+        private object Activate_23_NavigateToPageAction() { return new global::Microsoft.Xaml.Interactions.Core.NavigateToPageAction(); }
+        private object Activate_24_AddApartment() { return new global::OstManSysMVVM.View.AddApartment(); }
+        private object Activate_27_AddCoResident() { return new global::OstManSysMVVM.View.AddCoResident(); }
+        private object Activate_28_ResidentViewModel() { return new global::OstManSysMVVM.ViewModel.ResidentViewModel(); }
+        private object Activate_31_Account() { return new global::OstManSysMVVM.Model.Account(); }
+        private object Activate_32_Resident() { return new global::OstManSysMVVM.Model.Resident(); }
+        private object Activate_36_AddResident() { return new global::OstManSysMVVM.View.AddResident(); }
+        private object Activate_37_ApartmentsView() { return new global::OstManSysMVVM.View.ApartmentsView(); }
+        private object Activate_38_AttachView() { return new global::OstManSysMVVM.View.AttachView(); }
+        private object Activate_39_DownPipesView() { return new global::OstManSysMVVM.View.DownPipesView(); }
+        private object Activate_40_HistoryOfResidentsView() { return new global::OstManSysMVVM.View.HistoryOfResidentsView(); }
+        private object Activate_41_MainPage() { return new global::OstManSysMVVM.MainPage(); }
+        private object Activate_42_BoardMemberView() { return new global::OstManSysMVVM.View.BoardMemberView(); }
+        private object Activate_43_MyApartmentViewFrame() { return new global::OstManSysMVVM.View.MyApartmentViewFrame(); }
+        private object Activate_44_PreviousProblemsView() { return new global::OstManSysMVVM.View.PreviousProblemsView(); }
+        private object Activate_45_ProblemSolved() { return new global::OstManSysMVVM.View.ProblemSolved(); }
+        private object Activate_46_ProblemsView() { return new global::OstManSysMVVM.View.ProblemsView(); }
+        private object Activate_47_Report() { return new global::OstManSysMVVM.View.Report(); }
+        private object Activate_48_ResidentsViewFrame() { return new global::OstManSysMVVM.View.ResidentsViewFrame(); }
+        private object Activate_49_ResidentView() { return new global::OstManSysMVVM.View.ResidentView(); }
+        private object Activate_50_UpdateApartment() { return new global::OstManSysMVVM.View.UpdateApartment(); }
+        private object Activate_51_UpdateResident() { return new global::OstManSysMVVM.View.UpdateResident(); }
+        private void VectorAdd_16_BehaviorCollection(object instance, object item)
         {
             var collection = (global::System.Collections.Generic.ICollection<global::Windows.UI.Xaml.DependencyObject>)instance;
             var newItem = (global::Windows.UI.Xaml.DependencyObject)item;
             collection.Add(newItem);
         }
-        private void VectorAdd_21_ActionCollection(object instance, object item)
+        private void VectorAdd_22_ActionCollection(object instance, object item)
         {
             var collection = (global::System.Collections.Generic.ICollection<global::Windows.UI.Xaml.DependencyObject>)instance;
             var newItem = (global::Windows.UI.Xaml.DependencyObject)item;
@@ -370,151 +373,158 @@ namespace OstManSysMVVM.OstManSysMVVM_XamlTypeInfo
                 xamlType = userType;
                 break;
 
-            case 5:   //  OstManSysMVVM.Model.ApartmentCatalogSingleton
+            case 5:   //  OstManSysMVVM.Model.ApartmentAddress
                 userType = new global::OstManSysMVVM.OstManSysMVVM_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Object"));
                 userType.SetIsReturnTypeStub();
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;
 
-            case 6:   //  OstManSysMVVM.Model.ApartmentAddressCatalogSingleton
+            case 6:   //  OstManSysMVVM.Model.ApartmentCatalogSingleton
                 userType = new global::OstManSysMVVM.OstManSysMVVM_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Object"));
                 userType.SetIsReturnTypeStub();
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;
 
-            case 7:   //  OstManSysMVVM.Model.DownpipeApartmentAddressCatalogSingleton
+            case 7:   //  OstManSysMVVM.Model.ApartmentAddressCatalogSingleton
                 userType = new global::OstManSysMVVM.OstManSysMVVM_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Object"));
                 userType.SetIsReturnTypeStub();
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;
 
-            case 8:   //  OstManSysMVVM.Model.DownpipeCatalogSingleton
+            case 8:   //  OstManSysMVVM.Model.DownpipeApartmentAddressCatalogSingleton
                 userType = new global::OstManSysMVVM.OstManSysMVVM_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Object"));
                 userType.SetIsReturnTypeStub();
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;
 
-            case 9:   //  OstManSysMVVM.Model.ProblemCatalogSingleton
+            case 9:   //  OstManSysMVVM.Model.DownpipeCatalogSingleton
                 userType = new global::OstManSysMVVM.OstManSysMVVM_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Object"));
                 userType.SetIsReturnTypeStub();
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;
 
-            case 10:   //  OstManSysMVVM.Handler.ApartmentHandler
+            case 10:   //  OstManSysMVVM.Model.ProblemCatalogSingleton
                 userType = new global::OstManSysMVVM.OstManSysMVVM_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Object"));
                 userType.SetIsReturnTypeStub();
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;
 
-            case 11:   //  OstManSysMVVM.View.ProblemHistoryCatalogSingleton
+            case 11:   //  OstManSysMVVM.Handler.ApartmentHandler
                 userType = new global::OstManSysMVVM.OstManSysMVVM_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Object"));
                 userType.SetIsReturnTypeStub();
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;
 
-            case 12:   //  System.Windows.Input.ICommand
+            case 12:   //  OstManSysMVVM.View.ProblemHistoryCatalogSingleton
+                userType = new global::OstManSysMVVM.OstManSysMVVM_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Object"));
+                userType.SetIsReturnTypeStub();
+                userType.SetIsLocalType();
+                xamlType = userType;
+                break;
+
+            case 13:   //  System.Windows.Input.ICommand
                 userType = new global::OstManSysMVVM.OstManSysMVVM_XamlTypeInfo.XamlUserType(this, typeName, type, null);
                 userType.SetIsReturnTypeStub();
                 xamlType = userType;
                 break;
 
-            case 13:   //  OstManSysMVVM.Converter.DateTimeConverter
+            case 14:   //  OstManSysMVVM.Converter.DateTimeConverter
                 userType = new global::OstManSysMVVM.OstManSysMVVM_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Object"));
-                userType.Activator = Activate_13_DateTimeConverter;
+                userType.Activator = Activate_14_DateTimeConverter;
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;
 
-            case 14:   //  Microsoft.Xaml.Interactivity.Interaction
+            case 15:   //  Microsoft.Xaml.Interactivity.Interaction
                 userType = new global::OstManSysMVVM.OstManSysMVVM_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Object"));
                 userType.AddMemberName("Behaviors");
                 xamlType = userType;
                 break;
 
-            case 15:   //  Microsoft.Xaml.Interactivity.BehaviorCollection
+            case 16:   //  Microsoft.Xaml.Interactivity.BehaviorCollection
                 userType = new global::OstManSysMVVM.OstManSysMVVM_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.DependencyObjectCollection"));
-                userType.CollectionAdd = VectorAdd_15_BehaviorCollection;
+                userType.CollectionAdd = VectorAdd_16_BehaviorCollection;
                 userType.SetIsReturnTypeStub();
                 xamlType = userType;
                 break;
 
-            case 16:   //  Windows.UI.Xaml.DependencyObjectCollection
+            case 17:   //  Windows.UI.Xaml.DependencyObjectCollection
                 xamlType = new global::OstManSysMVVM.OstManSysMVVM_XamlTypeInfo.XamlSystemBaseType(typeName, type);
                 break;
 
-            case 17:   //  Windows.UI.Xaml.DependencyObject
+            case 18:   //  Windows.UI.Xaml.DependencyObject
                 xamlType = new global::OstManSysMVVM.OstManSysMVVM_XamlTypeInfo.XamlSystemBaseType(typeName, type);
                 break;
 
-            case 18:   //  Microsoft.Xaml.Interactions.Core.EventTriggerBehavior
+            case 19:   //  Microsoft.Xaml.Interactions.Core.EventTriggerBehavior
                 userType = new global::OstManSysMVVM.OstManSysMVVM_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Microsoft.Xaml.Interactivity.Trigger"));
-                userType.Activator = Activate_18_EventTriggerBehavior;
+                userType.Activator = Activate_19_EventTriggerBehavior;
                 userType.SetContentPropertyName("Microsoft.Xaml.Interactivity.Trigger.Actions");
                 userType.AddMemberName("EventName");
                 userType.AddMemberName("SourceObject");
                 xamlType = userType;
                 break;
 
-            case 19:   //  Microsoft.Xaml.Interactivity.Trigger
+            case 20:   //  Microsoft.Xaml.Interactivity.Trigger
                 userType = new global::OstManSysMVVM.OstManSysMVVM_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Microsoft.Xaml.Interactivity.Behavior"));
                 userType.SetContentPropertyName("Microsoft.Xaml.Interactivity.Trigger.Actions");
                 userType.AddMemberName("Actions");
                 xamlType = userType;
                 break;
 
-            case 20:   //  Microsoft.Xaml.Interactivity.Behavior
+            case 21:   //  Microsoft.Xaml.Interactivity.Behavior
                 userType = new global::OstManSysMVVM.OstManSysMVVM_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.DependencyObject"));
                 userType.AddMemberName("AssociatedObject");
                 xamlType = userType;
                 break;
 
-            case 21:   //  Microsoft.Xaml.Interactivity.ActionCollection
+            case 22:   //  Microsoft.Xaml.Interactivity.ActionCollection
                 userType = new global::OstManSysMVVM.OstManSysMVVM_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.DependencyObjectCollection"));
-                userType.CollectionAdd = VectorAdd_21_ActionCollection;
+                userType.CollectionAdd = VectorAdd_22_ActionCollection;
                 userType.SetIsReturnTypeStub();
                 xamlType = userType;
                 break;
 
-            case 22:   //  Microsoft.Xaml.Interactions.Core.NavigateToPageAction
+            case 23:   //  Microsoft.Xaml.Interactions.Core.NavigateToPageAction
                 userType = new global::OstManSysMVVM.OstManSysMVVM_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.DependencyObject"));
-                userType.Activator = Activate_22_NavigateToPageAction;
+                userType.Activator = Activate_23_NavigateToPageAction;
                 userType.AddMemberName("TargetPage");
                 userType.AddMemberName("Parameter");
                 xamlType = userType;
                 break;
 
-            case 23:   //  OstManSysMVVM.View.AddApartment
+            case 24:   //  OstManSysMVVM.View.AddApartment
                 userType = new global::OstManSysMVVM.OstManSysMVVM_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.Page"));
-                userType.Activator = Activate_23_AddApartment;
+                userType.Activator = Activate_24_AddApartment;
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;
 
-            case 24:   //  Windows.UI.Xaml.Controls.Page
+            case 25:   //  Windows.UI.Xaml.Controls.Page
                 xamlType = new global::OstManSysMVVM.OstManSysMVVM_XamlTypeInfo.XamlSystemBaseType(typeName, type);
                 break;
 
-            case 25:   //  Windows.UI.Xaml.Controls.UserControl
+            case 26:   //  Windows.UI.Xaml.Controls.UserControl
                 xamlType = new global::OstManSysMVVM.OstManSysMVVM_XamlTypeInfo.XamlSystemBaseType(typeName, type);
                 break;
 
-            case 26:   //  OstManSysMVVM.View.AddCoResident
+            case 27:   //  OstManSysMVVM.View.AddCoResident
                 userType = new global::OstManSysMVVM.OstManSysMVVM_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.Page"));
-                userType.Activator = Activate_26_AddCoResident;
+                userType.Activator = Activate_27_AddCoResident;
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;
 
-            case 27:   //  OstManSysMVVM.ViewModel.ResidentViewModel
+            case 28:   //  OstManSysMVVM.ViewModel.ResidentViewModel
                 userType = new global::OstManSysMVVM.OstManSysMVVM_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Object"));
-                userType.Activator = Activate_27_ResidentViewModel;
+                userType.Activator = Activate_28_ResidentViewModel;
                 userType.AddMemberName("ResidentCatalogSingleton");
                 userType.AddMemberName("ResidentHistoryCatalogSingleton");
                 userType.AddMemberName("Account");
@@ -534,163 +544,163 @@ namespace OstManSysMVVM.OstManSysMVVM_XamlTypeInfo
                 xamlType = userType;
                 break;
 
-            case 28:   //  OstManSysMVVM.Model.ResidentCatalogSingleton
+            case 29:   //  OstManSysMVVM.Model.ResidentCatalogSingleton
                 userType = new global::OstManSysMVVM.OstManSysMVVM_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Object"));
                 userType.SetIsReturnTypeStub();
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;
 
-            case 29:   //  OstManSysMVVM.Model.ResidentHistoryCatalogSingleton
+            case 30:   //  OstManSysMVVM.Model.ResidentHistoryCatalogSingleton
                 userType = new global::OstManSysMVVM.OstManSysMVVM_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Object"));
                 userType.SetIsReturnTypeStub();
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;
 
-            case 30:   //  OstManSysMVVM.Model.Account
+            case 31:   //  OstManSysMVVM.Model.Account
                 userType = new global::OstManSysMVVM.OstManSysMVVM_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Object"));
                 userType.SetIsReturnTypeStub();
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;
 
-            case 31:   //  OstManSysMVVM.Model.Resident
+            case 32:   //  OstManSysMVVM.Model.Resident
                 userType = new global::OstManSysMVVM.OstManSysMVVM_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Object"));
                 userType.SetIsReturnTypeStub();
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;
 
-            case 32:   //  OstManSysMVVM.Model.AccountCatalogSingleton
+            case 33:   //  OstManSysMVVM.Model.AccountCatalogSingleton
                 userType = new global::OstManSysMVVM.OstManSysMVVM_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Object"));
                 userType.SetIsReturnTypeStub();
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;
 
-            case 33:   //  OstManSysMVVM.Handler.ResidentHandler
+            case 34:   //  OstManSysMVVM.Handler.ResidentHandler
                 userType = new global::OstManSysMVVM.OstManSysMVVM_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Object"));
                 userType.SetIsReturnTypeStub();
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;
 
-            case 34:   //  OstManSysMVVM.Handler.LogInHandler
+            case 35:   //  OstManSysMVVM.Handler.LogInHandler
                 userType = new global::OstManSysMVVM.OstManSysMVVM_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Object"));
                 userType.SetIsReturnTypeStub();
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;
 
-            case 35:   //  OstManSysMVVM.View.AddResident
+            case 36:   //  OstManSysMVVM.View.AddResident
                 userType = new global::OstManSysMVVM.OstManSysMVVM_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.Page"));
-                userType.Activator = Activate_35_AddResident;
+                userType.Activator = Activate_36_AddResident;
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;
 
-            case 36:   //  OstManSysMVVM.View.ApartmentsView
+            case 37:   //  OstManSysMVVM.View.ApartmentsView
                 userType = new global::OstManSysMVVM.OstManSysMVVM_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.Page"));
-                userType.Activator = Activate_36_ApartmentsView;
+                userType.Activator = Activate_37_ApartmentsView;
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;
 
-            case 37:   //  OstManSysMVVM.View.AttachView
+            case 38:   //  OstManSysMVVM.View.AttachView
                 userType = new global::OstManSysMVVM.OstManSysMVVM_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.Page"));
-                userType.Activator = Activate_37_AttachView;
+                userType.Activator = Activate_38_AttachView;
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;
 
-            case 38:   //  OstManSysMVVM.View.DownPipesView
+            case 39:   //  OstManSysMVVM.View.DownPipesView
                 userType = new global::OstManSysMVVM.OstManSysMVVM_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.Page"));
-                userType.Activator = Activate_38_DownPipesView;
+                userType.Activator = Activate_39_DownPipesView;
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;
 
-            case 39:   //  OstManSysMVVM.View.HistoryOfResidentsView
+            case 40:   //  OstManSysMVVM.View.HistoryOfResidentsView
                 userType = new global::OstManSysMVVM.OstManSysMVVM_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.Page"));
-                userType.Activator = Activate_39_HistoryOfResidentsView;
+                userType.Activator = Activate_40_HistoryOfResidentsView;
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;
 
-            case 40:   //  OstManSysMVVM.MainPage
+            case 41:   //  OstManSysMVVM.MainPage
                 userType = new global::OstManSysMVVM.OstManSysMVVM_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.Page"));
-                userType.Activator = Activate_40_MainPage;
+                userType.Activator = Activate_41_MainPage;
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;
 
-            case 41:   //  OstManSysMVVM.View.BoardMemberView
+            case 42:   //  OstManSysMVVM.View.BoardMemberView
                 userType = new global::OstManSysMVVM.OstManSysMVVM_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.Page"));
-                userType.Activator = Activate_41_BoardMemberView;
+                userType.Activator = Activate_42_BoardMemberView;
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;
 
-            case 42:   //  OstManSysMVVM.View.MyApartmentViewFrame
+            case 43:   //  OstManSysMVVM.View.MyApartmentViewFrame
                 userType = new global::OstManSysMVVM.OstManSysMVVM_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.Page"));
-                userType.Activator = Activate_42_MyApartmentViewFrame;
+                userType.Activator = Activate_43_MyApartmentViewFrame;
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;
 
-            case 43:   //  OstManSysMVVM.View.PreviousProblemsView
+            case 44:   //  OstManSysMVVM.View.PreviousProblemsView
                 userType = new global::OstManSysMVVM.OstManSysMVVM_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.Page"));
-                userType.Activator = Activate_43_PreviousProblemsView;
+                userType.Activator = Activate_44_PreviousProblemsView;
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;
 
-            case 44:   //  OstManSysMVVM.View.ProblemSolved
+            case 45:   //  OstManSysMVVM.View.ProblemSolved
                 userType = new global::OstManSysMVVM.OstManSysMVVM_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.Page"));
-                userType.Activator = Activate_44_ProblemSolved;
+                userType.Activator = Activate_45_ProblemSolved;
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;
 
-            case 45:   //  OstManSysMVVM.View.ProblemsView
+            case 46:   //  OstManSysMVVM.View.ProblemsView
                 userType = new global::OstManSysMVVM.OstManSysMVVM_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.Page"));
-                userType.Activator = Activate_45_ProblemsView;
+                userType.Activator = Activate_46_ProblemsView;
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;
 
-            case 46:   //  OstManSysMVVM.View.Report
+            case 47:   //  OstManSysMVVM.View.Report
                 userType = new global::OstManSysMVVM.OstManSysMVVM_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.Page"));
-                userType.Activator = Activate_46_Report;
+                userType.Activator = Activate_47_Report;
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;
 
-            case 47:   //  OstManSysMVVM.View.ResidentsViewFrame
+            case 48:   //  OstManSysMVVM.View.ResidentsViewFrame
                 userType = new global::OstManSysMVVM.OstManSysMVVM_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.Page"));
-                userType.Activator = Activate_47_ResidentsViewFrame;
+                userType.Activator = Activate_48_ResidentsViewFrame;
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;
 
-            case 48:   //  OstManSysMVVM.View.ResidentView
+            case 49:   //  OstManSysMVVM.View.ResidentView
                 userType = new global::OstManSysMVVM.OstManSysMVVM_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.Page"));
-                userType.Activator = Activate_48_ResidentView;
+                userType.Activator = Activate_49_ResidentView;
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;
 
-            case 49:   //  OstManSysMVVM.View.UpdateApartment
+            case 50:   //  OstManSysMVVM.View.UpdateApartment
                 userType = new global::OstManSysMVVM.OstManSysMVVM_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.Page"));
-                userType.Activator = Activate_49_UpdateApartment;
+                userType.Activator = Activate_50_UpdateApartment;
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;
 
-            case 50:   //  OstManSysMVVM.View.UpdateResident
+            case 51:   //  OstManSysMVVM.View.UpdateResident
                 userType = new global::OstManSysMVVM.OstManSysMVVM_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.Page"));
-                userType.Activator = Activate_50_UpdateResident;
+                userType.Activator = Activate_51_UpdateResident;
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;
@@ -737,7 +747,7 @@ namespace OstManSysMVVM.OstManSysMVVM_XamlTypeInfo
         private void set_3_ApartmentViewModel_SelectedApartment(object instance, object Value)
         {
             var that = (global::OstManSysMVVM.ViewModel.ApartmentViewModel)instance;
-            that.SelectedApartment = (global::OstManSysMVVM.Model.Apartment)Value;
+            that.SelectedApartment = (global::OstManSysMVVM.Model.ApartmentAddress)Value;
         }
         private object get_4_ApartmentViewModel_SelectedProblem(object instance)
         {
@@ -1115,7 +1125,7 @@ namespace OstManSysMVVM.OstManSysMVVM_XamlTypeInfo
                 break;
             case "OstManSysMVVM.ViewModel.ApartmentViewModel.SelectedApartment":
                 userType = (global::OstManSysMVVM.OstManSysMVVM_XamlTypeInfo.XamlUserType)GetXamlTypeByName("OstManSysMVVM.ViewModel.ApartmentViewModel");
-                xamlMember = new global::OstManSysMVVM.OstManSysMVVM_XamlTypeInfo.XamlMember(this, "SelectedApartment", "OstManSysMVVM.Model.Apartment");
+                xamlMember = new global::OstManSysMVVM.OstManSysMVVM_XamlTypeInfo.XamlMember(this, "SelectedApartment", "OstManSysMVVM.Model.ApartmentAddress");
                 xamlMember.Getter = get_3_ApartmentViewModel_SelectedApartment;
                 xamlMember.Setter = set_3_ApartmentViewModel_SelectedApartment;
                 break;

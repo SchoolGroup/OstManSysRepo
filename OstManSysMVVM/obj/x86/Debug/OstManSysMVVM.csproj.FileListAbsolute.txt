@@ -1198,3 +1198,18 @@ C:\Users\Cristian Patras\Documents\GitHub\OstManSysRepo\OstManSysMVVM\obj\x86\De
 C:\Users\Cristian Patras\Documents\GitHub\OstManSysRepo\OstManSysMVVM\obj\x86\Debug\View\AttachView.g.cs
 C:\Users\Cristian Patras\Documents\GitHub\OstManSysRepo\OstManSysMVVM\obj\x86\Debug\View\AttachView.xaml
 C:\Users\Cristian Patras\Documents\GitHub\OstManSysRepo\OstManSysMVVM\obj\x86\Debug\View\AttachView.xbf
+C:\Users\Universe\Documents\GitHub\OstManSysRepo\OstManSysMVVM\bin\x86\Debug\View\AttachView.xbf
+C:\Users\Universe\Documents\GitHub\OstManSysRepo\OstManSysMVVM\bin\x86\Debug\View\HistoryOfResidentsView.xbf
+C:\Users\Universe\Documents\GitHub\OstManSysRepo\OstManSysMVVM\bin\x86\Debug\View\ProblemSolved.xbf
+C:\Users\Universe\Documents\GitHub\OstManSysRepo\OstManSysMVVM\obj\x86\Debug\View\AttachView.g.i.cs
+C:\Users\Universe\Documents\GitHub\OstManSysRepo\OstManSysMVVM\obj\x86\Debug\View\AttachView.g.cs
+C:\Users\Universe\Documents\GitHub\OstManSysRepo\OstManSysMVVM\obj\x86\Debug\View\HistoryOfResidentsView.g.i.cs
+C:\Users\Universe\Documents\GitHub\OstManSysRepo\OstManSysMVVM\obj\x86\Debug\View\HistoryOfResidentsView.g.cs
+C:\Users\Universe\Documents\GitHub\OstManSysRepo\OstManSysMVVM\obj\x86\Debug\View\ProblemSolved.g.i.cs
+C:\Users\Universe\Documents\GitHub\OstManSysRepo\OstManSysMVVM\obj\x86\Debug\View\ProblemSolved.g.cs
+C:\Users\Universe\Documents\GitHub\OstManSysRepo\OstManSysMVVM\obj\x86\Debug\View\AttachView.xaml
+C:\Users\Universe\Documents\GitHub\OstManSysRepo\OstManSysMVVM\obj\x86\Debug\View\HistoryOfResidentsView.xaml
+C:\Users\Universe\Documents\GitHub\OstManSysRepo\OstManSysMVVM\obj\x86\Debug\View\ProblemSolved.xaml
+C:\Users\Universe\Documents\GitHub\OstManSysRepo\OstManSysMVVM\obj\x86\Debug\View\AttachView.xbf
+C:\Users\Universe\Documents\GitHub\OstManSysRepo\OstManSysMVVM\obj\x86\Debug\View\HistoryOfResidentsView.xbf
+C:\Users\Universe\Documents\GitHub\OstManSysRepo\OstManSysMVVM\obj\x86\Debug\View\ProblemSolved.xbf

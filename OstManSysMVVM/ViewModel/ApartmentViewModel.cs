@@ -17,7 +17,7 @@ namespace OstManSysMVVM.ViewModel
     class ApartmentViewModel:INotifyPropertyChanged
     {
         private Apartment _newApartment;
-        private Apartment _selectedApartment;
+        private ApartmentAddress _selectedApartment;
         private Problem _selectedProblem;
         private Problem _newProblem;
         private string _problemNote;
@@ -52,7 +52,7 @@ namespace OstManSysMVVM.ViewModel
             }
         }
 
-        public Apartment SelectedApartment
+        public ApartmentAddress SelectedApartment
         {
             get { return _selectedApartment; }
             set

@@ -378,7 +378,7 @@ namespace OstManSysMVVM.Persistency
             }
         }
 
-        public void DeleteApartment(Apartment apartment)
+        public void DeleteApartment(ApartmentAddress apartment)
         {
             using (var client = new HttpClient(handler))
             {
