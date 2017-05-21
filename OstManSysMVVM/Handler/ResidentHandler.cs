@@ -20,11 +20,12 @@ namespace OstManSysMVVM.Handler
         public void CreateResident()
         {
             var resident = new Resident();
-            resident.ResidentID = ResidentViewModel.NewResident.ResidentID;
             resident.FirstName = ResidentViewModel.NewResident.FirstName;
             resident.LastName = ResidentViewModel.NewResident.LastName;
             resident.EmailAddress = ResidentViewModel.NewResident.EmailAddress;
             resident.PhoneNumber = ResidentViewModel.NewResident.PhoneNumber;
+            resident.Type = ResidentViewModel.NewResident.Type;
+            resident.DateOfBirth = ResidentViewModel.NewResident.DateOfBirth;
            // resident.ApartmentID = ResidentViewModel.NewResident.ApartmentID;
             //resident.IsBoardMember = ResidentViewModel.NewResident.IsBoardMember;
             new PersistencyFacade().SaveResident(resident);
@@ -66,13 +67,14 @@ namespace OstManSysMVVM.Handler
         public void UpdateResident()
         {
             Resident resident = new Resident();
-            resident.ResidentID = ResidentViewModel.NewResident.ResidentID;
             resident.FirstName = ResidentViewModel.NewResident.FirstName;
             resident.LastName = ResidentViewModel.NewResident.LastName;
             resident.EmailAddress = ResidentViewModel.NewResident.EmailAddress;
             resident.PhoneNumber = ResidentViewModel.NewResident.PhoneNumber;
-          //  resident.ApartmentID = ResidentViewModel.NewResident.ApartmentID;
-           // resident.IsBoardMember = ResidentViewModel.NewResident.IsBoardMember;
+            resident.Type = ResidentViewModel.NewResident.Type;
+            resident.DateOfBirth = ResidentViewModel.NewResident.DateOfBirth;
+            //  resident.ApartmentID = ResidentViewModel.NewResident.ApartmentID;
+            // resident.IsBoardMember = ResidentViewModel.NewResident.IsBoardMember;
             new PersistencyFacade().UpdateResident(resident);
             var residents = new PersistencyFacade().GetResidents();
             ResidentViewModel.ResidentCatalogSingleton.Residents.Clear();
