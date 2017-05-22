@@ -19,31 +19,35 @@
     <RootPropertyPathName Name="PhoneNumber" />
     <RootPropertyPathName Name="LastName" />
     <RootPropertyPathName Name="FirstName" />
-    <RootPropertyPathName Name="GoToUpdateCommand" />
-    <RootPropertyPathName Name="DeleteCommand" />
     <RootPropertyPathName Name="ApartmentAddressCatalogSingleton" />
-    <RootPropertyPathName Name="ApartmentAddresses" />
-    <RootPropertyPathName Name="SelectedApartment" />
+    <RootPropertyPathName Name="SelectedApartmentAddress" />
+    <RootPropertyPathName Name="ResidentID" />
+    <RootPropertyPathName Name="City" />
+    <RootPropertyPathName Name="Zipcode" />
     <RootPropertyPathName Name="Side" />
     <RootPropertyPathName Name="Floor" />
     <RootPropertyPathName Name="StreetNumber" />
     <RootPropertyPathName Name="StreetName" />
     <RootPropertyPathName Name="ApartmentID" />
+    <RootPropertyPathName Name="GoToUpdateCommand" />
+    <RootPropertyPathName Name="DeleteCommand" />
+    <RootPropertyPathName Name="ApartmentAddresses" />
+    <RootPropertyPathName Name="AttachCommand" />
     <RootPropertyPathName Name="ApartmentCatalogSingleton" />
     <RootPropertyPathName Name="Apartments" />
+    <RootPropertyPathName Name="DownpipeApartmentAddress" />
+    <RootPropertyPathName Name="LastChecked" />
+    <RootPropertyPathName Name="DownpipeID" />
     <RootPropertyPathName Name="DownpipeApartmentAddressCatalogSingleton" />
     <RootPropertyPathName Name="DownpipeApartmentAddresses" />
-    <RootPropertyPathName Name="LastChecked" />
     <RootPropertyPathName Name="Year" />
     <RootPropertyPathName Name="Month" />
     <RootPropertyPathName Name="Day" />
-    <RootPropertyPathName Name="DownpipeID" />
     <RootPropertyPathName Name="ResidentHistoryCatalogSingleton" />
     <RootPropertyPathName Name="ResidentHistories" />
     <RootPropertyPathName Name="SelectedResident" />
     <RootPropertyPathName Name="MoveOutDate" />
     <RootPropertyPathName Name="MoveInDate" />
-    <RootPropertyPathName Name="ResidentID" />
     <RootPropertyPathName Name="LogInCommand" />
     <RootPropertyPathName Name="Account" />
     <RootPropertyPathName Name="Password" />
@@ -64,7 +68,6 @@
     <RootPropertyPathName Name="ResidentCatalogSingleton" />
     <RootPropertyPathName Name="Residents" />
     <RootPropertyPathName Name="UpdateCommand" />
-    <RootPropertyPathName Name="Address" />
   </Roots.PropertyPathNames>
   <Roots.RootTypes>
     <RootType FullName="Windows.UI.Xaml.Application">
@@ -175,9 +178,9 @@
       <RootProperty Name="FontSize" />
       <RootProperty Name="FontWeight" />
       <RootProperty Name="VerticalAlignment" />
+      <RootProperty Name="HorizontalAlignment" />
       <RootProperty Name="Inlines" />
       <RootProperty Name="FontStyle" />
-      <RootProperty Name="HorizontalAlignment" />
       <RootProperty Name="Height" />
       <RootProperty Name="Width" />
     </RootType>
@@ -185,6 +188,23 @@
     <RootType FullName="OstManSysMVVM.View.AddCoResident" />
     <RootType FullName="OstManSysMVVM.ViewModel.ResidentViewModel" />
     <RootType FullName="OstManSysMVVM.View.AddResident" />
+    <RootType FullName="Windows.UI.Xaml.Controls.Frame">
+      <RootProperty Name="Name" />
+      <RootProperty Name="Width" />
+      <RootProperty Name="Height" />
+      <RootProperty Name="VerticalAlignment" />
+    </RootType>
+    <RootType FullName="OstManSysMVVM.View.ApartmentDetails" />
+    <RootType FullName="Windows.UI.Xaml.Controls.DatePicker">
+      <RootProperty Name="Margin" />
+      <RootProperty Name="Date" />
+    </RootType>
+    <RootType FullName="Windows.UI.Xaml.Documents.Run">
+      <RootProperty Name="Text" />
+      <RootProperty Name="FontWeight" />
+      <RootProperty Name="FontStyle" />
+    </RootType>
+    <RootType FullName="OstManSysMVVM.View.ApartmentDetailsView" />
     <RootType FullName="Windows.UI.Xaml.Controls.ListView">
       <RootProperty Name="HorizontalAlignment" />
       <RootProperty Name="Height" />
@@ -199,18 +219,15 @@
     <RootType FullName="Windows.UI.Xaml.DataTemplate">
       <RootProperty Name="Template" />
     </RootType>
-    <RootType FullName="Windows.UI.Xaml.Documents.Run">
-      <RootProperty Name="Text" />
-      <RootProperty Name="FontWeight" />
-      <RootProperty Name="FontStyle" />
-    </RootType>
     <RootType FullName="OstManSysMVVM.View.ApartmentsView" />
     <RootType FullName="Windows.UI.Xaml.Controls.ComboBox">
       <RootProperty Name="MaxDropDownHeight" />
       <RootProperty Name="Width" />
       <RootProperty Name="ItemsSource" />
+      <RootProperty Name="SelectedItem" />
     </RootType>
     <RootType FullName="OstManSysMVVM.View.AttachView" />
+    <RootType FullName="OstManSysMVVM.View.DownPipesApartmentDetails" />
     <RootType FullName="OstManSysMVVM.View.DownPipesView" />
     <RootType FullName="OstManSysMVVM.View.HistoryOfResidentsView" />
     <RootType FullName="Windows.UI.Xaml.Controls.Canvas">
@@ -222,12 +239,6 @@
       <RootProperty Name="Password" />
     </RootType>
     <RootType FullName="OstManSysMVVM.MainPage" />
-    <RootType FullName="Windows.UI.Xaml.Controls.Frame">
-      <RootProperty Name="Name" />
-      <RootProperty Name="Height" />
-      <RootProperty Name="VerticalAlignment" />
-      <RootProperty Name="Width" />
-    </RootType>
     <RootType FullName="Windows.UI.Xaml.Shapes.Ellipse">
       <RootProperty Name="Width" />
       <RootProperty Name="Height" />

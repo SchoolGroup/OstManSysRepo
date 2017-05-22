@@ -9,6 +9,7 @@ using Windows.UI.Popups;
 using Newtonsoft.Json;
 using OstManSysMVVM.Model;
 using OstManSysMVVM.View;
+using OstManSysMVVM.ViewModel;
 
 namespace OstManSysMVVM.Persistency
 {
@@ -229,6 +230,52 @@ namespace OstManSysMVVM.Persistency
             }
         }
 
+        //public Contract GetContract(Contract contract)
+        //{
+        //    using (var client = new HttpClient(handler))
+        //    {
+        //        client.BaseAddress = new Uri(ServerUrl);
+        //        client.DefaultRequestHeaders.Clear();
+        //        client.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
+        //        try
+        //        {
+        //            var response = client.GetAsync("api/Contracts/" + ).Result;
+        //            if (response.IsSuccessStatusCode)
+        //            {
+        //                var resident1 = response.Content.ReadAsAsync<Resident>().Result;
+        //                return resident1;
+        //            }
+        //        }
+        //        catch (Exception ex)
+        //        {
+        //            new MessageDialog(ex.Message).ShowAsync();
+        //        }
+        //        return null;
+        //    }
+        //}
+        public List<Contract> GetContracts()
+        {
+            using (var client = new HttpClient(handler))
+            {
+                client.BaseAddress = new Uri(ServerUrl);
+                client.DefaultRequestHeaders.Clear();
+                client.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
+                try
+                {
+                    var response = client.GetAsync("api/Contracts").Result;
+                    if (response.IsSuccessStatusCode)
+                    {
+                        var contracts = response.Content.ReadAsAsync<IEnumerable<Contract>>().Result;
+                        return contracts.ToList();
+                    }
+                }
+                catch (Exception ex)
+                {
+                    new MessageDialog(ex.Message).ShowAsync();
+                }
+                return null;
+            }
+        }
         public Resident GetResident(Account resident)
         {
             using (var client = new HttpClient(handler))
@@ -432,6 +479,25 @@ namespace OstManSysMVVM.Persistency
             }
         }
 
+        public void SaveContract(Contract contract)
+        {
+            using (var client = new HttpClient(handler))
+            {
+                client.BaseAddress = new Uri(ServerUrl);
+                client.DefaultRequestHeaders.Clear();
+                client.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
+                try
+                {
+                    var contract1 = JsonConvert.SerializeObject(contract);
+                    var content = new StringContent(contract1, Encoding.UTF8, "Application/json");
+                    var contractsList = client.PostAsync("api/Contracts", content).Result;
+                }
+                catch (Exception ex)
+                {
+                    new MessageDialog(ex.Message).ShowAsync();
+                }
+            }
+        }
         public void UpdateApartment(Apartment apartment)
         {
             using (var client = new HttpClient(handler))

@@ -21,6 +21,8 @@ namespace OstManSysMVVM.ViewModel
         private Problem _selectedProblem;
         private Problem _newProblem;
         private string _problemNote;
+        private int _residentId;
+        private DownpipeApartmentAddress _downpipeApartmentAddress;
 
         public string ProblemNote
         {
@@ -42,6 +44,7 @@ namespace OstManSysMVVM.ViewModel
             }
         }
 
+        //public Apartment ApartmentID { get; set; }
         public Apartment NewApartment
         {
             get { return _newApartment; }
@@ -62,6 +65,46 @@ namespace OstManSysMVVM.ViewModel
             }
         }
 
+        public DownpipeApartmentAddress DownpipeApartmentAddress
+        {
+            get
+            {
+                var apartmentID = SelectedApartment.ApartmentID;
+                var downpipeApartment = DownpipeApartmentAddressCatalogSingleton.DownpipeApartmentAddresses;
+                foreach (var downpipeApartmentAddress in downpipeApartment)
+                {
+                    if (downpipeApartmentAddress.ApartmentID==apartmentID)
+                    {
+                        _downpipeApartmentAddress = downpipeApartmentAddress;
+                        return _downpipeApartmentAddress;
+                    }
+                }
+                return null;
+            }
+            set { _downpipeApartmentAddress = value; }
+        }
+
+        public int ResidentID
+        {
+            get
+            {
+                var apartmentID = SelectedApartment.ApartmentID;
+                // var residentID = ResidentCatalogSingleton.Instance.SelectedResident.ResidentID;
+                var contracts = ContractCatalogSingleton.Instance.Contracts;
+                foreach (var contract in contracts)
+                {
+                    if (contract.ApartmentID == apartmentID)
+                    {
+                        _residentId = contract.ResidentID;
+                        return _residentId;
+                    }
+                    
+                }
+                return 0;
+            }
+            set { _residentId = value; }
+        }
+
         public Problem SelectedProblem
         {
             get { return _selectedProblem; }
@@ -72,6 +115,7 @@ namespace OstManSysMVVM.ViewModel
             }
         }
 
+        public ContractCatalogSingleton ContractCatalogSingleton { get; set; }
         public ApartmentCatalogSingleton ApartmentCatalogSingleton { get; set; }
         public ApartmentAddressCatalogSingleton ApartmentAddressCatalogSingleton { get; set; }
         public DownpipeApartmentAddressCatalogSingleton DownpipeApartmentAddressCatalogSingleton { get; set; }
@@ -85,9 +129,25 @@ namespace OstManSysMVVM.ViewModel
         public ICommand GoToUpdateCommand { get; set; }
         public ICommand CreateProblemCommand { get; set; }
         public ICommand SolveTheProblemCommand { get; set; }
+        //  public int GetResidentID()
+        //{
+        //    var apartmentID = SelectedApartment.ApartmentID;
+        //    var residentID = ResidentCatalogSingleton.Instance.SelectedResident.ResidentID;
+        //    var contracts = ContractCatalogSingleton.Instance.Contracts;
+        //    foreach (var contract in contracts)
+        //    {
+        //        if (contract.ApartmentID==apartmentID&&contract.ResidentID==residentID)
+        //        {
+        //            return contract.ResidentID;
+        //        }
+        //        return 0;
+        //    }
+        //    return 0;
+        //}
 
         public ApartmentViewModel()
         {
+            ContractCatalogSingleton=ContractCatalogSingleton.Instance;
             DownpipeApartmentAddressCatalogSingleton = DownpipeApartmentAddressCatalogSingleton.Instance;
             ApartmentAddressCatalogSingleton = ApartmentAddressCatalogSingleton.Instance;
             ApartmentCatalogSingleton = ApartmentCatalogSingleton.Instance;
@@ -97,8 +157,10 @@ namespace OstManSysMVVM.ViewModel
             ApartmentHandler = new Handler.ApartmentHandler(this);
             NewApartment =new Apartment();
             NewProblem = new Problem();
+            //ResidentID = GetResidentID();
+           // ResidentID = ContractCatalogSingleton.ResidentID;
             SelectedProblem = ProblemCatalogSingleton.SelectedProblem;
-            //SelectedApartment=new Apartment();
+            SelectedApartment = ApartmentAddressCatalogSingleton.SelectedApartmentAddress;
             CreateCommand=new RelayCommand(ApartmentHandler.CreateApartment);
             DeleteCommand=new RelayCommand(ApartmentHandler.DeleteApartment);
             UpdateCommand=new RelayCommand(ApartmentHandler.UpdateApartment);

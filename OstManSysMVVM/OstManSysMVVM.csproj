@@ -105,6 +105,7 @@
     <Compile Include="Model\ApartmentAddress.cs" />
     <Compile Include="Model\ApartmentAddressCatalogSingleton.cs" />
     <Compile Include="Model\Contract.cs" />
+    <Compile Include="Model\ContractCatalogSingleton.cs" />
     <Compile Include="Model\Downpipe.cs" />
     <Compile Include="Model\DownpipeApartmentAddress.cs" />
     <Compile Include="Model\DownpipeApartmentAddressCatalogSingleton.cs" />
@@ -122,11 +123,20 @@
     <Compile Include="View\AddResident.xaml.cs">
       <DependentUpon>AddResident.xaml</DependentUpon>
     </Compile>
+    <Compile Include="View\ApartmentDetails.xaml.cs">
+      <DependentUpon>ApartmentDetails.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\ApartmentDetailsView.xaml.cs">
+      <DependentUpon>ApartmentDetailsView.xaml</DependentUpon>
+    </Compile>
     <Compile Include="View\ApartmentsView.xaml.cs">
       <DependentUpon>ApartmentsView.xaml</DependentUpon>
     </Compile>
     <Compile Include="View\AttachView.xaml.cs">
       <DependentUpon>AttachView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\DownPipesApartmentDetails.xaml.cs">
+      <DependentUpon>DownPipesApartmentDetails.xaml</DependentUpon>
     </Compile>
     <Compile Include="View\DownPipesView.xaml.cs">
       <DependentUpon>DownPipesView.xaml</DependentUpon>
@@ -219,11 +229,23 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="View\ApartmentDetails.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\ApartmentDetailsView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="View\ApartmentsView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="View\AttachView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\DownPipesApartmentDetails.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

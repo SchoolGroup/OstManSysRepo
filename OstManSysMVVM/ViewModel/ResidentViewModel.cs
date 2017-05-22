@@ -89,6 +89,7 @@ namespace OstManSysMVVM.ViewModel
         public ICommand DeleteCommand { get; set; }
         public ICommand UpdateCommand { get; set; }
         public ICommand LogInCommand { get; set; }
+        public ICommand AttachCommand { get; set; }
         public ResidentViewModel()
         {
             ResidentHandler=new Handler.ResidentHandler(this);
@@ -96,7 +97,7 @@ namespace OstManSysMVVM.ViewModel
             ResidentHistoryCatalogSingleton = ResidentHistoryCatalogSingleton.Instance;
             LogInHandler = new LogInHandler(this);
             NewResident = new Resident();
-            SelectedResident=new Resident();
+            SelectedResident= ResidentCatalogSingleton.SelectedResident;
             AccountCatalogSingleton = AccountCatalogSingleton.Instance;
             Account = new Account();
             CurrentResident = ResidentCatalogSingleton.CurrentResident;
@@ -104,6 +105,7 @@ namespace OstManSysMVVM.ViewModel
             DeleteCommand = new RelayCommand(ResidentHandler.DeleteResident);
             UpdateCommand=new RelayCommand(ResidentHandler.UpdateResident);
             LogInCommand=new RelayCommand(LogInHandler.CheckAccount);
+            AttachCommand=new RelayCommand(ResidentHandler.AttachResident);
         }
 
         //public void Save()

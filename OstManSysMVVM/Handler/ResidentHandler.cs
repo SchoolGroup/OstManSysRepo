@@ -18,6 +18,14 @@ namespace OstManSysMVVM.Handler
             ResidentViewModel = residentViewModel;
         }
 
+        public void AttachResident()
+        {
+            var contract = new Contract();
+            contract.ApartmentID = ApartmentCatalogSingleton.Instance.ApartmentID.ApartmentID;
+            contract.ResidentID = ResidentCatalogSingleton.Instance.SelectedResident.ResidentID;
+            contract.MoveInDate=DateTime.Now;
+            new PersistencyFacade().SaveContract(contract);
+        }
         public void CreateResident()
         {
             var resident = new Resident();

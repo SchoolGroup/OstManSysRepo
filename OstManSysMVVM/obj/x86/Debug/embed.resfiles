@@ -2,9 +2,12 @@ App.xbf
 View\AddApartment.xbf
 View\AddCoResident.xbf
 View\AddResident.xbf
+View\ApartmentDetails.xbf
+View\ApartmentDetailsView.xbf
 View\ApartmentsView.xbf
 View\AttachView.xbf
 View\BoardMemberView.xbf
+View\DownPipesApartmentDetails.xbf
 View\DownPipesView.xbf
 View\HistoryOfResidentsView.xbf
 View\MainPage.xbf

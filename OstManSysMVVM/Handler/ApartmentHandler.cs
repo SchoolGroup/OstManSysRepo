@@ -76,7 +76,7 @@ namespace OstManSysMVVM.Handler
         //    DeleteProblem();
         //    var problems = new PersistencyFacade().GetProblemHistories();
         //}
-
+      
         public ProblemHistory HistoryConvert()
         {
             Problem problem = ApartmentViewModel.SelectedProblem;
@@ -154,66 +154,68 @@ namespace OstManSysMVVM.Handler
             //    _id = ApartmentViewModel.NewApartment.ApartmentID;
             //}
 
-            if (ApartmentViewModel.NewApartment.AddressID == 0)
-            {
-               // _address = ApartmentViewModel.SelectedApartment.AddressID;
-            }
-            else
-            {
+            //if (ApartmentViewModel.NewApartment.AddressID == 0)
+            //{
+            //   // _address = ApartmentViewModel.SelectedApartment.AddressID;
+            //}
+            //else
+            //{
                 _address = ApartmentViewModel.NewApartment.AddressID;
-            }
+           // }
 
-            if (ApartmentViewModel.NewApartment.Size == 0)
-            {
-                _size = ApartmentViewModel.SelectedApartment.Size;
-            }
-            else
-            {
+            //if (ApartmentViewModel.NewApartment.Size == 0)
+            //{
+            //    _size = ApartmentViewModel.SelectedApartment.Size;
+            //}
+            //else
+            //{
                 _size = ApartmentViewModel.NewApartment.Size;
-            }
+           // }
 
-            if (ApartmentViewModel.NewApartment.Condition == "")
-            {
-             //   _condition = ApartmentViewModel.SelectedApartment.Condition;
-            }
-            else
-            {
+            //if (ApartmentViewModel.NewApartment.Condition == "")
+            //{
+            // //   _condition = ApartmentViewModel.SelectedApartment.Condition;
+            //}
+            //else
+            //{
                 _condition = ApartmentViewModel.NewApartment.Condition;
-            }
+            //}
 
-            if (ApartmentViewModel.NewApartment.MonthlyRent == 0)
-            {
-                _rent = ApartmentViewModel.SelectedApartment.MonthlyRent;
-            }
-            else
-            {
+            //if (ApartmentViewModel.NewApartment.MonthlyRent == 0)
+            //{
+            //    _rent = ApartmentViewModel.SelectedApartment.MonthlyRent;
+            //}
+            //else
+            //{
                 _rent = ApartmentViewModel.NewApartment.MonthlyRent;
-            }
+           // }
 
-            if (ApartmentViewModel.NewApartment.NumberOfRooms == 0)
-            {
-                _numberOfRooms = ApartmentViewModel.SelectedApartment.NumberOfRooms;
-            }
-            else
-            {
+            //if (ApartmentViewModel.NewApartment.NumberOfRooms == 0)
+            //{
+            //    _numberOfRooms = ApartmentViewModel.SelectedApartment.NumberOfRooms;
+            //}
+            //else
+            //{
                 _numberOfRooms = ApartmentViewModel.NewApartment.NumberOfRooms;
-            }
+            //}
 
             var updatedApartment = new Apartment();
-            //updatedApartment.ApartmentID = _id;
+            updatedApartment.ApartmentID = ApartmentViewModel.SelectedApartment.ApartmentID;
             updatedApartment.AddressID = _address;
             updatedApartment.Condition = _condition;
             updatedApartment.MonthlyRent = _rent;
             updatedApartment.NumberOfRooms = _numberOfRooms;
             updatedApartment.Size = _size;
+            updatedApartment.DownpipeID = 2;
+            updatedApartment.WindowID = 1;
 
 
             new PersistencyFacade().UpdateApartment(updatedApartment);
-            var apartments = new PersistencyFacade().GetApartments();
-            ApartmentViewModel.ApartmentCatalogSingleton.Apartments.Clear();
+            var apartments = new PersistencyFacade().GetApartmentAddresses();
+            ApartmentViewModel.ApartmentAddressCatalogSingleton.ApartmentAddresses.Clear();
             foreach (var apartment1 in apartments)
             {
-                ApartmentViewModel.ApartmentCatalogSingleton.Apartments.Add(apartment1);
+                ApartmentViewModel.ApartmentAddressCatalogSingleton.ApartmentAddresses.Add(apartment1);
             }
             //ApartmentViewModel.NewApartment.ApartmentID = 0;
             //ApartmentViewModel.NewApartment.Address = "";
