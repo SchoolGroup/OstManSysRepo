@@ -198,6 +198,8 @@
     <RootType FullName="Windows.UI.Xaml.Controls.DatePicker">
       <RootProperty Name="Margin" />
       <RootProperty Name="Date" />
+      <RootProperty Name="Height" />
+      <RootProperty Name="FontSize" />
     </RootType>
     <RootType FullName="Windows.UI.Xaml.Documents.Run">
       <RootProperty Name="Text" />
