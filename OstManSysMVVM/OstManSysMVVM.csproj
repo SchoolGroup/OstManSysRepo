@@ -102,8 +102,18 @@
     <Compile Include="Handler\ResidentHandler.cs" />
     <Compile Include="Model\Account.cs" />
     <Compile Include="Model\AccountCatalogSingleton.cs" />
+    <Compile Include="Model\ApartmentAddress.cs" />
+    <Compile Include="Model\ApartmentAddressCatalogSingleton.cs" />
     <Compile Include="Model\Contract.cs" />
+    <Compile Include="Model\ContractCatalogSingleton.cs" />
+    <Compile Include="Model\Downpipe.cs" />
+    <Compile Include="Model\DownpipeApartmentAddress.cs" />
+    <Compile Include="Model\DownpipeApartmentAddressCatalogSingleton.cs" />
+    <Compile Include="Model\DownpipeCatalogSingleton.cs" />
     <Compile Include="Model\Problem.cs" />
+    <Compile Include="Model\ProblemCatalogSingleton.cs" />
+    <Compile Include="Model\ResidentHistory.cs" />
+    <Compile Include="Model\ResidentHistoryCatalogSingleton.cs" />
     <Compile Include="View\AddApartment.xaml.cs">
       <DependentUpon>AddApartment.xaml</DependentUpon>
     </Compile>
@@ -112,6 +122,27 @@
     </Compile>
     <Compile Include="View\AddResident.xaml.cs">
       <DependentUpon>AddResident.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\ApartmentDetails.xaml.cs">
+      <DependentUpon>ApartmentDetails.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\ApartmentDetailsView.xaml.cs">
+      <DependentUpon>ApartmentDetailsView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\ApartmentsView.xaml.cs">
+      <DependentUpon>ApartmentsView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\AttachView.xaml.cs">
+      <DependentUpon>AttachView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\DownPipesApartmentDetails.xaml.cs">
+      <DependentUpon>DownPipesApartmentDetails.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\DownPipesView.xaml.cs">
+      <DependentUpon>DownPipesView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\HistoryOfResidentsView.xaml.cs">
+      <DependentUpon>HistoryOfResidentsView.xaml</DependentUpon>
     </Compile>
     <Compile Include="View\MainPage.xaml.cs">
       <DependentUpon>MainPage.xaml</DependentUpon>
@@ -128,8 +159,25 @@
     <Compile Include="View\BoardMemberView.xaml.cs">
       <DependentUpon>BoardMemberView.xaml</DependentUpon>
     </Compile>
+    <Compile Include="View\MyApartmentViewFrame.xaml.cs">
+      <DependentUpon>MyApartmentViewFrame.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\PreviousProblemsView.xaml.cs">
+      <DependentUpon>PreviousProblemsView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Model\ProblemHistory.cs" />
+    <Compile Include="Model\ProblemHistoryCatalogSingleton.cs" />
+    <Compile Include="View\ProblemSolved.xaml.cs">
+      <DependentUpon>ProblemSolved.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\ProblemsView.xaml.cs">
+      <DependentUpon>ProblemsView.xaml</DependentUpon>
+    </Compile>
     <Compile Include="View\Report.xaml.cs">
       <DependentUpon>Report.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\ResidentsViewFrame.xaml.cs">
+      <DependentUpon>ResidentsViewFrame.xaml</DependentUpon>
     </Compile>
     <Compile Include="View\ResidentView.xaml.cs">
       <DependentUpon>ResidentView.xaml</DependentUpon>
@@ -148,6 +196,13 @@
     <None Include="OstManSysMVVM_TemporaryKey.pfx" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Assets\add.png" />
+    <Content Include="Assets\attach.png" />
+    <Content Include="Assets\delete.png" />
+    <Content Include="Assets\done.png" />
+    <Content Include="Assets\edit.png" />
+    <Content Include="Assets\history.png" />
+    <Content Include="Assets\OstBanHusLogo.png" />
     <Content Include="Properties\Default.rd.xml" />
     <Content Include="Assets\LockScreenLogo.scale-200.png" />
     <Content Include="Assets\SplashScreen.scale-200.png" />
@@ -174,6 +229,34 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="View\ApartmentDetails.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\ApartmentDetailsView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\ApartmentsView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\AttachView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\DownPipesApartmentDetails.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\DownPipesView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\HistoryOfResidentsView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="View\MainPage.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -182,7 +265,27 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="View\MyApartmentViewFrame.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\PreviousProblemsView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\ProblemSolved.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\ProblemsView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="View\Report.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\ResidentsViewFrame.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

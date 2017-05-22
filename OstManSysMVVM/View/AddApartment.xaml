@@ -46,7 +46,7 @@
 
             <StackPanel>
 
-                <TextBox x:Name="textBox" Margin="25, 0, 0, 0"  HorizontalAlignment="Left" TextWrapping="Wrap" Text="{Binding NewApartment.Address,Mode=TwoWay}" FontSize="15" Width="170"/>
+                <TextBox x:Name="textBox" Margin="25, 0, 0, 0"  HorizontalAlignment="Left" TextWrapping="Wrap" Text="{Binding NewApartment.AddressID,Mode=TwoWay}" FontSize="15" Width="170"/>
                 <TextBox x:Name="textBox1" Margin="25, 9, 0, 0"  HorizontalAlignment="Left" TextWrapping="Wrap" Text="{Binding NewApartment.Size,Mode=TwoWay}" FontSize="15" Width="170"/>
                 <TextBox x:Name="textBox2" Margin="25, 9, 0, 0"  HorizontalAlignment="Left" TextWrapping="Wrap" Text="{Binding NewApartment.NumberOfRooms,Mode=TwoWay}" FontSize="15" Width="50"/>
                 <TextBox x:Name="textBox3" Margin="25, 9, 0, 0"  HorizontalAlignment="Left" TextWrapping="Wrap" Text="{Binding NewApartment.Condition,Mode=TwoWay}" FontSize="15" Width="170"/>

@@ -25,6 +25,37 @@ namespace OstManSysMVVM.View
         public BoardMemberView()
         {
             this.InitializeComponent();
+            MyFrame.Navigate(typeof(ApartmentsView));
+        }
+
+        private void Button9_OnClick(object sender, RoutedEventArgs e)
+        {
+            MyFrame.Navigate(typeof(ApartmentsView));
+        }
+
+        private void Button10_OnClick(object sender, RoutedEventArgs e)
+        {
+            MyFrame.Navigate(typeof(ProblemsView));
+        }
+
+        private void Button11_OnClick(object sender, RoutedEventArgs e)
+        {
+            MyFrame.Navigate(typeof(DownPipesView));
+        }
+
+        private void Button12_OnClick(object sender, RoutedEventArgs e)
+        {
+            MyFrame.Navigate(typeof(ResidentsViewFrame));
+        }
+
+        private void Button13_OnClick(object sender, RoutedEventArgs e)
+        {
+            MyFrame.Navigate(typeof(PreviousProblemsView));
+        }
+
+        private void Button14_OnClick(object sender, RoutedEventArgs e)
+        {
+            MyFrame.Navigate(typeof(HistoryOfResidentsView));
         }
     }
 }

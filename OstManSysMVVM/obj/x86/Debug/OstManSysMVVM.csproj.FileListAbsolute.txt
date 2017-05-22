@@ -875,7 +875,6 @@ C:\Users\Cristian Patras\Documents\GitHub\OstManSysRepo\OstManSysMVVM\obj\x86\De
 C:\Users\Cristian Patras\Documents\GitHub\OstManSysRepo\OstManSysMVVM\obj\x86\Debug\View\AddCoResident.xbf
 C:\Users\Cristian Patras\Documents\GitHub\OstManSysRepo\OstManSysMVVM\obj\x86\Debug\View\UpdateResident.xbf
 C:\Users\Cristian Patras\Documents\GitHub\OstManSysRepo\OstManSysMVVM\bin\x86\Debug\View\Report.xbf
-C:\Users\Cristian Patras\Documents\GitHub\OstManSysRepo\OstManSysMVVM\obj\x86\Debug\OstManSysMVVM.csprojResolveAssemblyReference.cache
 C:\Users\Cristian Patras\Documents\GitHub\OstManSysRepo\OstManSysMVVM\obj\x86\Debug\View\Report.g.i.cs
 C:\Users\Cristian Patras\Documents\GitHub\OstManSysRepo\OstManSysMVVM\obj\x86\Debug\View\Report.g.cs
 C:\Users\Cristian Patras\Documents\GitHub\OstManSysRepo\OstManSysMVVM\obj\x86\Debug\View\Report.xaml
@@ -1123,3 +1122,109 @@ C:\Users\Universe\Documents\GitHub\OstManSysRepo\OstManSysMVVM\obj\x86\Debug\Mic
 C:\Users\Universe\Documents\GitHub\OstManSysRepo\OstManSysMVVM\obj\x86\Debug\Microsoft.Xaml.Interactivity.pri.xml
 C:\Users\Universe\Documents\GitHub\OstManSysRepo\OstManSysMVVM\obj\x86\Debug\ProjectArchitectures.txt
 C:\Users\Universe\Documents\GitHub\OstManSysRepo\OstManSysMVVM\obj\x86\Debug\OstManSysMVVM.csprojResolveAssemblyReference.cache
+C:\Users\Cristian Patras\Documents\GitHub\OstManSysRepo\OstManSysMVVM\bin\x86\Debug\View\ApartmentsView.xbf
+C:\Users\Cristian Patras\Documents\GitHub\OstManSysRepo\OstManSysMVVM\obj\x86\Debug\View\ApartmentsView.g.i.cs
+C:\Users\Cristian Patras\Documents\GitHub\OstManSysRepo\OstManSysMVVM\obj\x86\Debug\View\ApartmentsView.g.cs
+C:\Users\Cristian Patras\Documents\GitHub\OstManSysRepo\OstManSysMVVM\obj\x86\Debug\View\ApartmentsView.xaml
+C:\Users\Cristian Patras\Documents\GitHub\OstManSysRepo\OstManSysMVVM\obj\x86\Debug\View\ApartmentsView.xbf
+C:\Users\Cristian Patras\Documents\GitHub\OstManSysRepo\OstManSysMVVM\bin\x86\Debug\View\ProblemsView.xbf
+C:\Users\Cristian Patras\Documents\GitHub\OstManSysRepo\OstManSysMVVM\obj\x86\Debug\View\ProblemsView.g.i.cs
+C:\Users\Cristian Patras\Documents\GitHub\OstManSysRepo\OstManSysMVVM\obj\x86\Debug\View\ProblemsView.g.cs
+C:\Users\Cristian Patras\Documents\GitHub\OstManSysRepo\OstManSysMVVM\obj\x86\Debug\View\ProblemsView.xaml
+C:\Users\Cristian Patras\Documents\GitHub\OstManSysRepo\OstManSysMVVM\obj\x86\Debug\View\ProblemsView.xbf
+C:\Users\Cristian Patras\Documents\GitHub\OstManSysRepo\OstManSysMVVM\bin\x86\Debug\View\DownPipesView.xbf
+C:\Users\Cristian Patras\Documents\GitHub\OstManSysRepo\OstManSysMVVM\bin\x86\Debug\View\ResidentsViewFrame.xbf
+C:\Users\Cristian Patras\Documents\GitHub\OstManSysRepo\OstManSysMVVM\obj\x86\Debug\View\DownPipesView.g.i.cs
+C:\Users\Cristian Patras\Documents\GitHub\OstManSysRepo\OstManSysMVVM\obj\x86\Debug\View\DownPipesView.g.cs
+C:\Users\Cristian Patras\Documents\GitHub\OstManSysRepo\OstManSysMVVM\obj\x86\Debug\View\ResidentsViewFrame.g.i.cs
+C:\Users\Cristian Patras\Documents\GitHub\OstManSysRepo\OstManSysMVVM\obj\x86\Debug\View\ResidentsViewFrame.g.cs
+C:\Users\Cristian Patras\Documents\GitHub\OstManSysRepo\OstManSysMVVM\obj\x86\Debug\View\DownPipesView.xaml
+C:\Users\Cristian Patras\Documents\GitHub\OstManSysRepo\OstManSysMVVM\obj\x86\Debug\View\ResidentsViewFrame.xaml
+C:\Users\Cristian Patras\Documents\GitHub\OstManSysRepo\OstManSysMVVM\obj\x86\Debug\View\DownPipesView.xbf
+C:\Users\Cristian Patras\Documents\GitHub\OstManSysRepo\OstManSysMVVM\obj\x86\Debug\View\ResidentsViewFrame.xbf
+C:\Users\Cristian Patras\Documents\GitHub\OstManSysRepo\OstManSysMVVM\bin\x86\Debug\View\PreviousProblemsView.xbf
+C:\Users\Cristian Patras\Documents\GitHub\OstManSysRepo\OstManSysMVVM\obj\x86\Debug\View\PreviousProblemsView.g.i.cs
+C:\Users\Cristian Patras\Documents\GitHub\OstManSysRepo\OstManSysMVVM\obj\x86\Debug\View\PreviousProblemsView.g.cs
+C:\Users\Cristian Patras\Documents\GitHub\OstManSysRepo\OstManSysMVVM\obj\x86\Debug\View\PreviousProblemsView.xaml
+C:\Users\Cristian Patras\Documents\GitHub\OstManSysRepo\OstManSysMVVM\obj\x86\Debug\View\PreviousProblemsView.xbf
+C:\Users\Cristian Patras\Documents\GitHub\OstManSysRepo\OstManSysMVVM\obj\x86\Debug\View\MyApartmentViewFrame.g.i.cs
+C:\Users\Cristian Patras\Documents\GitHub\OstManSysRepo\OstManSysMVVM\obj\x86\Debug\View\MyApartmentViewFrame.g.cs
+C:\Users\Cristian Patras\Documents\GitHub\OstManSysRepo\OstManSysMVVM\obj\x86\Debug\View\MyApartmentViewFrame.xaml
+C:\Users\Cristian Patras\Documents\GitHub\OstManSysRepo\OstManSysMVVM\obj\x86\Debug\View\MyApartmentViewFrame.xbf
+C:\Users\Cristian Patras\Documents\GitHub\OstManSysRepo\OstManSysMVVM\bin\x86\Debug\View\MyApartmentViewFrame.xbf
+C:\Users\Universe\Documents\GitHub\OstManSysRepo\OstManSysMVVM\bin\x86\Debug\View\ApartmentsView.xbf
+C:\Users\Universe\Documents\GitHub\OstManSysRepo\OstManSysMVVM\bin\x86\Debug\View\DownPipesView.xbf
+C:\Users\Universe\Documents\GitHub\OstManSysRepo\OstManSysMVVM\bin\x86\Debug\View\MyApartmentViewFrame.xbf
+C:\Users\Universe\Documents\GitHub\OstManSysRepo\OstManSysMVVM\bin\x86\Debug\View\PreviousProblemsView.xbf
+C:\Users\Universe\Documents\GitHub\OstManSysRepo\OstManSysMVVM\bin\x86\Debug\View\ProblemsView.xbf
+C:\Users\Universe\Documents\GitHub\OstManSysRepo\OstManSysMVVM\bin\x86\Debug\View\ResidentsViewFrame.xbf
+C:\Users\Universe\Documents\GitHub\OstManSysRepo\OstManSysMVVM\obj\x86\Debug\View\ApartmentsView.g.i.cs
+C:\Users\Universe\Documents\GitHub\OstManSysRepo\OstManSysMVVM\obj\x86\Debug\View\ApartmentsView.g.cs
+C:\Users\Universe\Documents\GitHub\OstManSysRepo\OstManSysMVVM\obj\x86\Debug\View\DownPipesView.g.i.cs
+C:\Users\Universe\Documents\GitHub\OstManSysRepo\OstManSysMVVM\obj\x86\Debug\View\DownPipesView.g.cs
+C:\Users\Universe\Documents\GitHub\OstManSysRepo\OstManSysMVVM\obj\x86\Debug\View\MyApartmentViewFrame.g.i.cs
+C:\Users\Universe\Documents\GitHub\OstManSysRepo\OstManSysMVVM\obj\x86\Debug\View\MyApartmentViewFrame.g.cs
+C:\Users\Universe\Documents\GitHub\OstManSysRepo\OstManSysMVVM\obj\x86\Debug\View\PreviousProblemsView.g.i.cs
+C:\Users\Universe\Documents\GitHub\OstManSysRepo\OstManSysMVVM\obj\x86\Debug\View\PreviousProblemsView.g.cs
+C:\Users\Universe\Documents\GitHub\OstManSysRepo\OstManSysMVVM\obj\x86\Debug\View\ProblemsView.g.i.cs
+C:\Users\Universe\Documents\GitHub\OstManSysRepo\OstManSysMVVM\obj\x86\Debug\View\ProblemsView.g.cs
+C:\Users\Universe\Documents\GitHub\OstManSysRepo\OstManSysMVVM\obj\x86\Debug\View\ResidentsViewFrame.g.i.cs
+C:\Users\Universe\Documents\GitHub\OstManSysRepo\OstManSysMVVM\obj\x86\Debug\View\ResidentsViewFrame.g.cs
+C:\Users\Universe\Documents\GitHub\OstManSysRepo\OstManSysMVVM\obj\x86\Debug\View\ApartmentsView.xaml
+C:\Users\Universe\Documents\GitHub\OstManSysRepo\OstManSysMVVM\obj\x86\Debug\View\DownPipesView.xaml
+C:\Users\Universe\Documents\GitHub\OstManSysRepo\OstManSysMVVM\obj\x86\Debug\View\MyApartmentViewFrame.xaml
+C:\Users\Universe\Documents\GitHub\OstManSysRepo\OstManSysMVVM\obj\x86\Debug\View\PreviousProblemsView.xaml
+C:\Users\Universe\Documents\GitHub\OstManSysRepo\OstManSysMVVM\obj\x86\Debug\View\ProblemsView.xaml
+C:\Users\Universe\Documents\GitHub\OstManSysRepo\OstManSysMVVM\obj\x86\Debug\View\ResidentsViewFrame.xaml
+C:\Users\Universe\Documents\GitHub\OstManSysRepo\OstManSysMVVM\obj\x86\Debug\View\ApartmentsView.xbf
+C:\Users\Universe\Documents\GitHub\OstManSysRepo\OstManSysMVVM\obj\x86\Debug\View\DownPipesView.xbf
+C:\Users\Universe\Documents\GitHub\OstManSysRepo\OstManSysMVVM\obj\x86\Debug\View\MyApartmentViewFrame.xbf
+C:\Users\Universe\Documents\GitHub\OstManSysRepo\OstManSysMVVM\obj\x86\Debug\View\PreviousProblemsView.xbf
+C:\Users\Universe\Documents\GitHub\OstManSysRepo\OstManSysMVVM\obj\x86\Debug\View\ProblemsView.xbf
+C:\Users\Universe\Documents\GitHub\OstManSysRepo\OstManSysMVVM\obj\x86\Debug\View\ResidentsViewFrame.xbf
+C:\Users\Cristian Patras\Documents\GitHub\OstManSysRepo\OstManSysMVVM\bin\x86\Debug\View\HistoryOfResidentsView.xbf
+C:\Users\Cristian Patras\Documents\GitHub\OstManSysRepo\OstManSysMVVM\obj\x86\Debug\View\HistoryOfResidentsView.g.i.cs
+C:\Users\Cristian Patras\Documents\GitHub\OstManSysRepo\OstManSysMVVM\obj\x86\Debug\View\HistoryOfResidentsView.g.cs
+C:\Users\Cristian Patras\Documents\GitHub\OstManSysRepo\OstManSysMVVM\obj\x86\Debug\View\HistoryOfResidentsView.xaml
+C:\Users\Cristian Patras\Documents\GitHub\OstManSysRepo\OstManSysMVVM\obj\x86\Debug\View\HistoryOfResidentsView.xbf
+C:\Users\Cristian Patras\Documents\GitHub\OstManSysRepo\OstManSysMVVM\bin\x86\Debug\View\ProblemSolved.xbf
+C:\Users\Cristian Patras\Documents\GitHub\OstManSysRepo\OstManSysMVVM\obj\x86\Debug\View\ProblemSolved.g.i.cs
+C:\Users\Cristian Patras\Documents\GitHub\OstManSysRepo\OstManSysMVVM\obj\x86\Debug\View\ProblemSolved.g.cs
+C:\Users\Cristian Patras\Documents\GitHub\OstManSysRepo\OstManSysMVVM\obj\x86\Debug\View\ProblemSolved.xaml
+C:\Users\Cristian Patras\Documents\GitHub\OstManSysRepo\OstManSysMVVM\obj\x86\Debug\View\ProblemSolved.xbf
+C:\Users\Cristian Patras\Documents\GitHub\OstManSysRepo\OstManSysMVVM\obj\x86\Debug\OstManSysMVVM.csprojResolveAssemblyReference.cache
+C:\Users\Cristian Patras\Documents\GitHub\OstManSysRepo\OstManSysMVVM\bin\x86\Debug\View\AttachView.xbf
+C:\Users\Cristian Patras\Documents\GitHub\OstManSysRepo\OstManSysMVVM\obj\x86\Debug\View\AttachView.g.i.cs
+C:\Users\Cristian Patras\Documents\GitHub\OstManSysRepo\OstManSysMVVM\obj\x86\Debug\View\AttachView.g.cs
+C:\Users\Cristian Patras\Documents\GitHub\OstManSysRepo\OstManSysMVVM\obj\x86\Debug\View\AttachView.xaml
+C:\Users\Cristian Patras\Documents\GitHub\OstManSysRepo\OstManSysMVVM\obj\x86\Debug\View\AttachView.xbf
+C:\Users\Universe\Documents\GitHub\OstManSysRepo\OstManSysMVVM\bin\x86\Debug\View\AttachView.xbf
+C:\Users\Universe\Documents\GitHub\OstManSysRepo\OstManSysMVVM\bin\x86\Debug\View\HistoryOfResidentsView.xbf
+C:\Users\Universe\Documents\GitHub\OstManSysRepo\OstManSysMVVM\bin\x86\Debug\View\ProblemSolved.xbf
+C:\Users\Universe\Documents\GitHub\OstManSysRepo\OstManSysMVVM\obj\x86\Debug\View\AttachView.g.i.cs
+C:\Users\Universe\Documents\GitHub\OstManSysRepo\OstManSysMVVM\obj\x86\Debug\View\AttachView.g.cs
+C:\Users\Universe\Documents\GitHub\OstManSysRepo\OstManSysMVVM\obj\x86\Debug\View\HistoryOfResidentsView.g.i.cs
+C:\Users\Universe\Documents\GitHub\OstManSysRepo\OstManSysMVVM\obj\x86\Debug\View\HistoryOfResidentsView.g.cs
+C:\Users\Universe\Documents\GitHub\OstManSysRepo\OstManSysMVVM\obj\x86\Debug\View\ProblemSolved.g.i.cs
+C:\Users\Universe\Documents\GitHub\OstManSysRepo\OstManSysMVVM\obj\x86\Debug\View\ProblemSolved.g.cs
+C:\Users\Universe\Documents\GitHub\OstManSysRepo\OstManSysMVVM\obj\x86\Debug\View\AttachView.xaml
+C:\Users\Universe\Documents\GitHub\OstManSysRepo\OstManSysMVVM\obj\x86\Debug\View\HistoryOfResidentsView.xaml
+C:\Users\Universe\Documents\GitHub\OstManSysRepo\OstManSysMVVM\obj\x86\Debug\View\ProblemSolved.xaml
+C:\Users\Universe\Documents\GitHub\OstManSysRepo\OstManSysMVVM\obj\x86\Debug\View\AttachView.xbf
+C:\Users\Universe\Documents\GitHub\OstManSysRepo\OstManSysMVVM\obj\x86\Debug\View\HistoryOfResidentsView.xbf
+C:\Users\Universe\Documents\GitHub\OstManSysRepo\OstManSysMVVM\obj\x86\Debug\View\ProblemSolved.xbf
+C:\Users\Universe\Documents\GitHub\OstManSysRepo\OstManSysMVVM\bin\x86\Debug\View\ApartmentDetails.xbf
+C:\Users\Universe\Documents\GitHub\OstManSysRepo\OstManSysMVVM\bin\x86\Debug\View\ApartmentDetailsView.xbf
+C:\Users\Universe\Documents\GitHub\OstManSysRepo\OstManSysMVVM\bin\x86\Debug\View\DownPipesApartmentDetails.xbf
+C:\Users\Universe\Documents\GitHub\OstManSysRepo\OstManSysMVVM\obj\x86\Debug\View\ApartmentDetails.g.i.cs
+C:\Users\Universe\Documents\GitHub\OstManSysRepo\OstManSysMVVM\obj\x86\Debug\View\ApartmentDetails.g.cs
+C:\Users\Universe\Documents\GitHub\OstManSysRepo\OstManSysMVVM\obj\x86\Debug\View\ApartmentDetailsView.g.i.cs
+C:\Users\Universe\Documents\GitHub\OstManSysRepo\OstManSysMVVM\obj\x86\Debug\View\ApartmentDetailsView.g.cs
+C:\Users\Universe\Documents\GitHub\OstManSysRepo\OstManSysMVVM\obj\x86\Debug\View\DownPipesApartmentDetails.g.i.cs
+C:\Users\Universe\Documents\GitHub\OstManSysRepo\OstManSysMVVM\obj\x86\Debug\View\DownPipesApartmentDetails.g.cs
+C:\Users\Universe\Documents\GitHub\OstManSysRepo\OstManSysMVVM\obj\x86\Debug\View\ApartmentDetails.xaml
+C:\Users\Universe\Documents\GitHub\OstManSysRepo\OstManSysMVVM\obj\x86\Debug\View\DownPipesApartmentDetails.xaml
+C:\Users\Universe\Documents\GitHub\OstManSysRepo\OstManSysMVVM\obj\x86\Debug\View\ApartmentDetailsView.xaml
+C:\Users\Universe\Documents\GitHub\OstManSysRepo\OstManSysMVVM\obj\x86\Debug\View\ApartmentDetails.xbf
+C:\Users\Universe\Documents\GitHub\OstManSysRepo\OstManSysMVVM\obj\x86\Debug\View\DownPipesApartmentDetails.xbf
+C:\Users\Universe\Documents\GitHub\OstManSysRepo\OstManSysMVVM\obj\x86\Debug\View\ApartmentDetailsView.xbf

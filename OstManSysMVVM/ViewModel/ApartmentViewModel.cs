@@ -10,19 +10,43 @@ using OstManSysMVVM.Annotations;
 using OstManSysMVVM.Common;
 using OstManSysMVVM.Handler;
 using OstManSysMVVM.Model;
+using OstManSysMVVM.View;
 
 namespace OstManSysMVVM.ViewModel
 {
     class ApartmentViewModel:INotifyPropertyChanged
     {
         private Apartment _newApartment;
-        private Apartment _selectedApartment;
+        private ApartmentAddress _selectedApartment;
+        private Problem _selectedProblem;
+        private Problem _newProblem;
+        private string _problemNote;
+        private int _residentId;
+        private DownpipeApartmentAddress _downpipeApartmentAddress;
 
+        public string ProblemNote
+        {
+            get { return _problemNote; }
+            set
+            {
+                _problemNote = value;
+                OnPropertyChanged(nameof(ProblemNote));
+            }
+        }
+
+        public Problem NewProblem
+        {
+            get { return _newProblem; }
+            set
+            {
+                _newProblem = value;
+                OnPropertyChanged(nameof(NewProblem));
+            }
+        }
+
+        //public Apartment ApartmentID { get; set; }
         public Apartment NewApartment
         {
-
-
-
             get { return _newApartment; }
             set
             {
@@ -31,7 +55,7 @@ namespace OstManSysMVVM.ViewModel
             }
         }
 
-        public Apartment SelectedApartment
+        public ApartmentAddress SelectedApartment
         {
             get { return _selectedApartment; }
             set
@@ -41,23 +65,109 @@ namespace OstManSysMVVM.ViewModel
             }
         }
 
+        public DownpipeApartmentAddress DownpipeApartmentAddress
+        {
+            get
+            {
+                var apartmentID = SelectedApartment.ApartmentID;
+                var downpipeApartment = DownpipeApartmentAddressCatalogSingleton.DownpipeApartmentAddresses;
+                foreach (var downpipeApartmentAddress in downpipeApartment)
+                {
+                    if (downpipeApartmentAddress.ApartmentID==apartmentID)
+                    {
+                        _downpipeApartmentAddress = downpipeApartmentAddress;
+                        return _downpipeApartmentAddress;
+                    }
+                }
+                return null;
+            }
+            set { _downpipeApartmentAddress = value; }
+        }
+
+        public int ResidentID
+        {
+            get
+            {
+                var apartmentID = SelectedApartment.ApartmentID;
+                // var residentID = ResidentCatalogSingleton.Instance.SelectedResident.ResidentID;
+                var contracts = ContractCatalogSingleton.Instance.Contracts;
+                foreach (var contract in contracts)
+                {
+                    if (contract.ApartmentID == apartmentID)
+                    {
+                        _residentId = contract.ResidentID;
+                        return _residentId;
+                    }
+                    
+                }
+                return 0;
+            }
+            set { _residentId = value; }
+        }
+
+        public Problem SelectedProblem
+        {
+            get { return _selectedProblem; }
+            set
+            {
+                _selectedProblem = value;
+                OnPropertyChanged(nameof(SelectedApartment));
+            }
+        }
+
+        public ContractCatalogSingleton ContractCatalogSingleton { get; set; }
         public ApartmentCatalogSingleton ApartmentCatalogSingleton { get; set; }
+        public ApartmentAddressCatalogSingleton ApartmentAddressCatalogSingleton { get; set; }
+        public DownpipeApartmentAddressCatalogSingleton DownpipeApartmentAddressCatalogSingleton { get; set; }
+        public DownpipeCatalogSingleton DownpipeCatalogSingleton { get; set; }
+        public ProblemCatalogSingleton ProblemCatalogSingleton { get; set; }
         public Handler.ApartmentHandler ApartmentHandler { get; set; }
+        public ProblemHistoryCatalogSingleton ProblemHistoryCatalogSingleton { get; set; }
         public ICommand CreateCommand { get; set; }
         public ICommand DeleteCommand { get; set; }
         public ICommand UpdateCommand { get; set; }
+        public ICommand GoToUpdateCommand { get; set; }
+        public ICommand CreateProblemCommand { get; set; }
+        public ICommand SolveTheProblemCommand { get; set; }
+        //  public int GetResidentID()
+        //{
+        //    var apartmentID = SelectedApartment.ApartmentID;
+        //    var residentID = ResidentCatalogSingleton.Instance.SelectedResident.ResidentID;
+        //    var contracts = ContractCatalogSingleton.Instance.Contracts;
+        //    foreach (var contract in contracts)
+        //    {
+        //        if (contract.ApartmentID==apartmentID&&contract.ResidentID==residentID)
+        //        {
+        //            return contract.ResidentID;
+        //        }
+        //        return 0;
+        //    }
+        //    return 0;
+        //}
 
         public ApartmentViewModel()
         {
-       
-           
+            ContractCatalogSingleton=ContractCatalogSingleton.Instance;
+            DownpipeApartmentAddressCatalogSingleton = DownpipeApartmentAddressCatalogSingleton.Instance;
+            ApartmentAddressCatalogSingleton = ApartmentAddressCatalogSingleton.Instance;
             ApartmentCatalogSingleton = ApartmentCatalogSingleton.Instance;
+            DownpipeCatalogSingleton = DownpipeCatalogSingleton.Instance;
+            ProblemCatalogSingleton = ProblemCatalogSingleton.Instance;
+            ProblemHistoryCatalogSingleton = ProblemHistoryCatalogSingleton.Instance;
             ApartmentHandler = new Handler.ApartmentHandler(this);
             NewApartment =new Apartment();
-            //SelectedApartment=new Apartment();
+            NewProblem = new Problem();
+            //ResidentID = GetResidentID();
+           // ResidentID = ContractCatalogSingleton.ResidentID;
+            SelectedProblem = ProblemCatalogSingleton.SelectedProblem;
+            SelectedApartment = ApartmentAddressCatalogSingleton.SelectedApartmentAddress;
             CreateCommand=new RelayCommand(ApartmentHandler.CreateApartment);
             DeleteCommand=new RelayCommand(ApartmentHandler.DeleteApartment);
             UpdateCommand=new RelayCommand(ApartmentHandler.UpdateApartment);
+            GoToUpdateCommand = new RelayCommand(ApartmentHandler.GoToUpdatePage);
+            CreateProblemCommand = new RelayCommand(ApartmentHandler.ReportAProblem);
+            SolveTheProblemCommand = new RelayCommand(ApartmentHandler.DeleteProblem);
+
         }
 
         public event PropertyChangedEventHandler PropertyChanged;

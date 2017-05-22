@@ -19,8 +19,12 @@ namespace OstManSysMVVM.ViewModel
         private Resident _newResident;
         private Resident _selectedResident;
         private Resident _currentResident;
+        private Problem _selectedProblem;
         private Account _account;
         private Account acc;
+
+        public ResidentCatalogSingleton ResidentCatalogSingleton { get; set; }
+        public ResidentHistoryCatalogSingleton ResidentHistoryCatalogSingleton { get; set; }
         public Account Account
         {
             get { return _account; }
@@ -31,6 +35,22 @@ namespace OstManSysMVVM.ViewModel
             }
         }
 
+        public Problem SelectedProblem
+        {
+            get { return _selectedProblem; }
+            set
+            {
+                _selectedProblem = value;
+                OnPropertyChanged(nameof(SelectedProblem));
+            }
+        }
+
+        public Resident Resident { get; set; }
+
+        //public void IdentifyResident()
+        //{
+        //    _currentResident = LogInHandler.ReturnResident();
+        //}
         public Resident CurrentResident
         {
             get { return _currentResident; }
@@ -60,37 +80,38 @@ namespace OstManSysMVVM.ViewModel
                 OnPropertyChanged(nameof(SelectedResident));
             }
         }
+        
 
         public AccountCatalogSingleton AccountCatalogSingleton { get; set; }
-        public ResidentCatalogSingleton ResidentCatalogSingleton { get; set; }
         public Handler.ResidentHandler ResidentHandler { get; set; }
         public LogInHandler LogInHandler { get; set; }
         public ICommand CreateCommand { get; set; }
         public ICommand DeleteCommand { get; set; }
         public ICommand UpdateCommand { get; set; }
         public ICommand LogInCommand { get; set; }
+        public ICommand AttachCommand { get; set; }
         public ResidentViewModel()
         {
             ResidentHandler=new Handler.ResidentHandler(this);
             ResidentCatalogSingleton = ResidentCatalogSingleton.Instance;
+            ResidentHistoryCatalogSingleton = ResidentHistoryCatalogSingleton.Instance;
             LogInHandler = new LogInHandler(this);
             NewResident = new Resident();
-            SelectedResident=new Resident();
+            SelectedResident= ResidentCatalogSingleton.SelectedResident;
             AccountCatalogSingleton = AccountCatalogSingleton.Instance;
             Account = new Account();
-            CurrentResident = new PersistencyFacade().GetResident(acc);
-           
-            //CurrentResident = new Resident() {ApartmentID = 2,EmailAddress = "sadasd@asdasd.com",FirstName = "Michael",LastName = "Bech", IsBoardMember = true,PhoneNumber =02546878,ResidentID = 1};
+            CurrentResident = ResidentCatalogSingleton.CurrentResident;
             CreateCommand = new RelayCommand(ResidentHandler.CreateResident);
             DeleteCommand = new RelayCommand(ResidentHandler.DeleteResident);
             UpdateCommand=new RelayCommand(ResidentHandler.UpdateResident);
             LogInCommand=new RelayCommand(LogInHandler.CheckAccount);
+            AttachCommand=new RelayCommand(ResidentHandler.AttachResident);
         }
 
-        public void Save()
-        {
-            acc = Account;
-        }
+        //public void Save()
+        //{
+        //    acc = Account;
+        //}
         public event PropertyChangedEventHandler PropertyChanged;
 
         [NotifyPropertyChangedInvocator]

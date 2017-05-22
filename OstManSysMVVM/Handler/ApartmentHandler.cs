@@ -3,8 +3,11 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Windows.UI.Xaml;
+using Windows.UI.Xaml.Controls;
 using OstManSysMVVM.Model;
 using OstManSysMVVM.Persistency;
+using OstManSysMVVM.View;
 using OstManSysMVVM.ViewModel;
 
 namespace OstManSysMVVM.Handler
@@ -17,25 +20,49 @@ namespace OstManSysMVVM.Handler
             ApartmentViewModel = apartmentViewModel;
         }
 
+        public void ReportAProblem()
+        {
+            var problem = new Problem();
+            problem.ApartmentID = ApartmentViewModel.NewProblem.ApartmentID;
+            problem.Description = ApartmentViewModel.NewProblem.Description;
+            problem.Header = ApartmentViewModel.NewProblem.Header;
+            problem.ProblemID = ApartmentViewModel.NewProblem.ProblemID;
+            
+            new PersistencyFacade().SaveProblem(problem);
+            var problems = new PersistencyFacade().GetProblems();
+            ApartmentViewModel.ProblemCatalogSingleton.Problems.Clear();
+            foreach (var problem1 in problems)
+            {
+                ApartmentViewModel.ProblemCatalogSingleton.Problems.Add(problem1);
+            }
+
+            ApartmentViewModel.NewProblem.ApartmentID = 0;
+            ApartmentViewModel.NewProblem.Description = "";
+            ApartmentViewModel.NewProblem.Header = "";
+            ApartmentViewModel.NewProblem.ProblemID = 0;
+        }
+
         public void CreateApartment()
         {
             var apartment = new Apartment();
-            apartment.Address = ApartmentViewModel.NewApartment.Address;
+            apartment.AddressID = ApartmentViewModel.NewApartment.AddressID;
             apartment.Size = ApartmentViewModel.NewApartment.Size;
             apartment.Condition = ApartmentViewModel.NewApartment.Condition;
             apartment.MonthlyRent = ApartmentViewModel.NewApartment.MonthlyRent;
             apartment.NumberOfRooms = ApartmentViewModel.NewApartment.NumberOfRooms;
-          
+            apartment.DownpipeID = 2;
+            apartment.IsRented = true;
+            apartment.WindowID = 1;
             apartment.LastCheck = ApartmentViewModel.NewApartment.LastCheck;
             new PersistencyFacade().SaveApartment(apartment);
-            var apartments = new PersistencyFacade().GetApartments();
-            ApartmentViewModel.ApartmentCatalogSingleton.Apartments.Clear();
+            var apartments = new PersistencyFacade().GetApartmentAddresses();
+            ApartmentViewModel.ApartmentAddressCatalogSingleton.ApartmentAddresses.Clear();
             foreach (var apartment1 in apartments)
             {
-                ApartmentViewModel.ApartmentCatalogSingleton.Apartments.Add(apartment1);
+                ApartmentViewModel.ApartmentAddressCatalogSingleton.ApartmentAddresses.Add(apartment1);
             }
             ApartmentViewModel.NewApartment.ApartmentID= 0;
-            ApartmentViewModel.NewApartment.Address="";
+            ApartmentViewModel.NewApartment.AddressID=0;
             ApartmentViewModel.NewApartment.Size=0;
             ApartmentViewModel.NewApartment.Condition="";
             ApartmentViewModel.NewApartment.MonthlyRent=0;
@@ -43,14 +70,152 @@ namespace OstManSysMVVM.Handler
 
         }
 
+        //public void MoveProblemToHistory()
+        //{
+        //    new PersistencyFacade().MoveProblemToHistory(HistoryConvert());
+        //    DeleteProblem();
+        //    var problems = new PersistencyFacade().GetProblemHistories();
+        //}
+      
+        public ProblemHistory HistoryConvert()
+        {
+            Problem problem = ApartmentViewModel.SelectedProblem;
+            ProblemHistory problemHistory = new ProblemHistory()
+            {
+                ApartmentID = problem.ApartmentID,
+                Description = problem.Description,
+                Header = problem.Header,
+                ProblemID = problem.ProblemID,
+                Note = ApartmentViewModel.ProblemNote
+            };
+            return problemHistory;
+
+        }
+
+
+        public void DeleteProblem()
+        {
+            ProblemHistory problem = HistoryConvert();
+            new PersistencyFacade().MoveProblemToHistory(problem);
+            new PersistencyFacade().DeleteProblem(ApartmentViewModel.SelectedProblem);
+            var problems = new PersistencyFacade().GetProblems();
+            var historyProblems = new PersistencyFacade().GetProblemHistories();
+            ApartmentViewModel.ProblemHistoryCatalogSingleton.ProblemHistories.Clear();
+            ApartmentViewModel.ProblemCatalogSingleton.Problems.Clear();
+            foreach (var problem1 in problems)
+            {
+                ApartmentViewModel.ProblemCatalogSingleton.Problems.Add(problem1);
+            }
+            foreach (var problem2 in historyProblems)
+            {
+                ApartmentViewModel.ProblemHistoryCatalogSingleton.ProblemHistories.Add(problem2);
+            }
+
+            ApartmentViewModel.NewProblem.ApartmentID = 0;
+            ApartmentViewModel.NewProblem.Description = "";
+            ApartmentViewModel.NewProblem.Header = "";
+            ApartmentViewModel.NewProblem.ProblemID = 0;
+                  }
         public void DeleteApartment()
         {
             new PersistencyFacade().DeleteApartment(ApartmentViewModel.SelectedApartment);
-            var apartments = new PersistencyFacade().GetApartments();
-            ApartmentViewModel.ApartmentCatalogSingleton.Apartments.Clear();
+            var apartments = new PersistencyFacade().GetApartmentAddresses();
+            ApartmentViewModel.ApartmentAddressCatalogSingleton.ApartmentAddresses.Clear();
             foreach (var apartment1 in apartments)
             {
-                ApartmentViewModel.ApartmentCatalogSingleton.Apartments.Add(apartment1);
+                ApartmentViewModel.ApartmentAddressCatalogSingleton.ApartmentAddresses.Add(apartment1);
+            }
+        }
+
+        public void GoToUpdatePage()
+        {
+            //ApartmentViewModel.NewApartment.AddressID = ApartmentViewModel.SelectedApartment.AddressID;
+            //ApartmentViewModel.NewApartment.Condition = ApartmentViewModel.SelectedApartment.Condition;
+            var newFrame = new Frame();
+            newFrame.Navigate(typeof(UpdateApartment));
+            Window.Current.Content = newFrame;
+            Window.Current.Activate();
+       }
+
+        public void UpdateApartment()
+        {
+            int _address = 0;
+            int _size = 0;
+            string _condition = "";
+            double _rent = 0;
+            int _numberOfRooms = 0;
+
+            //if (ApartmentViewModel.NewApartment.ApartmentID == 0)
+            //{
+            //    _id = ApartmentViewModel.SelectedApartment.ApartmentID;
+            //}
+            //else
+            //{
+            //    _id = ApartmentViewModel.NewApartment.ApartmentID;
+            //}
+
+            //if (ApartmentViewModel.NewApartment.AddressID == 0)
+            //{
+            //   // _address = ApartmentViewModel.SelectedApartment.AddressID;
+            //}
+            //else
+            //{
+                _address = ApartmentViewModel.NewApartment.AddressID;
+           // }
+
+            //if (ApartmentViewModel.NewApartment.Size == 0)
+            //{
+            //    _size = ApartmentViewModel.SelectedApartment.Size;
+            //}
+            //else
+            //{
+                _size = ApartmentViewModel.NewApartment.Size;
+           // }
+
+            //if (ApartmentViewModel.NewApartment.Condition == "")
+            //{
+            // //   _condition = ApartmentViewModel.SelectedApartment.Condition;
+            //}
+            //else
+            //{
+                _condition = ApartmentViewModel.NewApartment.Condition;
+            //}
+
+            //if (ApartmentViewModel.NewApartment.MonthlyRent == 0)
+            //{
+            //    _rent = ApartmentViewModel.SelectedApartment.MonthlyRent;
+            //}
+            //else
+            //{
+                _rent = ApartmentViewModel.NewApartment.MonthlyRent;
+           // }
+
+            //if (ApartmentViewModel.NewApartment.NumberOfRooms == 0)
+            //{
+            //    _numberOfRooms = ApartmentViewModel.SelectedApartment.NumberOfRooms;
+            //}
+            //else
+            //{
+                _numberOfRooms = ApartmentViewModel.NewApartment.NumberOfRooms;
+            //}
+
+            var updatedApartment = new Apartment();
+            updatedApartment.ApartmentID = ApartmentViewModel.SelectedApartment.ApartmentID;
+            updatedApartment.AddressID = _address;
+            updatedApartment.Condition = _condition;
+            updatedApartment.MonthlyRent = _rent;
+            updatedApartment.NumberOfRooms = _numberOfRooms;
+            updatedApartment.Size = _size;
+            updatedApartment.DownpipeID = 2;
+            updatedApartment.WindowID = 1;
+
+
+            new PersistencyFacade().UpdateApartment(updatedApartment);
+            var apartments = new PersistencyFacade().GetApartmentAddresses();
+            ApartmentViewModel.ApartmentAddressCatalogSingleton.ApartmentAddresses.Clear();
+            foreach (var apartment1 in apartments)
+            {
+                ApartmentViewModel.ApartmentAddressCatalogSingleton.ApartmentAddresses.Add(apartment1);
             }
             //ApartmentViewModel.NewApartment.ApartmentID = 0;
             //ApartmentViewModel.NewApartment.Address = "";
@@ -58,30 +223,6 @@ namespace OstManSysMVVM.Handler
             //ApartmentViewModel.NewApartment.Condition = "";
             //ApartmentViewModel.NewApartment.MonthlyRent = 0;
             //ApartmentViewModel.NewApartment.NumberOfRooms = 0;
-        }
-
-        public void UpdateApartment()
-        {
-            var apartment = new Apartment();
-            apartment.ApartmentID = ApartmentViewModel.NewApartment.ApartmentID;
-            apartment.Address = ApartmentViewModel.NewApartment.Address;
-            apartment.Size = ApartmentViewModel.NewApartment.Size;
-            apartment.Condition = ApartmentViewModel.NewApartment.Condition;
-            apartment.MonthlyRent = ApartmentViewModel.NewApartment.MonthlyRent;
-            apartment.NumberOfRooms = ApartmentViewModel.NewApartment.NumberOfRooms;
-            new PersistencyFacade().UpdateApartment(apartment);
-            var apartments = new PersistencyFacade().GetApartments();
-            ApartmentViewModel.ApartmentCatalogSingleton.Apartments.Clear();
-            foreach (var apartment1 in apartments)
-            {
-                ApartmentViewModel.ApartmentCatalogSingleton.Apartments.Add(apartment1);
-            }
-            ApartmentViewModel.NewApartment.ApartmentID = 0;
-            ApartmentViewModel.NewApartment.Address = "";
-            ApartmentViewModel.NewApartment.Size = 0;
-            ApartmentViewModel.NewApartment.Condition = "";
-            ApartmentViewModel.NewApartment.MonthlyRent = 0;
-            ApartmentViewModel.NewApartment.NumberOfRooms = 0;
         }
     }
 }

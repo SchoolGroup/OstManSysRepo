@@ -24,6 +24,8 @@ namespace OstManSysMVVM.Model
             }
         }
 
+        public Resident CurrentResident { get; set; }
+        public Resident SelectedResident { get; set; }
         public ObservableCollection<Resident> Residents { get; set; }
 
         private ResidentCatalogSingleton()
