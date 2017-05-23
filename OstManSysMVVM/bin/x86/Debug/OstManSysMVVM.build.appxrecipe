@@ -370,6 +370,9 @@
     <AppxPackagedFile Include="C:\Users\Cristian Patras\Documents\GitHub\OstManSysRepo\OstManSysMVVM\Assets\history.png">
       <PackagePath>Assets\history.png</PackagePath>
     </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Cristian Patras\Documents\GitHub\OstManSysRepo\OstManSysMVVM\Assets\ostbanehuslogoo.png">
+      <PackagePath>Assets\ostbanehuslogoo.png</PackagePath>
+    </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Cristian Patras\Documents\GitHub\OstManSysRepo\OstManSysMVVM\Assets\OstBanHusLogo.png">
       <PackagePath>Assets\OstBanHusLogo.png</PackagePath>
     </AppxPackagedFile>

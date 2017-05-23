@@ -105,8 +105,9 @@
       <RootProperty Name="Orientation" />
       <RootProperty Name="Margin" />
       <RootProperty Name="DataContext" />
-      <RootProperty Name="Width" />
       <RootProperty Name="Height" />
+      <RootProperty Name="Background" />
+      <RootProperty Name="Width" />
     </RootType>
     <RootType FullName="Windows.UI.Xaml.Controls.Button">
       <RootProperty Name="Background" />
@@ -126,9 +127,10 @@
     <RootType FullName="Windows.UI.Xaml.Controls.Image">
       <RootProperty Name="Source" />
       <RootProperty Name="Stretch" />
+      <RootProperty Name="VerticalAlignment" />
+      <RootProperty Name="HorizontalAlignment" />
       <RootProperty Name="Width" />
       <RootProperty Name="Height" />
-      <RootProperty Name="VerticalAlignment" />
     </RootType>
     <RootType FullName="Microsoft.Xaml.Interactivity.Interaction">
       <RootMethod Name="GetBehaviors" />
