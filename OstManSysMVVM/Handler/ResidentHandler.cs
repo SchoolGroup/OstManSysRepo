@@ -9,6 +9,9 @@ using OstManSysMVVM.ViewModel;
 
 namespace OstManSysMVVM.Handler
 {
+    /// <summary>
+    /// Controls the functionality regarding residents
+    /// </summary>
     class ResidentHandler
     {
         public ResidentViewModel ResidentViewModel { get; set; }
@@ -17,7 +20,9 @@ namespace OstManSysMVVM.Handler
         {
             ResidentViewModel = residentViewModel;
         }
-
+        /// <summary>
+        /// Gets the ApartmentID and ResidentID in order to create a new contract with current date of creation.
+        /// </summary>
         public void AttachResident()
         {
             var contract = new Contract();
@@ -26,6 +31,10 @@ namespace OstManSysMVVM.Handler
             contract.MoveInDate=DateTime.Now;
             new PersistencyFacade().SaveContract(contract);
         }
+        /// <summary>
+        /// Creates a new resident with the information the user has provided and send it to the PersistencyFacade.
+        /// Than gets all the residents and adds them into the cleared list of residents in order to have the new resident also.
+        /// </summary>
         public void CreateResident()
         {
             var resident = new Resident();
@@ -36,8 +45,6 @@ namespace OstManSysMVVM.Handler
             resident.PhoneNumber = ResidentViewModel.NewResident.PhoneNumber;
             resident.DateOfBirth = ResidentViewModel.NewResident.DateOfBirth;
             resident.Type = ResidentViewModel.NewResident.Type;
-           // resident.ApartmentID = ResidentViewModel.NewResident.ApartmentID;
-            //resident.IsBoardMember = ResidentViewModel.NewResident.IsBoardMember;
             new PersistencyFacade().SaveResident(resident);
             var residents = new PersistencyFacade().GetResidents();
             ResidentViewModel.ResidentCatalogSingleton.Residents.Clear();
@@ -51,18 +58,11 @@ namespace OstManSysMVVM.Handler
             ResidentViewModel.NewResident.LastName = "";
             ResidentViewModel.NewResident.EmailAddress="";
             ResidentViewModel.NewResident.PhoneNumber=0;
-           // ResidentViewModel.NewResident.ApartmentID=0;
-            //ResidentViewModel.NewResident.IsBoardMember=false;
-        }
-
-        public void MoveResidentToHistory()
-        {
-            new PersistencyFacade().SaveResident(ResidentViewModel.SelectedResident);
-            var residents = new PersistencyFacade().GetResidentHistories();
-        }
-
-        
-
+        }     
+        /// <summary>
+        /// Converts the resident into residenthistory
+        /// </summary>
+        /// <returns>ResidentHistory with the details of the resident</returns>
         public ResidentHistory HistoryConvert()
         {
             Resident res = ResidentViewModel.SelectedResident;
@@ -81,7 +81,10 @@ namespace OstManSysMVVM.Handler
             };
             return newResident;
         }
-
+        /// <summary>
+        /// Gets the converted resident and send it to the PersistencyFacade.
+        /// Than gets all the residents and adds them to the cleared list of residents in order update the list.
+        /// </summary>
         public void DeleteResident()
         {
             ResidentHistory resident = HistoryConvert();
@@ -99,16 +102,11 @@ namespace OstManSysMVVM.Handler
             {
                 ResidentViewModel.ResidentHistoryCatalogSingleton.ResidentHistories.Add(resident2);
             }
-            
-            ResidentViewModel.NewResident.ResidentID = 0;
-            ResidentViewModel.NewResident.FirstName = "";
-            ResidentViewModel.NewResident.LastName = "";
-            ResidentViewModel.NewResident.EmailAddress = "";
-            ResidentViewModel.NewResident.PhoneNumber = 0;
-            // ResidentViewModel.NewResident.ApartmentID = 0;
-            //ResidentViewModel.NewResident.IsBoardMember = false;
         }
-
+        /// <summary>
+        /// Creates a new resident with the information provided by the user and send it to the PersistencyFacade.
+        /// Than gets all the residents and adds them to the cleared list of residents in order update the list.
+        /// </summary>
         public void UpdateResident()
         {
             Resident resident = new Resident();
@@ -117,8 +115,6 @@ namespace OstManSysMVVM.Handler
             resident.LastName = ResidentViewModel.NewResident.LastName;
             resident.EmailAddress = ResidentViewModel.NewResident.EmailAddress;
             resident.PhoneNumber = ResidentViewModel.NewResident.PhoneNumber;
-          //  resident.ApartmentID = ResidentViewModel.NewResident.ApartmentID;
-           // resident.IsBoardMember = ResidentViewModel.NewResident.IsBoardMember;
             new PersistencyFacade().UpdateResident(resident);
             var residents = new PersistencyFacade().GetResidents();
             ResidentViewModel.ResidentCatalogSingleton.Residents.Clear();
@@ -132,8 +128,6 @@ namespace OstManSysMVVM.Handler
             ResidentViewModel.NewResident.LastName = "";
             ResidentViewModel.NewResident.EmailAddress = "";
             ResidentViewModel.NewResident.PhoneNumber = 0;
-           // ResidentViewModel.NewResident.ApartmentID = 0;
-            //ResidentViewModel.NewResident.IsBoardMember = false;
         }
     }
 }

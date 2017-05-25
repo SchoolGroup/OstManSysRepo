@@ -199,6 +199,10 @@
       <RootProperty Name="Margin" />
       <RootProperty Name="Date" />
     </RootType>
+    <RootType FullName="Windows.UI.Xaml.Controls.GridView">
+      <RootProperty Name="Margin" />
+      <RootProperty Name="ItemsSource" />
+    </RootType>
     <RootType FullName="Windows.UI.Xaml.Documents.Run">
       <RootProperty Name="Text" />
       <RootProperty Name="FontWeight" />
@@ -230,6 +234,7 @@
     <RootType FullName="OstManSysMVVM.View.DownPipesApartmentDetails" />
     <RootType FullName="OstManSysMVVM.View.DownPipesView" />
     <RootType FullName="OstManSysMVVM.View.HistoryOfResidentsView" />
+    <RootType FullName="OstManSysMVVM.ViewModel.LogInViewModel" />
     <RootType FullName="Windows.UI.Xaml.Controls.Canvas">
       <RootMethod Name="GetZIndex" />
       <RootMethod Name="SetZIndex" />
@@ -258,10 +263,13 @@
     </RootType>
     <RootType FullName="Windows.UI.Xaml.Controls.DatePickerFlyout" />
     <RootType FullName="OstManSysMVVM.View.MyApartmentViewFrame" />
+    <RootType FullName="OstManSysMVVM.ViewModel.ProblemViewModel" />
     <RootType FullName="OstManSysMVVM.View.PreviousProblemsView" />
     <RootType FullName="OstManSysMVVM.View.ProblemSolved" />
     <RootType FullName="OstManSysMVVM.View.ProblemsView" />
     <RootType FullName="OstManSysMVVM.View.Report" />
+    <RootType FullName="OstManSysMVVM.View.ResidentApartmentDetails" />
+    <RootType FullName="OstManSysMVVM.View.ResidentDownpipesDetails" />
     <RootType FullName="OstManSysMVVM.View.ResidentsViewFrame" />
     <RootType FullName="OstManSysMVVM.View.ResidentView" />
     <RootType FullName="OstManSysMVVM.View.UpdateApartment" />

@@ -58,7 +58,7 @@
             </StackPanel>
             <StackPanel Orientation ="Horizontal" Margin="0, 0, 0, 10">
                 <TextBlock  Text="Currently living in this apartment:" FontWeight="Bold"/>
-                <TextBlock Margin="10, 0, 0, 0" Text="{Binding ResidentID}"/>
+                <GridView Margin="10, 0, 0, 0" ItemsSource="{Binding ResidentID}"/>
             </StackPanel>
             <StackPanel Orientation="Horizontal">
                 <TextBlock VerticalAlignment="Center" Text="Last Check:" FontWeight="Bold"/>

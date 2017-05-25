@@ -10,7 +10,7 @@
     xmlns:vm="using:OstManSysMVVM.ViewModel"
     mc:Ignorable="d">
 <Page.DataContext>
-    <vm:ResidentViewModel></vm:ResidentViewModel>
+    <vm:LogInViewModel></vm:LogInViewModel>
 </Page.DataContext>
     <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
         <StackPanel HorizontalAlignment="Center" Orientation="Horizontal" VerticalAlignment="Center">

@@ -13,7 +13,7 @@
     <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
 
         <Grid.DataContext>
-            <ViewModel:ApartmentViewModel/>
+            <ViewModel:ProblemViewModel/>
         </Grid.DataContext>
         <Grid.RowDefinitions>
             <RowDefinition Height="*" />

@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.ComponentModel;
 using System.Linq;
 using System.Runtime.CompilerServices;
@@ -18,31 +19,31 @@ namespace OstManSysMVVM.ViewModel
     {
         private Apartment _newApartment;
         private ApartmentAddress _selectedApartment;
-        private Problem _selectedProblem;
-        private Problem _newProblem;
-        private string _problemNote;
-        private int _residentId;
+        //private Problem _selectedProblem;
+        //private Problem _newProblem;
+        //private string _problemNote;
+        private ObservableCollection<int> _residentId;
         private DownpipeApartmentAddress _downpipeApartmentAddress;
 
-        public string ProblemNote
-        {
-            get { return _problemNote; }
-            set
-            {
-                _problemNote = value;
-                OnPropertyChanged(nameof(ProblemNote));
-            }
-        }
+        //public string ProblemNote
+        //{
+        //    get { return _problemNote; }
+        //    set
+        //    {
+        //        _problemNote = value;
+        //        OnPropertyChanged(nameof(ProblemNote));
+        //    }
+        //}
 
-        public Problem NewProblem
-        {
-            get { return _newProblem; }
-            set
-            {
-                _newProblem = value;
-                OnPropertyChanged(nameof(NewProblem));
-            }
-        }
+        //public Problem NewProblem
+        //{
+        //    get { return _newProblem; }
+        //    set
+        //    {
+        //        _newProblem = value;
+        //        OnPropertyChanged(nameof(NewProblem));
+        //    }
+        //}
 
         //public Apartment ApartmentID { get; set; }
         public Apartment NewApartment
@@ -84,7 +85,7 @@ namespace OstManSysMVVM.ViewModel
             set { _downpipeApartmentAddress = value; }
         }
 
-        public int ResidentID
+        public ObservableCollection<int> ResidentID
         {
             get
             {
@@ -95,40 +96,40 @@ namespace OstManSysMVVM.ViewModel
                 {
                     if (contract.ApartmentID == apartmentID)
                     {
-                        _residentId = contract.ResidentID;
-                        return _residentId;
+                        _residentId.Add(contract.ResidentID);
+                        //return _residentId;
                     }
                     
                 }
-                return 0;
+                return _residentId;
             }
             set { _residentId = value; }
         }
 
-        public Problem SelectedProblem
-        {
-            get { return _selectedProblem; }
-            set
-            {
-                _selectedProblem = value;
-                OnPropertyChanged(nameof(SelectedApartment));
-            }
-        }
+        //public Problem SelectedProblem
+        //{
+        //    get { return _selectedProblem; }
+        //    set
+        //    {
+        //        _selectedProblem = value;
+        //        OnPropertyChanged(nameof(SelectedApartment));
+        //    }
+        //}
 
         public ContractCatalogSingleton ContractCatalogSingleton { get; set; }
         public ApartmentCatalogSingleton ApartmentCatalogSingleton { get; set; }
         public ApartmentAddressCatalogSingleton ApartmentAddressCatalogSingleton { get; set; }
         public DownpipeApartmentAddressCatalogSingleton DownpipeApartmentAddressCatalogSingleton { get; set; }
         public DownpipeCatalogSingleton DownpipeCatalogSingleton { get; set; }
-        public ProblemCatalogSingleton ProblemCatalogSingleton { get; set; }
+        //public ProblemCatalogSingleton ProblemCatalogSingleton { get; set; }
         public Handler.ApartmentHandler ApartmentHandler { get; set; }
-        public ProblemHistoryCatalogSingleton ProblemHistoryCatalogSingleton { get; set; }
+        //public ProblemHistoryCatalogSingleton ProblemHistoryCatalogSingleton { get; set; }
         public ICommand CreateCommand { get; set; }
         public ICommand DeleteCommand { get; set; }
         public ICommand UpdateCommand { get; set; }
         public ICommand GoToUpdateCommand { get; set; }
-        public ICommand CreateProblemCommand { get; set; }
-        public ICommand SolveTheProblemCommand { get; set; }
+        //public ICommand CreateProblemCommand { get; set; }
+        //public ICommand SolveTheProblemCommand { get; set; }
         //  public int GetResidentID()
         //{
         //    var apartmentID = SelectedApartment.ApartmentID;
@@ -152,21 +153,22 @@ namespace OstManSysMVVM.ViewModel
             ApartmentAddressCatalogSingleton = ApartmentAddressCatalogSingleton.Instance;
             ApartmentCatalogSingleton = ApartmentCatalogSingleton.Instance;
             DownpipeCatalogSingleton = DownpipeCatalogSingleton.Instance;
-            ProblemCatalogSingleton = ProblemCatalogSingleton.Instance;
-            ProblemHistoryCatalogSingleton = ProblemHistoryCatalogSingleton.Instance;
+            //ProblemCatalogSingleton = ProblemCatalogSingleton.Instance;
+            //ProblemHistoryCatalogSingleton = ProblemHistoryCatalogSingleton.Instance;
             ApartmentHandler = new Handler.ApartmentHandler(this);
             NewApartment =new Apartment();
-            NewProblem = new Problem();
+            ResidentID= new ObservableCollection<int>();
+            //NewProblem = new Problem();
             //ResidentID = GetResidentID();
            // ResidentID = ContractCatalogSingleton.ResidentID;
-            SelectedProblem = ProblemCatalogSingleton.SelectedProblem;
+            //SelectedProblem = ProblemCatalogSingleton.SelectedProblem;
             SelectedApartment = ApartmentAddressCatalogSingleton.SelectedApartmentAddress;
             CreateCommand=new RelayCommand(ApartmentHandler.CreateApartment);
             DeleteCommand=new RelayCommand(ApartmentHandler.DeleteApartment);
             UpdateCommand=new RelayCommand(ApartmentHandler.UpdateApartment);
             GoToUpdateCommand = new RelayCommand(ApartmentHandler.GoToUpdatePage);
-            CreateProblemCommand = new RelayCommand(ApartmentHandler.ReportAProblem);
-            SolveTheProblemCommand = new RelayCommand(ApartmentHandler.DeleteProblem);
+            //CreateProblemCommand = new RelayCommand(ApartmentHandler.ReportAProblem);
+            //SolveTheProblemCommand = new RelayCommand(ApartmentHandler.DeleteProblem);
 
         }
 

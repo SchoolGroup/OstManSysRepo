@@ -13,6 +13,9 @@ using OstManSysMVVM.ViewModel;
 
 namespace OstManSysMVVM.Persistency
 {
+    /// <summary>
+    /// Connects the client based programme to the server part(WebApi and than database)
+    /// </summary>
     class PersistencyFacade
     {
         const string ServerUrl = "http://localhost:60721";
@@ -23,7 +26,10 @@ namespace OstManSysMVVM.Persistency
             handler = new HttpClientHandler();
             handler.UseDefaultCredentials = true;
         }
-
+        /// <summary>
+        /// Connects to the WebApi and gets all of the apartments with addresses from the database.
+        /// </summary>
+        /// <returns>A list of all the apartments with addresses</returns>
         public List<ApartmentAddress> GetApartmentAddresses()
         {
             using (var client = new HttpClient(handler))
@@ -49,7 +55,10 @@ namespace OstManSysMVVM.Persistency
                 return null;
             }
         }
-
+        /// <summary>
+        /// Connects to the WebApi and gets all of the downpipes connected with the apartment with address from the database.
+        /// </summary>
+        /// <returns>A list of all the downpipes</returns>
         public List<DownpipeApartmentAddress> GetDownpipeApartmentAddress()
             {
                 using (var client = new HttpClient(handler))
@@ -76,6 +85,10 @@ namespace OstManSysMVVM.Persistency
                     return null;
                 }
             }
+        /// <summary>
+        /// Connects to the WebApi and gets all of the past residents from the database.
+        /// </summary>
+        /// <returns>A list of all the past residents</returns>
         public List<ResidentHistory> GetResidentHistories()
         {
             using (var client = new HttpClient(handler))
@@ -102,6 +115,10 @@ namespace OstManSysMVVM.Persistency
                 return null;
             }
         }
+        /// <summary>
+        /// Connects to the WebApi and gets all of the resolved problems from the database.
+        /// </summary>
+        /// <returns>A list of the resolved problems</returns>
         public List<ProblemHistory> GetProblemHistories()
         {
             using (var client = new HttpClient(handler))
@@ -128,7 +145,10 @@ namespace OstManSysMVVM.Persistency
                 return null;
             }
         }
-
+        /// <summary>
+        /// Connects to the WebApi and gets all of the apartments from the database.
+        /// </summary>
+        /// <returns>Returns all of the apartments</returns>
         public List<Apartment> GetApartments()
         {
             using (var client = new HttpClient(handler))
@@ -154,6 +174,10 @@ namespace OstManSysMVVM.Persistency
                 return null;
             }
         }
+        /// <summary>
+        /// Connects to the WebApi and gets all of the problems from the database.
+        /// </summary>
+        /// <returns>A list of all the problems</returns>
         public List<Problem> GetProblems()
         {
             using (var client = new HttpClient(handler))
@@ -179,8 +203,10 @@ namespace OstManSysMVVM.Persistency
                 return null;
             }
         }
-
-
+        /// <summary>
+        /// Connects to the WebApi and gets all of the downpipes from the database.
+        /// </summary>
+        /// <returns>A list of all the downpipes</returns>
         public List<Downpipe> GetDownpipes()
         {
             using (var client = new HttpClient(handler))
@@ -206,6 +232,10 @@ namespace OstManSysMVVM.Persistency
                 return null;
             }
         }
+        /// <summary>
+        /// Connects to the WebApi and gets all of the accounts from the database.
+        /// </summary>
+        /// <returns>A list of all the accounts</returns>
         public List<Account> GetAccounts()
         {
             using (var client= new HttpClient(handler))
@@ -229,30 +259,10 @@ namespace OstManSysMVVM.Persistency
                 return null;
             }
         }
-
-        //public Contract GetContract(Contract contract)
-        //{
-        //    using (var client = new HttpClient(handler))
-        //    {
-        //        client.BaseAddress = new Uri(ServerUrl);
-        //        client.DefaultRequestHeaders.Clear();
-        //        client.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
-        //        try
-        //        {
-        //            var response = client.GetAsync("api/Contracts/" + ).Result;
-        //            if (response.IsSuccessStatusCode)
-        //            {
-        //                var resident1 = response.Content.ReadAsAsync<Resident>().Result;
-        //                return resident1;
-        //            }
-        //        }
-        //        catch (Exception ex)
-        //        {
-        //            new MessageDialog(ex.Message).ShowAsync();
-        //        }
-        //        return null;
-        //    }
-        //}
+        /// <summary>
+        /// Connects to the WebApi and gets all of the contracts from the database.
+        /// </summary>
+        /// <returns>A list of the contracts</returns>
         public List<Contract> GetContracts()
         {
             using (var client = new HttpClient(handler))
@@ -276,6 +286,11 @@ namespace OstManSysMVVM.Persistency
                 return null;
             }
         }
+        /// <summary>
+        /// Connects to the WebApi and gets a resident based on the account`s ResidentID from the database.
+        /// </summary>
+        /// <param name="resident"></param>
+        /// <returns>A single resident who is logged in</returns>
         public Resident GetResident(Account resident)
         {
             using (var client = new HttpClient(handler))
@@ -299,6 +314,10 @@ namespace OstManSysMVVM.Persistency
                 return null;
             }
         }
+        /// <summary>
+        /// Connects to the WebApi and gets all of the residents from the database.
+        /// </summary>
+        /// <returns>A list of all the residents</returns>
         public List<Resident> GetResidents()
         {
             using (var client = new HttpClient(handler))
@@ -322,8 +341,10 @@ namespace OstManSysMVVM.Persistency
                 return null;
             }
         }
-
-
+        /// <summary>
+        /// Gets the apartment send from ApartmentHandler and saves it in the database in apartment table
+        /// </summary>
+        /// <param name="apartment"></param>
         public void SaveApartment(Apartment apartment)
         {
             using (var client = new HttpClient(handler))
@@ -344,7 +365,10 @@ namespace OstManSysMVVM.Persistency
                 }
             }
         }
-
+        /// <summary>
+        /// Gets the resident send from ResidentHandler and saves it in the database in resident table
+        /// </summary>
+        /// <param name="resident"></param>
         public void SaveResident(Resident resident)
         {
             using (var client = new HttpClient(handler))
@@ -364,7 +388,10 @@ namespace OstManSysMVVM.Persistency
                 }
             }
         }
-
+        /// <summary>
+        /// Gets the problem send from ProblemHandler and saves it in the database problem table
+        /// </summary>
+        /// <param name="problem"></param>
         public void SaveProblem(Problem problem)
         {
             using (var client = new HttpClient(handler))
@@ -384,7 +411,10 @@ namespace OstManSysMVVM.Persistency
                 }
             }
         }
-
+        /// <summary>
+        /// Gets the problem send from ProblemHandler and saves it in the database in problemHistory table
+        /// </summary>
+        /// <param name="problemHistory"></param>
         public void MoveProblemToHistory(ProblemHistory problemHistory)
         {
             using (var client = new HttpClient(handler))
@@ -404,7 +434,10 @@ namespace OstManSysMVVM.Persistency
                 }
             }
         }
-
+        /// <summary>
+        /// Gets the residnet send from ResidentHandler and saves it in the database in residentHistory table
+        /// </summary>
+        /// <param name="resident"></param>
         public void MoveResidentToHistory(ResidentHistory resident)
         {
             using (var client = new HttpClient(handler))
@@ -424,7 +457,10 @@ namespace OstManSysMVVM.Persistency
                 }
             }
         }
-
+        /// <summary>
+        /// Gets the apartment send from ApartmentHandler and deletes it from the database
+        /// </summary>
+        /// <param name="apartment"></param>
         public void DeleteApartment(ApartmentAddress apartment)
         {
             using (var client = new HttpClient(handler))
@@ -442,7 +478,10 @@ namespace OstManSysMVVM.Persistency
                 }
             }
         }
-
+        /// <summary>
+        /// Gets the resident send from ResidentHandler and deletes it from the database
+        /// </summary>
+        /// <param name="resident"></param>
         public void DeleteResident(Resident resident)
         {
             using (var client = new HttpClient(handler))
@@ -460,7 +499,10 @@ namespace OstManSysMVVM.Persistency
                 }
             }
         }
-
+        /// <summary>
+        /// Gets the problem send from ProblemHandler and deletes it from the database
+        /// </summary>
+        /// <param name="problem"></param>
         public void DeleteProblem(Problem problem)
         {
             using (var client = new HttpClient(handler))
@@ -478,7 +520,10 @@ namespace OstManSysMVVM.Persistency
                 }
             }
         }
-
+        /// <summary>
+        /// Gets the contract send from ResidentHandler and saves it in the database in contract table
+        /// </summary>
+        /// <param name="contract"></param>
         public void SaveContract(Contract contract)
         {
             using (var client = new HttpClient(handler))
@@ -498,6 +543,10 @@ namespace OstManSysMVVM.Persistency
                 }
             }
         }
+        /// <summary>
+        /// Gets the apartment send from ApartmentHandler and updates the values of the apartment by replicing it
+        /// </summary>
+        /// <param name="apartment"></param>
         public void UpdateApartment(Apartment apartment)
         {
             using (var client = new HttpClient(handler))
@@ -517,7 +566,10 @@ namespace OstManSysMVVM.Persistency
                 }
             }
         }
-
+        /// <summary>
+        /// Gets the resident send from ResidentHandler and updates the values of the resident by replicing it
+        /// </summary>
+        /// <param name="resident"></param>
         public void UpdateResident(Resident resident)
         {
             using (var client = new HttpClient(handler))

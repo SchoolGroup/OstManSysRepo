@@ -126,5 +126,12 @@
             <Button x:Name="button10" Content="Co-residents" VerticalAlignment="Top" Background="Transparent" BorderBrush="Black" Click="Button11_OnClick" Margin="5, 0, 0, 0"/>
             <Button x:Name="button11" Content="Problems" VerticalAlignment="Top" Background="Transparent" BorderBrush="Black" Click="Button11_OnClick" Margin="5, 0, 0, 0"/>-->
         </StackPanel>
+        <StackPanel Grid.Row="1" Grid.Column="2" VerticalAlignment="Center" HorizontalAlignment="Center">
+            <Frame x:Name="MyFrame1" Height="650" VerticalAlignment="Top" Width="900"/>
+        </StackPanel>
+        <StackPanel Grid.Row="1" Grid.Column="2" Margin="74, 42, 0, 0" Orientation="Horizontal">
+            <Button x:Name="button9" Content="Apartment" VerticalAlignment="Top" Background="Transparent" BorderBrush="Black" Click="ButtonClick_OnClick"/>
+            <Button x:Name="button10" Content="Downpipes" VerticalAlignment="Top" Background="Transparent" BorderBrush="Black" Click="Button11_OnClick" Margin="5, 0, 0, 0"/>
+        </StackPanel>
     </Grid>
 </Page>

@@ -12,39 +12,40 @@ using OstManSysMVVM.ViewModel;
 
 namespace OstManSysMVVM.Handler
 {
+    /// <summary>
+    /// Controls the functionality regarding loging in
+    /// </summary>
     class LogInHandler
     {
-        public ResidentViewModel ResidentViewModel { get; set; }
+        public LogInViewModel LogInViewModel { get; set; }
         public ResidentCatalogSingleton ResidentCatalogSingleton { get; set; }
-        public LogInHandler(ResidentViewModel residentViewModel)
+        public LogInHandler(LogInViewModel logInViewModel)
         {
-            ResidentViewModel = residentViewModel;
+            LogInViewModel = logInViewModel;
             ResidentCatalogSingleton = ResidentCatalogSingleton.Instance;
         }
 
         public Resident _resident;
-
-
-        //public Resident ReturnResident()
-        //{
-        //    return _resident;
-        //}
+        /// <summary>
+        /// Gets the ResidentIDs and Passwords from the database and checks if they match with the values entered by the user.
+        /// If they match - checks wether the user is a Resident or a BoardMember and redirect him to the respective page
+        /// </summary>
         public void CheckAccount()
         {
-            var data = from account in ResidentViewModel.AccountCatalogSingleton.Accounts
+            var data = from account in LogInViewModel.AccountCatalogSingleton.Accounts
                 select account.ResidentID;
-            var data1 = from account1 in ResidentViewModel.AccountCatalogSingleton.Accounts
+            var data1 = from account1 in LogInViewModel.AccountCatalogSingleton.Accounts
                 select account1.Password;
 
             int s = 0;
             foreach (var i in data)
             {
                 
-                if (i.Equals(ResidentViewModel.Account.ResidentID))
+                if (i.Equals(LogInViewModel.Account.ResidentID))
                 {
-                    if (data1.ElementAt(s).Equals(ResidentViewModel.Account.Password))
+                    if (data1.ElementAt(s).Equals(LogInViewModel.Account.Password))
                     {
-                        _resident = new PersistencyFacade().GetResident(ResidentViewModel.Account);
+                        _resident = new PersistencyFacade().GetResident(LogInViewModel.Account);
                         ResidentCatalogSingleton.CurrentResident = _resident;
                         //ResidentViewModel.Save();
                         if (_resident.Type == "Resident")
@@ -63,10 +64,6 @@ namespace OstManSysMVVM.Handler
                         }
 
                     }
-                }
-                else
-                {
-                    
                 }
                 s++;
             }

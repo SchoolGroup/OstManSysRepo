@@ -16,6 +16,8 @@ View\PreviousProblemsView.xbf
 View\ProblemSolved.xbf
 View\ProblemsView.xbf
 View\Report.xbf
+View\ResidentApartmentDetails.xbf
+View\ResidentDownpipesDetails.xbf
 View\ResidentsViewFrame.xbf
 View\ResidentView.xbf
 View\UpdateApartment.xbf

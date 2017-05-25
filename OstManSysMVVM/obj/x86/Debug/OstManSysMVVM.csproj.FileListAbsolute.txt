@@ -1228,3 +1228,13 @@ C:\Users\Universe\Documents\GitHub\OstManSysRepo\OstManSysMVVM\obj\x86\Debug\Vie
 C:\Users\Universe\Documents\GitHub\OstManSysRepo\OstManSysMVVM\obj\x86\Debug\View\ApartmentDetails.xbf
 C:\Users\Universe\Documents\GitHub\OstManSysRepo\OstManSysMVVM\obj\x86\Debug\View\DownPipesApartmentDetails.xbf
 C:\Users\Universe\Documents\GitHub\OstManSysRepo\OstManSysMVVM\obj\x86\Debug\View\ApartmentDetailsView.xbf
+C:\Users\Universe\Documents\GitHub\OstManSysRepo\OstManSysMVVM\bin\x86\Debug\View\ResidentApartmentDetails.xbf
+C:\Users\Universe\Documents\GitHub\OstManSysRepo\OstManSysMVVM\bin\x86\Debug\View\ResidentDownpipesDetails.xbf
+C:\Users\Universe\Documents\GitHub\OstManSysRepo\OstManSysMVVM\obj\x86\Debug\View\ResidentApartmentDetails.g.i.cs
+C:\Users\Universe\Documents\GitHub\OstManSysRepo\OstManSysMVVM\obj\x86\Debug\View\ResidentApartmentDetails.g.cs
+C:\Users\Universe\Documents\GitHub\OstManSysRepo\OstManSysMVVM\obj\x86\Debug\View\ResidentDownpipesDetails.g.i.cs
+C:\Users\Universe\Documents\GitHub\OstManSysRepo\OstManSysMVVM\obj\x86\Debug\View\ResidentDownpipesDetails.g.cs
+C:\Users\Universe\Documents\GitHub\OstManSysRepo\OstManSysMVVM\obj\x86\Debug\View\ResidentApartmentDetails.xaml
+C:\Users\Universe\Documents\GitHub\OstManSysRepo\OstManSysMVVM\obj\x86\Debug\View\ResidentDownpipesDetails.xaml
+C:\Users\Universe\Documents\GitHub\OstManSysRepo\OstManSysMVVM\obj\x86\Debug\View\ResidentApartmentDetails.xbf
+C:\Users\Universe\Documents\GitHub\OstManSysRepo\OstManSysMVVM\obj\x86\Debug\View\ResidentDownpipesDetails.xbf
