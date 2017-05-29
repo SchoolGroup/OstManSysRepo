@@ -10,7 +10,7 @@
 
     <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
         <Grid.DataContext>
-            <viewModel:ApartmentViewModel/>
+            <viewModel:ResidentViewModel/>
         </Grid.DataContext>
         <StackPanel VerticalAlignment="Center" HorizontalAlignment="Center">
 
@@ -21,16 +21,16 @@
                             <StackPanel Orientation="Vertical">
                                 <StackPanel Orientation="Horizontal">
                                     <TextBlock Text="Downpipe ID:" FontWeight="Bold"/>
-                        <TextBlock Text="{Binding DownpipeApartmentAddress.DownpipeID}"/>
+                        <TextBlock Text="{Binding DownpipeCatalogSingleton.ResidentDownpipe.DownpipeID}"/>
                                 </StackPanel>
                                 <StackPanel Orientation="Horizontal">
                                     <TextBlock Text="Condition:" FontWeight="Bold"/>
-                                    <TextBlock Text="{Binding DownpipeApartmentAddress.Condition}"/>
+                                    <TextBlock Text="{Binding DownpipeCatalogSingleton.ResidentDownpipe.Condition}"/>
                                 </StackPanel>
                             </StackPanel>
                             <StackPanel Orientation="Horizontal" >
                                 <TextBlock Text="Last Check:" FontWeight="Bold"/>
-                                <DatePicker Date="{Binding DownpipeApartmentAddress.LastCheck}"/>
+                                <DatePicker Date="{Binding DownpipeCatalogSingleton.ResidentDownpipe.LastChecked}"/>
                             </StackPanel>
                         </StackPanel>
                     <!--</DataTemplate>

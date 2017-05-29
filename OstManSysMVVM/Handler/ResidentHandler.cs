@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Windows.UI.Popups;
 using OstManSysMVVM.Model;
 using OstManSysMVVM.Persistency;
 using OstManSysMVVM.ViewModel;
@@ -25,11 +26,51 @@ namespace OstManSysMVVM.Handler
         /// </summary>
         public void AttachResident()
         {
+            if (ResidentCatalogSingleton.Instance.SelectedResident==null)
+            {
+                new MessageDialog("You haven`t selected a resident").ShowAsync();
+            }
             var contract = new Contract();
             contract.ApartmentID = ApartmentCatalogSingleton.Instance.ApartmentID.ApartmentID;
             contract.ResidentID = ResidentCatalogSingleton.Instance.SelectedResident.ResidentID;
             contract.MoveInDate=DateTime.Now;
             new PersistencyFacade().SaveContract(contract);
+        }
+        public void Refresh()
+        {
+            var contracts = new PersistencyFacade().GetContracts();
+            //var contractResident = from contract in contracts
+            //    where 
+            //    select contract.ApartmentID;
+            int contractResident = 0; 
+            foreach (var contract in contracts)
+            {
+                if (ResidentCatalogSingleton.Instance.CurrentResident.ResidentID == contract.ResidentID)
+                {
+                    contractResident = contract.ApartmentID;
+                    break;
+                }
+            }
+            ApartmentCatalogSingleton.Instance.CurrentApartmentAddress = new PersistencyFacade().GetApartment(contractResident);
+            var addresses= new PersistencyFacade().GetAddresses();
+            foreach (var address in addresses)
+            {
+                if (ApartmentCatalogSingleton.Instance.CurrentApartmentAddress.AddressID==address.AddressID)
+                {
+                    AddressCatalogSingleton.Instance.Address = address;
+                    break;
+                }
+            }
+            var downpipes = new PersistencyFacade().GetDownpipes();
+            foreach (var downpipe in downpipes)
+            {
+                if (ApartmentCatalogSingleton.Instance.CurrentApartmentAddress.DownpipeID==downpipe.DownpipeID)
+                {
+                    DownpipeCatalogSingleton.Instance.ResidentDownpipe = downpipe;
+                    break;
+                }
+
+            }
         }
         /// <summary>
         /// Creates a new resident with the information the user has provided and send it to the PersistencyFacade.
@@ -37,27 +78,35 @@ namespace OstManSysMVVM.Handler
         /// </summary>
         public void CreateResident()
         {
-            var resident = new Resident();
-            resident.ResidentID = ResidentViewModel.NewResident.ResidentID;
-            resident.FirstName = ResidentViewModel.NewResident.FirstName;
-            resident.LastName = ResidentViewModel.NewResident.LastName;
-            resident.EmailAddress = ResidentViewModel.NewResident.EmailAddress;
-            resident.PhoneNumber = ResidentViewModel.NewResident.PhoneNumber;
-            resident.DateOfBirth = ResidentViewModel.NewResident.DateOfBirth;
-            resident.Type = ResidentViewModel.NewResident.Type;
-            new PersistencyFacade().SaveResident(resident);
-            var residents = new PersistencyFacade().GetResidents();
-            ResidentViewModel.ResidentCatalogSingleton.Residents.Clear();
-            foreach (var resident1 in residents)
+            if (ResidentViewModel.NewResident.FirstName==null || ResidentViewModel.NewResident.LastName==null || ResidentViewModel.NewResident.EmailAddress == null || ResidentViewModel.NewResident.PhoneNumber==0 || ResidentViewModel.NewResident.Type==null)
             {
-                ResidentViewModel.ResidentCatalogSingleton.Residents.Add(resident1);
+                new MessageDialog("You must fill in the form").ShowAsync();
             }
+            else
+            {
+                var resident = new Resident();
+                resident.ResidentID = ResidentViewModel.NewResident.ResidentID;
+                resident.FirstName = ResidentViewModel.NewResident.FirstName;
+                resident.LastName = ResidentViewModel.NewResident.LastName;
+                resident.EmailAddress = ResidentViewModel.NewResident.EmailAddress;
+                resident.PhoneNumber = ResidentViewModel.NewResident.PhoneNumber;
+                resident.DateOfBirth = ResidentViewModel.NewResident.DateOfBirth;
+                resident.Type = ResidentViewModel.NewResident.Type;
+                new PersistencyFacade().SaveResident(resident);
+                var residents = new PersistencyFacade().GetResidents();
+                ResidentViewModel.ResidentCatalogSingleton.Residents.Clear();
+                foreach (var resident1 in residents)
+                {
+                    ResidentViewModel.ResidentCatalogSingleton.Residents.Add(resident1);
+                }
 
-            ResidentViewModel.NewResident.ResidentID = 0;
-            ResidentViewModel.NewResident.FirstName = "";
-            ResidentViewModel.NewResident.LastName = "";
-            ResidentViewModel.NewResident.EmailAddress="";
-            ResidentViewModel.NewResident.PhoneNumber=0;
+                ResidentViewModel.NewResident.ResidentID = 0;
+                ResidentViewModel.NewResident.FirstName = "";
+                ResidentViewModel.NewResident.LastName = "";
+                ResidentViewModel.NewResident.EmailAddress = "";
+                ResidentViewModel.NewResident.PhoneNumber = 0;
+            }
+         
         }     
         /// <summary>
         /// Converts the resident into residenthistory
@@ -87,21 +136,29 @@ namespace OstManSysMVVM.Handler
         /// </summary>
         public void DeleteResident()
         {
-            ResidentHistory resident = HistoryConvert();
-            new PersistencyFacade().MoveResidentToHistory(resident);
-            new PersistencyFacade().DeleteResident(ResidentViewModel.SelectedResident);
-            var residents = new PersistencyFacade().GetResidents();
-            var historyResident = new PersistencyFacade().GetResidentHistories();
-            ResidentViewModel.ResidentHistoryCatalogSingleton.ResidentHistories.Clear();
-            ResidentViewModel.ResidentCatalogSingleton.Residents.Clear();
-            foreach (var resident1 in residents)
+            if (ResidentViewModel.SelectedResident==null)
             {
-                ResidentViewModel.ResidentCatalogSingleton.Residents.Add(resident1);
+                new MessageDialog("You haven`t selected a resident").ShowAsync();
             }
-            foreach (var resident2 in historyResident)
+            else
             {
-                ResidentViewModel.ResidentHistoryCatalogSingleton.ResidentHistories.Add(resident2);
+                ResidentHistory resident = HistoryConvert();
+                new PersistencyFacade().MoveResidentToHistory(resident);
+                new PersistencyFacade().DeleteResident(ResidentViewModel.SelectedResident);
+                var residents = new PersistencyFacade().GetResidents();
+                var historyResident = new PersistencyFacade().GetResidentHistories();
+                ResidentViewModel.ResidentHistoryCatalogSingleton.ResidentHistories.Clear();
+                ResidentViewModel.ResidentCatalogSingleton.Residents.Clear();
+                foreach (var resident1 in residents)
+                {
+                    ResidentViewModel.ResidentCatalogSingleton.Residents.Add(resident1);
+                }
+                foreach (var resident2 in historyResident)
+                {
+                    ResidentViewModel.ResidentHistoryCatalogSingleton.ResidentHistories.Add(resident2);
+                }
             }
+          
         }
         /// <summary>
         /// Creates a new resident with the information provided by the user and send it to the PersistencyFacade.
@@ -109,12 +166,18 @@ namespace OstManSysMVVM.Handler
         /// </summary>
         public void UpdateResident()
         {
+            if (ResidentViewModel.NewResident.FirstName == null || ResidentViewModel.NewResident.LastName == null || ResidentViewModel.NewResident.EmailAddress == null || ResidentViewModel.NewResident.PhoneNumber == 0 || ResidentViewModel.NewResident.Type == null)
+            {
+                new MessageDialog("You must fill in the form").ShowAsync();
+            }
             Resident resident = new Resident();
             resident.ResidentID = ResidentViewModel.NewResident.ResidentID;
             resident.FirstName = ResidentViewModel.NewResident.FirstName;
             resident.LastName = ResidentViewModel.NewResident.LastName;
             resident.EmailAddress = ResidentViewModel.NewResident.EmailAddress;
             resident.PhoneNumber = ResidentViewModel.NewResident.PhoneNumber;
+            resident.DateOfBirth = ResidentViewModel.NewResident.DateOfBirth;
+            resident.Type = ResidentViewModel.NewResident.Type;
             new PersistencyFacade().UpdateResident(resident);
             var residents = new PersistencyFacade().GetResidents();
             ResidentViewModel.ResidentCatalogSingleton.Residents.Clear();

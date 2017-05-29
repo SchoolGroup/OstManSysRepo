@@ -8,9 +8,9 @@ using OstManSysMVVM.Persistency;
 
 namespace OstManSysMVVM.Model
 {
-    public class ApartmentCatalogSingleton
+    class AddressCatalogSingleton
     {
-        private static ApartmentCatalogSingleton _instance = null;
+        private static AddressCatalogSingleton _instance = null;
 
         //public ApartmentCatalogSingleton GetInstance()
         //{
@@ -20,24 +20,24 @@ namespace OstManSysMVVM.Model
         //    }
         //    return _instance;
         //}
-        public static ApartmentCatalogSingleton Instance
+        public static AddressCatalogSingleton Instance
         {
             get
             {
                 if (_instance == null)
                 {
-                    _instance = new ApartmentCatalogSingleton();
+                    _instance = new AddressCatalogSingleton();
                 }
                 return _instance;
             }
         }
 
-        public Apartment ApartmentID { get; set; }
-        public Apartment CurrentApartmentAddress { get; set; }
-        public ObservableCollection<Apartment> Apartments { get; set; }
-        private ApartmentCatalogSingleton()
+        public Address Address { get; set; }
+      
+
+        private AddressCatalogSingleton()
         {
-            Apartments=new ObservableCollection<Apartment>(new PersistencyFacade().GetApartments());
+          
         }
     }
 }

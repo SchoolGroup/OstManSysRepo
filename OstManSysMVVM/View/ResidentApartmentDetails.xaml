@@ -15,17 +15,17 @@
         <StackPanel  HorizontalAlignment="Center" VerticalAlignment="Center">
             <StackPanel Orientation="Horizontal" Margin="0, 0, 0, 10">
                 <TextBlock Text="Apartment ID:" FontSize="15" FontWeight="Bold"/>
-                <TextBlock Margin="10, 0, 0, 0" Text="{Binding ApartmentAddressCatalogSingleton.SelectedApartmentAddress.ApartmentID}"/>
+                <TextBlock Margin="10, 0, 0, 0" Text="{Binding ApartmentCatalogSingleton.CurrentApartmentAddress.ApartmentID}"/>
             </StackPanel>
             <StackPanel Orientation="Horizontal" Margin="0, 0, 0, 10">
                 <TextBlock Text="Address:" FontWeight="Bold" FontSize="15" VerticalAlignment="Center" />
                 <TextBlock Margin="10, 0, 0, 0">
-                    <Run Text="{Binding ApartmentAddressCatalogSingleton.SelectedApartmentAddress.StreetName}"/><Run Text=","/>
-                    <Run Text="{Binding ApartmentAddressCatalogSingleton.SelectedApartmentAddress.StreetNumber}"/><Run Text=","/>
-                    <Run Text="{Binding ApartmentAddressCatalogSingleton.SelectedApartmentAddress.Floor}"/><Run Text=","/>
-                    <Run Text="{Binding ApartmentAddressCatalogSingleton.SelectedApartmentAddress.Side}"/><Run Text=","/>
-                    <Run Text="{Binding ApartmentAddressCatalogSingleton.SelectedApartmentAddress.Zipcode}"/><Run Text=","/>
-                    <Run Text="{Binding ApartmentAddressCatalogSingleton.SelectedApartmentAddress.City}"/><Run Text=","/>
+                    <Run Text="{Binding AddressCatalogSingleton.Address.StreetName}"/><Run Text=","/>
+                    <Run Text="{Binding AddressCatalogSingleton.Address.StreetNumber}"/><Run Text=","/>
+                    <Run Text="{Binding AddressCatalogSingleton.Address.Floor}"/><Run Text=","/>
+                    <Run Text="{Binding AddressCatalogSingleton.Address.Side}"/><Run Text=","/>
+                    <Run Text="{Binding AddressCatalogSingleton.Address.Zipcode}"/><Run Text=","/>
+                    <Run Text="{Binding AddressCatalogSingleton.Address.City}"/><Run Text=","/>
                 </TextBlock>
             </StackPanel>
             <StackPanel Orientation="Horizontal">
@@ -33,7 +33,7 @@
                     <StackPanel Orientation="Horizontal" VerticalAlignment="Center" Margin="0, 0, 0, 10">
                         <TextBlock Text="Size:" FontWeight="Bold" FontSize="15"/>
                         <TextBlock Margin="10, 0, 0,0">
-                        <Run Text="{Binding ApartmentAddressCatalogSingleton.SelectedApartmentAddress.Size}"/>
+                        <Run Text="{Binding ApartmentCatalogSingleton.CurrentApartmentAddress.Size}"/>
                         <Run Text="sq.m."/>
                         </TextBlock>
                     </StackPanel>
@@ -47,18 +47,18 @@
                 <StackPanel Orientation="Vertical" HorizontalAlignment="Left">
                     <StackPanel Margin="0, 0, 0, 10" Orientation="Horizontal" VerticalAlignment="Center">
                         <TextBlock HorizontalAlignment="Left"  Text="Number of Rooms:" FontWeight="Bold"/>
-                        <TextBlock Margin="10, 0, 0, 0" Text="{Binding ApartmentAddressCatalogSingleton.SelectedApartmentAddress.NumberOfRooms}"/>
+                        <TextBlock Margin="10, 0, 0, 0" Text="{Binding ApartmentCatalogSingleton.CurrentApartmentAddress.NumberOfRooms}"/>
                     </StackPanel>
 
                     <StackPanel Margin="0, 0, 0, 10"  Orientation="Horizontal" VerticalAlignment="Center">
                         <TextBlock Text="Monthly Rent:" FontWeight="Bold"/>
-                        <TextBlock Text="{Binding ApartmentAddressCatalogSingleton.SelectedApartmentAddress.MonthlyRent}"/>
+                        <TextBlock Text="{Binding ApartmentCatalogSingleton.CurrentApartmentAddress.MonthlyRent}"/>
                     </StackPanel>
                 </StackPanel>
             </StackPanel>
             <StackPanel Orientation="Horizontal">
                 <TextBlock VerticalAlignment="Center" Text="Last Check:" FontWeight="Bold"/>
-                <DatePicker Margin="10, 0, 0,0"  Date="{Binding ApartmentAddressCatalogSingleton.SelectedApartmentAddress.LastCheck}"/>
+                <DatePicker Margin="10, 0, 0,0"  Date="{Binding ApartmentCatalogSingleton.CurrentApartmentAddress.LastCheck}"/>
             </StackPanel>
         </StackPanel>
     </Grid>

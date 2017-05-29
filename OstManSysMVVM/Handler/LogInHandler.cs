@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Windows.UI.Popups;
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
 using OstManSysMVVM.Model;
@@ -32,6 +33,10 @@ namespace OstManSysMVVM.Handler
         /// </summary>
         public void CheckAccount()
         {
+            if (LogInViewModel.Account.ResidentID==0 || LogInViewModel.Account.Password==null)
+            {
+                new MessageDialog("You must fill in the ID and the Password").ShowAsync();
+            }
             var data = from account in LogInViewModel.AccountCatalogSingleton.Accounts
                 select account.ResidentID;
             var data1 = from account1 in LogInViewModel.AccountCatalogSingleton.Accounts
@@ -62,9 +67,11 @@ namespace OstManSysMVVM.Handler
                             Window.Current.Content = newFrame;
                             Window.Current.Activate();
                         }
-
+                        break;
                     }
+                    new MessageDialog("Wrong ID or Password").ShowAsync();
                 }
+
                 s++;
             }
             

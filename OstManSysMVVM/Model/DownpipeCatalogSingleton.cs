@@ -25,6 +25,7 @@ namespace OstManSysMVVM.Model
         }
 
         public ObservableCollection<Downpipe> Downpipes { get; set; }
+        public Downpipe ResidentDownpipe { get; set; }
         private DownpipeCatalogSingleton()
         {
             Downpipes = new ObservableCollection<Downpipe>(new PersistencyFacade().GetDownpipes());

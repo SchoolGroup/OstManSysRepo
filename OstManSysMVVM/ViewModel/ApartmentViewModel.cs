@@ -24,7 +24,7 @@ namespace OstManSysMVVM.ViewModel
         //private string _problemNote;
         private ObservableCollection<int> _residentId;
         private DownpipeApartmentAddress _downpipeApartmentAddress;
-
+        
         //public string ProblemNote
         //{
         //    get { return _problemNote; }
@@ -58,7 +58,14 @@ namespace OstManSysMVVM.ViewModel
 
         public ApartmentAddress SelectedApartment
         {
-            get { return _selectedApartment; }
+            get
+            {
+                if (ApartmentAddressCatalogSingleton.SelectedApartmentAddress!=null)
+                {
+                    _selectedApartment = ApartmentAddressCatalogSingleton.SelectedApartmentAddress;
+                }
+                return _selectedApartment;
+            }
             set
             {
                 _selectedApartment = value;
@@ -121,6 +128,7 @@ namespace OstManSysMVVM.ViewModel
         public ApartmentAddressCatalogSingleton ApartmentAddressCatalogSingleton { get; set; }
         public DownpipeApartmentAddressCatalogSingleton DownpipeApartmentAddressCatalogSingleton { get; set; }
         public DownpipeCatalogSingleton DownpipeCatalogSingleton { get; set; }
+        public AddressCatalogSingleton AddressCatalogSingleton { get; set; }
         //public ProblemCatalogSingleton ProblemCatalogSingleton { get; set; }
         public Handler.ApartmentHandler ApartmentHandler { get; set; }
         //public ProblemHistoryCatalogSingleton ProblemHistoryCatalogSingleton { get; set; }
@@ -153,6 +161,7 @@ namespace OstManSysMVVM.ViewModel
             ApartmentAddressCatalogSingleton = ApartmentAddressCatalogSingleton.Instance;
             ApartmentCatalogSingleton = ApartmentCatalogSingleton.Instance;
             DownpipeCatalogSingleton = DownpipeCatalogSingleton.Instance;
+            AddressCatalogSingleton=AddressCatalogSingleton.Instance;
             //ProblemCatalogSingleton = ProblemCatalogSingleton.Instance;
             //ProblemHistoryCatalogSingleton = ProblemHistoryCatalogSingleton.Instance;
             ApartmentHandler = new Handler.ApartmentHandler(this);

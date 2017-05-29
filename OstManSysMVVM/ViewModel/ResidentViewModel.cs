@@ -25,6 +25,8 @@ namespace OstManSysMVVM.ViewModel
 
         public ResidentCatalogSingleton ResidentCatalogSingleton { get; set; }
         public ResidentHistoryCatalogSingleton ResidentHistoryCatalogSingleton { get; set; }
+        public DownpipeCatalogSingleton DownpipeCatalogSingleton { get; set; }
+       
         //public Account Account
         //{
         //    get { return _account; }
@@ -90,11 +92,14 @@ namespace OstManSysMVVM.ViewModel
         public ICommand UpdateCommand { get; set; }
         //public ICommand LogInCommand { get; set; }
         public ICommand AttachCommand { get; set; }
+        public ICommand ResidentRefreshCommand { get; set; }
         public ResidentViewModel()
         {
             ResidentHandler=new Handler.ResidentHandler(this);
             ResidentCatalogSingleton = ResidentCatalogSingleton.Instance;
             ResidentHistoryCatalogSingleton = ResidentHistoryCatalogSingleton.Instance;
+            DownpipeCatalogSingleton=DownpipeCatalogSingleton.Instance;
+     
             //LogInHandler = new LogInHandler(this);
             NewResident = new Resident();
             SelectedResident= ResidentCatalogSingleton.SelectedResident;
@@ -104,6 +109,7 @@ namespace OstManSysMVVM.ViewModel
             CreateCommand = new RelayCommand(ResidentHandler.CreateResident);
             DeleteCommand = new RelayCommand(ResidentHandler.DeleteResident);
             UpdateCommand=new RelayCommand(ResidentHandler.UpdateResident);
+            ResidentRefreshCommand = new RelayCommand(ResidentHandler.Refresh);
             //LogInCommand=new RelayCommand(LogInHandler.CheckAccount);
             AttachCommand=new RelayCommand(ResidentHandler.AttachResident);
         }

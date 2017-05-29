@@ -26,6 +26,57 @@ namespace OstManSysMVVM.Persistency
             handler = new HttpClientHandler();
             handler.UseDefaultCredentials = true;
         }
+
+        public List<Address> GetAddresses()
+        {
+            using (var client = new HttpClient(handler))
+            {
+                client.BaseAddress = new Uri(ServerUrl);
+                client.DefaultRequestHeaders.Clear();
+                client.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
+                try
+                {
+                    var response = client.GetAsync("api/Addresses").Result;
+
+                    if (response.IsSuccessStatusCode)
+                    {
+                        var addresses = response.Content.ReadAsAsync<IEnumerable<Address>>().Result;
+                        return addresses.ToList();
+                    }
+
+                }
+                catch (Exception ex)
+                {
+                    new MessageDialog(ex.Message).ShowAsync();
+                }
+                return null;
+            }
+        }
+        public Apartment GetApartment(int apartmentID)
+        {
+            using (var client = new HttpClient(handler))
+            {
+                client.BaseAddress = new Uri(ServerUrl);
+                client.DefaultRequestHeaders.Clear();
+                client.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
+                try
+                {
+                    var response = client.GetAsync("api/Apartments/"+apartmentID).Result;
+
+                    if (response.IsSuccessStatusCode)
+                    {
+                        var apartment = response.Content.ReadAsAsync<Apartment>().Result;
+                        return apartment;
+                    }
+
+                }
+                catch (Exception ex)
+                {
+                    new MessageDialog(ex.Message).ShowAsync();
+                }
+                return null;
+            }
+        }
         /// <summary>
         /// Connects to the WebApi and gets all of the apartments with addresses from the database.
         /// </summary>

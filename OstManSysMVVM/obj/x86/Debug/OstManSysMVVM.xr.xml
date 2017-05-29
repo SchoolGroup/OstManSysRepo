@@ -13,7 +13,6 @@
     <RootPropertyPathName Name="Size" />
     <RootPropertyPathName Name="AddressID" />
     <RootPropertyPathName Name="NewResident" />
-    <RootPropertyPathName Name="Type" />
     <RootPropertyPathName Name="DateOfBirth" />
     <RootPropertyPathName Name="EmailAddress" />
     <RootPropertyPathName Name="PhoneNumber" />
@@ -52,6 +51,7 @@
     <RootPropertyPathName Name="Account" />
     <RootPropertyPathName Name="Password" />
     <RootPropertyPathName Name="CurrentResident" />
+    <RootPropertyPathName Name="Type" />
     <RootPropertyPathName Name="ProblemHistoryCatalogSingleton" />
     <RootPropertyPathName Name="ProblemHistories" />
     <RootPropertyPathName Name="ProblemCatalogSingleton" />
@@ -65,8 +65,14 @@
     <RootPropertyPathName Name="Problems" />
     <RootPropertyPathName Name="CreateProblemCommand" />
     <RootPropertyPathName Name="NewProblem" />
+    <RootPropertyPathName Name="CurrentApartmentAddress" />
+    <RootPropertyPathName Name="AddressCatalogSingleton" />
+    <RootPropertyPathName Name="Address" />
+    <RootPropertyPathName Name="DownpipeCatalogSingleton" />
+    <RootPropertyPathName Name="ResidentDownpipe" />
     <RootPropertyPathName Name="ResidentCatalogSingleton" />
     <RootPropertyPathName Name="Residents" />
+    <RootPropertyPathName Name="ResidentRefreshCommand" />
     <RootPropertyPathName Name="UpdateCommand" />
   </Roots.PropertyPathNames>
   <Roots.RootTypes>
@@ -115,10 +121,10 @@
       <RootProperty Name="HorizontalAlignment" />
       <RootProperty Name="VerticalAlignment" />
       <RootProperty Name="Content" />
-      <RootProperty Name="FontSize" />
       <RootProperty Name="BorderBrush" />
       <RootProperty Name="Margin" />
       <RootProperty Name="Command" />
+      <RootProperty Name="FontSize" />
       <RootProperty Name="HorizontalContentAlignment" />
       <RootProperty Name="FontWeight" />
       <RootEvent Name="Click" />
@@ -181,8 +187,6 @@
       <RootProperty Name="HorizontalAlignment" />
       <RootProperty Name="Inlines" />
       <RootProperty Name="FontStyle" />
-      <RootProperty Name="Height" />
-      <RootProperty Name="Width" />
     </RootType>
     <RootType FullName="OstManSysMVVM.View.AddApartment" />
     <RootType FullName="OstManSysMVVM.View.AddCoResident" />
@@ -217,8 +221,6 @@
       <RootProperty Name="ItemsSource" />
       <RootProperty Name="SelectedItem" />
       <RootProperty Name="ItemTemplate" />
-      <RootProperty Name="Margin" />
-      <RootProperty Name="Padding" />
     </RootType>
     <RootType FullName="Windows.UI.Xaml.DataTemplate">
       <RootProperty Name="Template" />

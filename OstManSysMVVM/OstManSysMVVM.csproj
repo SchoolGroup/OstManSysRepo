@@ -104,6 +104,8 @@
     <Compile Include="Handler\ResidentHandler.cs" />
     <Compile Include="Model\Account.cs" />
     <Compile Include="Model\AccountCatalogSingleton.cs" />
+    <Compile Include="Model\Address.cs" />
+    <Compile Include="Model\AddressCatalogSingleton.cs" />
     <Compile Include="Model\ApartmentAddress.cs" />
     <Compile Include="Model\ApartmentAddressCatalogSingleton.cs" />
     <Compile Include="Model\Contract.cs" />

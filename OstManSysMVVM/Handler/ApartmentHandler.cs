@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Windows.UI.Popups;
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
 using OstManSysMVVM.Model;
@@ -27,29 +28,37 @@ namespace OstManSysMVVM.Handler
         /// </summary>
         public void CreateApartment()
         {
-            var apartment = new Apartment();
-            apartment.AddressID = ApartmentViewModel.NewApartment.AddressID;
-            apartment.Size = ApartmentViewModel.NewApartment.Size;
-            apartment.Condition = ApartmentViewModel.NewApartment.Condition;
-            apartment.MonthlyRent = ApartmentViewModel.NewApartment.MonthlyRent;
-            apartment.NumberOfRooms = ApartmentViewModel.NewApartment.NumberOfRooms;
-            apartment.DownpipeID = 2;
-            apartment.IsRented = true;
-            apartment.WindowID = 1;
-            apartment.LastCheck = ApartmentViewModel.NewApartment.LastCheck;
-            new PersistencyFacade().SaveApartment(apartment);
-            var apartments = new PersistencyFacade().GetApartmentAddresses();
-            ApartmentViewModel.ApartmentAddressCatalogSingleton.ApartmentAddresses.Clear();
-            foreach (var apartment1 in apartments)
+            if (ApartmentViewModel.NewApartment.AddressID==0 || ApartmentViewModel.NewApartment.Size==0 || ApartmentViewModel.NewApartment.Condition == null || ApartmentViewModel.NewApartment.MonthlyRent==0.00 || ApartmentViewModel.NewApartment.NumberOfRooms==0)
             {
-                ApartmentViewModel.ApartmentAddressCatalogSingleton.ApartmentAddresses.Add(apartment1);
+                new MessageDialog("You must fill in the form").ShowAsync();
             }
-            ApartmentViewModel.NewApartment.ApartmentID= 0;
-            ApartmentViewModel.NewApartment.AddressID=0;
-            ApartmentViewModel.NewApartment.Size=0;
-            ApartmentViewModel.NewApartment.Condition="";
-            ApartmentViewModel.NewApartment.MonthlyRent=0;
-            ApartmentViewModel.NewApartment.NumberOfRooms=0;
+            else
+            {
+                var apartment = new Apartment();
+                apartment.AddressID = ApartmentViewModel.NewApartment.AddressID;
+                apartment.Size = ApartmentViewModel.NewApartment.Size;
+                apartment.Condition = ApartmentViewModel.NewApartment.Condition;
+                apartment.MonthlyRent = ApartmentViewModel.NewApartment.MonthlyRent;
+                apartment.NumberOfRooms = ApartmentViewModel.NewApartment.NumberOfRooms;
+                apartment.DownpipeID = 2;
+                apartment.IsRented = true;
+                apartment.WindowID = 1;
+                apartment.LastCheck = ApartmentViewModel.NewApartment.LastCheck;
+                new PersistencyFacade().SaveApartment(apartment);
+                var apartments = new PersistencyFacade().GetApartmentAddresses();
+                ApartmentViewModel.ApartmentAddressCatalogSingleton.ApartmentAddresses.Clear();
+                foreach (var apartment1 in apartments)
+                {
+                    ApartmentViewModel.ApartmentAddressCatalogSingleton.ApartmentAddresses.Add(apartment1);
+                }
+                ApartmentViewModel.NewApartment.ApartmentID = 0;
+                ApartmentViewModel.NewApartment.AddressID = 0;
+                ApartmentViewModel.NewApartment.Size = 0;
+                ApartmentViewModel.NewApartment.Condition = "";
+                ApartmentViewModel.NewApartment.MonthlyRent = 0;
+                ApartmentViewModel.NewApartment.NumberOfRooms = 0;
+            }
+           
 
         }
         /// <summary>
@@ -58,21 +67,39 @@ namespace OstManSysMVVM.Handler
         /// </summary>
         public void DeleteApartment()
         {
-            new PersistencyFacade().DeleteApartment(ApartmentViewModel.SelectedApartment);
-            var apartments = new PersistencyFacade().GetApartmentAddresses();
-            ApartmentViewModel.ApartmentAddressCatalogSingleton.ApartmentAddresses.Clear();
-            foreach (var apartment1 in apartments)
+            if (ApartmentViewModel.SelectedApartment==null)
             {
-                ApartmentViewModel.ApartmentAddressCatalogSingleton.ApartmentAddresses.Add(apartment1);
+                new MessageDialog("You haven`t selected an apartment").ShowAsync();
             }
+            else
+            {
+                new PersistencyFacade().DeleteApartment(ApartmentViewModel.SelectedApartment);
+                var apartments = new PersistencyFacade().GetApartmentAddresses();
+                ApartmentViewModel.ApartmentAddressCatalogSingleton.ApartmentAddresses.Clear();
+                foreach (var apartment1 in apartments)
+                {
+                    ApartmentViewModel.ApartmentAddressCatalogSingleton.ApartmentAddresses.Add(apartment1);
+                }
+            }
+            
         }
 
         public void GoToUpdatePage()
         {
-            var newFrame = new Frame();
-            newFrame.Navigate(typeof(UpdateApartment));
-            Window.Current.Content = newFrame;
-            Window.Current.Activate();
+
+            if (ApartmentViewModel.SelectedApartment == null)
+            {
+                new MessageDialog("You haven`t selected an apartment").ShowAsync();
+                
+            }
+            else
+            {
+                var newFrame = new Frame();
+                newFrame.Navigate(typeof(UpdateApartment));
+                Window.Current.Content = newFrame;
+                Window.Current.Activate();
+            }
+           
        }
         /// <summary>
         /// Creates a new apartment where the values the user has entered in order to update the apartment
