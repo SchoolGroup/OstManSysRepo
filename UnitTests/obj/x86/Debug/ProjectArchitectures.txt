@@ -1,0 +1,2 @@
+C:\Users\Universe\Documents\GitHub\OstManSysRepo\OstManSysMVVM\OstManSysMVVM.csproj;x86
+C:\Users\Universe\Documents\GitHub\OstManSysRepo\UnitTests\UnitTests.csproj;x86
