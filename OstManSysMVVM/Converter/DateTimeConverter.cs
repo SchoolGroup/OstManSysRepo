@@ -7,8 +7,12 @@ using Windows.UI.Xaml.Data;
 
 namespace OstManSysMVVM.Converter
 {
+    /// <summary>
+    /// Converts DateTime to DateTimeOffset and vice versa in order to get the value selected from datepicker
+    /// </summary>
     public class DateTimeConverter:IValueConverter
     {
+
         public object Convert(object value, Type targetType, object parameter, string language)
         {
             try

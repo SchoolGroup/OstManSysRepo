@@ -25,6 +25,17 @@ namespace OstManSysMVVM.View
         public ResidentView()
         {
             this.InitializeComponent();
+            MyFrame1.Navigate(typeof(ResidentApartmentDetails));
+        }
+
+        private void ButtonClick_OnClick(object sender, RoutedEventArgs e)
+        {
+            MyFrame1.Navigate(typeof(ResidentApartmentDetails));
+        }
+
+        private void Button11_OnClick(object sender, RoutedEventArgs e)
+        {
+            MyFrame1.Navigate(typeof(ResidentDownpipesDetails));
         }
     }
 }

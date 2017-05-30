@@ -12,7 +12,7 @@
 
     <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
         <Grid.DataContext>
-            <viewModel:ApartmentViewModel/>
+            <viewModel:ProblemViewModel/>
         </Grid.DataContext>
 
         <Grid.ColumnDefinitions>

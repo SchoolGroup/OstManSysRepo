@@ -23,7 +23,7 @@
         </Grid.ColumnDefinitions>
 
         <Grid.DataContext>
-            <ViewModel:ApartmentViewModel/>
+            <ViewModel:ProblemViewModel/>
         </Grid.DataContext>
 
         <StackPanel Grid.Column="1" Grid.Row="1" HorizontalAlignment="Center" VerticalAlignment="Top">

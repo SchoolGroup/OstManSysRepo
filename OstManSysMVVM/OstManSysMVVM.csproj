@@ -89,6 +89,7 @@
   </PropertyGroup>
   <ItemGroup>
     <!-- A reference to the entire .Net Framework and Windows SDK are automatically included -->
+    <None Include="ClassDiagram4.cd" />
     <None Include="project.json" />
   </ItemGroup>
   <ItemGroup>
@@ -99,12 +100,14 @@
     <Compile Include="Converter\DateTimeConverter.cs" />
     <Compile Include="Handler\ApartmentHandler.cs" />
     <Compile Include="Handler\LogInHandler.cs" />
+    <Compile Include="Handler\ProblemHandler.cs" />
     <Compile Include="Handler\ResidentHandler.cs" />
     <Compile Include="Model\Account.cs" />
     <Compile Include="Model\AccountCatalogSingleton.cs" />
     <Compile Include="Model\ApartmentAddress.cs" />
     <Compile Include="Model\ApartmentAddressCatalogSingleton.cs" />
     <Compile Include="Model\Contract.cs" />
+    <Compile Include="Model\ContractCatalogSingleton.cs" />
     <Compile Include="Model\Downpipe.cs" />
     <Compile Include="Model\DownpipeApartmentAddress.cs" />
     <Compile Include="Model\DownpipeApartmentAddressCatalogSingleton.cs" />
@@ -113,6 +116,8 @@
     <Compile Include="Model\ProblemCatalogSingleton.cs" />
     <Compile Include="Model\ResidentHistory.cs" />
     <Compile Include="Model\ResidentHistoryCatalogSingleton.cs" />
+    <Compile Include="ViewModel\LogInViewModel.cs" />
+    <Compile Include="ViewModel\ProblemViewModel.cs" />
     <Compile Include="View\AddApartment.xaml.cs">
       <DependentUpon>AddApartment.xaml</DependentUpon>
     </Compile>
@@ -122,11 +127,20 @@
     <Compile Include="View\AddResident.xaml.cs">
       <DependentUpon>AddResident.xaml</DependentUpon>
     </Compile>
+    <Compile Include="View\ApartmentDetails.xaml.cs">
+      <DependentUpon>ApartmentDetails.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\ApartmentDetailsView.xaml.cs">
+      <DependentUpon>ApartmentDetailsView.xaml</DependentUpon>
+    </Compile>
     <Compile Include="View\ApartmentsView.xaml.cs">
       <DependentUpon>ApartmentsView.xaml</DependentUpon>
     </Compile>
     <Compile Include="View\AttachView.xaml.cs">
       <DependentUpon>AttachView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\DownPipesApartmentDetails.xaml.cs">
+      <DependentUpon>DownPipesApartmentDetails.xaml</DependentUpon>
     </Compile>
     <Compile Include="View\DownPipesView.xaml.cs">
       <DependentUpon>DownPipesView.xaml</DependentUpon>
@@ -165,6 +179,12 @@
     </Compile>
     <Compile Include="View\Report.xaml.cs">
       <DependentUpon>Report.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\ResidentApartmentDetails.xaml.cs">
+      <DependentUpon>ResidentApartmentDetails.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\ResidentDownpipesDetails.xaml.cs">
+      <DependentUpon>ResidentDownpipesDetails.xaml</DependentUpon>
     </Compile>
     <Compile Include="View\ResidentsViewFrame.xaml.cs">
       <DependentUpon>ResidentsViewFrame.xaml</DependentUpon>
@@ -219,11 +239,23 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="View\ApartmentDetails.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\ApartmentDetailsView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="View\ApartmentsView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="View\AttachView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\DownPipesApartmentDetails.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -260,6 +292,14 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="View\Report.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\ResidentApartmentDetails.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\ResidentDownpipesDetails.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

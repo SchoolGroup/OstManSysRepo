@@ -30,7 +30,7 @@
                 <viewModel:ApartmentViewModel/>
             </StackPanel.DataContext>-->
             <StackPanel Margin="16, 100, 0, 0" HorizontalAlignment="Center" VerticalAlignment="Center">
-                <ListView x:Name="listView" HorizontalAlignment="Left" Height="450" VerticalAlignment="Top" Width="850" ItemsSource="{Binding ApartmentAddressCatalogSingleton.ApartmentAddresses, Mode=TwoWay}"  SelectedItem="{Binding SelectedApartment, Mode=TwoWay}">
+                <ListView x:Name="listView" HorizontalAlignment="Left" Height="450" VerticalAlignment="Top" Width="850" ItemsSource="{Binding ApartmentAddressCatalogSingleton.ApartmentAddresses, Mode=TwoWay}"  SelectedItem="{Binding ApartmentAddressCatalogSingleton.SelectedApartmentAddress, Mode=TwoWay}">
                     <ListView.ItemTemplate>
                         <DataTemplate>
                             <StackPanel Orientation="Horizontal" >
@@ -54,9 +54,15 @@
                                     <TextBlock Text=""/>
                                     <TextBlock Text="{Binding Side}"/>
                                 </StackPanel>
-                                
-                                
-                                <Button VerticalAlignment="Center" FontSize="10" Content="View Details" Background="Transparent" Margin="10, 0, 0, 0" BorderBrush="Black"/>
+
+
+                                <Button VerticalAlignment="Center" FontSize="10" Content="View Details" Background="Transparent" Margin="10, 0, 0, 0" BorderBrush="Black">
+                                    <interactivity:Interaction.Behaviors>
+                                        <core:EventTriggerBehavior EventName="Click">
+                                            <core:NavigateToPageAction TargetPage="OstManSysMVVM.View.ApartmentDetails"/>
+                                        </core:EventTriggerBehavior>
+                                    </interactivity:Interaction.Behaviors>
+                                </Button>
                             </StackPanel>
                         </DataTemplate>
                     </ListView.ItemTemplate>

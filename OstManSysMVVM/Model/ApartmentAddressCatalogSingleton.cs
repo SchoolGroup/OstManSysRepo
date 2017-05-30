@@ -32,6 +32,7 @@ namespace OstManSysMVVM.Model
             }
         }
 
+        public ApartmentAddress SelectedApartmentAddress { get; set; }
         public ObservableCollection<ApartmentAddress> ApartmentAddresses { get; set; }
         private ApartmentAddressCatalogSingleton()
         {
