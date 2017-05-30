@@ -52,7 +52,7 @@ namespace OstManSysMVVM.Handler
                     {
                         _resident = new PersistencyFacade().GetResident(LogInViewModel.Account);
                         ResidentCatalogSingleton.CurrentResident = _resident;
-                        //ResidentViewModel.Save();
+                       
                         if (_resident.Type == "Resident")
                         {
                             var newFrame = new Frame();

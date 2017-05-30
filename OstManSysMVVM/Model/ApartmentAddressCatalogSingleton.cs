@@ -12,14 +12,7 @@ namespace OstManSysMVVM.Model
     {
         private static ApartmentAddressCatalogSingleton _instance = null;
 
-        //public ApartmentCatalogSingleton GetInstance()
-        //{
-        //    if (_instance==null)
-        //    {
-        //        _instance = new ApartmentCatalogSingleton();
-        //    }
-        //    return _instance;
-        //}
+       
         public static ApartmentAddressCatalogSingleton Instance
         {
             get

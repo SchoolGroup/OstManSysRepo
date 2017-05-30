@@ -30,18 +30,28 @@ namespace OstManSysMVVM.Handler
             {
                 new MessageDialog("You haven`t selected a resident").ShowAsync();
             }
+            var contracts = new PersistencyFacade().GetContracts();
+            foreach (var contract1 in contracts)
+            {
+                if (contract1.ApartmentID== ApartmentCatalogSingleton.Instance.ApartmentID.ApartmentID && contract1.ResidentID== ResidentCatalogSingleton.Instance.SelectedResident.ResidentID)
+                {
+                    new MessageDialog("The resident already live in this apartment").ShowAsync();
+                    break;
+                }
+            }
             var contract = new Contract();
             contract.ApartmentID = ApartmentCatalogSingleton.Instance.ApartmentID.ApartmentID;
             contract.ResidentID = ResidentCatalogSingleton.Instance.SelectedResident.ResidentID;
             contract.MoveInDate=DateTime.Now;
             new PersistencyFacade().SaveContract(contract);
+
         }
+        /// <summary>
+        /// Gets the information about the apartment and the downpipes of the current resident that has logged in
+        /// </summary>
         public void Refresh()
         {
             var contracts = new PersistencyFacade().GetContracts();
-            //var contractResident = from contract in contracts
-            //    where 
-            //    select contract.ApartmentID;
             int contractResident = 0; 
             foreach (var contract in contracts)
             {
@@ -114,7 +124,7 @@ namespace OstManSysMVVM.Handler
         /// <returns>ResidentHistory with the details of the resident</returns>
         public ResidentHistory HistoryConvert()
         {
-            Resident res = ResidentViewModel.SelectedResident;
+            Resident res = ResidentViewModel.ResidentCatalogSingleton.SelectedResident;
             ResidentHistory newResident = new ResidentHistory()
             {
                 DateOfBirth = res.DateOfBirth,
@@ -136,7 +146,7 @@ namespace OstManSysMVVM.Handler
         /// </summary>
         public void DeleteResident()
         {
-            if (ResidentViewModel.SelectedResident==null)
+            if (ResidentViewModel.ResidentCatalogSingleton.SelectedResident==null)
             {
                 new MessageDialog("You haven`t selected a resident").ShowAsync();
             }
@@ -144,7 +154,7 @@ namespace OstManSysMVVM.Handler
             {
                 ResidentHistory resident = HistoryConvert();
                 new PersistencyFacade().MoveResidentToHistory(resident);
-                new PersistencyFacade().DeleteResident(ResidentViewModel.SelectedResident);
+                new PersistencyFacade().DeleteResident(ResidentViewModel.ResidentCatalogSingleton.SelectedResident);
                 var residents = new PersistencyFacade().GetResidents();
                 var historyResident = new PersistencyFacade().GetResidentHistories();
                 ResidentViewModel.ResidentHistoryCatalogSingleton.ResidentHistories.Clear();

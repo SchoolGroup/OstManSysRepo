@@ -197,6 +197,9 @@
     <Compile Include="View\UpdateApartment.xaml.cs">
       <DependentUpon>UpdateApartment.xaml</DependentUpon>
     </Compile>
+    <Compile Include="View\UpdateCoResident.xaml.cs">
+      <DependentUpon>UpdateCoResident.xaml</DependentUpon>
+    </Compile>
     <Compile Include="View\UpdateResident.xaml.cs">
       <DependentUpon>UpdateResident.xaml</DependentUpon>
     </Compile>
@@ -314,6 +317,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="View\UpdateApartment.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\UpdateCoResident.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

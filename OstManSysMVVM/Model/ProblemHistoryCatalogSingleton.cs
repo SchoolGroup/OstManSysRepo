@@ -13,14 +13,7 @@ namespace OstManSysMVVM.View
     {
         private static ProblemHistoryCatalogSingleton _instance = null;
 
-        //public ApartmentCatalogSingleton GetInstance()
-        //{
-        //    if (_instance==null)
-        //    {
-        //        _instance = new ApartmentCatalogSingleton();
-        //    }
-        //    return _instance;
-        //}
+     
         public static ProblemHistoryCatalogSingleton Instance
         {
             get

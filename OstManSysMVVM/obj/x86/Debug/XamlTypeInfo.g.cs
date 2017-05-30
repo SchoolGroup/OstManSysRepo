@@ -132,7 +132,7 @@ namespace OstManSysMVVM.OstManSysMVVM_XamlTypeInfo
 
         private void InitTypeTables()
         {
-            _typeNameTable = new string[66];
+            _typeNameTable = new string[67];
             _typeNameTable[0] = "OstManSysMVVM.ViewModel.ApartmentViewModel";
             _typeNameTable[1] = "Object";
             _typeNameTable[2] = "OstManSysMVVM.Model.Apartment";
@@ -198,9 +198,10 @@ namespace OstManSysMVVM.OstManSysMVVM_XamlTypeInfo
             _typeNameTable[62] = "OstManSysMVVM.View.ResidentsViewFrame";
             _typeNameTable[63] = "OstManSysMVVM.View.ResidentView";
             _typeNameTable[64] = "OstManSysMVVM.View.UpdateApartment";
-            _typeNameTable[65] = "OstManSysMVVM.View.UpdateResident";
+            _typeNameTable[65] = "OstManSysMVVM.View.UpdateCoResident";
+            _typeNameTable[66] = "OstManSysMVVM.View.UpdateResident";
 
-            _typeTable = new global::System.Type[66];
+            _typeTable = new global::System.Type[67];
             _typeTable[0] = typeof(global::OstManSysMVVM.ViewModel.ApartmentViewModel);
             _typeTable[1] = typeof(global::System.Object);
             _typeTable[2] = typeof(global::OstManSysMVVM.Model.Apartment);
@@ -266,7 +267,8 @@ namespace OstManSysMVVM.OstManSysMVVM_XamlTypeInfo
             _typeTable[62] = typeof(global::OstManSysMVVM.View.ResidentsViewFrame);
             _typeTable[63] = typeof(global::OstManSysMVVM.View.ResidentView);
             _typeTable[64] = typeof(global::OstManSysMVVM.View.UpdateApartment);
-            _typeTable[65] = typeof(global::OstManSysMVVM.View.UpdateResident);
+            _typeTable[65] = typeof(global::OstManSysMVVM.View.UpdateCoResident);
+            _typeTable[66] = typeof(global::OstManSysMVVM.View.UpdateResident);
         }
 
         private int LookupTypeIndexByName(string typeName)
@@ -340,7 +342,8 @@ namespace OstManSysMVVM.OstManSysMVVM_XamlTypeInfo
         private object Activate_62_ResidentsViewFrame() { return new global::OstManSysMVVM.View.ResidentsViewFrame(); }
         private object Activate_63_ResidentView() { return new global::OstManSysMVVM.View.ResidentView(); }
         private object Activate_64_UpdateApartment() { return new global::OstManSysMVVM.View.UpdateApartment(); }
-        private object Activate_65_UpdateResident() { return new global::OstManSysMVVM.View.UpdateResident(); }
+        private object Activate_65_UpdateCoResident() { return new global::OstManSysMVVM.View.UpdateCoResident(); }
+        private object Activate_66_UpdateResident() { return new global::OstManSysMVVM.View.UpdateResident(); }
         private void VectorAdd_5_ObservableCollection(object instance, object item)
         {
             var collection = (global::System.Collections.Generic.ICollection<global::System.Int32>)instance;
@@ -394,6 +397,7 @@ namespace OstManSysMVVM.OstManSysMVVM_XamlTypeInfo
                 userType.AddMemberName("DeleteCommand");
                 userType.AddMemberName("UpdateCommand");
                 userType.AddMemberName("GoToUpdateCommand");
+                userType.AddMemberName("RefreshCommand");
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;
@@ -851,9 +855,16 @@ namespace OstManSysMVVM.OstManSysMVVM_XamlTypeInfo
                 xamlType = userType;
                 break;
 
-            case 65:   //  OstManSysMVVM.View.UpdateResident
+            case 65:   //  OstManSysMVVM.View.UpdateCoResident
                 userType = new global::OstManSysMVVM.OstManSysMVVM_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.Page"));
-                userType.Activator = Activate_65_UpdateResident;
+                userType.Activator = Activate_65_UpdateCoResident;
+                userType.SetIsLocalType();
+                xamlType = userType;
+                break;
+
+            case 66:   //  OstManSysMVVM.View.UpdateResident
+                userType = new global::OstManSysMVVM.OstManSysMVVM_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.Page"));
+                userType.Activator = Activate_66_UpdateResident;
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;
@@ -1012,320 +1023,330 @@ namespace OstManSysMVVM.OstManSysMVVM_XamlTypeInfo
             var that = (global::OstManSysMVVM.ViewModel.ApartmentViewModel)instance;
             that.GoToUpdateCommand = (global::System.Windows.Input.ICommand)Value;
         }
-        private object get_15_Interaction_Behaviors(object instance)
+        private object get_15_ApartmentViewModel_RefreshCommand(object instance)
+        {
+            var that = (global::OstManSysMVVM.ViewModel.ApartmentViewModel)instance;
+            return that.RefreshCommand;
+        }
+        private void set_15_ApartmentViewModel_RefreshCommand(object instance, object Value)
+        {
+            var that = (global::OstManSysMVVM.ViewModel.ApartmentViewModel)instance;
+            that.RefreshCommand = (global::System.Windows.Input.ICommand)Value;
+        }
+        private object get_16_Interaction_Behaviors(object instance)
         {
             return global::Microsoft.Xaml.Interactivity.Interaction.GetBehaviors((global::Windows.UI.Xaml.DependencyObject)instance);
         }
-        private void set_15_Interaction_Behaviors(object instance, object Value)
+        private void set_16_Interaction_Behaviors(object instance, object Value)
         {
             global::Microsoft.Xaml.Interactivity.Interaction.SetBehaviors((global::Windows.UI.Xaml.DependencyObject)instance, (global::Microsoft.Xaml.Interactivity.BehaviorCollection)Value);
         }
-        private object get_16_Trigger_Actions(object instance)
+        private object get_17_Trigger_Actions(object instance)
         {
             var that = (global::Microsoft.Xaml.Interactivity.Trigger)instance;
             return that.Actions;
         }
-        private object get_17_EventTriggerBehavior_EventName(object instance)
+        private object get_18_EventTriggerBehavior_EventName(object instance)
         {
             var that = (global::Microsoft.Xaml.Interactions.Core.EventTriggerBehavior)instance;
             return that.EventName;
         }
-        private void set_17_EventTriggerBehavior_EventName(object instance, object Value)
+        private void set_18_EventTriggerBehavior_EventName(object instance, object Value)
         {
             var that = (global::Microsoft.Xaml.Interactions.Core.EventTriggerBehavior)instance;
             that.EventName = (global::System.String)Value;
         }
-        private object get_18_EventTriggerBehavior_SourceObject(object instance)
+        private object get_19_EventTriggerBehavior_SourceObject(object instance)
         {
             var that = (global::Microsoft.Xaml.Interactions.Core.EventTriggerBehavior)instance;
             return that.SourceObject;
         }
-        private void set_18_EventTriggerBehavior_SourceObject(object instance, object Value)
+        private void set_19_EventTriggerBehavior_SourceObject(object instance, object Value)
         {
             var that = (global::Microsoft.Xaml.Interactions.Core.EventTriggerBehavior)instance;
             that.SourceObject = (global::System.Object)Value;
         }
-        private object get_19_Behavior_AssociatedObject(object instance)
+        private object get_20_Behavior_AssociatedObject(object instance)
         {
             var that = (global::Microsoft.Xaml.Interactivity.Behavior)instance;
             return that.AssociatedObject;
         }
-        private object get_20_NavigateToPageAction_TargetPage(object instance)
+        private object get_21_NavigateToPageAction_TargetPage(object instance)
         {
             var that = (global::Microsoft.Xaml.Interactions.Core.NavigateToPageAction)instance;
             return that.TargetPage;
         }
-        private void set_20_NavigateToPageAction_TargetPage(object instance, object Value)
+        private void set_21_NavigateToPageAction_TargetPage(object instance, object Value)
         {
             var that = (global::Microsoft.Xaml.Interactions.Core.NavigateToPageAction)instance;
             that.TargetPage = (global::System.String)Value;
         }
-        private object get_21_NavigateToPageAction_Parameter(object instance)
+        private object get_22_NavigateToPageAction_Parameter(object instance)
         {
             var that = (global::Microsoft.Xaml.Interactions.Core.NavigateToPageAction)instance;
             return that.Parameter;
         }
-        private void set_21_NavigateToPageAction_Parameter(object instance, object Value)
+        private void set_22_NavigateToPageAction_Parameter(object instance, object Value)
         {
             var that = (global::Microsoft.Xaml.Interactions.Core.NavigateToPageAction)instance;
             that.Parameter = (global::System.Object)Value;
         }
-        private object get_22_ResidentViewModel_ResidentCatalogSingleton(object instance)
+        private object get_23_ResidentViewModel_ResidentCatalogSingleton(object instance)
         {
             var that = (global::OstManSysMVVM.ViewModel.ResidentViewModel)instance;
             return that.ResidentCatalogSingleton;
         }
-        private void set_22_ResidentViewModel_ResidentCatalogSingleton(object instance, object Value)
+        private void set_23_ResidentViewModel_ResidentCatalogSingleton(object instance, object Value)
         {
             var that = (global::OstManSysMVVM.ViewModel.ResidentViewModel)instance;
             that.ResidentCatalogSingleton = (global::OstManSysMVVM.Model.ResidentCatalogSingleton)Value;
         }
-        private object get_23_ResidentViewModel_ResidentHistoryCatalogSingleton(object instance)
+        private object get_24_ResidentViewModel_ResidentHistoryCatalogSingleton(object instance)
         {
             var that = (global::OstManSysMVVM.ViewModel.ResidentViewModel)instance;
             return that.ResidentHistoryCatalogSingleton;
         }
-        private void set_23_ResidentViewModel_ResidentHistoryCatalogSingleton(object instance, object Value)
+        private void set_24_ResidentViewModel_ResidentHistoryCatalogSingleton(object instance, object Value)
         {
             var that = (global::OstManSysMVVM.ViewModel.ResidentViewModel)instance;
             that.ResidentHistoryCatalogSingleton = (global::OstManSysMVVM.Model.ResidentHistoryCatalogSingleton)Value;
         }
-        private object get_24_ResidentViewModel_DownpipeCatalogSingleton(object instance)
+        private object get_25_ResidentViewModel_DownpipeCatalogSingleton(object instance)
         {
             var that = (global::OstManSysMVVM.ViewModel.ResidentViewModel)instance;
             return that.DownpipeCatalogSingleton;
         }
-        private void set_24_ResidentViewModel_DownpipeCatalogSingleton(object instance, object Value)
+        private void set_25_ResidentViewModel_DownpipeCatalogSingleton(object instance, object Value)
         {
             var that = (global::OstManSysMVVM.ViewModel.ResidentViewModel)instance;
             that.DownpipeCatalogSingleton = (global::OstManSysMVVM.Model.DownpipeCatalogSingleton)Value;
         }
-        private object get_25_ResidentViewModel_SelectedProblem(object instance)
+        private object get_26_ResidentViewModel_SelectedProblem(object instance)
         {
             var that = (global::OstManSysMVVM.ViewModel.ResidentViewModel)instance;
             return that.SelectedProblem;
         }
-        private void set_25_ResidentViewModel_SelectedProblem(object instance, object Value)
+        private void set_26_ResidentViewModel_SelectedProblem(object instance, object Value)
         {
             var that = (global::OstManSysMVVM.ViewModel.ResidentViewModel)instance;
             that.SelectedProblem = (global::OstManSysMVVM.Model.Problem)Value;
         }
-        private object get_26_ResidentViewModel_Resident(object instance)
+        private object get_27_ResidentViewModel_Resident(object instance)
         {
             var that = (global::OstManSysMVVM.ViewModel.ResidentViewModel)instance;
             return that.Resident;
         }
-        private void set_26_ResidentViewModel_Resident(object instance, object Value)
+        private void set_27_ResidentViewModel_Resident(object instance, object Value)
         {
             var that = (global::OstManSysMVVM.ViewModel.ResidentViewModel)instance;
             that.Resident = (global::OstManSysMVVM.Model.Resident)Value;
         }
-        private object get_27_ResidentViewModel_CurrentResident(object instance)
+        private object get_28_ResidentViewModel_CurrentResident(object instance)
         {
             var that = (global::OstManSysMVVM.ViewModel.ResidentViewModel)instance;
             return that.CurrentResident;
         }
-        private void set_27_ResidentViewModel_CurrentResident(object instance, object Value)
+        private void set_28_ResidentViewModel_CurrentResident(object instance, object Value)
         {
             var that = (global::OstManSysMVVM.ViewModel.ResidentViewModel)instance;
             that.CurrentResident = (global::OstManSysMVVM.Model.Resident)Value;
         }
-        private object get_28_ResidentViewModel_NewResident(object instance)
+        private object get_29_ResidentViewModel_NewResident(object instance)
         {
             var that = (global::OstManSysMVVM.ViewModel.ResidentViewModel)instance;
             return that.NewResident;
         }
-        private void set_28_ResidentViewModel_NewResident(object instance, object Value)
+        private void set_29_ResidentViewModel_NewResident(object instance, object Value)
         {
             var that = (global::OstManSysMVVM.ViewModel.ResidentViewModel)instance;
             that.NewResident = (global::OstManSysMVVM.Model.Resident)Value;
         }
-        private object get_29_ResidentViewModel_SelectedResident(object instance)
+        private object get_30_ResidentViewModel_SelectedResident(object instance)
         {
             var that = (global::OstManSysMVVM.ViewModel.ResidentViewModel)instance;
             return that.SelectedResident;
         }
-        private void set_29_ResidentViewModel_SelectedResident(object instance, object Value)
+        private void set_30_ResidentViewModel_SelectedResident(object instance, object Value)
         {
             var that = (global::OstManSysMVVM.ViewModel.ResidentViewModel)instance;
             that.SelectedResident = (global::OstManSysMVVM.Model.Resident)Value;
         }
-        private object get_30_ResidentViewModel_ResidentHandler(object instance)
+        private object get_31_ResidentViewModel_ResidentHandler(object instance)
         {
             var that = (global::OstManSysMVVM.ViewModel.ResidentViewModel)instance;
             return that.ResidentHandler;
         }
-        private void set_30_ResidentViewModel_ResidentHandler(object instance, object Value)
+        private void set_31_ResidentViewModel_ResidentHandler(object instance, object Value)
         {
             var that = (global::OstManSysMVVM.ViewModel.ResidentViewModel)instance;
             that.ResidentHandler = (global::OstManSysMVVM.Handler.ResidentHandler)Value;
         }
-        private object get_31_ResidentViewModel_CreateCommand(object instance)
+        private object get_32_ResidentViewModel_CreateCommand(object instance)
         {
             var that = (global::OstManSysMVVM.ViewModel.ResidentViewModel)instance;
             return that.CreateCommand;
         }
-        private void set_31_ResidentViewModel_CreateCommand(object instance, object Value)
+        private void set_32_ResidentViewModel_CreateCommand(object instance, object Value)
         {
             var that = (global::OstManSysMVVM.ViewModel.ResidentViewModel)instance;
             that.CreateCommand = (global::System.Windows.Input.ICommand)Value;
         }
-        private object get_32_ResidentViewModel_DeleteCommand(object instance)
+        private object get_33_ResidentViewModel_DeleteCommand(object instance)
         {
             var that = (global::OstManSysMVVM.ViewModel.ResidentViewModel)instance;
             return that.DeleteCommand;
         }
-        private void set_32_ResidentViewModel_DeleteCommand(object instance, object Value)
+        private void set_33_ResidentViewModel_DeleteCommand(object instance, object Value)
         {
             var that = (global::OstManSysMVVM.ViewModel.ResidentViewModel)instance;
             that.DeleteCommand = (global::System.Windows.Input.ICommand)Value;
         }
-        private object get_33_ResidentViewModel_UpdateCommand(object instance)
+        private object get_34_ResidentViewModel_UpdateCommand(object instance)
         {
             var that = (global::OstManSysMVVM.ViewModel.ResidentViewModel)instance;
             return that.UpdateCommand;
         }
-        private void set_33_ResidentViewModel_UpdateCommand(object instance, object Value)
+        private void set_34_ResidentViewModel_UpdateCommand(object instance, object Value)
         {
             var that = (global::OstManSysMVVM.ViewModel.ResidentViewModel)instance;
             that.UpdateCommand = (global::System.Windows.Input.ICommand)Value;
         }
-        private object get_34_ResidentViewModel_AttachCommand(object instance)
+        private object get_35_ResidentViewModel_AttachCommand(object instance)
         {
             var that = (global::OstManSysMVVM.ViewModel.ResidentViewModel)instance;
             return that.AttachCommand;
         }
-        private void set_34_ResidentViewModel_AttachCommand(object instance, object Value)
+        private void set_35_ResidentViewModel_AttachCommand(object instance, object Value)
         {
             var that = (global::OstManSysMVVM.ViewModel.ResidentViewModel)instance;
             that.AttachCommand = (global::System.Windows.Input.ICommand)Value;
         }
-        private object get_35_ResidentViewModel_ResidentRefreshCommand(object instance)
+        private object get_36_ResidentViewModel_ResidentRefreshCommand(object instance)
         {
             var that = (global::OstManSysMVVM.ViewModel.ResidentViewModel)instance;
             return that.ResidentRefreshCommand;
         }
-        private void set_35_ResidentViewModel_ResidentRefreshCommand(object instance, object Value)
+        private void set_36_ResidentViewModel_ResidentRefreshCommand(object instance, object Value)
         {
             var that = (global::OstManSysMVVM.ViewModel.ResidentViewModel)instance;
             that.ResidentRefreshCommand = (global::System.Windows.Input.ICommand)Value;
         }
-        private object get_36_LogInViewModel_Account(object instance)
+        private object get_37_LogInViewModel_Account(object instance)
         {
             var that = (global::OstManSysMVVM.ViewModel.LogInViewModel)instance;
             return that.Account;
         }
-        private void set_36_LogInViewModel_Account(object instance, object Value)
+        private void set_37_LogInViewModel_Account(object instance, object Value)
         {
             var that = (global::OstManSysMVVM.ViewModel.LogInViewModel)instance;
             that.Account = (global::OstManSysMVVM.Model.Account)Value;
         }
-        private object get_37_LogInViewModel_LogInHandler(object instance)
+        private object get_38_LogInViewModel_LogInHandler(object instance)
         {
             var that = (global::OstManSysMVVM.ViewModel.LogInViewModel)instance;
             return that.LogInHandler;
         }
-        private void set_37_LogInViewModel_LogInHandler(object instance, object Value)
+        private void set_38_LogInViewModel_LogInHandler(object instance, object Value)
         {
             var that = (global::OstManSysMVVM.ViewModel.LogInViewModel)instance;
             that.LogInHandler = (global::OstManSysMVVM.Handler.LogInHandler)Value;
         }
-        private object get_38_LogInViewModel_LogInCommand(object instance)
+        private object get_39_LogInViewModel_LogInCommand(object instance)
         {
             var that = (global::OstManSysMVVM.ViewModel.LogInViewModel)instance;
             return that.LogInCommand;
         }
-        private void set_38_LogInViewModel_LogInCommand(object instance, object Value)
+        private void set_39_LogInViewModel_LogInCommand(object instance, object Value)
         {
             var that = (global::OstManSysMVVM.ViewModel.LogInViewModel)instance;
             that.LogInCommand = (global::System.Windows.Input.ICommand)Value;
         }
-        private object get_39_LogInViewModel_AccountCatalogSingleton(object instance)
+        private object get_40_LogInViewModel_AccountCatalogSingleton(object instance)
         {
             var that = (global::OstManSysMVVM.ViewModel.LogInViewModel)instance;
             return that.AccountCatalogSingleton;
         }
-        private void set_39_LogInViewModel_AccountCatalogSingleton(object instance, object Value)
+        private void set_40_LogInViewModel_AccountCatalogSingleton(object instance, object Value)
         {
             var that = (global::OstManSysMVVM.ViewModel.LogInViewModel)instance;
             that.AccountCatalogSingleton = (global::OstManSysMVVM.Model.AccountCatalogSingleton)Value;
         }
-        private object get_40_ProblemViewModel_ProblemNote(object instance)
+        private object get_41_ProblemViewModel_ProblemNote(object instance)
         {
             var that = (global::OstManSysMVVM.ViewModel.ProblemViewModel)instance;
             return that.ProblemNote;
         }
-        private void set_40_ProblemViewModel_ProblemNote(object instance, object Value)
+        private void set_41_ProblemViewModel_ProblemNote(object instance, object Value)
         {
             var that = (global::OstManSysMVVM.ViewModel.ProblemViewModel)instance;
             that.ProblemNote = (global::System.String)Value;
         }
-        private object get_41_ProblemViewModel_NewProblem(object instance)
+        private object get_42_ProblemViewModel_NewProblem(object instance)
         {
             var that = (global::OstManSysMVVM.ViewModel.ProblemViewModel)instance;
             return that.NewProblem;
         }
-        private void set_41_ProblemViewModel_NewProblem(object instance, object Value)
+        private void set_42_ProblemViewModel_NewProblem(object instance, object Value)
         {
             var that = (global::OstManSysMVVM.ViewModel.ProblemViewModel)instance;
             that.NewProblem = (global::OstManSysMVVM.Model.Problem)Value;
         }
-        private object get_42_ProblemViewModel_SelectedProblem(object instance)
+        private object get_43_ProblemViewModel_SelectedProblem(object instance)
         {
             var that = (global::OstManSysMVVM.ViewModel.ProblemViewModel)instance;
             return that.SelectedProblem;
         }
-        private void set_42_ProblemViewModel_SelectedProblem(object instance, object Value)
+        private void set_43_ProblemViewModel_SelectedProblem(object instance, object Value)
         {
             var that = (global::OstManSysMVVM.ViewModel.ProblemViewModel)instance;
             that.SelectedProblem = (global::OstManSysMVVM.Model.Problem)Value;
         }
-        private object get_43_ProblemViewModel_ProblemCatalogSingleton(object instance)
+        private object get_44_ProblemViewModel_ProblemCatalogSingleton(object instance)
         {
             var that = (global::OstManSysMVVM.ViewModel.ProblemViewModel)instance;
             return that.ProblemCatalogSingleton;
         }
-        private void set_43_ProblemViewModel_ProblemCatalogSingleton(object instance, object Value)
+        private void set_44_ProblemViewModel_ProblemCatalogSingleton(object instance, object Value)
         {
             var that = (global::OstManSysMVVM.ViewModel.ProblemViewModel)instance;
             that.ProblemCatalogSingleton = (global::OstManSysMVVM.Model.ProblemCatalogSingleton)Value;
         }
-        private object get_44_ProblemViewModel_ProblemHistoryCatalogSingleton(object instance)
+        private object get_45_ProblemViewModel_ProblemHistoryCatalogSingleton(object instance)
         {
             var that = (global::OstManSysMVVM.ViewModel.ProblemViewModel)instance;
             return that.ProblemHistoryCatalogSingleton;
         }
-        private void set_44_ProblemViewModel_ProblemHistoryCatalogSingleton(object instance, object Value)
+        private void set_45_ProblemViewModel_ProblemHistoryCatalogSingleton(object instance, object Value)
         {
             var that = (global::OstManSysMVVM.ViewModel.ProblemViewModel)instance;
             that.ProblemHistoryCatalogSingleton = (global::OstManSysMVVM.View.ProblemHistoryCatalogSingleton)Value;
         }
-        private object get_45_ProblemViewModel_CreateProblemCommand(object instance)
+        private object get_46_ProblemViewModel_CreateProblemCommand(object instance)
         {
             var that = (global::OstManSysMVVM.ViewModel.ProblemViewModel)instance;
             return that.CreateProblemCommand;
         }
-        private void set_45_ProblemViewModel_CreateProblemCommand(object instance, object Value)
+        private void set_46_ProblemViewModel_CreateProblemCommand(object instance, object Value)
         {
             var that = (global::OstManSysMVVM.ViewModel.ProblemViewModel)instance;
             that.CreateProblemCommand = (global::System.Windows.Input.ICommand)Value;
         }
-        private object get_46_ProblemViewModel_SolveTheProblemCommand(object instance)
+        private object get_47_ProblemViewModel_SolveTheProblemCommand(object instance)
         {
             var that = (global::OstManSysMVVM.ViewModel.ProblemViewModel)instance;
             return that.SolveTheProblemCommand;
         }
-        private void set_46_ProblemViewModel_SolveTheProblemCommand(object instance, object Value)
+        private void set_47_ProblemViewModel_SolveTheProblemCommand(object instance, object Value)
         {
             var that = (global::OstManSysMVVM.ViewModel.ProblemViewModel)instance;
             that.SolveTheProblemCommand = (global::System.Windows.Input.ICommand)Value;
         }
-        private object get_47_ProblemViewModel_ProblemHandler(object instance)
+        private object get_48_ProblemViewModel_ProblemHandler(object instance)
         {
             var that = (global::OstManSysMVVM.ViewModel.ProblemViewModel)instance;
             return that.ProblemHandler;
         }
-        private void set_47_ProblemViewModel_ProblemHandler(object instance, object Value)
+        private void set_48_ProblemViewModel_ProblemHandler(object instance, object Value)
         {
             var that = (global::OstManSysMVVM.ViewModel.ProblemViewModel)instance;
             that.ProblemHandler = (global::OstManSysMVVM.Handler.ProblemHandler)Value;
@@ -1428,210 +1449,216 @@ namespace OstManSysMVVM.OstManSysMVVM_XamlTypeInfo
                 xamlMember.Getter = get_14_ApartmentViewModel_GoToUpdateCommand;
                 xamlMember.Setter = set_14_ApartmentViewModel_GoToUpdateCommand;
                 break;
+            case "OstManSysMVVM.ViewModel.ApartmentViewModel.RefreshCommand":
+                userType = (global::OstManSysMVVM.OstManSysMVVM_XamlTypeInfo.XamlUserType)GetXamlTypeByName("OstManSysMVVM.ViewModel.ApartmentViewModel");
+                xamlMember = new global::OstManSysMVVM.OstManSysMVVM_XamlTypeInfo.XamlMember(this, "RefreshCommand", "System.Windows.Input.ICommand");
+                xamlMember.Getter = get_15_ApartmentViewModel_RefreshCommand;
+                xamlMember.Setter = set_15_ApartmentViewModel_RefreshCommand;
+                break;
             case "Microsoft.Xaml.Interactivity.Interaction.Behaviors":
                 userType = (global::OstManSysMVVM.OstManSysMVVM_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.Xaml.Interactivity.Interaction");
                 xamlMember = new global::OstManSysMVVM.OstManSysMVVM_XamlTypeInfo.XamlMember(this, "Behaviors", "Microsoft.Xaml.Interactivity.BehaviorCollection");
                 xamlMember.SetTargetTypeName("Windows.UI.Xaml.DependencyObject");
                 xamlMember.SetIsAttachable();
-                xamlMember.Getter = get_15_Interaction_Behaviors;
-                xamlMember.Setter = set_15_Interaction_Behaviors;
+                xamlMember.Getter = get_16_Interaction_Behaviors;
+                xamlMember.Setter = set_16_Interaction_Behaviors;
                 break;
             case "Microsoft.Xaml.Interactivity.Trigger.Actions":
                 userType = (global::OstManSysMVVM.OstManSysMVVM_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.Xaml.Interactivity.Trigger");
                 xamlMember = new global::OstManSysMVVM.OstManSysMVVM_XamlTypeInfo.XamlMember(this, "Actions", "Microsoft.Xaml.Interactivity.ActionCollection");
                 xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_16_Trigger_Actions;
+                xamlMember.Getter = get_17_Trigger_Actions;
                 xamlMember.SetIsReadOnly();
                 break;
             case "Microsoft.Xaml.Interactions.Core.EventTriggerBehavior.EventName":
                 userType = (global::OstManSysMVVM.OstManSysMVVM_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.Xaml.Interactions.Core.EventTriggerBehavior");
                 xamlMember = new global::OstManSysMVVM.OstManSysMVVM_XamlTypeInfo.XamlMember(this, "EventName", "String");
                 xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_17_EventTriggerBehavior_EventName;
-                xamlMember.Setter = set_17_EventTriggerBehavior_EventName;
+                xamlMember.Getter = get_18_EventTriggerBehavior_EventName;
+                xamlMember.Setter = set_18_EventTriggerBehavior_EventName;
                 break;
             case "Microsoft.Xaml.Interactions.Core.EventTriggerBehavior.SourceObject":
                 userType = (global::OstManSysMVVM.OstManSysMVVM_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.Xaml.Interactions.Core.EventTriggerBehavior");
                 xamlMember = new global::OstManSysMVVM.OstManSysMVVM_XamlTypeInfo.XamlMember(this, "SourceObject", "Object");
                 xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_18_EventTriggerBehavior_SourceObject;
-                xamlMember.Setter = set_18_EventTriggerBehavior_SourceObject;
+                xamlMember.Getter = get_19_EventTriggerBehavior_SourceObject;
+                xamlMember.Setter = set_19_EventTriggerBehavior_SourceObject;
                 break;
             case "Microsoft.Xaml.Interactivity.Behavior.AssociatedObject":
                 userType = (global::OstManSysMVVM.OstManSysMVVM_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.Xaml.Interactivity.Behavior");
                 xamlMember = new global::OstManSysMVVM.OstManSysMVVM_XamlTypeInfo.XamlMember(this, "AssociatedObject", "Windows.UI.Xaml.DependencyObject");
-                xamlMember.Getter = get_19_Behavior_AssociatedObject;
+                xamlMember.Getter = get_20_Behavior_AssociatedObject;
                 xamlMember.SetIsReadOnly();
                 break;
             case "Microsoft.Xaml.Interactions.Core.NavigateToPageAction.TargetPage":
                 userType = (global::OstManSysMVVM.OstManSysMVVM_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.Xaml.Interactions.Core.NavigateToPageAction");
                 xamlMember = new global::OstManSysMVVM.OstManSysMVVM_XamlTypeInfo.XamlMember(this, "TargetPage", "String");
                 xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_20_NavigateToPageAction_TargetPage;
-                xamlMember.Setter = set_20_NavigateToPageAction_TargetPage;
+                xamlMember.Getter = get_21_NavigateToPageAction_TargetPage;
+                xamlMember.Setter = set_21_NavigateToPageAction_TargetPage;
                 break;
             case "Microsoft.Xaml.Interactions.Core.NavigateToPageAction.Parameter":
                 userType = (global::OstManSysMVVM.OstManSysMVVM_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.Xaml.Interactions.Core.NavigateToPageAction");
                 xamlMember = new global::OstManSysMVVM.OstManSysMVVM_XamlTypeInfo.XamlMember(this, "Parameter", "Object");
                 xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_21_NavigateToPageAction_Parameter;
-                xamlMember.Setter = set_21_NavigateToPageAction_Parameter;
+                xamlMember.Getter = get_22_NavigateToPageAction_Parameter;
+                xamlMember.Setter = set_22_NavigateToPageAction_Parameter;
                 break;
             case "OstManSysMVVM.ViewModel.ResidentViewModel.ResidentCatalogSingleton":
                 userType = (global::OstManSysMVVM.OstManSysMVVM_XamlTypeInfo.XamlUserType)GetXamlTypeByName("OstManSysMVVM.ViewModel.ResidentViewModel");
                 xamlMember = new global::OstManSysMVVM.OstManSysMVVM_XamlTypeInfo.XamlMember(this, "ResidentCatalogSingleton", "OstManSysMVVM.Model.ResidentCatalogSingleton");
-                xamlMember.Getter = get_22_ResidentViewModel_ResidentCatalogSingleton;
-                xamlMember.Setter = set_22_ResidentViewModel_ResidentCatalogSingleton;
+                xamlMember.Getter = get_23_ResidentViewModel_ResidentCatalogSingleton;
+                xamlMember.Setter = set_23_ResidentViewModel_ResidentCatalogSingleton;
                 break;
             case "OstManSysMVVM.ViewModel.ResidentViewModel.ResidentHistoryCatalogSingleton":
                 userType = (global::OstManSysMVVM.OstManSysMVVM_XamlTypeInfo.XamlUserType)GetXamlTypeByName("OstManSysMVVM.ViewModel.ResidentViewModel");
                 xamlMember = new global::OstManSysMVVM.OstManSysMVVM_XamlTypeInfo.XamlMember(this, "ResidentHistoryCatalogSingleton", "OstManSysMVVM.Model.ResidentHistoryCatalogSingleton");
-                xamlMember.Getter = get_23_ResidentViewModel_ResidentHistoryCatalogSingleton;
-                xamlMember.Setter = set_23_ResidentViewModel_ResidentHistoryCatalogSingleton;
+                xamlMember.Getter = get_24_ResidentViewModel_ResidentHistoryCatalogSingleton;
+                xamlMember.Setter = set_24_ResidentViewModel_ResidentHistoryCatalogSingleton;
                 break;
             case "OstManSysMVVM.ViewModel.ResidentViewModel.DownpipeCatalogSingleton":
                 userType = (global::OstManSysMVVM.OstManSysMVVM_XamlTypeInfo.XamlUserType)GetXamlTypeByName("OstManSysMVVM.ViewModel.ResidentViewModel");
                 xamlMember = new global::OstManSysMVVM.OstManSysMVVM_XamlTypeInfo.XamlMember(this, "DownpipeCatalogSingleton", "OstManSysMVVM.Model.DownpipeCatalogSingleton");
-                xamlMember.Getter = get_24_ResidentViewModel_DownpipeCatalogSingleton;
-                xamlMember.Setter = set_24_ResidentViewModel_DownpipeCatalogSingleton;
+                xamlMember.Getter = get_25_ResidentViewModel_DownpipeCatalogSingleton;
+                xamlMember.Setter = set_25_ResidentViewModel_DownpipeCatalogSingleton;
                 break;
             case "OstManSysMVVM.ViewModel.ResidentViewModel.SelectedProblem":
                 userType = (global::OstManSysMVVM.OstManSysMVVM_XamlTypeInfo.XamlUserType)GetXamlTypeByName("OstManSysMVVM.ViewModel.ResidentViewModel");
                 xamlMember = new global::OstManSysMVVM.OstManSysMVVM_XamlTypeInfo.XamlMember(this, "SelectedProblem", "OstManSysMVVM.Model.Problem");
-                xamlMember.Getter = get_25_ResidentViewModel_SelectedProblem;
-                xamlMember.Setter = set_25_ResidentViewModel_SelectedProblem;
+                xamlMember.Getter = get_26_ResidentViewModel_SelectedProblem;
+                xamlMember.Setter = set_26_ResidentViewModel_SelectedProblem;
                 break;
             case "OstManSysMVVM.ViewModel.ResidentViewModel.Resident":
                 userType = (global::OstManSysMVVM.OstManSysMVVM_XamlTypeInfo.XamlUserType)GetXamlTypeByName("OstManSysMVVM.ViewModel.ResidentViewModel");
                 xamlMember = new global::OstManSysMVVM.OstManSysMVVM_XamlTypeInfo.XamlMember(this, "Resident", "OstManSysMVVM.Model.Resident");
-                xamlMember.Getter = get_26_ResidentViewModel_Resident;
-                xamlMember.Setter = set_26_ResidentViewModel_Resident;
+                xamlMember.Getter = get_27_ResidentViewModel_Resident;
+                xamlMember.Setter = set_27_ResidentViewModel_Resident;
                 break;
             case "OstManSysMVVM.ViewModel.ResidentViewModel.CurrentResident":
                 userType = (global::OstManSysMVVM.OstManSysMVVM_XamlTypeInfo.XamlUserType)GetXamlTypeByName("OstManSysMVVM.ViewModel.ResidentViewModel");
                 xamlMember = new global::OstManSysMVVM.OstManSysMVVM_XamlTypeInfo.XamlMember(this, "CurrentResident", "OstManSysMVVM.Model.Resident");
-                xamlMember.Getter = get_27_ResidentViewModel_CurrentResident;
-                xamlMember.Setter = set_27_ResidentViewModel_CurrentResident;
+                xamlMember.Getter = get_28_ResidentViewModel_CurrentResident;
+                xamlMember.Setter = set_28_ResidentViewModel_CurrentResident;
                 break;
             case "OstManSysMVVM.ViewModel.ResidentViewModel.NewResident":
                 userType = (global::OstManSysMVVM.OstManSysMVVM_XamlTypeInfo.XamlUserType)GetXamlTypeByName("OstManSysMVVM.ViewModel.ResidentViewModel");
                 xamlMember = new global::OstManSysMVVM.OstManSysMVVM_XamlTypeInfo.XamlMember(this, "NewResident", "OstManSysMVVM.Model.Resident");
-                xamlMember.Getter = get_28_ResidentViewModel_NewResident;
-                xamlMember.Setter = set_28_ResidentViewModel_NewResident;
+                xamlMember.Getter = get_29_ResidentViewModel_NewResident;
+                xamlMember.Setter = set_29_ResidentViewModel_NewResident;
                 break;
             case "OstManSysMVVM.ViewModel.ResidentViewModel.SelectedResident":
                 userType = (global::OstManSysMVVM.OstManSysMVVM_XamlTypeInfo.XamlUserType)GetXamlTypeByName("OstManSysMVVM.ViewModel.ResidentViewModel");
                 xamlMember = new global::OstManSysMVVM.OstManSysMVVM_XamlTypeInfo.XamlMember(this, "SelectedResident", "OstManSysMVVM.Model.Resident");
-                xamlMember.Getter = get_29_ResidentViewModel_SelectedResident;
-                xamlMember.Setter = set_29_ResidentViewModel_SelectedResident;
+                xamlMember.Getter = get_30_ResidentViewModel_SelectedResident;
+                xamlMember.Setter = set_30_ResidentViewModel_SelectedResident;
                 break;
             case "OstManSysMVVM.ViewModel.ResidentViewModel.ResidentHandler":
                 userType = (global::OstManSysMVVM.OstManSysMVVM_XamlTypeInfo.XamlUserType)GetXamlTypeByName("OstManSysMVVM.ViewModel.ResidentViewModel");
                 xamlMember = new global::OstManSysMVVM.OstManSysMVVM_XamlTypeInfo.XamlMember(this, "ResidentHandler", "OstManSysMVVM.Handler.ResidentHandler");
-                xamlMember.Getter = get_30_ResidentViewModel_ResidentHandler;
-                xamlMember.Setter = set_30_ResidentViewModel_ResidentHandler;
+                xamlMember.Getter = get_31_ResidentViewModel_ResidentHandler;
+                xamlMember.Setter = set_31_ResidentViewModel_ResidentHandler;
                 break;
             case "OstManSysMVVM.ViewModel.ResidentViewModel.CreateCommand":
                 userType = (global::OstManSysMVVM.OstManSysMVVM_XamlTypeInfo.XamlUserType)GetXamlTypeByName("OstManSysMVVM.ViewModel.ResidentViewModel");
                 xamlMember = new global::OstManSysMVVM.OstManSysMVVM_XamlTypeInfo.XamlMember(this, "CreateCommand", "System.Windows.Input.ICommand");
-                xamlMember.Getter = get_31_ResidentViewModel_CreateCommand;
-                xamlMember.Setter = set_31_ResidentViewModel_CreateCommand;
+                xamlMember.Getter = get_32_ResidentViewModel_CreateCommand;
+                xamlMember.Setter = set_32_ResidentViewModel_CreateCommand;
                 break;
             case "OstManSysMVVM.ViewModel.ResidentViewModel.DeleteCommand":
                 userType = (global::OstManSysMVVM.OstManSysMVVM_XamlTypeInfo.XamlUserType)GetXamlTypeByName("OstManSysMVVM.ViewModel.ResidentViewModel");
                 xamlMember = new global::OstManSysMVVM.OstManSysMVVM_XamlTypeInfo.XamlMember(this, "DeleteCommand", "System.Windows.Input.ICommand");
-                xamlMember.Getter = get_32_ResidentViewModel_DeleteCommand;
-                xamlMember.Setter = set_32_ResidentViewModel_DeleteCommand;
+                xamlMember.Getter = get_33_ResidentViewModel_DeleteCommand;
+                xamlMember.Setter = set_33_ResidentViewModel_DeleteCommand;
                 break;
             case "OstManSysMVVM.ViewModel.ResidentViewModel.UpdateCommand":
                 userType = (global::OstManSysMVVM.OstManSysMVVM_XamlTypeInfo.XamlUserType)GetXamlTypeByName("OstManSysMVVM.ViewModel.ResidentViewModel");
                 xamlMember = new global::OstManSysMVVM.OstManSysMVVM_XamlTypeInfo.XamlMember(this, "UpdateCommand", "System.Windows.Input.ICommand");
-                xamlMember.Getter = get_33_ResidentViewModel_UpdateCommand;
-                xamlMember.Setter = set_33_ResidentViewModel_UpdateCommand;
+                xamlMember.Getter = get_34_ResidentViewModel_UpdateCommand;
+                xamlMember.Setter = set_34_ResidentViewModel_UpdateCommand;
                 break;
             case "OstManSysMVVM.ViewModel.ResidentViewModel.AttachCommand":
                 userType = (global::OstManSysMVVM.OstManSysMVVM_XamlTypeInfo.XamlUserType)GetXamlTypeByName("OstManSysMVVM.ViewModel.ResidentViewModel");
                 xamlMember = new global::OstManSysMVVM.OstManSysMVVM_XamlTypeInfo.XamlMember(this, "AttachCommand", "System.Windows.Input.ICommand");
-                xamlMember.Getter = get_34_ResidentViewModel_AttachCommand;
-                xamlMember.Setter = set_34_ResidentViewModel_AttachCommand;
+                xamlMember.Getter = get_35_ResidentViewModel_AttachCommand;
+                xamlMember.Setter = set_35_ResidentViewModel_AttachCommand;
                 break;
             case "OstManSysMVVM.ViewModel.ResidentViewModel.ResidentRefreshCommand":
                 userType = (global::OstManSysMVVM.OstManSysMVVM_XamlTypeInfo.XamlUserType)GetXamlTypeByName("OstManSysMVVM.ViewModel.ResidentViewModel");
                 xamlMember = new global::OstManSysMVVM.OstManSysMVVM_XamlTypeInfo.XamlMember(this, "ResidentRefreshCommand", "System.Windows.Input.ICommand");
-                xamlMember.Getter = get_35_ResidentViewModel_ResidentRefreshCommand;
-                xamlMember.Setter = set_35_ResidentViewModel_ResidentRefreshCommand;
+                xamlMember.Getter = get_36_ResidentViewModel_ResidentRefreshCommand;
+                xamlMember.Setter = set_36_ResidentViewModel_ResidentRefreshCommand;
                 break;
             case "OstManSysMVVM.ViewModel.LogInViewModel.Account":
                 userType = (global::OstManSysMVVM.OstManSysMVVM_XamlTypeInfo.XamlUserType)GetXamlTypeByName("OstManSysMVVM.ViewModel.LogInViewModel");
                 xamlMember = new global::OstManSysMVVM.OstManSysMVVM_XamlTypeInfo.XamlMember(this, "Account", "OstManSysMVVM.Model.Account");
-                xamlMember.Getter = get_36_LogInViewModel_Account;
-                xamlMember.Setter = set_36_LogInViewModel_Account;
+                xamlMember.Getter = get_37_LogInViewModel_Account;
+                xamlMember.Setter = set_37_LogInViewModel_Account;
                 break;
             case "OstManSysMVVM.ViewModel.LogInViewModel.LogInHandler":
                 userType = (global::OstManSysMVVM.OstManSysMVVM_XamlTypeInfo.XamlUserType)GetXamlTypeByName("OstManSysMVVM.ViewModel.LogInViewModel");
                 xamlMember = new global::OstManSysMVVM.OstManSysMVVM_XamlTypeInfo.XamlMember(this, "LogInHandler", "OstManSysMVVM.Handler.LogInHandler");
-                xamlMember.Getter = get_37_LogInViewModel_LogInHandler;
-                xamlMember.Setter = set_37_LogInViewModel_LogInHandler;
+                xamlMember.Getter = get_38_LogInViewModel_LogInHandler;
+                xamlMember.Setter = set_38_LogInViewModel_LogInHandler;
                 break;
             case "OstManSysMVVM.ViewModel.LogInViewModel.LogInCommand":
                 userType = (global::OstManSysMVVM.OstManSysMVVM_XamlTypeInfo.XamlUserType)GetXamlTypeByName("OstManSysMVVM.ViewModel.LogInViewModel");
                 xamlMember = new global::OstManSysMVVM.OstManSysMVVM_XamlTypeInfo.XamlMember(this, "LogInCommand", "System.Windows.Input.ICommand");
-                xamlMember.Getter = get_38_LogInViewModel_LogInCommand;
-                xamlMember.Setter = set_38_LogInViewModel_LogInCommand;
+                xamlMember.Getter = get_39_LogInViewModel_LogInCommand;
+                xamlMember.Setter = set_39_LogInViewModel_LogInCommand;
                 break;
             case "OstManSysMVVM.ViewModel.LogInViewModel.AccountCatalogSingleton":
                 userType = (global::OstManSysMVVM.OstManSysMVVM_XamlTypeInfo.XamlUserType)GetXamlTypeByName("OstManSysMVVM.ViewModel.LogInViewModel");
                 xamlMember = new global::OstManSysMVVM.OstManSysMVVM_XamlTypeInfo.XamlMember(this, "AccountCatalogSingleton", "OstManSysMVVM.Model.AccountCatalogSingleton");
-                xamlMember.Getter = get_39_LogInViewModel_AccountCatalogSingleton;
-                xamlMember.Setter = set_39_LogInViewModel_AccountCatalogSingleton;
+                xamlMember.Getter = get_40_LogInViewModel_AccountCatalogSingleton;
+                xamlMember.Setter = set_40_LogInViewModel_AccountCatalogSingleton;
                 break;
             case "OstManSysMVVM.ViewModel.ProblemViewModel.ProblemNote":
                 userType = (global::OstManSysMVVM.OstManSysMVVM_XamlTypeInfo.XamlUserType)GetXamlTypeByName("OstManSysMVVM.ViewModel.ProblemViewModel");
                 xamlMember = new global::OstManSysMVVM.OstManSysMVVM_XamlTypeInfo.XamlMember(this, "ProblemNote", "String");
-                xamlMember.Getter = get_40_ProblemViewModel_ProblemNote;
-                xamlMember.Setter = set_40_ProblemViewModel_ProblemNote;
+                xamlMember.Getter = get_41_ProblemViewModel_ProblemNote;
+                xamlMember.Setter = set_41_ProblemViewModel_ProblemNote;
                 break;
             case "OstManSysMVVM.ViewModel.ProblemViewModel.NewProblem":
                 userType = (global::OstManSysMVVM.OstManSysMVVM_XamlTypeInfo.XamlUserType)GetXamlTypeByName("OstManSysMVVM.ViewModel.ProblemViewModel");
                 xamlMember = new global::OstManSysMVVM.OstManSysMVVM_XamlTypeInfo.XamlMember(this, "NewProblem", "OstManSysMVVM.Model.Problem");
-                xamlMember.Getter = get_41_ProblemViewModel_NewProblem;
-                xamlMember.Setter = set_41_ProblemViewModel_NewProblem;
+                xamlMember.Getter = get_42_ProblemViewModel_NewProblem;
+                xamlMember.Setter = set_42_ProblemViewModel_NewProblem;
                 break;
             case "OstManSysMVVM.ViewModel.ProblemViewModel.SelectedProblem":
                 userType = (global::OstManSysMVVM.OstManSysMVVM_XamlTypeInfo.XamlUserType)GetXamlTypeByName("OstManSysMVVM.ViewModel.ProblemViewModel");
                 xamlMember = new global::OstManSysMVVM.OstManSysMVVM_XamlTypeInfo.XamlMember(this, "SelectedProblem", "OstManSysMVVM.Model.Problem");
-                xamlMember.Getter = get_42_ProblemViewModel_SelectedProblem;
-                xamlMember.Setter = set_42_ProblemViewModel_SelectedProblem;
+                xamlMember.Getter = get_43_ProblemViewModel_SelectedProblem;
+                xamlMember.Setter = set_43_ProblemViewModel_SelectedProblem;
                 break;
             case "OstManSysMVVM.ViewModel.ProblemViewModel.ProblemCatalogSingleton":
                 userType = (global::OstManSysMVVM.OstManSysMVVM_XamlTypeInfo.XamlUserType)GetXamlTypeByName("OstManSysMVVM.ViewModel.ProblemViewModel");
                 xamlMember = new global::OstManSysMVVM.OstManSysMVVM_XamlTypeInfo.XamlMember(this, "ProblemCatalogSingleton", "OstManSysMVVM.Model.ProblemCatalogSingleton");
-                xamlMember.Getter = get_43_ProblemViewModel_ProblemCatalogSingleton;
-                xamlMember.Setter = set_43_ProblemViewModel_ProblemCatalogSingleton;
+                xamlMember.Getter = get_44_ProblemViewModel_ProblemCatalogSingleton;
+                xamlMember.Setter = set_44_ProblemViewModel_ProblemCatalogSingleton;
                 break;
             case "OstManSysMVVM.ViewModel.ProblemViewModel.ProblemHistoryCatalogSingleton":
                 userType = (global::OstManSysMVVM.OstManSysMVVM_XamlTypeInfo.XamlUserType)GetXamlTypeByName("OstManSysMVVM.ViewModel.ProblemViewModel");
                 xamlMember = new global::OstManSysMVVM.OstManSysMVVM_XamlTypeInfo.XamlMember(this, "ProblemHistoryCatalogSingleton", "OstManSysMVVM.View.ProblemHistoryCatalogSingleton");
-                xamlMember.Getter = get_44_ProblemViewModel_ProblemHistoryCatalogSingleton;
-                xamlMember.Setter = set_44_ProblemViewModel_ProblemHistoryCatalogSingleton;
+                xamlMember.Getter = get_45_ProblemViewModel_ProblemHistoryCatalogSingleton;
+                xamlMember.Setter = set_45_ProblemViewModel_ProblemHistoryCatalogSingleton;
                 break;
             case "OstManSysMVVM.ViewModel.ProblemViewModel.CreateProblemCommand":
                 userType = (global::OstManSysMVVM.OstManSysMVVM_XamlTypeInfo.XamlUserType)GetXamlTypeByName("OstManSysMVVM.ViewModel.ProblemViewModel");
                 xamlMember = new global::OstManSysMVVM.OstManSysMVVM_XamlTypeInfo.XamlMember(this, "CreateProblemCommand", "System.Windows.Input.ICommand");
-                xamlMember.Getter = get_45_ProblemViewModel_CreateProblemCommand;
-                xamlMember.Setter = set_45_ProblemViewModel_CreateProblemCommand;
+                xamlMember.Getter = get_46_ProblemViewModel_CreateProblemCommand;
+                xamlMember.Setter = set_46_ProblemViewModel_CreateProblemCommand;
                 break;
             case "OstManSysMVVM.ViewModel.ProblemViewModel.SolveTheProblemCommand":
                 userType = (global::OstManSysMVVM.OstManSysMVVM_XamlTypeInfo.XamlUserType)GetXamlTypeByName("OstManSysMVVM.ViewModel.ProblemViewModel");
                 xamlMember = new global::OstManSysMVVM.OstManSysMVVM_XamlTypeInfo.XamlMember(this, "SolveTheProblemCommand", "System.Windows.Input.ICommand");
-                xamlMember.Getter = get_46_ProblemViewModel_SolveTheProblemCommand;
-                xamlMember.Setter = set_46_ProblemViewModel_SolveTheProblemCommand;
+                xamlMember.Getter = get_47_ProblemViewModel_SolveTheProblemCommand;
+                xamlMember.Setter = set_47_ProblemViewModel_SolveTheProblemCommand;
                 break;
             case "OstManSysMVVM.ViewModel.ProblemViewModel.ProblemHandler":
                 userType = (global::OstManSysMVVM.OstManSysMVVM_XamlTypeInfo.XamlUserType)GetXamlTypeByName("OstManSysMVVM.ViewModel.ProblemViewModel");
                 xamlMember = new global::OstManSysMVVM.OstManSysMVVM_XamlTypeInfo.XamlMember(this, "ProblemHandler", "OstManSysMVVM.Handler.ProblemHandler");
-                xamlMember.Getter = get_47_ProblemViewModel_ProblemHandler;
-                xamlMember.Setter = set_47_ProblemViewModel_ProblemHandler;
+                xamlMember.Getter = get_48_ProblemViewModel_ProblemHandler;
+                xamlMember.Setter = set_48_ProblemViewModel_ProblemHandler;
                 break;
             }
             return xamlMember;

@@ -30,6 +30,9 @@
             <Button Command="{Binding LogInCommand,Mode=TwoWay}" Background="Transparent" BorderBrush="Black">Log In</Button>
         </StackPanel>
         </StackPanel>
+        <StackPanel Background="Black" Height="25" VerticalAlignment="Bottom">
+            <TextBlock VerticalAlignment="Center" HorizontalAlignment="Center" Foreground="White" FontSize="16" Text="© A/B Østbanehus"/>
+        </StackPanel>
     </Grid>
 
 

@@ -23,6 +23,16 @@ namespace OstManSysMVVM.Handler
         {
             ApartmentViewModel = apartmentViewModel;
         }
+
+        public void RefreshApartments()
+        {
+            var apartments = new PersistencyFacade().GetApartments();
+            ApartmentCatalogSingleton.Instance.Apartments.Clear();
+            foreach (var apartmentAddress in apartments)
+            {
+                ApartmentCatalogSingleton.Instance.Apartments.Add(apartmentAddress);
+            }
+        }
         /// <summary>
         /// Creates an apartment with the values entered by the user and saving it into the database through PersistencyFacade
         /// </summary>
@@ -114,59 +124,17 @@ namespace OstManSysMVVM.Handler
             double _rent = 0;
             int _numberOfRooms = 0;
 
-            //if (ApartmentViewModel.NewApartment.ApartmentID == 0)
-            //{
-            //    _id = ApartmentViewModel.SelectedApartment.ApartmentID;
-            //}
-            //else
-            //{
-            //    _id = ApartmentViewModel.NewApartment.ApartmentID;
-            //}
-
-            //if (ApartmentViewModel.NewApartment.AddressID == 0)
-            //{
-            //   // _address = ApartmentViewModel.SelectedApartment.AddressID;
-            //}
-            //else
-            //{
+           
                 _address = ApartmentViewModel.NewApartment.AddressID;
-           // }
-
-            //if (ApartmentViewModel.NewApartment.Size == 0)
-            //{
-            //    _size = ApartmentViewModel.SelectedApartment.Size;
-            //}
-            //else
-            //{
+          
                 _size = ApartmentViewModel.NewApartment.Size;
-           // }
-
-            //if (ApartmentViewModel.NewApartment.Condition == "")
-            //{
-            // //   _condition = ApartmentViewModel.SelectedApartment.Condition;
-            //}
-            //else
-            //{
+         
                 _condition = ApartmentViewModel.NewApartment.Condition;
-            //}
-
-            //if (ApartmentViewModel.NewApartment.MonthlyRent == 0)
-            //{
-            //    _rent = ApartmentViewModel.SelectedApartment.MonthlyRent;
-            //}
-            //else
-            //{
+           
                 _rent = ApartmentViewModel.NewApartment.MonthlyRent;
-           // }
-
-            //if (ApartmentViewModel.NewApartment.NumberOfRooms == 0)
-            //{
-            //    _numberOfRooms = ApartmentViewModel.SelectedApartment.NumberOfRooms;
-            //}
-            //else
-            //{
+         
                 _numberOfRooms = ApartmentViewModel.NewApartment.NumberOfRooms;
-            //}
+          
 
             var updatedApartment = new Apartment();
             updatedApartment.ApartmentID = ApartmentViewModel.SelectedApartment.ApartmentID;
@@ -186,12 +154,7 @@ namespace OstManSysMVVM.Handler
             {
                 ApartmentViewModel.ApartmentAddressCatalogSingleton.ApartmentAddresses.Add(apartment1);
             }
-            //ApartmentViewModel.NewApartment.ApartmentID = 0;
-            //ApartmentViewModel.NewApartment.Address = "";
-            //ApartmentViewModel.NewApartment.Size = 0;
-            //ApartmentViewModel.NewApartment.Condition = "";
-            //ApartmentViewModel.NewApartment.MonthlyRent = 0;
-            //ApartmentViewModel.NewApartment.NumberOfRooms = 0;
+            
         }
     }
 }
