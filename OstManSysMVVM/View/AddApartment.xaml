@@ -39,10 +39,7 @@
                 <TextBlock x:Name="TextBlock5" Margin="0, 21, 0, 0" TextWrapping="Wrap" Text="Is rented:" FontSize="15" FontWeight="Bold"/>
                 <TextBlock x:Name="TextBlock6" Margin="0, 21, 0, 0" TextWrapping="Wrap" Text="Last check:" FontSize="15" FontWeight="Bold"/>
                 <TextBlock x:Name="TextBlock7" Margin="0, 21 0, 0" TextWrapping="Wrap" Text="Rent:" FontSize="15" FontWeight="Bold"/>
-                <TextBlock x:Name="TextBlock8" Margin="0, 21 0, 0" TextWrapping="Wrap" Text="Owner:" FontSize="15" FontWeight="Bold"/>
-                <TextBlock x:Name="TextBlock9" Margin="0, 21 0, 0" TextWrapping="Wrap" Text="Images:" FontSize="15" FontWeight="Bold"/>
-
-            </StackPanel>
+                  </StackPanel>
 
             <StackPanel>
 
@@ -53,9 +50,7 @@
                 <CheckBox x:Name="checkBox" Content=""  Margin="25, 9, 0, 0" HorizontalAlignment="Left" VerticalAlignment="Top"/>
                 <CalendarDatePicker HorizontalAlignment="Left" Margin="25, 9, 0, 0" Date="{Binding NewApartment.LastCheck,Mode=TwoWay,Converter={StaticResource DateTimeConverter}}" VerticalAlignment="Top"/>
                 <TextBox x:Name="textBox6" Margin="25, 9, 0, 0"  HorizontalAlignment="Left" TextWrapping="Wrap" Text="{Binding NewApartment.MonthlyRent,Mode=TwoWay}" FontSize="15" Width="170"/>
-                <TextBox x:Name="textBox7" Margin="25, 9, 0, 0"  HorizontalAlignment="Left" TextWrapping="Wrap" Text="" FontSize="15" Width="170"/>
-                <Button x:Name="button2" Background="Transparent" FontSize="12" BorderBrush="Gray" Content="Browse" Margin="25, 15, 0, 0" HorizontalAlignment="Left" VerticalAlignment="Top"/>
-                <Button x:Name="button" Background="Transparent" BorderBrush="Black" Content="Add" Margin="0, 15, 0, 0" Command="{Binding CreateCommand}" HorizontalAlignment="Right" VerticalAlignment="Top"/>
+               <Button x:Name="button" Background="Transparent" BorderBrush="Black" Content="Add" Margin="0, 15, 0, 0" Command="{Binding CreateCommand}" HorizontalAlignment="Right" VerticalAlignment="Top"/>
                 
             </StackPanel>
 

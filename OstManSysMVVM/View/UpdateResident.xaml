@@ -7,8 +7,15 @@
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     xmlns:interactivity="using:Microsoft.Xaml.Interactivity"
     xmlns:core="using:Microsoft.Xaml.Interactions.Core"
+    xmlns:vm="using:OstManSysMVVM.ViewModel"
+    xmlns:converter="using:OstManSysMVVM.Converter"
     mc:Ignorable="d">
-
+<Page.DataContext>
+    <vm:ResidentViewModel></vm:ResidentViewModel>
+</Page.DataContext>
+    <Page.Resources>
+        <converter:DateTimeConverter x:Key="DateTimeConverter"></converter:DateTimeConverter>
+    </Page.Resources>
     <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
         <Grid.RowDefinitions>
             <RowDefinition Height="*" />
@@ -31,22 +38,20 @@
                 <TextBlock x:Name="TextBlock3" Margin="0, 20, 0, 0" TextWrapping="Wrap" Text="Phone number" FontSize="15" FontWeight="Bold"/>
                 <TextBlock x:Name="TextBlock4" Margin="0, 19, 0, 0" TextWrapping="Wrap" Text="E-mail address:" FontSize="15" FontWeight="Bold"/>
                 <TextBlock x:Name="TextBlock6" Margin="0, 21, 0, 0" TextWrapping="Wrap" Text="Date of birth:" FontSize="15" FontWeight="Bold"/>
-                <TextBlock x:Name="TextBlock9" Margin="0, 21 0, 0" TextWrapping="Wrap" Text="Images:" FontSize="15" FontWeight="Bold"/>
-
-                <TextBlock x:Name="TextBlock7" Margin="0, 21 0, 0" TextWrapping="Wrap" Text="Note:" FontSize="15" FontWeight="Bold"/>
+                <TextBlock x:Name="TextBlock7" Margin="0, 21, 0, 0" TextWrapping="Wrap" Text="Type:" FontSize="15" FontWeight="Bold"/>
 
             </StackPanel>
 
             <StackPanel>
 
-                <TextBox x:Name="textBox" Margin="25, 5, 0, 0"  HorizontalAlignment="Left" TextWrapping="Wrap" Text="" FontSize="15" Width="170"/>
-                <TextBox x:Name="textBox1" Margin="25, 10, 0, 0"  HorizontalAlignment="Left" TextWrapping="Wrap" Text="" FontSize="15" Width="170"/>
-                <TextBox x:Name="textBox2" Margin="25, 7, 0, 0"  HorizontalAlignment="Left" TextWrapping="Wrap" Text="" FontSize="15" Width="170"/>
-                <TextBox x:Name="textBox3" Margin="25, 7, 0, 0"  HorizontalAlignment="Left" TextWrapping="Wrap" Text="" FontSize="15" Width="170"/>
-                <CalendarDatePicker HorizontalAlignment="Left" Margin="25, 9, 0, 0" VerticalAlignment="Top"/>
-                <Button x:Name="button2" Background="Transparent" FontSize="12" BorderBrush="Gray" Content="Browse" Margin="25, 15, 0, 0" HorizontalAlignment="Left" VerticalAlignment="Top"/>
-                <TextBox x:Name="textBox6" Margin="25, 9, 0, 0"  HorizontalAlignment="Left" TextWrapping="Wrap" Text="" FontSize="15" Height="100" Width="170"/>
-                <Button x:Name="button" Background="Transparent" BorderBrush="Black" Content="Update" Margin="0, 15, 0, 0" HorizontalAlignment="Right" VerticalAlignment="Top"/>
+                <TextBox x:Name="textBox"  Margin="25, 5, 0, 0"  HorizontalAlignment="Left" TextWrapping="Wrap" Text="{Binding NewResident.FirstName,Mode=TwoWay}" FontSize="15" Width="170"/>
+                <TextBox x:Name="textBox1" Margin="25, 10, 0, 0"  HorizontalAlignment="Left" TextWrapping="Wrap" Text="{Binding NewResident.LastName,Mode=TwoWay}" FontSize="15" Width="170"/>
+                <TextBox x:Name="textBox2" Margin="25, 7, 0, 0"  HorizontalAlignment="Left" TextWrapping="Wrap" Text="{Binding NewResident.PhoneNumber,Mode=TwoWay}" FontSize="15" Width="170"/>
+                <TextBox x:Name="textBox3" Margin="25, 7, 0, 0"  HorizontalAlignment="Left" TextWrapping="Wrap" Text="{Binding NewResident.EmailAddress,Mode=TwoWay}" FontSize="15" Width="170"/>
+                <CalendarDatePicker HorizontalAlignment="Left" Date="{Binding NewResident.DateOfBirth,Mode=TwoWay,Converter={StaticResource DateTimeConverter}}" Margin="25, 9, 0, 0" VerticalAlignment="Top"/>
+                <TextBox x:Name="textBox4" Margin="25, 7, 0, 0"  HorizontalAlignment="Left" TextWrapping="Wrap" Text="{Binding NewResident.Type,Mode=TwoWay}" FontSize="15" Width="170"/>
+
+                <Button x:Name="button" Command="{Binding UpdateCommand}" Background="Transparent" BorderBrush="Black" Content="Update" Margin="0, 15, 0, 0" HorizontalAlignment="Right" VerticalAlignment="Top"/>
 
             </StackPanel>
 

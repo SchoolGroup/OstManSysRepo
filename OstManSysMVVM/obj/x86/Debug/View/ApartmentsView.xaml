@@ -26,9 +26,6 @@
             <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
         <StackPanel Grid.Column="1" Grid.Row="1"  HorizontalAlignment="Left" VerticalAlignment="Top">
-            <!--<StackPanel.DataContext>
-                <viewModel:ApartmentViewModel/>
-            </StackPanel.DataContext>-->
             <StackPanel Margin="16, 100, 0, 0" HorizontalAlignment="Center" VerticalAlignment="Center">
                 <ListView x:ConnectionId='4' x:Name="listView" HorizontalAlignment="Left" Height="450" VerticalAlignment="Top" Width="850" ItemsSource="{Binding ApartmentAddressCatalogSingleton.ApartmentAddresses, Mode=TwoWay}"  SelectedItem="{Binding ApartmentAddressCatalogSingleton.SelectedApartmentAddress, Mode=TwoWay}">
                     <ListView.ItemTemplate>

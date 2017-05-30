@@ -34,65 +34,41 @@
             </Ellipse>
 
             <StackPanel Grid.Row="1" Grid.Column="1" Orientation="Horizontal" VerticalAlignment="Top" HorizontalAlignment="Center" Margin="0, 120, 0, 0">
-                <TextBlock x:ConnectionId='26' x:Name="textBlock" FontWeight="Bold" FontSize="13" HorizontalAlignment="Left" TextWrapping="Wrap" Text="Role:" VerticalAlignment="Top"/>
-                <TextBlock x:ConnectionId='27' x:Name="textBlock17" HorizontalAlignment="Left" Margin="5, 0, 0 ,0" FontSize="13" TextWrapping="Wrap" Text="{Binding CurrentResident.Type}" VerticalAlignment="Top"/>
+                <TextBlock x:ConnectionId='21' x:Name="textBlock" FontWeight="Bold" FontSize="13" HorizontalAlignment="Left" TextWrapping="Wrap" Text="Role:" VerticalAlignment="Top"/>
+                <TextBlock x:ConnectionId='22' x:Name="textBlock17" HorizontalAlignment="Left" Margin="5, 0, 0 ,0" FontSize="13" TextWrapping="Wrap" Text="{Binding CurrentResident.Type}" VerticalAlignment="Top"/>
             </StackPanel>
 
             <StackPanel Grid.Column="1" Grid.Row="1" Orientation="Horizontal" Margin="0, 200, 0, 0">
-                <TextBlock x:ConnectionId='24' x:Name="textBlock2" HorizontalAlignment="Left" FontSize="15" FontWeight="Bold" TextWrapping="Wrap" Text="First Name:" VerticalAlignment="Top"/>
-                <TextBlock x:ConnectionId='25' x:Name="textBlock10" Margin="5, 0, 0, 0" HorizontalAlignment="Left" FontSize="15" TextWrapping="Wrap" Text="{Binding CurrentResident.FirstName}" VerticalAlignment="Top"/>
+                <TextBlock x:ConnectionId='19' x:Name="textBlock2" HorizontalAlignment="Left" FontSize="15" FontWeight="Bold" TextWrapping="Wrap" Text="First Name:" VerticalAlignment="Top"/>
+                <TextBlock x:ConnectionId='20' x:Name="textBlock10" Margin="5, 0, 0, 0" HorizontalAlignment="Left" FontSize="15" TextWrapping="Wrap" Text="{Binding CurrentResident.FirstName}" VerticalAlignment="Top"/>
             </StackPanel>
 
             <StackPanel Grid.Row="1" Grid.Column="1" Orientation="Horizontal" Margin="0, 225, 0, 0">
-                <TextBlock x:ConnectionId='22' x:Name="textBlock3" HorizontalAlignment="Left"  FontSize="15" FontWeight="Bold" TextWrapping="Wrap" Text="Last Name:" VerticalAlignment="Top"/>
-                <TextBlock x:ConnectionId='23' x:Name="textBlock11" Margin="5, 0, 0, 0" HorizontalAlignment="Left" FontSize="15" TextWrapping="Wrap" Text="{Binding CurrentResident.LastName}" VerticalAlignment="Top"/>
+                <TextBlock x:ConnectionId='17' x:Name="textBlock3" HorizontalAlignment="Left"  FontSize="15" FontWeight="Bold" TextWrapping="Wrap" Text="Last Name:" VerticalAlignment="Top"/>
+                <TextBlock x:ConnectionId='18' x:Name="textBlock11" Margin="5, 0, 0, 0" HorizontalAlignment="Left" FontSize="15" TextWrapping="Wrap" Text="{Binding CurrentResident.LastName}" VerticalAlignment="Top"/>
             </StackPanel>
 
             <StackPanel Grid.Row="1" Grid.Column="1" Orientation="Horizontal" Margin="0, 250, 0, 0">
-                <TextBlock x:ConnectionId='20' x:Name="textBlock4" HorizontalAlignment="Left" FontSize="15" FontWeight="Bold" TextWrapping="Wrap" Text="Phone Number:" VerticalAlignment="Top"/>
-                <TextBlock x:ConnectionId='21' x:Name="textBlock12" Margin="5, 0, 0, 0" HorizontalAlignment="Left" TextWrapping="Wrap" FontSize="15" Text="{Binding CurrentResident.PhoneNumber}" VerticalAlignment="Top"/>
+                <TextBlock x:ConnectionId='15' x:Name="textBlock4" HorizontalAlignment="Left" FontSize="15" FontWeight="Bold" TextWrapping="Wrap" Text="Phone Number:" VerticalAlignment="Top"/>
+                <TextBlock x:ConnectionId='16' x:Name="textBlock12" Margin="5, 0, 0, 0" HorizontalAlignment="Left" TextWrapping="Wrap" FontSize="15" Text="{Binding CurrentResident.PhoneNumber}" VerticalAlignment="Top"/>
             </StackPanel>
 
             <StackPanel Grid.Row="1" Grid.Column="1" Orientation="Horizontal" Margin="0, 275, 0, 0">
-                <TextBlock x:ConnectionId='18' x:Name="textBlock5" HorizontalAlignment="Left" FontSize="15" FontWeight="Bold" TextWrapping="Wrap" Text="E-mail:" VerticalAlignment="Top"/>
-                <TextBlock x:ConnectionId='19' x:Name="textBlock13" Margin="5, 0, 0, 0" HorizontalAlignment="Left" FontSize="15" TextWrapping="Wrap" Text="{Binding CurrentResident.EmailAddress}" VerticalAlignment="Top"/>
+                <TextBlock x:ConnectionId='13' x:Name="textBlock5" HorizontalAlignment="Left" FontSize="15" FontWeight="Bold" TextWrapping="Wrap" Text="E-mail:" VerticalAlignment="Top"/>
+                <TextBlock x:ConnectionId='14' x:Name="textBlock13" Margin="5, 0, 0, 0" HorizontalAlignment="Left" FontSize="15" TextWrapping="Wrap" Text="{Binding CurrentResident.EmailAddress}" VerticalAlignment="Top"/>
             </StackPanel>
 
             <StackPanel Grid.Column="1" Grid.Row="1" Orientation="Horizontal" Margin="0, 300, 0, 0">
-                <TextBlock x:ConnectionId='16' x:Name="textBlock6" HorizontalAlignment="Left" FontSize="15" FontWeight="Bold" TextWrapping="Wrap" Text="Date of Birth:" VerticalAlignment="Top"/>
-                <TextBlock x:ConnectionId='17' x:Name="textBlock14" Margin="5, 0, 0, 0" HorizontalAlignment="Left" FontSize="15" TextWrapping="Wrap" Text="{Binding CurrentResident.DateOfBirth}" VerticalAlignment="Top"/>
+                <TextBlock x:ConnectionId='11' x:Name="textBlock6" HorizontalAlignment="Left" FontSize="15" FontWeight="Bold" TextWrapping="Wrap" Text="Date of Birth:" VerticalAlignment="Top"/>
+                <TextBlock x:ConnectionId='12' x:Name="textBlock14" Margin="5, 0, 0, 0" HorizontalAlignment="Left" FontSize="15" TextWrapping="Wrap" Text="{Binding CurrentResident.DateOfBirth}" VerticalAlignment="Top"/>
             </StackPanel>
-
-            <!--<StackPanel Grid.Column="1" Grid.Row="1" Orientation="Horizontal" Margin="0, 325, 0, 0">
-                <TextBlock x:Name="textBlock7" HorizontalAlignment="Left" TextWrapping="Wrap" FontSize="15" FontWeight="Bold" Text="Move-in Date:" VerticalAlignment="Top"/>
-                <TextBlock x:Name="textBlock15" Margin="5, 0, 0, 0" HorizontalAlignment="Left" FontSize="15" TextWrapping="Wrap" Text="" VerticalAlignment="Top"/>
-            </StackPanel>-->
-
-            <StackPanel Grid.Column="1" Grid.Row="1" Orientation="Horizontal" Margin="0, 325, 0, 0">
-                <TextBlock x:ConnectionId='14' x:Name="textBlock8" HorizontalAlignment="Left" TextWrapping="Wrap" FontSize="15" FontWeight="Bold" Text="Note:" VerticalAlignment="Top"/>
-                <TextBlock x:ConnectionId='15' x:Name="textBlock9" Margin="5, 0, 0, 0" FontWeight="Thin" FontSize="15" HorizontalAlignment="Left" TextWrapping="Wrap" Text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. In pellentesque metus vitae tortor vulputate, non porta felis tempus viverra fusce." VerticalAlignment="Top" Height="112" Width="206"/>
-            </StackPanel>
-
-
-            <StackPanel Grid.Row="1" Grid.Column="1">
-                <Button x:ConnectionId='13' x:Name="button3" Content="Edit Contact Details" Background="Transparent" BorderBrush="Black" HorizontalAlignment="Right" FontSize="13" Margin="0,450,0,0" VerticalAlignment="Top"/>
-            </StackPanel>
-            <StackPanel Grid.Row="1" Grid.Column="1" Margin="0, 500, 0, 0" Orientation="Horizontal">
-                <TextBlock x:ConnectionId='11' x:Name="textBlock16" HorizontalAlignment="Left"  Grid.Row="1" TextWrapping="Wrap" Text="Living together with:" VerticalAlignment="Top"/>
-                <ListView x:ConnectionId='12' x:Name="listView1" HorizontalAlignment="Left" Margin="10, 0, 0, 0" Height="100" Grid.Row="1" Padding="0" VerticalAlignment="Top" Width="120"/>
-            </StackPanel>
-        </Grid>
+  </Grid>
         <StackPanel Grid.Row="1" Grid.Column="2" VerticalAlignment="Center" HorizontalAlignment="Center">
             <Frame x:ConnectionId='10' Name="MyFrame" Height="650" VerticalAlignment="Top" Width="900">
             </Frame>
         </StackPanel>
 
-        <!--<StackPanel Grid.Row="1" Grid.Column="2" Orientation="Horizontal" VerticalAlignment="Bottom" HorizontalAlignment="Right" Margin="0, 0, 45, 0">
-          
-
-            
-            
-        </StackPanel>-->
+      
 
         <StackPanel Grid.Row="1" Grid.Column="2" Margin="0, 40, 10, 0" VerticalAlignment="Top" Orientation="Horizontal" HorizontalAlignment="Right">
             <TextBox x:ConnectionId='8' x:Name="textBox" HorizontalAlignment="Left" BorderThickness="0.5" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="159"/>

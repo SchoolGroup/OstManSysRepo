@@ -26,6 +26,57 @@ namespace OstManSysMVVM.Persistency
             handler = new HttpClientHandler();
             handler.UseDefaultCredentials = true;
         }
+
+        public List<Address> GetAddresses()
+        {
+            using (var client = new HttpClient(handler))
+            {
+                client.BaseAddress = new Uri(ServerUrl);
+                client.DefaultRequestHeaders.Clear();
+                client.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
+                try
+                {
+                    var response = client.GetAsync("api/Addresses").Result;
+
+                    if (response.IsSuccessStatusCode)
+                    {
+                        var addresses = response.Content.ReadAsAsync<IEnumerable<Address>>().Result;
+                        return addresses.ToList();
+                    }
+
+                }
+                catch (Exception ex)
+                {
+                    new MessageDialog(ex.Message).ShowAsync();
+                }
+                return null;
+            }
+        }
+        public Apartment GetApartment(int apartmentID)
+        {
+            using (var client = new HttpClient(handler))
+            {
+                client.BaseAddress = new Uri(ServerUrl);
+                client.DefaultRequestHeaders.Clear();
+                client.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
+                try
+                {
+                    var response = client.GetAsync("api/Apartments/"+apartmentID).Result;
+
+                    if (response.IsSuccessStatusCode)
+                    {
+                        var apartment = response.Content.ReadAsAsync<Apartment>().Result;
+                        return apartment;
+                    }
+
+                }
+                catch (Exception ex)
+                {
+                    new MessageDialog(ex.Message).ShowAsync();
+                }
+                return null;
+            }
+        }
         /// <summary>
         /// Connects to the WebApi and gets all of the apartments with addresses from the database.
         /// </summary>
@@ -357,7 +408,10 @@ namespace OstManSysMVVM.Persistency
                     var apartment1 = JsonConvert.SerializeObject(apartment);
                     var content = new StringContent(apartment1, Encoding.UTF8, "Application/json");
                     var apartmentsList = client.PostAsync("api/Apartments", content).Result;
-
+                    if (apartmentsList.IsSuccessStatusCode)
+                    {
+                        new MessageDialog("Successfully created an apartment!").ShowAsync();
+                    }
                 }
                 catch (Exception ex)
                 {
@@ -381,6 +435,10 @@ namespace OstManSysMVVM.Persistency
                     var resident1 = JsonConvert.SerializeObject(resident);
                     var content = new StringContent(resident1,Encoding.UTF8,"Application/json");
                     var residentsList = client.PostAsync("api/Residents", content).Result;
+                    if (residentsList.IsSuccessStatusCode)
+                    {
+                        new MessageDialog("Successfully created a resident!").ShowAsync();
+                    }
                 }
                 catch (Exception ex)
                 {
@@ -404,6 +462,10 @@ namespace OstManSysMVVM.Persistency
                     var problem1 = JsonConvert.SerializeObject(problem);
                     var content = new StringContent(problem1, Encoding.UTF8, "Application/json");
                     var problemsList = client.PostAsync("api/Problems", content).Result;
+                    if (problemsList.IsSuccessStatusCode)
+                    {
+                        new MessageDialog("Successfully created a problem!").ShowAsync();
+                    }
                 }
                 catch (Exception ex)
                 {
@@ -471,6 +533,10 @@ namespace OstManSysMVVM.Persistency
                 try
                 {
                     var apartmentsList = client.DeleteAsync("api/Apartments/" + apartment.ApartmentID).Result;
+                    if (apartmentsList.IsSuccessStatusCode)
+                    {
+                        new MessageDialog("Successfully deleted the apartment").ShowAsync();
+                    }
                 }
                 catch (Exception ex)
                 {
@@ -492,6 +558,10 @@ namespace OstManSysMVVM.Persistency
                 try
                 {
                     var residentsList = client.DeleteAsync("api/Residents/" + resident.ResidentID).Result;
+                    if (residentsList.IsSuccessStatusCode)
+                    {
+                        new MessageDialog("Successfully deleted and moved to the history!").ShowAsync();
+                    }
                 }
                 catch (Exception ex)
                 {
@@ -513,6 +583,10 @@ namespace OstManSysMVVM.Persistency
                 try
                 {
                     var problemsList = client.DeleteAsync("api/Problems/" + problem.ProblemID).Result;
+                    if (problemsList.IsSuccessStatusCode)
+                    {
+                        new MessageDialog("Successfully deleted and moved to the history!").ShowAsync();
+                    }
                 }
                 catch (Exception ex)
                 {
@@ -536,6 +610,10 @@ namespace OstManSysMVVM.Persistency
                     var contract1 = JsonConvert.SerializeObject(contract);
                     var content = new StringContent(contract1, Encoding.UTF8, "Application/json");
                     var contractsList = client.PostAsync("api/Contracts", content).Result;
+                    if (contractsList.IsSuccessStatusCode)
+                    {
+                        new MessageDialog("Succesfylly attached a resident!").ShowAsync();
+                    }
                 }
                 catch (Exception ex)
                 {

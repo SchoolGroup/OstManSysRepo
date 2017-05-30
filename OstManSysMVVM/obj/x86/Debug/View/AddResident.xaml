@@ -29,19 +29,17 @@
             <ViewModel:ResidentViewModel/>
         </Grid.DataContext>
          <StackPanel  Grid.Column="1" Grid.Row="1"  HorizontalAlignment="Center" VerticalAlignment="Top">
-            <TextBlock x:ConnectionId='16'  x:Name="textBlock" FontWeight="Bold" TextWrapping="Wrap" Margin="0, 20, 0, 0" Text="Enter the details of the new user:" FontSize="20" />
+            <TextBlock x:ConnectionId='14'  x:Name="textBlock" FontWeight="Bold" TextWrapping="Wrap" Margin="0, 20, 0, 0" Text="Enter the details of the new user:" FontSize="20" />
         </StackPanel>
 
         <StackPanel Grid.Column="1" Grid.Row="1" HorizontalAlignment="Center" VerticalAlignment="Center" Orientation="Horizontal">
             <StackPanel>
-                <TextBlock x:ConnectionId='9' x:Name="TextBlock1" Margin="0, 10, 0, 0" TextWrapping="Wrap" Text="First name:" FontSize="15" FontWeight="Bold"/>
-                <TextBlock x:ConnectionId='10' x:Name="TextBlock2" Margin="0, 21, 0, 0" TextWrapping="Wrap" Text="Last name:" FontSize="15" FontWeight="Bold"/>
-                <TextBlock x:ConnectionId='11' x:Name="TextBlock3" Margin="0, 20, 0, 0" TextWrapping="Wrap" Text="Phone number" FontSize="15" FontWeight="Bold"/>
-                <TextBlock x:ConnectionId='12' x:Name="TextBlock4" Margin="0, 19, 0, 0" TextWrapping="Wrap" Text="E-mail address:" FontSize="15" FontWeight="Bold"/>
-                <TextBlock x:ConnectionId='13' x:Name="TextBlock6" Margin="0, 21, 0, 0" TextWrapping="Wrap" Text="Date of birth:" FontSize="15" FontWeight="Bold"/>
-                <TextBlock x:ConnectionId='14' x:Name="TextBlock9" Margin="0, 21 0, 0" TextWrapping="Wrap" Text="Images:" FontSize="15" FontWeight="Bold"/>
-
-                <TextBlock x:ConnectionId='15' x:Name="TextBlock7" Margin="0, 21 0, 0" TextWrapping="Wrap" Text="Note:" FontSize="15" FontWeight="Bold"/>
+                <TextBlock x:ConnectionId='8' x:Name="TextBlock1" Margin="0, 10, 0, 0" TextWrapping="Wrap" Text="First name:" FontSize="15" FontWeight="Bold"/>
+                <TextBlock x:ConnectionId='9' x:Name="TextBlock2" Margin="0, 21, 0, 0" TextWrapping="Wrap" Text="Last name:" FontSize="15" FontWeight="Bold"/>
+                <TextBlock x:ConnectionId='10' x:Name="TextBlock3" Margin="0, 20, 0, 0" TextWrapping="Wrap" Text="Phone number" FontSize="15" FontWeight="Bold"/>
+                <TextBlock x:ConnectionId='11' x:Name="TextBlock4" Margin="0, 19, 0, 0" TextWrapping="Wrap" Text="E-mail address:" FontSize="15" FontWeight="Bold"/>
+                <TextBlock x:ConnectionId='12' x:Name="TextBlock6" Margin="0, 21, 0, 0" TextWrapping="Wrap" Text="Date of birth:" FontSize="15" FontWeight="Bold"/>
+                <TextBlock x:ConnectionId='13' x:Name="TextBlock7" Margin="0, 21, 0, 0" TextWrapping="Wrap" Text="Type:" FontSize="15" FontWeight="Bold"/>
 
             </StackPanel>
 
@@ -52,9 +50,8 @@
                 <TextBox x:ConnectionId='4' x:Name="textBox2" Margin="25, 7, 0, 0"  HorizontalAlignment="Left" TextWrapping="Wrap" Text="{Binding NewResident.PhoneNumber, Mode=TwoWay}" FontSize="15" Width="170"/>
                 <TextBox x:ConnectionId='5' x:Name="textBox3" Margin="25, 7, 0, 0"  HorizontalAlignment="Left" TextWrapping="Wrap" Text="{Binding NewResident.EmailAddress, Mode=TwoWay}" FontSize="15" Width="170"/>
                 <CalendarDatePicker HorizontalAlignment="Left" Margin="25, 9, 0, 0" VerticalAlignment="Top" Date="{Binding NewResident.DateOfBirth ,Mode=TwoWay, Converter={StaticResource DateTimeConverter}}"/>
-                <Button x:ConnectionId='6' x:Name="button2" Background="Transparent" FontSize="12" BorderBrush="Gray" Content="Browse" Margin="25, 15, 0, 0" HorizontalAlignment="Left" VerticalAlignment="Top"/>
-                <TextBox x:ConnectionId='7' x:Name="textBox6" Margin="25, 9, 0, 0"  HorizontalAlignment="Left" TextWrapping="Wrap" Text="{Binding NewResident.Type, Mode=TwoWay}" FontSize="15" Height="100" Width="170"/>
-                <Button x:ConnectionId='8' x:Name="button" Background="Transparent" Command="{Binding CreateCommand, Mode=TwoWay}" BorderBrush="Black" Content="Add" Margin="0, 15, 0, 0" HorizontalAlignment="Right" VerticalAlignment="Top"/>
+                <TextBox x:ConnectionId='6' x:Name="textBox4" Margin="25, 7, 0, 0"  HorizontalAlignment="Left" TextWrapping="Wrap" Text="{Binding NewResident.Type, Mode=TwoWay}" FontSize="15" Width="170"/>
+                <Button x:ConnectionId='7' x:Name="button" Background="Transparent" Command="{Binding CreateCommand, Mode=TwoWay}" BorderBrush="Black" Content="Add" Margin="0, 15, 0, 0" HorizontalAlignment="Right" VerticalAlignment="Top"/>
 
             </StackPanel>
 

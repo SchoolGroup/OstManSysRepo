@@ -104,6 +104,8 @@
     <Compile Include="Handler\ResidentHandler.cs" />
     <Compile Include="Model\Account.cs" />
     <Compile Include="Model\AccountCatalogSingleton.cs" />
+    <Compile Include="Model\Address.cs" />
+    <Compile Include="Model\AddressCatalogSingleton.cs" />
     <Compile Include="Model\ApartmentAddress.cs" />
     <Compile Include="Model\ApartmentAddressCatalogSingleton.cs" />
     <Compile Include="Model\Contract.cs" />
@@ -194,6 +196,9 @@
     </Compile>
     <Compile Include="View\UpdateApartment.xaml.cs">
       <DependentUpon>UpdateApartment.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\UpdateCoResident.xaml.cs">
+      <DependentUpon>UpdateCoResident.xaml</DependentUpon>
     </Compile>
     <Compile Include="View\UpdateResident.xaml.cs">
       <DependentUpon>UpdateResident.xaml</DependentUpon>
@@ -312,6 +317,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="View\UpdateApartment.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\UpdateCoResident.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

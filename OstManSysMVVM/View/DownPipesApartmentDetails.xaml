@@ -14,9 +14,7 @@
         </Grid.DataContext>
         <StackPanel VerticalAlignment="Center" HorizontalAlignment="Center">
 
-            <!--<ListView x:Name="listView" Height="300" Width="300" ItemsSource="{Binding }">
-                <ListView.ItemTemplate>
-                    <DataTemplate>-->
+           
                         <StackPanel Orientation="Vertical">
                             <StackPanel Orientation="Vertical">
                                 <StackPanel Orientation="Horizontal">
@@ -32,10 +30,7 @@
                                 <TextBlock Text="Last Check:" FontWeight="Bold"/>
                                 <DatePicker Date="{Binding DownpipeApartmentAddress.LastChecked}"/>
                             </StackPanel>
-                        <!--</StackPanel>
-                    </DataTemplate>
-                </ListView.ItemTemplate>
-            </ListView>-->
+                      
         </StackPanel>
             </StackPanel>
     </Grid>
