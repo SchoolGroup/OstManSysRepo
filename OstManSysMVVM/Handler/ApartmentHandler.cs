@@ -40,7 +40,7 @@ namespace OstManSysMVVM.Handler
         {
             if (ApartmentViewModel.NewApartment.AddressID==0 || ApartmentViewModel.NewApartment.Size==0 || ApartmentViewModel.NewApartment.Condition == null || ApartmentViewModel.NewApartment.MonthlyRent==0.00 || ApartmentViewModel.NewApartment.NumberOfRooms==0)
             {
-                new MessageDialog("You must fill in the form").ShowAsync();
+                new MessageDialog("You must fill out all forms!").ShowAsync();
             }
             else
             {

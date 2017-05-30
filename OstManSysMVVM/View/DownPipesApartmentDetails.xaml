@@ -19,16 +19,16 @@
                             <StackPanel Orientation="Vertical">
                                 <StackPanel Orientation="Horizontal">
                                     <TextBlock Text="Downpipe ID:" FontWeight="Bold"/>
-                                    <TextBlock Text="{Binding  DownpipeApartmentAddress.DownpipeID,Mode=TwoWay}"/>
+                                    <TextBlock Margin="10, 0, 0, 0"  Text="{Binding  DownpipeApartmentAddress.DownpipeID,Mode=TwoWay}"/>
                                 </StackPanel>
                                 <StackPanel Orientation="Horizontal">
                                     <TextBlock Text="Condition:" FontWeight="Bold"/>
-                                    <TextBlock Text="{Binding DownpipeApartmentAddress.Condition}"/>
+                                    <TextBlock Margin="10, 0 ,0, 0" Text="{Binding DownpipeApartmentAddress.Condition}"/>
                                 </StackPanel>
                             </StackPanel>
                             <StackPanel Orientation="Horizontal" >
-                                <TextBlock Text="Last Check:" FontWeight="Bold"/>
-                                <DatePicker Date="{Binding DownpipeApartmentAddress.LastChecked}"/>
+                                <TextBlock VerticalAlignment="Center" Text="Last Check:" FontWeight="Bold"/>
+                                <DatePicker Margin="10, 0 ,0 0"  Date="{Binding DownpipeApartmentAddress.LastChecked}"/>
                             </StackPanel>
                       
         </StackPanel>

@@ -60,7 +60,9 @@
 
             <StackPanel Grid.Column="1" Grid.Row="1" Orientation="Horizontal" Margin="0, 300, 0, 0">
                 <TextBlock x:Name="textBlock6" HorizontalAlignment="Left" FontSize="15" FontWeight="Bold" TextWrapping="Wrap" Text="Date of Birth:" VerticalAlignment="Top"/>
-                <TextBlock x:Name="textBlock14" Margin="5, 0, 0, 0" HorizontalAlignment="Left" FontSize="15" TextWrapping="Wrap" Text="{Binding CurrentResident.DateOfBirth}" VerticalAlignment="Top"/>
+                <TextBlock x:Name="textBlock14" Margin="5, 0, 0, 0" HorizontalAlignment="Left" FontSize="15" TextWrapping="Wrap" VerticalAlignment="Top">
+                    <Run Text="{Binding CurrentResident.DateOfBirth.Day}"/><Run Text="/"/><Run Text="{Binding CurrentResident.DateOfBirth.Month}"/><Run Text="/"/><Run Text="{Binding CurrentResident.DateOfBirth.Year}"/>
+                </TextBlock>
             </StackPanel>
   </Grid>
         <StackPanel Grid.Row="1" Grid.Column="2" VerticalAlignment="Center" HorizontalAlignment="Center">

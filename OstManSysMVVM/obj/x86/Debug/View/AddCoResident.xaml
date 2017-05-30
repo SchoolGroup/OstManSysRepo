@@ -56,7 +56,7 @@
                 <Image Source="https://maxcdn.icons8.com/Share/icon/Arrows//left_arrow1600.png" Stretch="UniformToFill">
                     <interactivity:Interaction.Behaviors>
                         <core:EventTriggerBehavior EventName="PointerPressed">
-                            <core:NavigateToPageAction TargetPage="OstManSysMVVM.View.BoardMemberView"/>
+                            <core:NavigateToPageAction TargetPage="OstManSysMVVM.View.ResidentView"/>
                         </core:EventTriggerBehavior>
                     </interactivity:Interaction.Behaviors>
                 </Image>

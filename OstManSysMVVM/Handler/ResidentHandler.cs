@@ -176,26 +176,71 @@ namespace OstManSysMVVM.Handler
         /// </summary>
         public void UpdateResident()
         {
-            if (ResidentViewModel.NewResident.FirstName == null || ResidentViewModel.NewResident.LastName == null || ResidentViewModel.NewResident.EmailAddress == null || ResidentViewModel.NewResident.PhoneNumber == 0 || ResidentViewModel.NewResident.Type == null)
+            if (ResidentViewModel.NewResident.FirstName == null && ResidentViewModel.NewResident.LastName == null && ResidentViewModel.NewResident.EmailAddress == null && ResidentViewModel.NewResident.PhoneNumber == 0 && ResidentViewModel.NewResident.Type == null)
             {
-                new MessageDialog("You must fill in the form").ShowAsync();
+                new MessageDialog("You must fill in at least one form").ShowAsync();
             }
             Resident resident = new Resident();
-            resident.ResidentID = ResidentViewModel.NewResident.ResidentID;
-            resident.FirstName = ResidentViewModel.NewResident.FirstName;
-            resident.LastName = ResidentViewModel.NewResident.LastName;
-            resident.EmailAddress = ResidentViewModel.NewResident.EmailAddress;
-            resident.PhoneNumber = ResidentViewModel.NewResident.PhoneNumber;
-            resident.DateOfBirth = ResidentViewModel.NewResident.DateOfBirth;
-            resident.Type = ResidentViewModel.NewResident.Type;
+            //resident.ResidentID = ResidentViewModel.NewResident.ResidentID;
+            //resident.FirstName = ResidentViewModel.NewResident.FirstName;
+            //resident.LastName = ResidentViewModel.NewResident.LastName;
+            //resident.EmailAddress = ResidentViewModel.NewResident.EmailAddress;
+            //resident.PhoneNumber = ResidentViewModel.NewResident.PhoneNumber;
+            //resident.DateOfBirth = ResidentViewModel.NewResident.DateOfBirth;
+            //resident.Type = ResidentViewModel.NewResident.Type;
+            resident.ResidentID = ResidentCatalogSingleton.Instance.SelectedResident.ResidentID;
+            if (ResidentViewModel.NewResident.FirstName == null)
+            {
+                resident.FirstName = ResidentCatalogSingleton.Instance.SelectedResident.FirstName;
+            }
+            else
+            {
+                resident.FirstName = ResidentViewModel.NewResident.FirstName;
+            }
+
+            if (ResidentViewModel.NewResident.LastName == null)
+            {
+                resident.LastName = ResidentCatalogSingleton.Instance.SelectedResident.LastName;
+            }
+            else
+            {
+                resident.LastName = ResidentViewModel.NewResident.LastName;
+            }
+
+            if (ResidentViewModel.NewResident.EmailAddress == null)
+            {
+                resident.EmailAddress = ResidentCatalogSingleton.Instance.SelectedResident.EmailAddress;
+            }
+            else
+            {
+                resident.EmailAddress = ResidentViewModel.NewResident.EmailAddress;
+            }
+
+            if (ResidentViewModel.NewResident.PhoneNumber == 0)
+            {
+                resident.PhoneNumber = ResidentCatalogSingleton.Instance.SelectedResident.PhoneNumber;
+            }
+            else
+            {
+                resident.PhoneNumber = ResidentViewModel.NewResident.PhoneNumber;
+            }
+
+            if (ResidentViewModel.NewResident.Type == null)
+            {
+                resident.Type = ResidentCatalogSingleton.Instance.SelectedResident.Type;
+            }
+            else
+            {
+                resident.Type = ResidentViewModel.NewResident.Type;}
             new PersistencyFacade().UpdateResident(resident);
             var residents = new PersistencyFacade().GetResidents();
+           
             ResidentViewModel.ResidentCatalogSingleton.Residents.Clear();
             foreach (var resident1 in residents)
             {
                 ResidentViewModel.ResidentCatalogSingleton.Residents.Add(resident1);
             }
-
+            
             ResidentViewModel.NewResident.ResidentID = 0;
             ResidentViewModel.NewResident.FirstName = "";
             ResidentViewModel.NewResident.LastName = "";
